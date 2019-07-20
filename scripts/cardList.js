@@ -13976,6 +13976,7 @@ function fuseCards() {
    //List all possible error messages
    if (errorCheck) {
       errorSection.innerHTML = errorMessages;
+      alert(errorMessages);
       return;
    }
 
@@ -14028,7 +14029,9 @@ function fuseCards() {
 
 
    if (!document.getElementsByClassName('resultSequence')[0]) {
-      errorSection.innerHTML = 'No possible fusion combinations found.'
+      errorMessages = 'No possible fusion combinations found.'
+      errorSection.innerHTML = errorMessages;
+      alert(errorMessages);
    } else {
       jumpToSection.innerHTML = 'Jump To: '; //+ allResults;
       allResults.forEach(function(element) {
