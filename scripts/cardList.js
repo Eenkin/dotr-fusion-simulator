@@ -2944,7 +2944,7 @@ var cardInfo = [
     "atk": 1500,
     "def": 0,
     "effect": "",
-    "fusionInfo": "Zombie + Warrior\n*Requires at least 1 card to have 1200+ ATK",
+    "fusionInfo": "Zombie + Warrior\n*Requires at least 1 card with 1200+ ATK",
     "password": "SVYMUH6K",
     "extra": ""
   },
@@ -2986,7 +2986,7 @@ var cardInfo = [
     "atk": 1800,
     "def": 2000,
     "effect": "NATURE: While this card is face-up in the defense position, all ZOMBIE monsters are increased 100 points at the start of each turn.",
-    "fusionInfo": "Zombie + Plant\n*Requires at least 1 card to have 1000+ ATK",
+    "fusionInfo": "Zombie + Plant\n*Requires at least 1 card with 1000+ ATK",
     "password": "EFGVETEZ",
     "extra": ""
   },
@@ -7914,7 +7914,7 @@ var cardInfo = [
     "atk": 1500,
     "def": 1200,
     "effect": "",
-    "fusionInfo": "Fish + Beast\n*Requires at least 1 card to have 1350+ ATK",
+    "fusionInfo": "Fish + Beast\n*Requires at least 1 card with 1350+ ATK",
     "password": "GXQ1SF4V",
     "extra": ""
   },
@@ -8908,7 +8908,7 @@ var cardInfo = [
     "atk": 1600,
     "def": 1900,
     "effect": "",
-    "fusionInfo": "Machine + Fish\n*Requires at least 1 card to have 1400+ ATK",
+    "fusionInfo": "Machine + Fish\n*Requires at least 1 card with 1400+ ATK",
     "password": "YZJR0TY5",
     "extra": ""
   },
@@ -9090,7 +9090,7 @@ var cardInfo = [
     "atk": 1900,
     "def": 1400,
     "effect": "",
-    "fusionInfo": "Thunder + Spellcaster\n*Requires at least 1 card to have 1500+ ATK",
+    "fusionInfo": "Thunder + Spellcaster\n*Requires at least 1 card with 1500+ ATK",
     "password": "U9YB4XA5",
     "extra": ""
   },
@@ -14203,3 +14203,13 @@ function randomFusion() {
 window.onload = function() {
 };
 
+window.addEventListener('scroll', function(e) {
+
+   if (window.scrollY > 0 && !scrolled) {
+      document.getElementById('myBtn').style.visibility = 'visible';
+      scrolled = true;
+   } else {
+      //document.getElementById('myBtn').style.visibility = 'hidden';
+   }
+
+});
