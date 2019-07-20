@@ -1,6 +1,5 @@
 body {
    font-family: Verdana;
-   width: 1200px;
    margin: 0 auto;
    padding: 10px 0;
 }
@@ -18,6 +17,10 @@ nav {
 input[type=checkbox]{
    position: relative;
    top: 2px;
+}
+
+.cardInput, .fuseSimBtn{
+   margin: 5px auto;
 }
 
 
@@ -276,4 +279,63 @@ header{
 
 #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
+}
+
+* {
+   box-sizing: border-box;
+}
+
+html{
+   scroll-behavior: smooth;
+}
+
+body {
+ font: 18px Verdana;
+ max-width: 1200px;
+ margin:0 auto;
+ text-align: center;
+}
+
+.autocomplete {
+ /*the container must be positioned relative:*/
+ position: relative;
+ display: inline-block;
+}
+
+input {
+ border: 1px solid transparent;
+ background-color: #f1f1f1;
+ padding: 10px;
+ font: 16px Verdana;
+}
+
+input[type=text] {
+ background-color: #f1f1f1;
+ width: 100%;
+}
+
+input[type=button], .fuseSimBtn {
+ background-color: #3457ac;
+ color: #fff;
+ cursor: pointer;
+ padding: 10px;
+ display: inline-block;
+ font: 16px Verdana;
+}
+
+.resultSequence{
+   text-align: center;
+   margin: 10px auto;
+   width: 100%;
+//   background-color: #ecebe7;
+   padding: 10px;
+   border-radius: 10px;
+}
+.resultOrder{
+   display: block;
+   margin: 10px 0;
+}
+
+#errorSection{
+   font-weight: bold;
 }
