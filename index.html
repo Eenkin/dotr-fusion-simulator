@@ -7,87 +7,26 @@
    <title>Yu-Gi-Oh! The Duelists of the Roses - Fusion Simulator</title>
    <script src="scripts/cardList.js"></script>
    <link rel="stylesheet" href="stylesheet.css">
-
-   <style>
-      * {
-         box-sizing: border-box;
-      }
-
-      html{
-         scroll-behavior: smooth;
-      }
-
-      body {
-        font: 18px Verdana;
-        width: 1200px;
-        margin:0 auto;
-        text-align: center;
-      }
-
-      .autocomplete {
-        /*the container must be positioned relative:*/
-        position: relative;
-        display: inline-block;
-      }
-
-      input {
-        border: 1px solid transparent;
-        background-color: #f1f1f1;
-        padding: 10px;
-        font: 16px Verdana;
-      }
-
-      input[type=text] {
-        background-color: #f1f1f1;
-        width: 100%;
-      }
-
-      input[type=button], .fuseSimBtn {
-        background-color: #3457ac;
-        color: #fff;
-        cursor: pointer;
-        padding: 10px;
-        display: inline-block;
-        font: 16px Verdana;
-      }
-
-      .resultSequence{
-         text-align: center;
-         margin: 10px auto;
-         width: 100%;
-      //   background-color: #ecebe7;
-         padding: 10px;
-         border-radius: 10px;
-      }
-      .resultOrder{
-         display: block;
-         margin: 10px 0;
-      }
-
-      #errorSection{
-         font-weight: bold;
-      }
-   </style>
 </head>
 
 <body>
 
    <h1 id="pageHeading">Yu-Gi-Oh! The Duelists of the Roses - Fusion Simulator</h1>
 
-   <div id='note' style='font-size: 14px; width: 100%;text-align: center; margin: 20px auto;'>
+   <div id='note' style='font-size: 14px; width: 75%;text-align: left; margin: 20px auto;'>
 
-      A general rule of thumb is that a fusion material's original ATK cannot be higher than the ATK of the monster you are trying to fuse for (with a few, rare exceptions).<br><br>
+      <!--A general rule of thumb is that a fusion material's original ATK cannot be higher than the ATK of the monster you are trying to fuse for (with a few, rare exceptions).<br><br>
 
       Some fusions will have minimum ATK or LV requirement (i.e. 1500+ ATK or LV 5+). For fusion, only the fusion materials' <u>original</u> type and ATK matters. <br>Changing a monster's type or ATK will not affect the fusion result.<br><br>
 
-      Some fusions requires Female, Elf, or Turtle archetypes. Elf monsters have "Elf" in its name ("Celtic Guardian" is considered as an elf for fusions). Turtle monsters have "Turtle" or "Tortoise" in its name. Female monsters can be identified if they can equip female Power Ups like "Cyber Shield". Fusions that involve these archetypes as fusion materials will usually be placed in a higher priority than fusions that only, exclusively deal with a monster's type. For example, a female, Fairy with less than 1300 ATK and a Fish will prioritize fusing for "Amazon of the Seas" (Female + Fish) over "7 Colored Fish" (Fairy + Fish).<br><br>
+      Some fusions requires Female, Elf, or Turtle archetypes. Elf monsters have "Elf" in its name ("Celtic Guardian" is considered as an elf for fusions). Turtle monsters have "Turtle" or "Tortoise" in its name. Female monsters can be identified if they can equip female Power Ups like "Cyber Shield". Fusions that involve these archetypes as fusion materials will usually be placed in a higher priority than fusions that only, exclusively deal with a monster's type. For example, a female, Fairy with less than 1300 ATK and a Fish will prioritize fusing for "Amazon of the Seas" (Female + Fish) over "7 Colored Fish" (Fairy + Fish).<br><br>-->
 
-      For all intents and purposes, cards that include "Elegant Egotist", "Cocoon of Evolution" and "Metalmorph" will count as fusions. <br>"Insect Imiitation" will not be included since  it fuses into a random card.<br><br>
+      For all intents and purposes, cards that include "Elegant Egotist", "Cocoon of Evolution" and "Metalmorph" will count as fusions. "Insect Imiitation" will not be included since  it fuses into a random card.<br><br>
 
-      The light-blue box is for the card that's already on the field, and it will always be placed as the first card in the fusion order. <br>All other boxes can be arranged in any order, and will be calculated for any possible order combinations from the hand.<br>Blank inputs will be ignored, but a minimum of 2 cards is needed to perform a fusion.
+      The light-blue box that says "Card on Field" is for a card that is already on your Summoning Area, and it will always be placed as the first card in the fusion order. All other boxes can be arranged in any order, and will be calculated for any possible combinations from the hand. Blank inputs will be ignored, but a minimum of 2 cards is needed to perform a fusion.
    </div>
 
-   <div id='forms' style='width:1035px; margin: 20px auto;'>
+   <div id='forms' style='width:80%; margin: 20px auto;'>
 
       <datalist id="listOfCards">
          <option value="30,000-Year White Turtle"></option>
@@ -805,7 +744,7 @@
          <input type='button' value='Reset' onclick='resetFusionInputs()'>
       </div>-->
 
-      <div id='buttonSection' style='margin-top:10px;'>
+      <div id='buttonSection'>
          <div class="fuseSimBtn" id='fuseCardsBtn' onclick='fuseCards()' style='background-color: DodgerBlue;'>Fuse Cards</div>
          <div class="fuseSimBtn" id="exampleBtn" onclick='exampleFusion()'>Show Set Example</div>
          <div class="fuseSimBtn" id="rndmBtn" onclick='randomFusion()'>Random Example</div>
@@ -822,7 +761,7 @@
 
 
 
-   <button onclick="scrollToTop()" id="myBtn" title="Go to top">Scroll to Top</button>
+   <!--<button onclick="scrollToTop()" id="myBtn" title="Go to top">Scroll to Top</button>-->
 
 
 </body>
