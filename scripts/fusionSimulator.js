@@ -1,4 +1,6 @@
-//ver1.0.2
+const versionNum = 'ver1.0.2a';
+console.log(versionNum);
+
 var abcList = [];
 
 var shareLink = '';
@@ -501,7 +503,7 @@ function scrollToTop() {
    resetFusionSectionColors();
 }
 
-function fuseBase36(){
+function fuseBase36() {
    //Converting Cards into base36 to add to # on window url
 
    let cardInput = document.getElementsByClassName('cardInput');
@@ -537,7 +539,7 @@ function fuseBase36(){
          let deciNum = cardNamelist.indexOf(temp);
          hashString[i] = deciNum < 36 ? '0' + deciNum.toString(36) : deciNum.toString(36); //Converts ID # to base 36; add a leading 0 if result only has 1 character
          deciArr.push(deciNum);
-      } else if(!temp){
+      } else if (!temp) {
          //if blank, then assign non-existent card id to leave input blank
          hashString[i] = 'nq'; //#854
          //Add counter to make sure there are less than 5 blank inputs
@@ -866,7 +868,7 @@ function resetFusionInputs() {
    }
 }
 
-function checkHash(){
+function checkHash() {
    let hashString = window.location.hash ? window.location.hash.slice(1) : '';
 
    if (hashString && hashString.length === 12 && hashString.match(/^[a-z0-9]+$/i)) {
