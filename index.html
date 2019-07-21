@@ -745,20 +745,28 @@
          </div>
       </form>
 
-      <div id='buttonSection'>
-         <div class="fuseSimBtn" id='fuseCardsBtn' onclick='fuseBase36()' style='background-color: DodgerBlue;'>Fuse Cards</div>
-         <div class="fuseSimBtn" id="exampleBtn" onclick='exampleFusion()'>Use Preset Example</div>
-         <div class="fuseSimBtn" id="rndmBtn" onclick='randomFusion()'>Randomize Cards</div>
-         <div class="fuseSimBtn" id="resetBtn" onclick='resetFusionInputs()'>Reset</div>
+      <!--<div id='buttonSection'>
+         <div class="fuseSimBtn" onmousedown="btnMouseDown('fuseCardsBtn')"  onmouseup="btnMouseUp('fuseCardsBtn')" id='fuseCardsBtn' onclick='fuseBase36()' style='background-color: DodgerBlue;'>Fuse Cards</div>
+         <div class="fuseSimBtn" onmousedown="btnMouseDown('exampleBtn')"  onmouseup="btnMouseUp('exampleBtn')" id="exampleBtn" onclick='exampleFusion()'>Use Preset Example</div>
+         <div class="fuseSimBtn" onmousedown="btnMouseDown('rndmBtn')"  onmouseup="btnMouseUp('rndmBtn')" id="rndmBtn" onclick='randomFusion()'>Randomize Cards</div>
+         <div class="fuseSimBtn" onmousedown="btnMouseDown('resetBtn')"  onmouseup="btnMouseUp('resetBtn')" id="resetBtn" onclick='resetFusionInputs()'>Reset</div>
+      </div>-->
+
+      <div id="buttonSection">
+         <input type="button" value="Fuse Cards" class="fuseSimBtn" id='fuseCardsBtn' onclick='fuseBase36()'>
+         <input type="button" value="Use Preset Example" class="fuseSimBtn" id="exampleBtn" onclick='exampleFusion()'>
+         <input type="button" value="Randomize Cards" class="fuseSimBtn" id="rndmBtn" onclick='randomFusion()'>
+         <input type="button" value="Reset" class="fuseSimBtn" id="resetBtn" onclick='resetFusionInputs()'>
       </div>
-   </div>
 
 
-   <div id='errorSection' style='margin:10px 0'></div>
 
-   <div id='jumpToSection' style='margin:10px 0'></div>
 
-   <div id='fusionResults'></div>
+      <div id='errorSection' style='margin:10px 0'></div>
+
+      <div id='jumpToSection' style='margin:10px 0'></div>
+
+      <div id='fusionResults'></div>
 
 
 </body>
