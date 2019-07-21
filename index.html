@@ -746,10 +746,10 @@
       </form>
 
       <div id='buttonSection'>
-         <div class="fuseSimBtn" id='fuseCardsBtn' onclick='fuseBase36()' style='background-color: DodgerBlue;'>Fuse Cards</div>
-         <div class="fuseSimBtn" id="exampleBtn" onclick='exampleFusion()'>Use Preset Example</div>
-         <div class="fuseSimBtn" id="rndmBtn" onclick='randomFusion()'>Randomize Cards</div>
-         <div class="fuseSimBtn" id="resetBtn" onclick='resetFusionInputs()'>Reset</div>
+         <div class="fuseSimBtn" onmousedown="btnMouseDown('fuseCardsBtn')"  onmouseup="btnMouseUp('fuseCardsBtn')" id='fuseCardsBtn' onclick='fuseBase36()' style='background-color: DodgerBlue;'>Fuse Cards</div>
+         <div class="fuseSimBtn" onmousedown="btnMouseDown('exampleBtn')"  onmouseup="btnMouseUp('exampleBtn')" id="exampleBtn" onclick='exampleFusion()'>Use Preset Example</div>
+         <div class="fuseSimBtn" onmousedown="btnMouseDown('rndmBtn')"  onmouseup="btnMouseUp('rndmBtn')" id="rndmBtn" onclick='randomFusion()'>Randomize Cards</div>
+         <div class="fuseSimBtn" onmousedown="btnMouseDown('resetBtn')"  onmouseup="btnMouseUp('resetBtn')" id="resetBtn" onclick='resetFusionInputs()'>Reset</div>
       </div>
    </div>
 
