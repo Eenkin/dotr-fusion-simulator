@@ -1,4 +1,4 @@
-console.log('ver1.0.2b');
+console.log('ver1.0.2c');
 
 var abcList = [];
 
@@ -688,7 +688,7 @@ function fuseCards(idArrSkip, clearSkip) {
       jumpToSection.innerHTML = 'Jump To: '; //+ allResults;
       allResults.forEach(function(element) {
          let jumpToLink = 'card' + element.replace(/ /g, '').replace(/\./g, '').replace(/#/g, '').replace(/,/g, '').replace(/-/g, '');
-         jumpToSection.innerHTML += '&emsp; <a onclick=" highlightResult(' + jumpToLink + ')">' + element + '</a>'
+         jumpToSection.innerHTML += '&emsp; <a class="jumpAnch" onclick=" highlightResult(' + jumpToLink + ')">' + element + '</a>'
       })
    }
 
@@ -729,9 +729,9 @@ function createCardResults(groundExists, newSequence, finalResult, numberOrder) 
       spanResultStat.setAttribute('class', 'resultStats');
       spanResultStat.innerHTML = '<br>Type: ' + finalResult.type + '&emsp;Attribute: ' + finalResult.attribute + '&emsp;ATK/DEF:' + finalResult.atk + '/' + finalResult.def;
 
-      spanResultStat.innerHTML += finalResult.extra ? '&emsp;Archetype: ' + finalResult.extra.split(',') : '';
+      spanResultStat.innerHTML += finalResult.archetype ? '&emsp;Archetype: ' + finalResult.archetype : '';
       spanResultStat.innerHTML += finalResult.effect ? '<br><br>' + finalResult.effect.replace(/\n/g, '<br>') : '';
-      spanResultStat.innerHTML += '<br><br><hr style="width: 60%">'
+      spanResultStat.innerHTML += '<br><br><hr>'
 
       createBold.appendChild(createTitle);
       createDiv.appendChild(createBold);
@@ -781,13 +781,12 @@ function bruteFusion(order) {
    let object = {};
 
    object.sequence = [];
-   //let isFusable;
-
 
    for (var i = 0; i < order.length - 1; i++) {
       //Card A = first card in sequence. Otherwise, it equals the result of the previous card
       let cardA = i > 0 ? object.resultCard : order[i];
       let cardB = order[i + 1];
+
       let pair = Math.min(cardA, cardB) + "," + Math.max(cardA, cardB);
 
       if (pair in fusionCombos) {
@@ -798,35 +797,8 @@ function bruteFusion(order) {
          }
          object.sequence.push(cardB, object.resultCard);
       } else {
-
          return false;
       }
-
-      // let optionA = cardA + ',' + cardB;
-      // let optionB = cardB + ',' + cardA;
-      //
-      // for (var j = 0; j < fusionCardIds.length; j++) {
-      //    let fusionCard = fusionCombos[fusionCardIds[j]]
-      //
-      //    //Checks if combo exist in any fusion card
-      //    if (fusionCard.combo.includes(optionA) || fusionCard.combo.includes(optionB)) {
-      //       object.resultCard = fusionCard.id;
-      //
-      //       if (object.sequence < 1) {
-      //          //adds very first card to sequence
-      //          object.sequence.push(cardA);
-      //       }
-      //       object.sequence.push(cardB, object.resultCard);
-      //       isFusable = true;
-      //       break;
-      //    }
-      // // }
-      //
-      // if (!isFusable) {
-      //    //stop fusion altogether. This order doesn't work.
-      //    return false;
-      // }
-
 
    }
 

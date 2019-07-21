@@ -11,7 +11,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "UB0HA94H",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 1,
@@ -25,7 +25,7 @@ const cardList = [
     "effect": "ATTACK: 300-point bonus for battles against FIEND monsters.",
     "fusionInfo": "",
     "password": "2H4D85J7",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 2,
@@ -39,7 +39,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 3,
@@ -53,7 +53,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "L7URE9YT",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 4,
@@ -67,7 +67,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Dragon + Spellcaster",
     "password": "E1CTYFUR",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 5,
@@ -81,7 +81,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Dragon + Fiend",
     "password": "8ZWMW5NB",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 6,
@@ -95,7 +95,7 @@ const cardList = [
     "effect": "ATTACK: Transforms the occupied space into WASTELAND terrain when engaging in a battle.",
     "fusionInfo": "Dragon (1600+ ATK) + Zombie (1200+ ATK)",
     "password": "SM63L3C3",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 7,
@@ -109,7 +109,7 @@ const cardList = [
     "effect": "SPECIAL POWER UP: Transforms into \"Red-Eyes Black Metal Dragon when powered up with a \"Metalmorph\".",
     "fusionInfo": "\"Tyhone #2\" + Dragon (Dark Attribute)",
     "password": "078HC3YB",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 8,
@@ -123,7 +123,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "J5WB6TWT",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 9,
@@ -137,7 +137,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "\"Red Eyes B. Dragon\" + \"Summoned Skull\"",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 10,
@@ -151,7 +151,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 11,
@@ -165,7 +165,7 @@ const cardList = [
     "effect": "ATTACK: 900-point bonus for battles against SPELLCASTER monsters.",
     "fusionInfo": "",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 12,
@@ -179,7 +179,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 13,
@@ -193,7 +193,7 @@ const cardList = [
     "effect": "ATTACK: Transforms surrounding spaces into NORMAL terrain when engaged in battle.\nFLIP: Transforms surrounding spaces into NORMAL terrain when this card is flipped face-up.",
     "fusionInfo": "",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 14,
@@ -207,7 +207,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "\"Red Eyes B. Dragon\" + \"Meteor Dragon\"",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 15,
@@ -221,7 +221,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "8DQB4PL1",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 16,
@@ -235,7 +235,7 @@ const cardList = [
     "effect": "SPECIAL POWER UP: Randomly transforms into DRAGON/FIRE monster when powered up with Insect Imitation.",
     "fusionInfo": "",
     "password": "01E3S967",
-    "extra": "Horned, Egg"
+    "archetype": "Horned, Egg"
   },
   {
     "id": 17,
@@ -249,7 +249,7 @@ const cardList = [
     "effect": "SPECIAL POWER UP: Strong in TOON terrain.\nSPECIAL POWER UP: Randomly transforms into DRAGON/FIRE monster when powered up with Insect Imitation.",
     "fusionInfo": "",
     "password": "65YDA3WR",
-    "extra": "Toon, Horned, Egg"
+    "archetype": "Toon, Horned, Egg"
   },
   {
     "id": 18,
@@ -263,7 +263,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "NZ8MWHCP",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 19,
@@ -277,7 +277,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "86985631",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 20,
@@ -291,7 +291,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Dragon (1600+ ATK) + Plant",
     "password": "CBU7YKYH",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 21,
@@ -305,7 +305,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "E36HAZNM",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 22,
@@ -319,7 +319,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "0XSRG52P",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 23,
@@ -333,7 +333,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "\"Gaia the Fierce Knight\" + \"Curse of Dragon\"",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 24,
@@ -347,7 +347,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "\"Time Wizard\" + Dragon",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 25,
@@ -361,7 +361,7 @@ const cardList = [
     "effect": "NATURE: Transforms into Yamadron after surviving 3 turns in a face-up, defense position. However, the card must be voluntarily turned face-up.",
     "fusionInfo": "",
     "password": "UMQDUKAT",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 26,
@@ -375,7 +375,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "4HJMEH8P",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 27,
@@ -389,7 +389,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "UB2T81AM",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 28,
@@ -403,7 +403,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "876T8BQ7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 29,
@@ -417,7 +417,7 @@ const cardList = [
     "effect": "SPECIAL POWER UP: Strong in TOON terrain.",
     "fusionInfo": "",
     "password": "89W7UTAR",
-    "extra": "Toon"
+    "archetype": "Toon"
   },
   {
     "id": 30,
@@ -431,7 +431,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "\"Harpie Lady\" or \"Harpie Lady Sisters\" + Dragon",
     "password": "E34V63JT",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 31,
@@ -445,7 +445,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 32,
@@ -459,7 +459,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "4HSPADYM",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 33,
@@ -473,7 +473,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "8HCX4X2H",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 34,
@@ -487,7 +487,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "2RWTUTYK",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 35,
@@ -501,7 +501,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, powers up all of your own LIGHT monsters by 800 points.",
     "fusionInfo": "Elf + Spellcaster (Light Attribute) or Fairy",
     "password": "UPNK65UP",
-    "extra": "Female, Elf"
+    "archetype": "Female, Elf"
   },
   {
     "id": 36,
@@ -515,7 +515,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all DRAGON monsters with ATK less than 2400 are turned into Thousand Dragon.",
     "fusionInfo": "",
     "password": "E52M0BSM",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 37,
@@ -529,7 +529,7 @@ const cardList = [
     "effect": "ATTACK: Allows the one-sided destruction of the opposition when battling ZOMBIE monsters.",
     "fusionInfo": "",
     "password": "4ZJFNHEK",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 38,
@@ -543,7 +543,7 @@ const cardList = [
     "effect": "MOVEMENT: Able to move and attack without triggering an opponent's TRAP (LR).",
     "fusionInfo": "",
     "password": "YP01STQV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 39,
@@ -557,7 +557,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "47SKLV09",
-    "extra": "Female, Horned"
+    "archetype": "Female, Horned"
   },
   {
     "id": 40,
@@ -571,7 +571,7 @@ const cardList = [
     "effect": "NATURE: All DARK monsters are reduced 100 points while this card remains in the face-up, defense position.",
     "fusionInfo": "",
     "password": "41LPYRLF",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 41,
@@ -585,7 +585,7 @@ const cardList = [
     "effect": "SPECIAL POWER UP: Strong in TOON terrain.\nFLIP: Spellbinds an opponent for 1 turn when this card is flipped face-up in battle.",
     "fusionInfo": "",
     "password": "NBN9Y7AZ",
-    "extra": "Toon"
+    "archetype": "Toon"
   },
   {
     "id": 42,
@@ -599,7 +599,7 @@ const cardList = [
     "effect": "FLIP: Gain 800 Life Points when this card is flipped face-up.",
     "fusionInfo": "",
     "password": "NVE7A3EZ",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 43,
@@ -613,7 +613,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, select 1 spell card from all graveyards and revive it in own Summoning Area. However, can only be activated in a turn when 'Magician of Faith' is being controlled.",
     "fusionInfo": "",
     "password": "GME1S3UM",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 44,
@@ -627,7 +627,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "QXG92T8P",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 45,
@@ -641,7 +641,7 @@ const cardList = [
     "effect": "NATURE: When in the face-up, defense position, the effect of all Power-up Cards are boosted an additional 200 points.",
     "fusionInfo": "",
     "password": "2BYBCRNZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 46,
@@ -655,7 +655,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "\"Hibikime\" + \"Sonic Maid\"",
     "password": "SXL5S9CT",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 47,
@@ -669,7 +669,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "4X41N50X",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 48,
@@ -683,7 +683,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "W12REZ61",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 49,
@@ -697,7 +697,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "L9G3WD0P",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 50,
@@ -711,7 +711,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "WF21N7QD",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 51,
@@ -725,7 +725,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all face-down cards are automatically flipped face-up.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 52,
@@ -739,7 +739,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "ABJZW3LD",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 53,
@@ -753,7 +753,7 @@ const cardList = [
     "effect": "ATTACK: Whenever damage is inflicted to LP in battle, the damage amount is reduced to 0.",
     "fusionInfo": "",
     "password": "YBUKLRUK",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 54,
@@ -767,7 +767,7 @@ const cardList = [
     "effect": "Awards victory to the one who brings together all four limbs and unleashes the monster.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 55,
@@ -781,7 +781,7 @@ const cardList = [
     "effect": "Awards victory to the one who brings together all four limbs and unleashes the monster.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 56,
@@ -795,7 +795,7 @@ const cardList = [
     "effect": "Awards victory to the one who brings together all four limbs and unleashes the monster.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 57,
@@ -809,7 +809,7 @@ const cardList = [
     "effect": "Awards victory to the one who brings together all four limbs and unleashes the monster.",
     "fusionInfo": "",
     "password": "A5CF6HSH",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 58,
@@ -823,7 +823,7 @@ const cardList = [
     "effect": "As Leader, summon the four limbs from your own deck to adjacent Summoning Areas, and enter your next turn face-up without being spellbound and victory is yours.",
     "fusionInfo": "",
     "password": "37689434",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 59,
@@ -837,7 +837,7 @@ const cardList = [
     "effect": "SPECIAL POWER UP: Strong in TOON terrain.",
     "fusionInfo": "",
     "password": "APUBAFYT",
-    "extra": "Toon"
+    "archetype": "Toon"
   },
   {
     "id": 60,
@@ -851,7 +851,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "8M0KLZ6P",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 61,
@@ -865,7 +865,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up in battle, spellbinds opposing monster for 3 turns.",
     "fusionInfo": "",
     "password": "AB89654R",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 62,
@@ -879,7 +879,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up in battle, the opposing enemy is spellbound for one turn.",
     "fusionInfo": "",
     "password": "4T2BA7YP",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 63,
@@ -893,7 +893,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "898KAD4D",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 64,
@@ -907,7 +907,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, spellbinds all enemy WARRIOR monsters.",
     "fusionInfo": "",
     "password": "8ZJZCPGH",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 65,
@@ -921,7 +921,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "25EHQRCX",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 66,
@@ -935,7 +935,7 @@ const cardList = [
     "effect": "MOVEMENT: Able to move and attack without triggering an opponent's TRAP (LR).",
     "fusionInfo": "",
     "password": "AX8KCVYP",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 67,
@@ -949,7 +949,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up in battle, spellbinds opposing monster for 3 turns.",
     "fusionInfo": "",
     "password": "AV6XNX87",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 68,
@@ -963,7 +963,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "QX0949QB",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 69,
@@ -977,7 +977,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "GBNPSFLT",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 70,
@@ -991,7 +991,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "6BNRGBJD",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 71,
@@ -1005,7 +1005,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "2V49ERSR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 72,
@@ -1019,7 +1019,7 @@ const cardList = [
     "effect": "DESTRUCTION: Weakens an opposing enemy by 300 points when destroyed in battle.",
     "fusionInfo": "",
     "password": "QVJVJM4F",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 73,
@@ -1033,7 +1033,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, strengthens Lord of the Lamp by 700 points.",
     "fusionInfo": "",
     "password": "CKYTYP4T",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 74,
@@ -1047,7 +1047,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, strengthens Spirit of the Books by 700 points.",
     "fusionInfo": "",
     "password": "EK2HGPWP",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 75,
@@ -1061,7 +1061,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 76,
@@ -1075,7 +1075,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, transforms the surrounding spaces within a range of two to DARK terrain.",
     "fusionInfo": "",
     "password": "",
-    "extra": "Female, Horned"
+    "archetype": "Female, Horned"
   },
   {
     "id": 77,
@@ -1089,7 +1089,7 @@ const cardList = [
     "effect": "ATTACK: 900-pt bonus for battles against WARRIOR types.",
     "fusionInfo": "",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 78,
@@ -1103,7 +1103,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 79,
@@ -1117,7 +1117,7 @@ const cardList = [
     "effect": "ATTACK: For every battle engaged with the enemy, the LP of the player controlling Dark Elf is reduced by 50 points.",
     "fusionInfo": "Elf + Spellcaster (Dark Attribute) \n*Celtic Guardian counts as an Elf",
     "password": "",
-    "extra": "Female, Elf"
+    "archetype": "Female, Elf"
   },
   {
     "id": 80,
@@ -1131,7 +1131,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, all LIGHT monsters are reduced 100 points.",
     "fusionInfo": "",
     "password": "NM6D6DC1",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 81,
@@ -1145,7 +1145,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "GKAH8H2M",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 82,
@@ -1159,7 +1159,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "A7NV8DY7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 83,
@@ -1173,7 +1173,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, all DRAGON monsters on the field are immune to the effects of an opponent's SPELL cards.",
     "fusionInfo": "",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 84,
@@ -1187,7 +1187,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all enemy cards are spellbound for 1 turn.",
     "fusionInfo": "",
     "password": "LZY78ZYZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 85,
@@ -1201,7 +1201,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all ZOMBIE monsters are increased by 300 points.",
     "fusionInfo": "",
     "password": "JP45234X",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 86,
@@ -1215,7 +1215,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "NVSBNZ2K",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 87,
@@ -1229,7 +1229,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, it is increased by 500 points for every Dark Magician and Dark Magician Girl found in all graveyards.",
     "fusionInfo": "",
     "password": "",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 88,
@@ -1243,7 +1243,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "2XWVU5GM",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 89,
@@ -1257,7 +1257,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up in battle, the opposing monster is spellbound for 1 turn.",
     "fusionInfo": "",
     "password": "NZS5C9J9",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 90,
@@ -1271,7 +1271,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all LIGHT monsters are turned to DARK monsters.",
     "fusionInfo": "",
     "password": "UT2P2PAX",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 91,
@@ -1285,7 +1285,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "0VGZ69EK",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 92,
@@ -1299,7 +1299,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "0BS947QX",
-    "extra": "Female, Elf"
+    "archetype": "Female, Elf"
   },
   {
     "id": 93,
@@ -1313,7 +1313,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "ADQK8BE7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 94,
@@ -1327,7 +1327,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "4H8DAXW1",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 95,
@@ -1341,7 +1341,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, LP increases 50 points at the start of each turn.",
     "fusionInfo": "",
     "password": "GD6FLB05",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 96,
@@ -1355,7 +1355,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "U1QXWZ4P",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 97,
@@ -1369,7 +1369,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "6ZGPWXJ7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 98,
@@ -1383,7 +1383,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all spells within a range of a single space are destroyed.",
     "fusionInfo": "",
     "password": "A5A5A5S1",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 99,
@@ -1397,7 +1397,7 @@ const cardList = [
     "effect": "ATTACK: Whenever damage is inflicted to LP in battle, the damage amount is reduced to 0.",
     "fusionInfo": "",
     "password": "ER2V83UM",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 100,
@@ -1411,7 +1411,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "EBC1GBUV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 101,
@@ -1425,7 +1425,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all Shadow Specters are increased by 300 points.",
     "fusionInfo": "",
     "password": "YKC347L3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 102,
@@ -1439,7 +1439,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all Skull Servants are increased by 300 points.",
     "fusionInfo": "",
     "password": "WV8ZLZ87",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 103,
@@ -1453,7 +1453,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Zombie + Warrior",
     "password": "GXY50149",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 104,
@@ -1467,7 +1467,7 @@ const cardList = [
     "effect": "DESTRUCTION: Eternally spellbinds opposing monster when destroyed in battle.",
     "fusionInfo": "",
     "password": "E54VWH4T",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 105,
@@ -1481,7 +1481,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Zombie + Warrior\n*Requires at least 1 card with 1200+ ATK",
     "password": "SVYMUH6K",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 106,
@@ -1495,7 +1495,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Zombie + Dragon",
     "password": "47EBLHA7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 107,
@@ -1509,7 +1509,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "\"Crass Clown\" + Zombie",
     "password": "AMY1UR4Z",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 108,
@@ -1523,7 +1523,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, all ZOMBIE monsters are increased 100 points at the start of each turn.",
     "fusionInfo": "Zombie + Plant\n*Requires at least 1 card with 1000+ ATK",
     "password": "EFGVETEZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 109,
@@ -1537,7 +1537,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all your monsters are transformed into ZOMBIE monsters.",
     "fusionInfo": "",
     "password": "8B4VSMUR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 110,
@@ -1551,7 +1551,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "YFEZAFLK",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 111,
@@ -1565,7 +1565,7 @@ const cardList = [
     "effect": "DESTRUCTION: When destroyed in battle, it destroys the opposing monster as well.",
     "fusionInfo": "",
     "password": "01YHSTW1",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 112,
@@ -1579,7 +1579,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all your monsters are transformed into ZOMBIE monsters.",
     "fusionInfo": "",
     "password": "GTNK8TL7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 113,
@@ -1593,7 +1593,7 @@ const cardList = [
     "effect": "NATURE: While this card is in the face-up, defense position, all MAGIC and RITUAL cards are rendered ineffective.",
     "fusionInfo": "",
     "password": "8K2DJZQ3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 114,
@@ -1607,7 +1607,7 @@ const cardList = [
     "effect": "MOVEMENT: Able to move and attack without triggering an opponent's TRAP (LR).",
     "fusionInfo": "",
     "password": "ATN5ATQP",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 115,
@@ -1621,7 +1621,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all cards located in Meadow terrain are destroyed.",
     "fusionInfo": "",
     "password": "EREHGXQV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 116,
@@ -1635,7 +1635,7 @@ const cardList = [
     "effect": "When turned face-up in battle, transforms an opponent into a ZOMBIE monster.",
     "fusionInfo": "",
     "password": "N1G7WZ61",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 117,
@@ -1649,7 +1649,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "2XQBLT67",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 118,
@@ -1663,7 +1663,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all cards located in Sea terrain are destroyed.",
     "fusionInfo": "",
     "password": "L52DAFCD",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 119,
@@ -1677,7 +1677,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all Wood Remains are increased by 500 points.",
     "fusionInfo": "Zombie + Plant",
     "password": "L129YD09",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 120,
@@ -1691,7 +1691,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "G50KG1C9",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 121,
@@ -1705,7 +1705,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "J5L10D0M",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 122,
@@ -1719,7 +1719,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "8MCPL9Y3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 123,
@@ -1733,7 +1733,7 @@ const cardList = [
     "effect": "MOVEMENT: Can move into LABYRINTH terrain, and transforms into Wall Shadow.",
     "fusionInfo": "",
     "password": "LXNTAHCF",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 124,
@@ -1747,7 +1747,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Spellcaster + Zombie",
     "password": "YBCX83GF",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 125,
@@ -1761,7 +1761,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Zombie + Fish",
     "password": "E7QDNMUF",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 126,
@@ -1775,7 +1775,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "\"Dragon Zombie\" + Zombie",
     "password": "UZ2KLHSM",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 127,
@@ -1789,7 +1789,7 @@ const cardList = [
     "effect": "MOVEMENT: Able to move and attack without triggering an opponent's TRAP (LR).",
     "fusionInfo": "",
     "password": "6K030FAF",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 128,
@@ -1803,7 +1803,7 @@ const cardList = [
     "effect": "MOVEMENT: During movement, transforms terrain of entered space into WASTELAND terrain.",
     "fusionInfo": "",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 129,
@@ -1817,7 +1817,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "89EZUFSX",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 130,
@@ -1831,7 +1831,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "\"Mammoth Graveyard\" + Zombie",
     "password": "GZG3J7UP",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 131,
@@ -1845,7 +1845,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "UMYDLPGR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 132,
@@ -1859,7 +1859,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "GXSFQ9JH",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 133,
@@ -1873,7 +1873,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "YF2Z4VU7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 134,
@@ -1887,7 +1887,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "8TQ1AHGV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 135,
@@ -1901,7 +1901,7 @@ const cardList = [
     "effect": "ATTACK: 900-pt bonus when battling FIEND monsters.\nFLIP: When this card is flipped face-up, strengthens all LIGHT monsters by 300 points.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 136,
@@ -1915,7 +1915,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "670ZW58K",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 137,
@@ -1929,7 +1929,7 @@ const cardList = [
     "effect": "ATTACK: Whenever damage is inflicted to LP in battle, the damage amount is reduced to 0.\nFLIP: When this card is flipped face-up, adds one more Kageningen face-up in own Summoning Area.",
     "fusionInfo": "",
     "password": "J92HSFN3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 138,
@@ -1943,7 +1943,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "NB4FU3A3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 139,
@@ -1957,7 +1957,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "QPGV8BUD",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 140,
@@ -1971,7 +1971,7 @@ const cardList = [
     "effect": "DESTRUCTION: Reduces opposing monster by 300 points when destroyed in battle.",
     "fusionInfo": "",
     "password": "2TY5WRYM",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 141,
@@ -1985,7 +1985,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, strengthens all Succubus Knights by 300 points.",
     "fusionInfo": "",
     "password": "ERCZAVL7",
-    "extra": "Female, Horned"
+    "archetype": "Female, Horned"
   },
   {
     "id": 142,
@@ -1999,7 +1999,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "0DND6RG9",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 143,
@@ -2013,7 +2013,7 @@ const cardList = [
     "effect": "ATTACK: 600-pt bonus when battling DRAGON monsters.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 144,
@@ -2027,7 +2027,7 @@ const cardList = [
     "effect": "MOVEMENT: Can move into LABYRINTH terrain.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 145,
@@ -2041,7 +2041,7 @@ const cardList = [
     "effect": "ATTACK: Whenever damage is inflicted to LP in battle, the damage amount is reduced to 0.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 146,
@@ -2055,7 +2055,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, it is increased by 100 points for each monster in own Graveyard.",
     "fusionInfo": "",
     "password": "AH0PSHEB",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 147,
@@ -2069,7 +2069,7 @@ const cardList = [
     "effect": "ATTACK: Allows the one-sided destruction of the opposition when battling BEAST monsters.\nSPECIAL POWER UP: Strong in TOON terrain.",
     "fusionInfo": "",
     "password": "",
-    "extra": "Toon"
+    "archetype": "Toon"
   },
   {
     "id": 148,
@@ -2083,7 +2083,7 @@ const cardList = [
     "effect": "ATTACK: 800-pt bonus when battling SPELLCASTER monsters.",
     "fusionInfo": "",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 149,
@@ -2097,7 +2097,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, adopts the ATK/DEF of the monster with the highest attack power on the field.",
     "fusionInfo": "",
     "password": "YBJMCD6Z",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 150,
@@ -2111,7 +2111,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "0MEDCKNX",
-    "extra": "Female, Horned"
+    "archetype": "Female, Horned"
   },
   {
     "id": 151,
@@ -2125,7 +2125,7 @@ const cardList = [
     "effect": "ATTACK: 300-pt bonus when battling DINOSAUR monsters.",
     "fusionInfo": "Warrior + Pyro",
     "password": "UFJMLZST",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 152,
@@ -2139,7 +2139,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all WARRIOR monsters are increased 300 points.",
     "fusionInfo": "",
     "password": "054TC727",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 153,
@@ -2153,7 +2153,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all Lava Battleguards are increased 500 points.",
     "fusionInfo": "",
     "password": "CX8MS5UV",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 154,
@@ -2167,7 +2167,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "\"Judgement Hand\" + Warrior (1000+ ATK)",
     "password": "2PYVADW9",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 155,
@@ -2181,7 +2181,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "GMJKAFY7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 156,
@@ -2195,7 +2195,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, all effects involving the taking of a card's control are rendered ineffective.",
     "fusionInfo": "Warrior + Elf",
     "password": "QXYT4D4T",
-    "extra": "Elf"
+    "archetype": "Elf"
   },
   {
     "id": 157,
@@ -2209,7 +2209,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "23NHCKJ7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 158,
@@ -2223,7 +2223,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "E9EXUH0H",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 159,
@@ -2237,7 +2237,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "03W9Y1NT",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 160,
@@ -2251,7 +2251,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "AKY3E3EK",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 161,
@@ -2265,7 +2265,7 @@ const cardList = [
     "effect": "ATTACK: 500-pt bonus when battling BEAST monsters.",
     "fusionInfo": "",
     "password": "NBEP6MQB",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 162,
@@ -2279,7 +2279,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "GPY50KJ5",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 163,
@@ -2293,7 +2293,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all WARRIOR monsters are increased 300 points.",
     "fusionInfo": "",
     "password": "Y1SB4H4K",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 164,
@@ -2307,7 +2307,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up in battle, the opponent is rendered eternally spellbound.",
     "fusionInfo": "",
     "password": "SRWT8DQT",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 165,
@@ -2321,7 +2321,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "W9YVY5YP",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 166,
@@ -2335,7 +2335,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "CP6F8ZEV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 167,
@@ -2349,7 +2349,7 @@ const cardList = [
     "effect": "SPECIAL POWER UP: Randomly transforms into a BEAST-WARRIOR/EARTH monster when powered up with Insect Imitation.",
     "fusionInfo": "",
     "password": "CM4TUZS5",
-    "extra": "Egg"
+    "archetype": "Egg"
   },
   {
     "id": 168,
@@ -2363,7 +2363,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "WTUR63NH",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 169,
@@ -2377,7 +2377,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "UTGRNT6M",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 170,
@@ -2391,7 +2391,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all M-Warrior #2s are increased 500 points.",
     "fusionInfo": "",
     "password": "67UDARJM",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 171,
@@ -2405,7 +2405,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all M-Warrior #1s are increased 500 points.",
     "fusionInfo": "",
     "password": "8XEH4DW3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 172,
@@ -2419,7 +2419,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "CHCKYMAH",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 173,
@@ -2433,7 +2433,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "YZ8TY9U3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 174,
@@ -2447,7 +2447,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "J54V27ND",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 175,
@@ -2461,7 +2461,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, adopts the ATK/DEF of the monster with the highest attack power on the field.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 176,
@@ -2475,7 +2475,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, adds another Doron face-up in own Summoning Area.",
     "fusionInfo": "",
     "password": "WMUDUZE1",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 177,
@@ -2489,7 +2489,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "GTJRJ3QZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 178,
@@ -2503,7 +2503,7 @@ const cardList = [
     "effect": "MOVEMENT: Able to move and attack without triggering an opponent's TRAP (LR).",
     "fusionInfo": "",
     "password": "Q3UZSHGP",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 179,
@@ -2517,7 +2517,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "U7ST2KCB",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 180,
@@ -2531,7 +2531,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "NKY3G7WF",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 181,
@@ -2545,7 +2545,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, strengthens all PLANT monsters by 300 points.",
     "fusionInfo": "",
     "password": "CFQTS5SR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 182,
@@ -2559,7 +2559,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "ST05QVLF",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 183,
@@ -2573,7 +2573,7 @@ const cardList = [
     "effect": "ATTACK: Monsters destroyed in battles against Dimensional Warrior cannot be revived once they are sent to the Graveyard.",
     "fusionInfo": "",
     "password": "6V034TN3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 184,
@@ -2587,7 +2587,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "A7WK4PSZ",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 185,
@@ -2601,7 +2601,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "S3472VE9",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 186,
@@ -2615,7 +2615,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all Hibikime cards are increased 500 points.",
     "fusionInfo": "",
     "password": "QH0HLKJ7",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 187,
@@ -2629,7 +2629,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "2H0TLD2X",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 188,
@@ -2643,7 +2643,7 @@ const cardList = [
     "effect": "SPECIAL POWER UP: Strong in TOON terrain.",
     "fusionInfo": "",
     "password": "",
-    "extra": "Toon"
+    "archetype": "Toon"
   },
   {
     "id": 189,
@@ -2657,7 +2657,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, all your monsters receive 1000 bonus points for their DEF.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 190,
@@ -2671,7 +2671,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all INSECT monsters are increased 300 points.",
     "fusionInfo": "",
     "password": "JD8FE7GF",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 191,
@@ -2685,7 +2685,7 @@ const cardList = [
     "effect": "DESTRUCTION: When destroyed in battle, it destroys the opposing monster as well.",
     "fusionInfo": "",
     "password": "CZ81UVGR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 192,
@@ -2699,7 +2699,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all BEAST monsters are increased 300 points.",
     "fusionInfo": "",
     "password": "83258H4B",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 193,
@@ -2713,7 +2713,7 @@ const cardList = [
     "effect": "MOVEMENT: Able to move and attack without triggering an opponent's TRAP (LR).",
     "fusionInfo": "",
     "password": "254KCRJZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 194,
@@ -2727,7 +2727,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "QTCDUZJZ",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 195,
@@ -2741,7 +2741,7 @@ const cardList = [
     "effect": "ATTACK: 900-pt bonus for battles against WARRIOR monsters.",
     "fusionInfo": "",
     "password": "",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 196,
@@ -2755,7 +2755,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "GKW3Q7S1",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 197,
@@ -2769,7 +2769,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all Swamp Battleguards are increased 500 points.",
     "fusionInfo": "",
     "password": "6KN9GDCT",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 198,
@@ -2783,7 +2783,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "61LR2MQZ",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 199,
@@ -2797,7 +2797,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "W3JM4PCK",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 200,
@@ -2811,7 +2811,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "QFSFQV8X",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 201,
@@ -2825,7 +2825,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all Princess of Tsurugi cards are increased 700 points.",
     "fusionInfo": "",
     "password": "JH2VN367",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 202,
@@ -2839,7 +2839,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "\"Protector of the Throne\" + Fiend",
     "password": "CDQPY76B",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 203,
@@ -2853,7 +2853,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all Sonic Maid cards are increased 500 points.",
     "fusionInfo": "",
     "password": "A3E94F6V",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 204,
@@ -2867,7 +2867,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "G3CD87ND",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 205,
@@ -2881,7 +2881,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Dragon + Warrior",
     "password": "GKN3UVGF",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 206,
@@ -2895,7 +2895,7 @@ const cardList = [
     "effect": "DESTRUCTION: Spellbinds an opponent for 1 turn when destroyed in battle.",
     "fusionInfo": "",
     "password": "N905NDJZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 207,
@@ -2909,7 +2909,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "YV49GPN9",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 208,
@@ -2923,7 +2923,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "2KCV6K2Z",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 209,
@@ -2937,7 +2937,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "SB2H2KC7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 210,
@@ -2951,7 +2951,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "6VJBGVJ1",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 211,
@@ -2965,7 +2965,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "4XA1JH8M",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 212,
@@ -2979,7 +2979,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "6BQ1GHEV",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 213,
@@ -2993,7 +2993,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all monsters in MOUNTAIN terrain are increased 300 points.",
     "fusionInfo": "",
     "password": "6KNDQMC1",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 214,
@@ -3007,7 +3007,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "A7QPADUR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 215,
@@ -3021,7 +3021,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Battle Ox + Mystical Horseman",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 216,
@@ -3035,7 +3035,7 @@ const cardList = [
     "effect": "DESTRUCTION: Spellbinds an opponent for 3 turns when destroyed in battle.",
     "fusionInfo": "",
     "password": "A3G56HC3",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 217,
@@ -3049,7 +3049,7 @@ const cardList = [
     "effect": "ATTACK: Monsters destroyed in battles against One Who Hunts Souls cannot be revived once they are sent to the Graveyard.",
     "fusionInfo": "",
     "password": "YFWT2HEV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 218,
@@ -3063,7 +3063,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "U56D43JZ",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 219,
@@ -3077,7 +3077,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "0V81L3WB",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 220,
@@ -3091,7 +3091,7 @@ const cardList = [
     "effect": "ATTACK: 900-pt bonus for battles against ROCK monsters.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 221,
@@ -3105,7 +3105,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Female + Beast or Beast-Warrior",
     "password": "",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 222,
@@ -3119,7 +3119,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "UDNFSD4R",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 223,
@@ -3133,7 +3133,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "N9QDA7ET",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 224,
@@ -3147,7 +3147,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, the owning player's Summoning Power Points are increased to the maximum value.",
     "fusionInfo": "",
     "password": "J3QZN929",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 225,
@@ -3161,7 +3161,7 @@ const cardList = [
     "effect": "SPECIAL POWER UP: Strong in TOON terrain.",
     "fusionInfo": "",
     "password": "N1YXSBCM",
-    "extra": "Toon"
+    "archetype": "Toon"
   },
   {
     "id": 226,
@@ -3175,7 +3175,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 227,
@@ -3189,7 +3189,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "Y3JZU50Z",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 228,
@@ -3203,7 +3203,7 @@ const cardList = [
     "effect": "DESTRUCTION: When destroyed in battle, this card is returned to the deck, and the deck is re-shuffled.",
     "fusionInfo": "",
     "password": "GXEDJHW7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 229,
@@ -3217,7 +3217,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "QMUHW3Q3",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 230,
@@ -3231,7 +3231,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "L5LFY909",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 231,
@@ -3245,7 +3245,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "S3AHAX6X",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 232,
@@ -3259,7 +3259,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "J7GMLH6K",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 233,
@@ -3273,7 +3273,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "UD8DEVAM",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 234,
@@ -3287,7 +3287,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "LMEVNKWZ",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 235,
@@ -3301,7 +3301,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "JRCPNT4Z",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 236,
@@ -3315,7 +3315,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all Mon Larvas cards are increased 500 points.",
     "fusionInfo": "",
     "password": "2V456TN1",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 237,
@@ -3329,7 +3329,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "ETJDWFET",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 238,
@@ -3343,7 +3343,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "J16T2KS1",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 239,
@@ -3357,7 +3357,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "UX4Z6P6R",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 240,
@@ -3371,7 +3371,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "NRCZ6HNZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 241,
@@ -3385,7 +3385,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "2FNMW9GV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 242,
@@ -3399,7 +3399,7 @@ const cardList = [
     "effect": "MOVEMENT: Able to move and attack without triggering an opponent's TRAP (LR).",
     "fusionInfo": "",
     "password": "4K2HJK05",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 243,
@@ -3413,7 +3413,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "0R0VAH4V",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 244,
@@ -3427,7 +3427,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "U5QMNKQD",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 245,
@@ -3441,7 +3441,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "UPJF4KLD",
-    "extra": "Female, Horned"
+    "archetype": "Female, Horned"
   },
   {
     "id": 246,
@@ -3455,7 +3455,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "05QH0XJV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 247,
@@ -3469,7 +3469,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up in battle, the opposing monster is spellbound for 1 turn.",
     "fusionInfo": "",
     "password": "4H0TS1WM",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 248,
@@ -3483,7 +3483,7 @@ const cardList = [
     "effect": "MOVEMENT: If face-up, can move two spaces at a time regardless of terrain.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 249,
@@ -3497,7 +3497,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "J9QFWD0X",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 250,
@@ -3511,7 +3511,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Beast + Fish",
     "password": "UMWKAHAB",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 251,
@@ -3525,7 +3525,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "QFWKY3AZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 252,
@@ -3539,7 +3539,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Beast + Winged Beast",
     "password": "29E5A1N5",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 253,
@@ -3553,7 +3553,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Beast + Plant",
     "password": "Y56H4VNK",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 254,
@@ -3567,7 +3567,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "Q1UFJK25",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 255,
@@ -3581,7 +3581,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up in battle, if the opposing card is a ZOMBIE monster, it is automatically destroyed.",
     "fusionInfo": "",
     "password": "ARQMSVWH",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 256,
@@ -3595,7 +3595,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "LBA3A5NX",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 257,
@@ -3609,7 +3609,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, return to own deck and re-shuffle the deck.",
     "fusionInfo": "",
     "password": "29JHA54K",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 258,
@@ -3623,7 +3623,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "0V4F0XU9",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 259,
@@ -3637,7 +3637,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Larvas + Beast",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 260,
@@ -3651,7 +3651,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "Y347CKYD",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 261,
@@ -3665,7 +3665,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "WFNK2TE3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 262,
@@ -3679,7 +3679,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "01U3SPG9",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 263,
@@ -3693,7 +3693,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "EXU7SZ4Z",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 264,
@@ -3707,7 +3707,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "\"Mystical Sheep #2\" + Fiend",
     "password": "J3C1S9WR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 265,
@@ -3721,7 +3721,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "4HE3CMQ5",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 266,
@@ -3735,7 +3735,7 @@ const cardList = [
     "effect": "MOVEMENT: If face-up, can move two spaces at a time regardless of terrain.",
     "fusionInfo": "",
     "password": "S7L7U1A3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 267,
@@ -3749,7 +3749,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Beast (LV 4+) + Fiend",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 268,
@@ -3763,7 +3763,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up and a card has already been played from the hand, an additional card can be played from the hand.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 269,
@@ -3777,7 +3777,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "\"Mavelus\" + Winged Beast\nWinged Beast (1300+ ATK) + Pyro",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 270,
@@ -3791,7 +3791,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, all recovery values to LP are doubled.\nSPECIAL POWER UP: Strong in TOON terrain.",
     "fusionInfo": "",
     "password": "UFL3G9JM",
-    "extra": "Toon"
+    "archetype": "Toon"
   },
   {
     "id": 271,
@@ -3805,7 +3805,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "WPLFQHYH",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 272,
@@ -3819,7 +3819,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, Harpie's Pet Dragon increases 300 points.\nSPECIAL POWER UP: When strengthened with Elegant Egotist, transforms into Harpie Lady Sisters.",
     "fusionInfo": "",
     "password": "UXST0VC3",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 273,
@@ -3833,7 +3833,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, Harpie's Pet Dragon increases 900 points.",
     "fusionInfo": "\"Elegant Egotist\" + \"Harpie Lady\"",
     "password": "",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 274,
@@ -3847,7 +3847,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, add a Boo Koo face-down to own Summoning Area.",
     "fusionInfo": "\"Boo Koo \"+ Winged Beast",
     "password": "69JKCPJK",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 275,
@@ -3861,7 +3861,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "NF2TAKE9",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 276,
@@ -3875,7 +3875,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all monsters with an ATK of 500 or less are automatically flipped face-up.",
     "fusionInfo": "",
     "password": "STCMEDN1",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 277,
@@ -3889,7 +3889,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Winged Beast + Pyro",
     "password": "QV0Z41W3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 278,
@@ -3903,7 +3903,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "ADNP07CT",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 279,
@@ -3917,7 +3917,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "0K436HA5",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 280,
@@ -3931,7 +3931,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Winged Beast (1300+ ATK) + Warrior",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 281,
@@ -3945,7 +3945,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "6KQPGTUR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 282,
@@ -3959,7 +3959,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "47S1SKGT",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 283,
@@ -3973,7 +3973,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "UTC5APG5",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 284,
@@ -3987,7 +3987,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "Q9S181WD",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 285,
@@ -4001,7 +4001,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "8B6XQF2T",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 286,
@@ -4015,7 +4015,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "LV6ZW1GZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 287,
@@ -4029,7 +4029,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "YPW1NVJ5",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 288,
@@ -4043,7 +4043,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "A38TLZAT",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 289,
@@ -4057,7 +4057,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "\"Job-Change Mirror\" or \"Wicked Mirror\" + Winged Beast",
     "password": "QMAMWHG3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 290,
@@ -4071,7 +4071,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "4MJBWH6K",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 291,
@@ -4085,7 +4085,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, all your WINGED-BEAST monsters are awarded a power-up bonus of 300 points.",
     "fusionInfo": "",
     "password": "N54T4TY5",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 292,
@@ -4099,7 +4099,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "S3EBLX43",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 293,
@@ -4113,7 +4113,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "W30961NK",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 294,
@@ -4127,7 +4127,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Job-Change Mirror + Fiend (1600+ ATK)",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 295,
@@ -4141,7 +4141,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, if there's a Jigen Bakudan in any adjacent space, teleport 1 Jigen Bakudan to an opponent's summoning area.",
     "fusionInfo": "",
     "password": "G3016MCT",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 296,
@@ -4155,7 +4155,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "CD2Z4Z8R",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 297,
@@ -4169,7 +4169,7 @@ const cardList = [
     "effect": "ATTACK: Whenever damage is inflicted to LP in battle, the damage amount is reduced to 0.",
     "fusionInfo": "",
     "password": "AD814XAB",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 298,
@@ -4183,7 +4183,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, all FIEND monsters are awarded a power-up bonus of 500 points.",
     "fusionInfo": "",
     "password": "UPNHNFLR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 299,
@@ -4197,7 +4197,7 @@ const cardList = [
     "effect": "MOVEMENT: Able to move and attack without triggering an opponent's TRAP (LR).",
     "fusionInfo": "",
     "password": "Y3SKNRU5",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 300,
@@ -4211,7 +4211,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "JRA3LTGK",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 301,
@@ -4225,7 +4225,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "E1JDCD23",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 302,
@@ -4239,7 +4239,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "QK4KJ9QH",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 303,
@@ -4253,7 +4253,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 304,
@@ -4267,7 +4267,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "85GBAD2K",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 305,
@@ -4281,7 +4281,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, revive 1 SPELL card from the Graveyard and set it in own Summoning Area. This can only be done during the turn of a player controlling a Mask of Darkness card.",
     "fusionInfo": "",
     "password": "01EKUZJ7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 306,
@@ -4295,7 +4295,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "JZCRCRAK",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 307,
@@ -4309,7 +4309,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "Y3CDERJP",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 308,
@@ -4323,7 +4323,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "ETJKE1N3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 309,
@@ -4337,7 +4337,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "8VG9W1WX",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 310,
@@ -4351,7 +4351,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, if there's a Jigen Bakudan in any adjacent space, teleport 1 Jigen Bakudan to an opponent's summoning area.",
     "fusionInfo": "",
     "password": "UFY7YBQV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 311,
@@ -4365,7 +4365,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up in battle, the engaged enemy is spellbound for 3 turns.",
     "fusionInfo": "",
     "password": "NZLD4BY3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 312,
@@ -4379,7 +4379,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "\"Mystic Lamp\" + Spellcaster",
     "password": "YBEXYM25",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 313,
@@ -4393,7 +4393,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, a card's CLASS effects during battle can be identified even if the card is face-down.",
     "fusionInfo": "",
     "password": "ADL9QRJ3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 314,
@@ -4407,7 +4407,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "CF8VQBGP",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 315,
@@ -4421,7 +4421,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "J7A3UDUD",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 316,
@@ -4435,7 +4435,7 @@ const cardList = [
     "effect": "DESTRUCTION: When destroyed in battle, the engaged enemy is spellbound for 1 turn.",
     "fusionInfo": "",
     "password": "Q94TQ3S3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 317,
@@ -4449,7 +4449,7 @@ const cardList = [
     "effect": "ATTACK: Whenever damage is inflicted to LP in battle, the damage amount is reduced to 0.",
     "fusionInfo": "",
     "password": "UZE9L3SZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 318,
@@ -4463,7 +4463,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "W5CKYBSR",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 319,
@@ -4477,7 +4477,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "8MNDLZJH",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 320,
@@ -4491,7 +4491,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "LXYV6ZEF",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 321,
@@ -4505,7 +4505,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "GMNTNX27",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 322,
@@ -4519,7 +4519,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, all damage to LP is increased by 100 points.",
     "fusionInfo": "",
     "password": "CX09J1Y3",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 323,
@@ -4533,7 +4533,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "NFW5CXC9",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 324,
@@ -4547,7 +4547,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "WRY1EVA3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 325,
@@ -4561,7 +4561,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all cards are shifted to attack position.",
     "fusionInfo": "",
     "password": "L3AVWKJK",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 326,
@@ -4575,7 +4575,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, all opponent monsters are reduced by 100 points each turn.",
     "fusionInfo": "",
     "password": "GTWM6XS7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 327,
@@ -4589,7 +4589,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "CD8H6DJX",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 328,
@@ -4603,7 +4603,7 @@ const cardList = [
     "effect": "NATURE: After being turned face-up, transforms into a Ryu-Kishin after surviving 3 turns in a face-up, defense position. However, the card must be turned up by the controlling player.",
     "fusionInfo": "",
     "password": "EM072MNK",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 329,
@@ -4617,7 +4617,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "ST4ZW1GP",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 330,
@@ -4631,7 +4631,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "EB018KEX",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 331,
@@ -4645,7 +4645,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "EVJVYDNH",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 332,
@@ -4659,7 +4659,7 @@ const cardList = [
     "effect": "SPECIAL POWEr UP: Transforms into a ZOMBIE/DARK monster when strengthened with Insect Imitation.",
     "fusionInfo": "",
     "password": "GP0341LH",
-    "extra": "Egg"
+    "archetype": "Egg"
   },
   {
     "id": 333,
@@ -4673,7 +4673,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "A3Q5UBLV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 334,
@@ -4687,7 +4687,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "2XEZNVQ7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 335,
@@ -4701,7 +4701,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "NFCV4RJ1",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 336,
@@ -4715,7 +4715,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "A7NMGM67",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 337,
@@ -4729,7 +4729,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 338,
@@ -4743,7 +4743,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, reduce opponent's Summoning Power by 1 point.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 339,
@@ -4757,7 +4757,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "\"Job-Change Mirror\" + Fiend",
     "password": "UX2XUTC3",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 340,
@@ -4771,7 +4771,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "\"Lord of the Lamp\" or \"Mystic Lamp \" + Fiend",
     "password": "N7EZUH4V",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 341,
@@ -4785,7 +4785,7 @@ const cardList = [
     "effect": "SPECIAL POWER UP: Strong in TOON terrain.",
     "fusionInfo": "",
     "password": "AZUMUMS5",
-    "extra": "Toon"
+    "archetype": "Toon"
   },
   {
     "id": 342,
@@ -4799,7 +4799,7 @@ const cardList = [
     "effect": "SPECIAL POWER UP: Transforms into Metalzoa when strengthened with Metalmorph.",
     "fusionInfo": "",
     "password": "8M05G18K",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 343,
@@ -4813,7 +4813,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "\"Ancient Jar\", \"Morphing Jar\", \"Pot of Trick\" or \"Charubin the Fire Knight\" + Spellcaster (1500+ ATK)",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 344,
@@ -4827,7 +4827,7 @@ const cardList = [
     "effect": "FLIP: When turned face-up, flips the last card played by an opponent face-up.",
     "fusionInfo": "",
     "password": "8V2V8DAH",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 345,
@@ -4841,7 +4841,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "\"Crass Clown\" or \"Clown Zombie\" + Reptile",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 346,
@@ -4855,7 +4855,7 @@ const cardList = [
     "effect": "DESTRUCTION: Inflicts 500 points of damage against an opponent's LP when destroyed in battle.",
     "fusionInfo": "",
     "password": "YMYTSTQR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 347,
@@ -4869,7 +4869,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "QZ4XER8F",
-    "extra": "Shell"
+    "archetype": "Shell"
   },
   {
     "id": 348,
@@ -4883,7 +4883,7 @@ const cardList = [
     "effect": "ATTACK: 500 bonus points added in battles against DRAGON monsters.",
     "fusionInfo": "",
     "password": "81EZCH8B",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 349,
@@ -4897,7 +4897,7 @@ const cardList = [
     "effect": "FLIP: Reduces an enemy by 500 points when this card is flipped face-up in battle.",
     "fusionInfo": "",
     "password": "WVSMYBQD",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 350,
@@ -4911,7 +4911,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "GFSHNZL7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 351,
@@ -4925,7 +4925,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "L3EZ8ZS3",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 352,
@@ -4939,7 +4939,7 @@ const cardList = [
     "effect": "DESTRUCTION: Revives in own Summoning Area, other than current location, when destroyed in battle.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 353,
@@ -4953,7 +4953,7 @@ const cardList = [
     "effect": "FLIP: If the leader is a Mysterious Puppeteer, gains 1500 points when this card is flipped face-up.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 354,
@@ -4967,7 +4967,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "L9Q9U1AM",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 355,
@@ -4981,7 +4981,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "A70KGPYK",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 356,
@@ -4995,7 +4995,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "E1N3YDNP",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 357,
@@ -5009,7 +5009,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, identifies an opponent's face-down card by type (MONSTER/MAGIC/POWER-UP/TRAP).",
     "fusionInfo": "",
     "password": "67Y5L70V",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 358,
@@ -5023,7 +5023,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Ryu-Kishin + Reptile",
     "password": "LRJT2KEZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 359,
@@ -5037,7 +5037,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "QVQDQKAB",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 360,
@@ -5051,7 +5051,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "CBUT89JH",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 361,
@@ -5065,7 +5065,7 @@ const cardList = [
     "effect": "FLIP: Returns enemy monster to opponent's deck for re-shuffling when this card is flipped face-up in battle.",
     "fusionInfo": "",
     "password": "Y9GFJRER",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 362,
@@ -5079,7 +5079,7 @@ const cardList = [
     "effect": "SPECIAL POWER UP: Strong in TOON terrain.",
     "fusionInfo": "",
     "password": "",
-    "extra": "Toon, Horned"
+    "archetype": "Toon, Horned"
   },
   {
     "id": 363,
@@ -5093,7 +5093,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "QZW5WF03",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 364,
@@ -5107,7 +5107,7 @@ const cardList = [
     "effect": "FLIP: Increases Summoning Power points to maximum level when this card is flipped face-up.",
     "fusionInfo": "",
     "password": "0XLX6D83",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 365,
@@ -5121,7 +5121,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, all damage to LP increased by 200 points.",
     "fusionInfo": "",
     "password": "YPQTLMAZ",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 366,
@@ -5135,7 +5135,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "A1EDGKQ1",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 367,
@@ -5149,7 +5149,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "ERY3U76V",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 368,
@@ -5163,7 +5163,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all your own monsters with ATK of 1000 or below are increased by 1000 points.",
     "fusionInfo": "",
     "password": "EM6FYV4T",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 369,
@@ -5177,7 +5177,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "AK2T4ZCT",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 370,
@@ -5191,7 +5191,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "6B8FG9CF",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 371,
@@ -5205,7 +5205,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, transforms all adjacent spaces to WASTELAND.",
     "fusionInfo": "",
     "password": "ERUX612K",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 372,
@@ -5219,7 +5219,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, spellbinds all FIEND monsters.",
     "fusionInfo": "",
     "password": "N1NDJMQ3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 373,
@@ -5233,7 +5233,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "UR0TLKEB",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 374,
@@ -5247,7 +5247,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, shifts all cards to defense position.",
     "fusionInfo": "",
     "password": "QFQ90MC7",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 375,
@@ -5261,7 +5261,7 @@ const cardList = [
     "effect": "NATURE: Cancels all power increases or decreases of an enemy monster in battle. Does not cancel bonus effects such as terrain or Leader ability effects.",
     "fusionInfo": "",
     "password": "S18VYFCH",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 376,
@@ -5275,7 +5275,7 @@ const cardList = [
     "effect": "DESTRUCTION: Revives in own Summoning Area, other than current location, when destroyed in battle.",
     "fusionInfo": "",
     "password": "8MA9C5YV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 377,
@@ -5289,7 +5289,7 @@ const cardList = [
     "effect": "DESTRUCTION: If LP is higher than 1000 at the moment this card is destroyed, a maximum of 4 monsters with the highest ATKs from own as well as opponent's Graveyard are revived under owning player's control. Following the revival, the owning player's LP is reduced by 1000.",
     "fusionInfo": "",
     "password": "2RS5AP01",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 378,
@@ -5303,7 +5303,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "JR2DL1U9",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 379,
@@ -5317,7 +5317,7 @@ const cardList = [
     "effect": "SPECIAL POWER UP: Randomly transforms to a monster with \"Elf\" in its name when strengthened with Insect Imitation.",
     "fusionInfo": "",
     "password": "S3G589WM",
-    "extra": "Elf, Egg"
+    "archetype": "Elf, Egg"
   },
   {
     "id": 380,
@@ -5331,7 +5331,7 @@ const cardList = [
     "effect": "NATURE: Cancels all power increases or decreases of an enemy monster in battle. Does not cancel bonus effects such as terrain or Leader ability effects.",
     "fusionInfo": "",
     "password": "YMJMCKE3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 381,
@@ -5345,7 +5345,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "2HNHNPJT",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 382,
@@ -5359,7 +5359,7 @@ const cardList = [
     "effect": "ATTACK: Own ATK/DEF either increased or decreased by up to 1500 points when entering battle.",
     "fusionInfo": "",
     "password": "",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 383,
@@ -5373,7 +5373,7 @@ const cardList = [
     "effect": "FLIP: Own LIGHT monsters strengthened by 300 points when this card is flipped face-up.",
     "fusionInfo": "",
     "password": "6VUKSXEZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 384,
@@ -5387,7 +5387,7 @@ const cardList = [
     "effect": "DESTRUCTION: If a card has been played from the hand in the turn when this card is destroyed in battle, the owning player can play one more card from the hand.",
     "fusionInfo": "",
     "password": "GD07W7NP",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 385,
@@ -5401,7 +5401,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Fairy + Female",
     "password": "",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 386,
@@ -5415,7 +5415,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, all WARRIOR monsters are spellbound.",
     "fusionInfo": "",
     "password": "SZJV6KNP",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 387,
@@ -5429,7 +5429,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all Musician King cards are strengthened 700 points.",
     "fusionInfo": "",
     "password": "0ZWBCM49",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 388,
@@ -5443,7 +5443,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, all damage to LP are reduced by half.",
     "fusionInfo": "",
     "password": "A9NK4KLD",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 389,
@@ -5457,7 +5457,7 @@ const cardList = [
     "effect": "FLIP: Spellbinds enemy for 1 turn when this card is flipped face-up in battle.",
     "fusionInfo": "",
     "password": "ARC5Q7YZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 390,
@@ -5471,7 +5471,7 @@ const cardList = [
     "effect": "DESTRUCTION: If LP is over 1000 points when this card is destroyed in battle, the strength of your monsters are increased by 1000 points, and your LP is reduced by 1000.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 391,
@@ -5485,7 +5485,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Fairy + Winged Beast",
     "password": "YHAZWPUV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 392,
@@ -5499,7 +5499,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "LTQHUPAV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 393,
@@ -5513,7 +5513,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "83YRG301",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 394,
@@ -5527,7 +5527,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "S7QX6T0T",
-    "extra": "Female, Elf"
+    "archetype": "Female, Elf"
   },
   {
     "id": 395,
@@ -5541,7 +5541,7 @@ const cardList = [
     "effect": "MOVEMENT: Able to move 2 spaces regardless of terrain when this card is face-up.",
     "fusionInfo": "",
     "password": "QR89WFAP",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 396,
@@ -5555,7 +5555,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "J7GKED2M",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 397,
@@ -5569,7 +5569,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "ATYVJ1UH",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 398,
@@ -5583,7 +5583,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "LP8T6XLR",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 399,
@@ -5597,7 +5597,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "GMNRGMEV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 400,
@@ -5611,7 +5611,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "8P0BLMA3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 401,
@@ -5625,7 +5625,7 @@ const cardList = [
     "effect": "SPECIAL POWER UP: Transforms to Larva of Moth when strengthened with Cocoon of Evolution.",
     "fusionInfo": "",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 402,
@@ -5639,7 +5639,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, all enemy monsters are reduced by 100 points each turn.",
     "fusionInfo": "",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 403,
@@ -5653,7 +5653,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, all enemy monsters are reduced by 100 points each turn.",
     "fusionInfo": "",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 404,
@@ -5667,7 +5667,7 @@ const cardList = [
     "effect": "FLIP: Spellbinds opposing monster for 1 turn when this card is flipped face-up in battle.",
     "fusionInfo": "",
     "password": "UKW3QMU3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 405,
@@ -5681,7 +5681,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "YX4BU507",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 406,
@@ -5695,7 +5695,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "WF83YVQK",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 407,
@@ -5709,7 +5709,7 @@ const cardList = [
     "effect": "SPECIAL POWER UP: Transforms to Larva of Moth when strengthened with Cocoon of Evolution.",
     "fusionInfo": "",
     "password": "2Z83N1ET",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 408,
@@ -5723,7 +5723,7 @@ const cardList = [
     "effect": "NATURE: Cancels all power increases or decreases of an enemy monster in battle. Does not cancel bonus effects such as terrain or Leader ability effects.\nMOVEMENT: Decreases LP by 100 points for each space moved.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 409,
@@ -5737,7 +5737,7 @@ const cardList = [
     "effect": "MOVEMENT: Can enter LABYRINTH terrain.",
     "fusionInfo": "",
     "password": "JKW9YZ2P",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 410,
@@ -5751,7 +5751,7 @@ const cardList = [
     "effect": "FLIP: Teleports to opponent's Summoning Area when this card is flipped face-up. when this card is flipped face-up in battle, the battle to be engaged is cancelled.",
     "fusionInfo": "",
     "password": "AV8XLK8T",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 411,
@@ -5765,7 +5765,7 @@ const cardList = [
     "effect": "MOVEMENT: Able to move and attack without triggering an opponent's TRAP (LR).",
     "fusionInfo": "",
     "password": "4VJ3QHEP",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 412,
@@ -5779,7 +5779,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "G1NRC98F",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 413,
@@ -5793,7 +5793,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "0ZGPWPWH",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 414,
@@ -5807,7 +5807,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "YMETLFQ7",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 415,
@@ -5821,7 +5821,7 @@ const cardList = [
     "effect": "DESTRUCTION: Reduces all monsters located in vertical and horizontal spaces by 300 points when destroyed in battle.",
     "fusionInfo": "",
     "password": "WZAFLB45",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 416,
@@ -5835,7 +5835,7 @@ const cardList = [
     "effect": "SPECIAL POWER UP: Transforms to Larva of Moth when strengthened with Cocoon of Evolution.",
     "fusionInfo": "",
     "password": "NBE1URLB",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 417,
@@ -5849,7 +5849,7 @@ const cardList = [
     "effect": "FLIP: Destroys opposing enemy when this card is flipped face-up in battle.",
     "fusionInfo": "",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 418,
@@ -5863,7 +5863,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, all enemy monsters are reduced 100 points each turn.",
     "fusionInfo": "",
     "password": "0TW38MWK",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 419,
@@ -5877,7 +5877,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "N9YRNTS7",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 420,
@@ -5891,7 +5891,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "EZC7UX0R",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 421,
@@ -5905,7 +5905,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "C76X4DSF",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 422,
@@ -5919,7 +5919,7 @@ const cardList = [
     "effect": "ATTACK: 600 bonus points added in battles against DRAGON monsters.",
     "fusionInfo": "",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 423,
@@ -5933,7 +5933,7 @@ const cardList = [
     "effect": "SPECIAL POWER UP: Transforms to Larva of Moth when strengthened with Cocoon of Evolution.",
     "fusionInfo": "",
     "password": "GD6TW9SH",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 424,
@@ -5947,7 +5947,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "JKAV8DCD",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 425,
@@ -5961,7 +5961,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "AKYM4BNV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 426,
@@ -5975,7 +5975,7 @@ const cardList = [
     "effect": "SPECIAL POWER UP: Transforms to Larva of Moth when strengthened with Cocoon of Evolution.",
     "fusionInfo": "",
     "password": "L94BU7LT",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 427,
@@ -5989,7 +5989,7 @@ const cardList = [
     "effect": "MOVEMENT: Cannot move.\nNATURE: Transforms into Pupa of Moth if this card survives 5 turns in face-up, defense position after being flipped face-up by the controlling player. If destroyed prior to transformation, the card is revived as Larvae Moth in own Summoning Area other than current location.",
     "fusionInfo": "\"Cocoon of Evolution\" + \"Acid Crawler\", \"Larvae Moth\", \"Kattapillar\", \"Needle Worm\" or \"Petit Moth\"",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 428,
@@ -6003,7 +6003,7 @@ const cardList = [
     "effect": "MOVEMENT: Cannot move.\nNATURE: Transforms into Perfectly Ultimate Great Moth if this card survives 1 turn in face-up, defense position after being flipped face-up by the controlling player. If destroyed in battle, the card is revived as Great Moth in own Summoning Area other than current location.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 429,
@@ -6017,7 +6017,7 @@ const cardList = [
     "effect": "ATTACK: All spaces within an area of 2 spaces are transformed into FOREST terrain. \nFLIP: If an INSECT monster is Leader, this card's power is strengthened by 1500 points when this card is flipped face-up.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 430,
@@ -6031,7 +6031,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "U5U9NFSM",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 431,
@@ -6045,7 +6045,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "8V4T8961",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 432,
@@ -6059,7 +6059,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, all WIND monsters gain a 500-point power-up bonus.",
     "fusionInfo": "",
     "password": "E58KLFC5",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 433,
@@ -6073,7 +6073,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Dinosaur + Warrior (ID# less than 200) or Insect (ID# between 401-407)",
     "password": "YHCK01QD",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 434,
@@ -6087,7 +6087,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "LV63E569",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 435,
@@ -6101,7 +6101,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "WZEPUMGH",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 436,
@@ -6115,7 +6115,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Reptile + Rock",
     "password": "2BAM0KWM",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 437,
@@ -6129,7 +6129,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "LK4HQ563",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 438,
@@ -6143,7 +6143,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "658XY1QX",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 439,
@@ -6157,7 +6157,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "8XG78MUV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 440,
@@ -6171,7 +6171,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "J9YPYBWR",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 441,
@@ -6185,7 +6185,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "L18MWPNZ",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 442,
@@ -6199,7 +6199,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "4H4565CV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 443,
@@ -6213,7 +6213,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "6T6RQZGP",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 444,
@@ -6227,7 +6227,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "8KNMSXL5",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 445,
@@ -6241,7 +6241,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Dinosaur (1750+ ATK) + Aqua\nReptile (1400+ ATK) + Rock",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 446,
@@ -6255,7 +6255,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "N3Q7WB21",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 447,
@@ -6269,7 +6269,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, cancels any increased movement effects for all cards.",
     "fusionInfo": "",
     "password": "47G5UZAX",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 448,
@@ -6283,7 +6283,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "S7QV634M",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 449,
@@ -6297,7 +6297,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "2B0ZLRQD",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 450,
@@ -6311,7 +6311,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "896ZY96T",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 451,
@@ -6325,7 +6325,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "6MUBJ7UD",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 452,
@@ -6339,7 +6339,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "YPYK87A9",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 453,
@@ -6353,7 +6353,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "85UF0ZNK",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 454,
@@ -6367,7 +6367,7 @@ const cardList = [
     "effect": "SPECIAL POWER UP: Strong in TOON terrain.",
     "fusionInfo": "",
     "password": "UMSDU7QB",
-    "extra": "Toon"
+    "archetype": "Toon"
   },
   {
     "id": 455,
@@ -6381,7 +6381,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "YH85CVST",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 456,
@@ -6395,7 +6395,7 @@ const cardList = [
     "effect": "DESTRUCTION: Reduces opponent's Summoning Power to 0 when destroyed in battle.",
     "fusionInfo": "",
     "password": "LMG5LXLM",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 457,
@@ -6409,7 +6409,7 @@ const cardList = [
     "effect": "FLIP: Flips all your spell cards face-down when this card is flipped face-up.",
     "fusionInfo": "",
     "password": "JPWD49SZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 458,
@@ -6423,7 +6423,7 @@ const cardList = [
     "effect": "FLIP: Own REPTILE monsters strengthened by 900 points when this card is flipped face-up.",
     "fusionInfo": "",
     "password": "UMQ3WZUZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 459,
@@ -6437,7 +6437,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "89S965JH",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 460,
@@ -6451,7 +6451,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Fish + Beast\n*Requires at least 1 card with 1350+ ATK",
     "password": "GXQ1SF4V",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 461,
@@ -6465,7 +6465,7 @@ const cardList = [
     "effect": "FLIP: All spaces within a range of 1 space are transformed to Sea terrain when this card is flipped face-up.",
     "fusionInfo": "",
     "password": "Q10BN5SM",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 462,
@@ -6479,7 +6479,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "NR2KAFNZ",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 463,
@@ -6493,7 +6493,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "CZ03SP47",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 464,
@@ -6507,7 +6507,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "4B2XL3QR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 465,
@@ -6521,7 +6521,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "U1ATC7J7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 466,
@@ -6535,7 +6535,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Fish + Fairy",
     "password": "6VNZC3N5",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 467,
@@ -6549,7 +6549,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "LPA96T81",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 468,
@@ -6563,7 +6563,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "SVJH2ZJ7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 469,
@@ -6577,7 +6577,7 @@ const cardList = [
     "effect": "ATTACK: Adds 500 bonus points for any battle against MACHINE monsters.",
     "fusionInfo": "Fish + Machine",
     "password": "NPN3WVL9",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 470,
@@ -6591,7 +6591,7 @@ const cardList = [
     "effect": "FLIP: Decreases opposing enemy by 500 points when this card is flipped face-up in battle.",
     "fusionInfo": "",
     "password": "834HEPS1",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 471,
@@ -6605,7 +6605,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Fish + Warrior",
     "password": "6MLZWZSZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 472,
@@ -6619,7 +6619,7 @@ const cardList = [
     "effect": "ATTACK: Automatically destroys WARRIOR monsters in battle.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 473,
@@ -6633,7 +6633,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "EP8H0VNZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 474,
@@ -6647,7 +6647,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Rare Fish + Aqua",
     "password": "6F4D0BU7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 475,
@@ -6661,7 +6661,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Fish + Female",
     "password": "L7L5EZ85",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 476,
@@ -6675,7 +6675,7 @@ const cardList = [
     "effect": "FLIP: All spaces within a range of 1 space are transformed to Sea terrain when this card is flipped face-up.",
     "fusionInfo": "Fish + Dragon",
     "password": "NRYTGTWH",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 477,
@@ -6689,7 +6689,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "UF23JR2X",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 478,
@@ -6703,7 +6703,7 @@ const cardList = [
     "effect": "ATTACK: Space occupied is transformed to Sea terrain when engaged in battle.",
     "fusionInfo": "Dragon (2000+ ATK) + Aqua (LV 5+)\nSea Serpent (LV 5+) + Aqua (LV 5+)",
     "password": "JXCB6FU7",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 479,
@@ -6717,7 +6717,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Dragon + Aqua (1500+ ATK)",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 480,
@@ -6731,7 +6731,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, this card is strengthened by 300 points for every THUNDER monster on the field.",
     "fusionInfo": "\"Boulder Tortoise\" + Dragon",
     "password": "GTA74KNB",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 481,
@@ -6745,7 +6745,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "CBC5YXCH",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 482,
@@ -6759,7 +6759,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "CFUTEHE5",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 483,
@@ -6773,7 +6773,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "\"Key Mace\" + \"Key Mace #2\"",
     "password": "GBYVN5EV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 484,
@@ -6787,7 +6787,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "SX2X8RNH",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 485,
@@ -6801,7 +6801,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 486,
@@ -6815,7 +6815,7 @@ const cardList = [
     "effect": "MOVEMENT: Can enter LABYRINTH squares.",
     "fusionInfo": "",
     "password": "WMA1G3YK",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 487,
@@ -6829,7 +6829,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "SPNTQZ0T",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 488,
@@ -6843,7 +6843,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "\"Metalmorph\" + \"Zoa\"",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 489,
@@ -6857,7 +6857,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "LREKNP0X",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 490,
@@ -6871,7 +6871,7 @@ const cardList = [
     "effect": "DESTRUCTION: Inflicts 300 points of damage to opponent's LP when destroyed in battle.",
     "fusionInfo": "",
     "password": "4TCHS3W3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 491,
@@ -6885,7 +6885,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Machine + Warrior",
     "password": "UVSZAXAT",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 492,
@@ -6899,7 +6899,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "YM45YB6D",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 493,
@@ -6913,7 +6913,7 @@ const cardList = [
     "effect": "ATTACK: Whenever damage is inflicted to LP in battle, the damage amount is reduced to 0.",
     "fusionInfo": "",
     "password": "UZWKC581",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 494,
@@ -6927,7 +6927,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "07CZAPWT",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 495,
@@ -6941,7 +6941,7 @@ const cardList = [
     "effect": "ATTACK: Turns occupied space into WASTELAND when engaged in battle.",
     "fusionInfo": "",
     "password": "09YVQM4D",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 496,
@@ -6955,7 +6955,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, the strength of all your MACHINE monsters are increased by 300 bonus points.",
     "fusionInfo": "",
     "password": "SZWF0M05",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 497,
@@ -6969,7 +6969,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "QDAD0VLF",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 498,
@@ -6983,7 +6983,7 @@ const cardList = [
     "effect": "MOVEMENT: Can enter labyrinth squares, and transforms the occupied space into NORMAL terrain.",
     "fusionInfo": "",
     "password": "8B6PN5JK",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 499,
@@ -6997,7 +6997,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "WH4FC9SR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 500,
@@ -7011,7 +7011,7 @@ const cardList = [
     "effect": "MOVEMENT: Can enter labyrinth squares, and transforms the occupied space into NORMAL terrain.",
     "fusionInfo": "",
     "password": "4P0HAD6X",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 501,
@@ -7025,7 +7025,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "\"Metalmorph\" + \"Red-Eyes B. Dragon\"",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 502,
@@ -7039,7 +7039,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, 1 card other than own is randomly selected for destruction.",
     "fusionInfo": "",
     "password": "GTJXSBJ7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 503,
@@ -7053,7 +7053,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "AMSF8MNX",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 504,
@@ -7067,7 +7067,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "URUMYDE1",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 505,
@@ -7081,7 +7081,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 506,
@@ -7095,7 +7095,7 @@ const cardList = [
     "effect": "DESTRUCTION: All cards located in the surrounding 3x3 area are automatically destroyed when this card is destroyed in battle.",
     "fusionInfo": "",
     "password": "CZN5GD2X",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 507,
@@ -7109,7 +7109,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "SME3G9C3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 508,
@@ -7123,7 +7123,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "CVQKEPJ9",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 509,
@@ -7137,7 +7137,7 @@ const cardList = [
     "effect": "DESTRUCTION: All cards located in the surrounding 3x3 area are automatically destroyed when this card is destroyed in battle.",
     "fusionInfo": "",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 510,
@@ -7151,7 +7151,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, the strength of all your MACHINE monsters are increased by 300 bonus points.",
     "fusionInfo": "",
     "password": "S5S7NKNH",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 511,
@@ -7165,7 +7165,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "2XC5SMN3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 512,
@@ -7179,7 +7179,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "Y5U3A5UH",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 513,
@@ -7193,7 +7193,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "GX83EB6P",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 514,
@@ -7207,7 +7207,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, this card is strengthened by 100 points for every MACHINE monster on the field.",
     "fusionInfo": "",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 515,
@@ -7221,7 +7221,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "65YME5QM",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 516,
@@ -7235,7 +7235,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "2ZC901YR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 517,
@@ -7249,7 +7249,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "6KYRAMWV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 518,
@@ -7263,7 +7263,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "QXUMUHLH",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 519,
@@ -7277,7 +7277,7 @@ const cardList = [
     "effect": "DESTRUCTION: Revives in own Summoning Area, other than current location, when destroyed in battle.",
     "fusionInfo": "",
     "password": "C5U9C54H",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 520,
@@ -7291,7 +7291,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Machine + Beast",
     "password": "4V2DLVSD",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 521,
@@ -7305,7 +7305,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Machine + Dinosaur",
     "password": "W1YPL3SZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 522,
@@ -7319,7 +7319,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "4K8B4VN7",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 523,
@@ -7333,7 +7333,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, flips all opponent SPELL cards face-up.",
     "fusionInfo": "",
     "password": "0FWVLHC7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 524,
@@ -7347,7 +7347,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "A9YREZS7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 525,
@@ -7361,7 +7361,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "SKW3NXNZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 526,
@@ -7375,7 +7375,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "S3C9JFND",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 527,
@@ -7389,7 +7389,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "2HWXGDCV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 528,
@@ -7403,7 +7403,7 @@ const cardList = [
     "effect": "ATTACK: Increases 2000 bonus points in battles against WARRIOR monsters.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 529,
@@ -7417,7 +7417,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Machine + Dragon",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 530,
@@ -7431,7 +7431,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, if there's a Jigen Bakudan in any adjacent space, teleport 1 Jigen Bakudan to an opponent's summoning area.",
     "fusionInfo": "",
     "password": "E9E9QVG9",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 531,
@@ -7445,7 +7445,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Machine + Fish\n*Requires at least 1 card with 1400+ ATK",
     "password": "YZJR0TY5",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 532,
@@ -7459,7 +7459,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Machine (1600+ ATK) + Fish",
     "password": "S3CPWB8H",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 533,
@@ -7473,7 +7473,7 @@ const cardList = [
     "effect": "ATTACK: Increases 800 bonus points in battles against FISH monsters.",
     "fusionInfo": "",
     "password": "E9WX8HAB",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 534,
@@ -7487,7 +7487,7 @@ const cardList = [
     "effect": "ATTACK: Whenever damage is inflicted to LP in battle, the damage amount is reduced to 0.",
     "fusionInfo": "",
     "password": "AKN5NH6Z",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 535,
@@ -7501,7 +7501,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Thunder + Dragon",
     "password": "07NMQ3LZ",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 536,
@@ -7515,7 +7515,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, all female monsters are reduced by 500 points.",
     "fusionInfo": "Thunder + Spellcaster",
     "password": "0P4XJDJP",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 537,
@@ -7529,7 +7529,7 @@ const cardList = [
     "effect": "ATTACK: Increases 1000 bonus points in battles against MACHINE monsters.",
     "fusionInfo": "",
     "password": "65SP6FAP",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 538,
@@ -7543,7 +7543,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Thunder + Dragon (2000+ ATK)",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 539,
@@ -7557,7 +7557,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, all face-up THUNDER monsters gain movement bonus.",
     "fusionInfo": "",
     "password": "CT2VJD8K",
-    "extra": "Female, Horned"
+    "archetype": "Female, Horned"
   },
   {
     "id": 540,
@@ -7571,7 +7571,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Thunder + Beast",
     "password": "SPUPG3YR",
-    "extra": "Horned, Shell"
+    "archetype": "Horned, Shell"
   },
   {
     "id": 541,
@@ -7585,7 +7585,7 @@ const cardList = [
     "effect": "FLIP: Spellbinds the opposing enemy for 1 turn when this card is flipped face-up in battle.",
     "fusionInfo": "Reptile + Thunder",
     "password": "41SBW903",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 542,
@@ -7599,7 +7599,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, all MACHINE monsters are reduced 500 points.",
     "fusionInfo": "",
     "password": "8BCMY7Y7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 543,
@@ -7613,7 +7613,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "L74H0PEK",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 544,
@@ -7627,7 +7627,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Thunder + Spellcaster\n*Requires at least 1 card with 1500+ ATK",
     "password": "U9YB4XA5",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 545,
@@ -7641,7 +7641,7 @@ const cardList = [
     "effect": "FLIP: Gain control of an opposing monster if it is MACHINE for one turn when this card is flipped face-up in battle.",
     "fusionInfo": "",
     "password": "2MJTYHUX",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 546,
@@ -7655,7 +7655,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Thunder + Aqua",
     "password": "W7S5UPED",
-    "extra": "Shell"
+    "archetype": "Shell"
   },
   {
     "id": 547,
@@ -7669,7 +7669,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "8D058R4R",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 548,
@@ -7683,7 +7683,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Aqua + Pyro",
     "password": "QM8F6MCR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 549,
@@ -7697,7 +7697,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Rock + Turtle",
     "password": "AV0TS7UB",
-    "extra": "Shell, Turtle"
+    "archetype": "Shell, Turtle"
   },
   {
     "id": 550,
@@ -7711,7 +7711,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "610FJ7UX",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 551,
@@ -7725,7 +7725,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, all THUNDER monsters are reduced 500 points.",
     "fusionInfo": "",
     "password": "LRN3YPSZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 552,
@@ -7739,7 +7739,7 @@ const cardList = [
     "effect": "MOVEMENT: Can enter labyrinth squares, and transforms the occupied space into NORMAL terrain.",
     "fusionInfo": "",
     "password": "6KSXJB07",
-    "extra": "Shell, Turtle"
+    "archetype": "Shell, Turtle"
   },
   {
     "id": 553,
@@ -7753,7 +7753,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "UB494T8F",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 554,
@@ -7767,7 +7767,7 @@ const cardList = [
     "effect": "FLIP: Summons Frog The Jam in own Summon Area when this card is flipped face-up.",
     "fusionInfo": "",
     "password": "GZ0VCTJB",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 555,
@@ -7781,7 +7781,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "63JFGPNT",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 556,
@@ -7795,7 +7795,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "65LBCXU5",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 557,
@@ -7809,7 +7809,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "6VNPN7Y7",
-    "extra": "Horned, Shell, Turtle"
+    "archetype": "Horned, Shell, Turtle"
   },
   {
     "id": 558,
@@ -7823,7 +7823,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Beast + Turtle",
     "password": "CP8REHU9",
-    "extra": "Shell, Turtle"
+    "archetype": "Shell, Turtle"
   },
   {
     "id": 559,
@@ -7837,7 +7837,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "QZY98H85",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 560,
@@ -7851,7 +7851,7 @@ const cardList = [
     "effect": "FLIP: All Penguin Soldiers increase 800 points when this card is flipped face-up.",
     "fusionInfo": "",
     "password": "6V4BY521",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 561,
@@ -7865,7 +7865,7 @@ const cardList = [
     "effect": "DESTRUCTION: When destroyed, spellbinds the enemy it engaged in battle for 1 turn.",
     "fusionInfo": "",
     "password": "2FWHUR0R",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 562,
@@ -7879,7 +7879,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "WZSR6HWK",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 563,
@@ -7893,7 +7893,7 @@ const cardList = [
     "effect": "ATTACK: When engaged in battle, transforms the space it occupies into Sea terrain.\nFLIP: When this card is flipped face-up, transforms all adjacent spaces into Sea terrain.",
     "fusionInfo": "",
     "password": "NVQFSF61",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 564,
@@ -7907,7 +7907,7 @@ const cardList = [
     "effect": "ATTACK: Gains 1000 bonus points when engaged in battle with MACHINE monsters.",
     "fusionInfo": "",
     "password": "CV0TYBCR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 565,
@@ -7921,7 +7921,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, flips all of own SPELL cards face-down.",
     "fusionInfo": "",
     "password": "E1E78HN1",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 566,
@@ -7935,7 +7935,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "L54HGRLV",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 567,
@@ -7949,7 +7949,7 @@ const cardList = [
     "effect": "DESTRUCTION: When destroyed, destroys the enemy it engaged in battle with.",
     "fusionInfo": "",
     "password": "QXNTQPAX",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 568,
@@ -7963,7 +7963,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, transforms all adjacent spaces to Sea terrain.",
     "fusionInfo": "",
     "password": "LTQV4K0H",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 569,
@@ -7977,7 +7977,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "Y9CT2X0P",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 570,
@@ -7991,7 +7991,7 @@ const cardList = [
     "effect": "FLIP: Adopts opposing monster's ATK/DEF when this card is flipped face-up in battle.",
     "fusionInfo": "",
     "password": "0XN5896Z",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 571,
@@ -8005,7 +8005,7 @@ const cardList = [
     "effect": "ATTACK: Whenever damage is inflicted to LP in battle, the damage amount is reduced to 0.",
     "fusionInfo": "",
     "password": "J967SDS3",
-    "extra": "Shell"
+    "archetype": "Shell"
   },
   {
     "id": 572,
@@ -8019,7 +8019,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "JRGPUB0F",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 573,
@@ -8033,7 +8033,7 @@ const cardList = [
     "effect": "ATTACK: Whenever damage is inflicted to LP in battle, the damage amount is reduced to 0.",
     "fusionInfo": "",
     "password": "SH4HUZ47",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 574,
@@ -8047,7 +8047,7 @@ const cardList = [
     "effect": "FLIP: Transforms all horizontal spaces to Sea spaces when this card is flipped face-up.",
     "fusionInfo": "",
     "password": "C7S3GFCV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 575,
@@ -8061,7 +8061,7 @@ const cardList = [
     "effect": "FLIP: Teleports to opponent's Summoning Area when this card is flipped face-up. When this card is flipped in battle, that battle is canceled.",
     "fusionInfo": "",
     "password": "SRGK2V0H",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 576,
@@ -8075,7 +8075,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "SFL58M8B",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 577,
@@ -8089,7 +8089,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "AR6KEHGH",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 578,
@@ -8103,7 +8103,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "4MWH2PQB",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 579,
@@ -8117,7 +8117,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "JK0Z0FAZ",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 580,
@@ -8131,7 +8131,7 @@ const cardList = [
     "effect": "ATTACK: Gains 1000 bonus points when engaging in battle against FISH monsters.",
     "fusionInfo": "",
     "password": "ND4F6TST",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 581,
@@ -8145,7 +8145,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "4R89UM6B",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 582,
@@ -8159,7 +8159,7 @@ const cardList = [
     "effect": "FLIP: Spellbinds the opposing enemy for 1 turn when this card is flipped face-up in battle.",
     "fusionInfo": "",
     "password": "GRG1SRSB",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 583,
@@ -8173,7 +8173,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "EFJBWBCZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 584,
@@ -8187,7 +8187,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "\"Time Wizard\" + Turtle",
     "password": "Q7YR2R2M",
-    "extra": "Shell, Turtle"
+    "archetype": "Shell, Turtle"
   },
   {
     "id": 585,
@@ -8201,7 +8201,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "UXCVWKJB",
-    "extra": "Shell"
+    "archetype": "Shell"
   },
   {
     "id": 586,
@@ -8215,7 +8215,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "41AVWPYR",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 587,
@@ -8229,7 +8229,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "0TC9LRAB",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 588,
@@ -8243,7 +8243,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "01QFNF0F",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 589,
@@ -8257,7 +8257,7 @@ const cardList = [
     "effect": "DESTRUCTION: Transforms all adjacent spaces into Sea spaces when destroyed in battle.",
     "fusionInfo": "",
     "password": "GDUMJB81",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 590,
@@ -8271,7 +8271,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "6RNX45UR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 591,
@@ -8285,7 +8285,7 @@ const cardList = [
     "effect": "FLIP: Teleports to own Summoning Area when this card is flipped face-up. When this card is flipped face-up in battle, that battle is canceled.",
     "fusionInfo": "",
     "password": "UF2ZWHN1",
-    "extra": "Shell, Turtle"
+    "archetype": "Shell, Turtle"
   },
   {
     "id": 592,
@@ -8299,7 +8299,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Winged Beast + Turtle",
     "password": "JDC9SZWB",
-    "extra": "Shell, Turtle"
+    "archetype": "Shell, Turtle"
   },
   {
     "id": 593,
@@ -8313,7 +8313,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all of own AQUA monsters are strengthened by 300 points.",
     "fusionInfo": "",
     "password": "C7S3U1EM",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 594,
@@ -8327,7 +8327,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, all LP recovery points are doubled.",
     "fusionInfo": "",
     "password": "JZ458V67",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 595,
@@ -8341,7 +8341,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "6FSBURNF",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 596,
@@ -8355,7 +8355,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "",
-    "extra": "Shell, Turtle"
+    "archetype": "Shell, Turtle"
   },
   {
     "id": 597,
@@ -8369,7 +8369,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "GXLKNBCD",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 598,
@@ -8383,7 +8383,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Pyro + Turtle",
     "password": "AVUHNB6D",
-    "extra": "Horned, Shell, Turtle"
+    "archetype": "Horned, Shell, Turtle"
   },
   {
     "id": 599,
@@ -8397,7 +8397,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all adjacent spaces are transformed into Sea terrain.",
     "fusionInfo": "",
     "password": "29E945W1",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 600,
@@ -8411,7 +8411,7 @@ const cardList = [
     "effect": "FLIP: All Penguin Knights increase 800 points when this card is flipped face-up.",
     "fusionInfo": "",
     "password": "8MGHWZ0K",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 601,
@@ -8425,7 +8425,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "UFQK8Z0H",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 602,
@@ -8439,7 +8439,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "SDYPUXWD",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 603,
@@ -8453,7 +8453,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "6367U9WF",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 604,
@@ -8467,7 +8467,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "UBAVCXWX",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 605,
@@ -8481,7 +8481,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "47CXQ9QK",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 606,
@@ -8495,7 +8495,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "JBNX4927",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 607,
@@ -8509,7 +8509,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "\"Ground Attacker Bugroth\" + Aqua",
     "password": "0T23UPCP",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 608,
@@ -8523,7 +8523,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "YZWD2KAK",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 609,
@@ -8537,7 +8537,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "2TAP8BSR",
-    "extra": "Shell"
+    "archetype": "Shell"
   },
   {
     "id": 610,
@@ -8551,7 +8551,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "C3G5GXC9",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 611,
@@ -8565,7 +8565,7 @@ const cardList = [
     "effect": "SPECIAL POWER UP: Strong in TOON terrain.",
     "fusionInfo": "",
     "password": "QF4MWKNV",
-    "extra": "Toon, Female"
+    "archetype": "Toon, Female"
   },
   {
     "id": 612,
@@ -8579,7 +8579,7 @@ const cardList = [
     "effect": "NATURE: The power of all your AQUA monsters increases 500 points while this card is face-up in the defense position.",
     "fusionInfo": "",
     "password": "0BEKEKCF",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 613,
@@ -8593,7 +8593,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all spellbound cards are freed and can move in the following turn.",
     "fusionInfo": "",
     "password": "2HUP4MCM",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 614,
@@ -8607,7 +8607,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "8KE5EDCT",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 615,
@@ -8621,7 +8621,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "QKWZUDA1",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 616,
@@ -8635,7 +8635,7 @@ const cardList = [
     "effect": "MOVEMENT: Able to move and attack without triggering an opponent's TRAP (LR).",
     "fusionInfo": "",
     "password": "W3J5C5L5",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 617,
@@ -8649,7 +8649,7 @@ const cardList = [
     "effect": "DESTRUCTION: When this card is destroyed in battle, all SPELL cards positioned in adjacent spaces are destroyed.",
     "fusionInfo": "",
     "password": "SKARJXUX",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 618,
@@ -8663,7 +8663,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "6TAMLBAZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 619,
@@ -8677,7 +8677,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Flame Swordsman + Pyro",
     "password": "WV0M47G3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 620,
@@ -8691,7 +8691,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Beast (1200+ ATK) + Pyro",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 621,
@@ -8705,7 +8705,7 @@ const cardList = [
     "effect": "FLIP: When this card survives 2 turns face-up in the defense position, all cards located in a 3x3 area are automatically destroyed. This only applies when the controlling player intentionally flips the card face-up.",
     "fusionInfo": "",
     "password": "2XL7QTGZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 622,
@@ -8719,7 +8719,7 @@ const cardList = [
     "effect": "NATURE: The power of all your PYRO monsters increases 500 points while this card is face-up in the defense position.",
     "fusionInfo": "",
     "password": "WK0BSPUK",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 623,
@@ -8733,7 +8733,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "CZ412XJK",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 624,
@@ -8747,7 +8747,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all your SPELL cards are flipped face-down.",
     "fusionInfo": "",
     "password": "Y1YZW1JK",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 625,
@@ -8761,7 +8761,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "SFCXSXY9",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 626,
@@ -8775,7 +8775,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "JKEHJ7SH",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 627,
@@ -8789,7 +8789,7 @@ const cardList = [
     "effect": "The turn count for spellbound cards is not conducted while the card is in the face-up, defense position.",
     "fusionInfo": "",
     "password": "69NPUF8D",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 628,
@@ -8803,7 +8803,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "0VAZYMWV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 629,
@@ -8817,7 +8817,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all cards located in MOUNTAIN terrain are destroyed.",
     "fusionInfo": "",
     "password": "8FUZW9LP",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 630,
@@ -8831,7 +8831,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "JFQPU1C3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 631,
@@ -8845,7 +8845,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "Q1LTWTSV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 632,
@@ -8859,7 +8859,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Rock + Dragon (1200+ ATK)",
     "password": "",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 633,
@@ -8873,7 +8873,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "078HNDQP",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 634,
@@ -8887,7 +8887,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "ABWMQTG9",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 635,
@@ -8901,7 +8901,7 @@ const cardList = [
     "effect": "MOVEMENT: Can enter labyrinth squares, and transforms the occupied space into NORMAL terrain.",
     "fusionInfo": "",
     "password": "Q9QV4BGX",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 636,
@@ -8915,7 +8915,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Rock + Warrior",
     "password": "JRYZGD0P",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 637,
@@ -8929,7 +8929,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Rock + Zombie",
     "password": "CF43QX6X",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 638,
@@ -8943,7 +8943,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "6R6VURYB",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 639,
@@ -8957,7 +8957,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, the power of this card increases by 300 points for every monster in the controlling player's graveyard.",
     "fusionInfo": "",
     "password": "QX2DGFCM",
-    "extra": "Shell"
+    "archetype": "Shell"
   },
   {
     "id": 640,
@@ -8971,7 +8971,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "0MS10HWM",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 641,
@@ -8985,7 +8985,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Rock + Female (LV 4+)",
     "password": "",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 642,
@@ -8999,7 +8999,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, your spellbound cards are freed and can move in the following turn.",
     "fusionInfo": "",
     "password": "SX6X65GR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 643,
@@ -9013,7 +9013,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "Y38MJMUF",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 644,
@@ -9027,7 +9027,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "QF03SZJF",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 645,
@@ -9041,7 +9041,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "AP6TLHSR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 646,
@@ -9055,7 +9055,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "WKQ3NXGB",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 647,
@@ -9069,7 +9069,7 @@ const cardList = [
     "effect": "DESTRUCTION: When this card is destroyed in battle, all adjacent spaces are transformed into CRUSH terrain.",
     "fusionInfo": "",
     "password": "WMWBYD8F",
-    "extra": "Horned"
+    "archetype": "Horned"
   },
   {
     "id": 648,
@@ -9083,7 +9083,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Plant + Fiend",
     "password": "CZNFJK0B",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 649,
@@ -9097,7 +9097,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, the power of all Mushroom Man #2 cards are increased by 500 points.",
     "fusionInfo": "",
     "password": "LB4P85JR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 650,
@@ -9111,7 +9111,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "U1EPEZGK",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 651,
@@ -9125,7 +9125,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "8TN9QDU3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 652,
@@ -9139,7 +9139,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all cards located in FOREST terrain are destroyed.",
     "fusionInfo": "",
     "password": "L7856DUT",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 653,
@@ -9153,7 +9153,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "LHUFUDJK",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 654,
@@ -9167,7 +9167,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, LP increases 500 points.",
     "fusionInfo": "",
     "password": "WPYRA3Q1",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 655,
@@ -9181,7 +9181,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, TRAP cards cannot be triggered.",
     "fusionInfo": "",
     "password": "EKJHQ109",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 656,
@@ -9195,7 +9195,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all Queen of Autumn Leaves cards are strengthened by 500 points.",
     "fusionInfo": "",
     "password": "2K29YME9",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 657,
@@ -9209,7 +9209,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "QDJRJFGR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 658,
@@ -9223,7 +9223,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "SHSVQ3JR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 659,
@@ -9237,7 +9237,7 @@ const cardList = [
     "effect": "FLIP: Control of opposing card is gained when this card is flipped face-up in battle.",
     "fusionInfo": "",
     "password": "2V01E3CX",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 660,
@@ -9251,7 +9251,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Plant + Warrior",
     "password": "C50V6RC9",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 661,
@@ -9265,7 +9265,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "L5SHC3SF",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 662,
@@ -9279,7 +9279,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "\"Fungi of the Musk\" + Fiend",
     "password": "8ZNBN5S9",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 663,
@@ -9293,7 +9293,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "U9CXW54P",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 664,
@@ -9307,7 +9307,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "L1Y1ABEH",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 665,
@@ -9321,7 +9321,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Plant + Reptile",
     "password": "C3UD67SR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 666,
@@ -9335,7 +9335,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "8H4H0ZCD",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 667,
@@ -9349,7 +9349,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "Plant + Female",
     "password": "AVY7AVY1",
-    "extra": "Female"
+    "archetype": "Female"
   },
   {
     "id": 668,
@@ -9363,7 +9363,7 @@ const cardList = [
     "effect": "ATTACK: Power increases by 2500 points in battles against FIEND monsters.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 669,
@@ -9377,7 +9377,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "LHU3GZ6K",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 670,
@@ -9391,7 +9391,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, the power of all your PLANT monsters increases by 500 points.",
     "fusionInfo": "",
     "password": "YF07QVEZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 671,
@@ -9405,7 +9405,7 @@ const cardList = [
     "effect": "",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 672,
@@ -9419,7 +9419,7 @@ const cardList = [
     "effect": "FLIP: When this parasite card is flipped face-up in battle, it takes control of the opposing card. When the controlled monster is destroyed in battle, this card is revived in the controlling player's Summoning Area, other than its current location. The nature effect and destruction features of the monster that's taken over are rendered ineffective.\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 673,
@@ -9433,7 +9433,7 @@ const cardList = [
     "effect": "NATURE: When this card enters a turn face-up and in the defense position, all MONSTER cards are removed from the respective Graveyards, and the number of these removed cards are multiplied by 200 points. The result is added to the power of this card.\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 674,
@@ -9447,7 +9447,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all your IMMORTAL cards are strengthened by 500 points.\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
     "fusionInfo": "",
     "password": "73153736",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 675,
@@ -9461,7 +9461,7 @@ const cardList = [
     "effect": "NATURE: Shapesnatch's ATK and DEF copies the enemy Leader's ATK for attacks and your own Leader's DEF when defending.\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 676,
@@ -9475,7 +9475,7 @@ const cardList = [
     "effect": "NATURE: When this card enters a turn face-up and in the defense position, all cards are drawn 1 space towards Carat Idol!\nDESTRUCTION: Transforms adjacent spaces to CRUSH terrain when this card is destroyed in battle!",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 677,
@@ -9489,7 +9489,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, a player gains control of all opposing MACHINE monsters for the turn in play.\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 678,
@@ -9503,7 +9503,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, the countdown speed for spellbound cards are doubled should a Turn Count be involved.\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 679,
@@ -9517,7 +9517,7 @@ const cardList = [
     "effect": "MOVEMENT: Each time Mucus Yolk moves, an opponent's LP is reduced by 50 points.\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 680,
@@ -9531,7 +9531,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, an additional point is added each turn during the recovery of the player's Summoning Power points.\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 681,
@@ -9545,7 +9545,7 @@ const cardList = [
     "effect": "FLIP: When this card is flipped face-up, all players must discard their current hand to their respective Graveyards.\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 682,
@@ -9559,7 +9559,7 @@ const cardList = [
     "effect": "NATURE: While this card is face-up in the defense position, the opposing leader's powers are rendered ineffective.\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 683,
@@ -9573,7 +9573,7 @@ const cardList = [
     "effect": "Permanently spellbinds all DRAGON monsters.",
     "fusionInfo": "",
     "password": "Q5YH09S5",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 684,
@@ -9587,7 +9587,7 @@ const cardList = [
     "effect": "Permanently spellbinds the monster with the highest ATK on the field.",
     "fusionInfo": "",
     "password": "EKQ18VJX",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 685,
@@ -9601,7 +9601,7 @@ const cardList = [
     "effect": "Select, revive, and control 1 MONSTER Card from either Graveyard.",
     "fusionInfo": "",
     "password": "Q5GDA5UB",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 686,
@@ -9615,7 +9615,7 @@ const cardList = [
     "effect": "Select, revive, and control 1 SPELL Card from an opponent's Graveyard.",
     "fusionInfo": "",
     "password": "UMWZLPWP",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 687,
@@ -9629,7 +9629,7 @@ const cardList = [
     "effect": "Select, revive, and control 1 Card from either Graveyard.",
     "fusionInfo": "",
     "password": "69YDQM85",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 688,
@@ -9643,7 +9643,7 @@ const cardList = [
     "effect": "Select, revive, and control 1 SPELL Card from either Graveyard.",
     "fusionInfo": "",
     "password": "JH4DC96Z",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 689,
@@ -9657,7 +9657,7 @@ const cardList = [
     "effect": "Transforms a surrounding 2-space area into FOREST terrain.",
     "fusionInfo": "",
     "password": "UVGMADN1",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 690,
@@ -9671,7 +9671,7 @@ const cardList = [
     "effect": "Transforms a surrounding 2-space area into WASTELAND terrain.",
     "fusionInfo": "",
     "password": "6B4Z61EX",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 691,
@@ -9685,7 +9685,7 @@ const cardList = [
     "effect": "Transforms a surrounding 2-space area into MOUNTAIN terrain.",
     "fusionInfo": "",
     "password": "8RGX0ZET",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 692,
@@ -9699,7 +9699,7 @@ const cardList = [
     "effect": "Transforms a surrounding 2-space area into MEADOW terrain.",
     "fusionInfo": "",
     "password": "AXWKSTJR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 693,
@@ -9713,7 +9713,7 @@ const cardList = [
     "effect": "Transforms a surrounding 2-space area into SEA terrain.",
     "fusionInfo": "",
     "password": "GTUXQBJ7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 694,
@@ -9727,7 +9727,7 @@ const cardList = [
     "effect": "Transforms a surrounding 2-space area into DARK terrain.",
     "fusionInfo": "",
     "password": "2FU7AFLF",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 695,
@@ -9741,7 +9741,7 @@ const cardList = [
     "effect": "Transforms a surrounding 2-space area into TOON terrain.",
     "fusionInfo": "",
     "password": "2R4XJRUH",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 696,
@@ -9755,7 +9755,7 @@ const cardList = [
     "effect": "Transforms a surrounding 2-space area into NORMAL terrain.",
     "fusionInfo": "",
     "password": "CXG78BNF",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 697,
@@ -9769,7 +9769,7 @@ const cardList = [
     "effect": "Transform the occupied space into LABYRINTH terrain.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 698,
@@ -9783,7 +9783,7 @@ const cardList = [
     "effect": "Randomly selects 1 LABYRINTH terrain space, transforms it to NORMAL, and transforms the space where this card was triggered into LABYRINTH terrain. This card is effective only if there is at least one space containing LABYRINTH terrain on the field.",
     "fusionInfo": "",
     "password": "0FL3W7YT",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 699,
@@ -9797,7 +9797,7 @@ const cardList = [
     "effect": "Destroys all monster and spell cards on the field.",
     "fusionInfo": "",
     "password": "UMJ10MQB",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 700,
@@ -9811,7 +9811,7 @@ const cardList = [
     "effect": "Destroys all monsters located in vertical and horizontal lines from the activated space.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 701,
@@ -9825,7 +9825,7 @@ const cardList = [
     "effect": "Destroys all spell cards on the field.",
     "fusionInfo": "",
     "password": "SD4X6F49",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 702,
@@ -9839,7 +9839,7 @@ const cardList = [
     "effect": "Destroys all spells located in vertical and horizontal lines from the activated space.",
     "fusionInfo": "",
     "password": "8HJHQPNP",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 703,
@@ -9853,7 +9853,7 @@ const cardList = [
     "effect": "200-pt LP recovery for controlling player.",
     "fusionInfo": "",
     "password": "E7WMSD6R",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 704,
@@ -9867,7 +9867,7 @@ const cardList = [
     "effect": "500-pt LP recovery for controlling player.",
     "fusionInfo": "",
     "password": "45LRCTS3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 705,
@@ -9881,7 +9881,7 @@ const cardList = [
     "effect": "1000-pt LP recovery for controlling player.",
     "fusionInfo": "",
     "password": "YDE34XLK",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 706,
@@ -9895,7 +9895,7 @@ const cardList = [
     "effect": "2000-pt LP recovery for controlling player.",
     "fusionInfo": "",
     "password": "87C3E1UP",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 707,
@@ -9909,7 +9909,7 @@ const cardList = [
     "effect": "If LP is 4000 or below, the number of points is increased to 4000.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 708,
@@ -9923,7 +9923,7 @@ const cardList = [
     "effect": "Recover controlling player's LP by 1500 points.",
     "fusionInfo": "",
     "password": "0M8F03QF",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 709,
@@ -9937,7 +9937,7 @@ const cardList = [
     "effect": "Inflicts 50 points of damage to opponent's LP.",
     "fusionInfo": "",
     "password": "GMJBLHWB",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 710,
@@ -9951,7 +9951,7 @@ const cardList = [
     "effect": "Inflicts 100 points of damage to opponent's LP.",
     "fusionInfo": "",
     "password": "65JKG9QR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 711,
@@ -9965,7 +9965,7 @@ const cardList = [
     "effect": "Inflicts 200 points of damage to opponent's LP.",
     "fusionInfo": "",
     "password": "SF49SBSX",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 712,
@@ -9979,7 +9979,7 @@ const cardList = [
     "effect": "Inflicts 500 points of damage to opponent's LP.",
     "fusionInfo": "",
     "password": "ADERG3U1",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 713,
@@ -9993,7 +9993,7 @@ const cardList = [
     "effect": "Inflicts 1000 points of damage to opponent's LP.",
     "fusionInfo": "",
     "password": "EH0DNDAR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 714,
@@ -10007,7 +10007,7 @@ const cardList = [
     "effect": "Opponent's LP suffers damage equivalent to 300 points multiplied by the number of enemies on the field.",
     "fusionInfo": "",
     "password": "SKATQ70F",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 715,
@@ -10021,7 +10021,7 @@ const cardList = [
     "effect": "Flips all enemy cards on the Field face-up and spellbinds them for 3 turns.",
     "fusionInfo": "",
     "password": "Q7AV6XQ9",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 716,
@@ -10035,7 +10035,7 @@ const cardList = [
     "effect": "Flips all enemy cards on the Field face-up.",
     "fusionInfo": "",
     "password": "2TS3JT89",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 717,
@@ -10049,7 +10049,7 @@ const cardList = [
     "effect": "Flips all cards on the Field face-down.",
     "fusionInfo": "",
     "password": "L5N1SV0K",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 718,
@@ -10063,7 +10063,7 @@ const cardList = [
     "effect": "Displays opponent's hand face-up for 5 seconds.",
     "fusionInfo": "",
     "password": "4XG9URS1",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 719,
@@ -10077,7 +10077,7 @@ const cardList = [
     "effect": "Regardless of facing, Type icons of all opponent's card are displayed on the Field for 5 seconds.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 720,
@@ -10091,7 +10091,7 @@ const cardList = [
     "effect": "Destroys all WARRIOR monsters on the Field.",
     "fusionInfo": "",
     "password": "JX05SR87",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 721,
@@ -10105,7 +10105,7 @@ const cardList = [
     "effect": "Destroys all ZOMBIE monsters on the Field.",
     "fusionInfo": "",
     "password": "AMUKY9E7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 722,
@@ -10119,7 +10119,7 @@ const cardList = [
     "effect": "Destroys all MACHINE monsters on the Field.",
     "fusionInfo": "",
     "password": "WB45LKJ3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 723,
@@ -10133,7 +10133,7 @@ const cardList = [
     "effect": "Destroys all INSECT monsters on the Field.",
     "fusionInfo": "",
     "password": "L7G3SMUK",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 724,
@@ -10147,7 +10147,7 @@ const cardList = [
     "effect": "Destroys all ROCK monsters on the Field.",
     "fusionInfo": "",
     "password": "Q7LMNKJ9",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 725,
@@ -10161,7 +10161,7 @@ const cardList = [
     "effect": "Destroys all FISH monsters on the Field.",
     "fusionInfo": "",
     "password": "SFE941AH",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 726,
@@ -10175,7 +10175,7 @@ const cardList = [
     "effect": "Destroys the monster with the lowest ATK on the Field.",
     "fusionInfo": "",
     "password": "NXWMEZQD",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 727,
@@ -10189,7 +10189,7 @@ const cardList = [
     "effect": "Destroys all SPELLCASTER monsters on the Field.",
     "fusionInfo": "",
     "password": "2ZSBG32D",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 728,
@@ -10203,7 +10203,7 @@ const cardList = [
     "effect": "Destroys all FIEND monsters on the Field.",
     "fusionInfo": "",
     "password": "2DA78PJR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 729,
@@ -10217,7 +10217,7 @@ const cardList = [
     "effect": "Destroys all WINGED-BEAST monsters on the Field.",
     "fusionInfo": "",
     "password": "JKWP0DLV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 730,
@@ -10231,7 +10231,7 @@ const cardList = [
     "effect": "Destroys all DINOSAUR monsters on the Field.",
     "fusionInfo": "",
     "password": "8FEP0TW9",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 731,
@@ -10245,7 +10245,7 @@ const cardList = [
     "effect": "Randomly selects 10 spaces on the Field, and destroys any card in-play on that space.",
     "fusionInfo": "",
     "password": "Q34VE5E3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 732,
@@ -10259,7 +10259,7 @@ const cardList = [
     "effect": "Select one of the opponent's cards on the Field and control it for 1 turn.",
     "fusionInfo": "",
     "password": "SBYDQM8B",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 733,
@@ -10273,7 +10273,7 @@ const cardList = [
     "effect": "Take control of opponent's highest ATK monster for 1 turn.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 734,
@@ -10287,7 +10287,7 @@ const cardList = [
     "effect": "Cancels all spellbind and power increase/decrease effects. In addition, destroys all face-up TRAP cards. Does not cancel any bonus effects involving terrain and leader abilities.",
     "fusionInfo": "",
     "password": "QXEHGZJR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 735,
@@ -10301,7 +10301,7 @@ const cardList = [
     "effect": "Strengthens all FAIRY monsters on the Field by 600 pts.",
     "fusionInfo": "",
     "password": "QFSMGMUF",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 736,
@@ -10315,7 +10315,7 @@ const cardList = [
     "effect": "Swaps the respective ATK and DEF values of each monster on the Field.",
     "fusionInfo": "",
     "password": "0VC3U743",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 737,
@@ -10329,7 +10329,7 @@ const cardList = [
     "effect": "Boosts the DEF of all your own monsters on the Field by 900 points.",
     "fusionInfo": "",
     "password": "YH2MEXA5",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 738,
@@ -10343,7 +10343,7 @@ const cardList = [
     "effect": "Boosts the ATK/DEF factors of all MACHINE monsters on the Field by 600 points.",
     "fusionInfo": "",
     "password": "LHW30HCF",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 739,
@@ -10357,7 +10357,7 @@ const cardList = [
     "effect": "Boosts the ATK/DEF factors of all PLANT monsters on the Field by 600 points.",
     "fusionInfo": "",
     "password": "SBSBNPN3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 740,
@@ -10371,7 +10371,7 @@ const cardList = [
     "effect": "Boosts the ATK/DEF factors of all WINGED-BEAST monsters on the Field by 600 points.",
     "fusionInfo": "",
     "password": "NHYBQVAR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 741,
@@ -10385,7 +10385,7 @@ const cardList = [
     "effect": "Boosts the ATK/DEF factors of all REPTILE monsters on the Field by 600 points.",
     "fusionInfo": "",
     "password": "G7CTYPEM",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 742,
@@ -10399,7 +10399,7 @@ const cardList = [
     "effect": "Boosts the ATK/DEF factors of all WATER monsters on the Field by 600 points.",
     "fusionInfo": "",
     "password": "NKC5WXWX",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 743,
@@ -10413,7 +10413,7 @@ const cardList = [
     "effect": "All of the enemy cards on the Field in defense position are shifted to attack position.",
     "fusionInfo": "",
     "password": "J9EPABET",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 744,
@@ -10427,7 +10427,7 @@ const cardList = [
     "effect": "All your monsters on the Field are returned to the deck.",
     "fusionInfo": "",
     "password": "LZ4B2HAV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 745,
@@ -10441,7 +10441,7 @@ const cardList = [
     "effect": "All your monsters on the field are transformed to ZOMBIE monsters.",
     "fusionInfo": "",
     "password": "0RWZ6FN7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 746,
@@ -10455,7 +10455,7 @@ const cardList = [
     "effect": "Your monster with the highest ATK on the Field is transported to the space where this card is activated.",
     "fusionInfo": "",
     "password": "CXNPSVWT",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 747,
@@ -10469,7 +10469,7 @@ const cardList = [
     "effect": "If a card has already been played from your hand, you can play another card.",
     "fusionInfo": "",
     "password": "WRCV43JZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 748,
@@ -10483,7 +10483,7 @@ const cardList = [
     "effect": "Absorbs all of your opponent's Summoning Power.",
     "fusionInfo": "",
     "password": "E7LKQ7UX",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 749,
@@ -10497,7 +10497,7 @@ const cardList = [
     "effect": "Transports your Leader to the space where this card is activated.",
     "fusionInfo": "",
     "password": "W1A7W101",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 750,
@@ -10511,7 +10511,7 @@ const cardList = [
     "effect": "Randomly shifts the position of cards and changes the terrain on the Field. In addition, all LABYRINTH squares are changed to NORMAL.",
     "fusionInfo": "",
     "password": "Y34PN1SV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 751,
@@ -10525,7 +10525,7 @@ const cardList = [
     "effect": "All cards in play on the Field with the exception of the Leaders are transported to contrasting spaces diagonal to their current positions.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 752,
@@ -10539,7 +10539,7 @@ const cardList = [
     "effect": "Increases the power of WARRIOR monsters of LIGHT and EARTH by 500 points.",
     "fusionInfo": "",
     "password": "QTWKU389",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 753,
@@ -10553,7 +10553,7 @@ const cardList = [
     "effect": "Increases the power of WARRIOR monsters of DARK, FIRE, WATER and WIND by 500 points.",
     "fusionInfo": "",
     "password": "078MEDN1",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 754,
@@ -10567,7 +10567,7 @@ const cardList = [
     "effect": "Increases the power of DARK monsters by 300 points.",
     "fusionInfo": "",
     "password": "21E547U1",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 755,
@@ -10581,7 +10581,7 @@ const cardList = [
     "effect": "Increases the power of BEAST-WARRIOR and FIEND monsters by 500 points.",
     "fusionInfo": "",
     "password": "A1EMLKGH",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 756,
@@ -10595,7 +10595,7 @@ const cardList = [
     "effect": "Increases the power of INSECT monsters by 500 points.",
     "fusionInfo": "",
     "password": "STSTYBAD",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 757,
@@ -10609,7 +10609,7 @@ const cardList = [
     "effect": "Increases the power of INSECT monsters by 500 points.",
     "fusionInfo": "",
     "password": "NVYTG7YV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 758,
@@ -10623,7 +10623,7 @@ const cardList = [
     "effect": "Increases the power of any monster with \"Elf\" in its name by 700 points.",
     "fusionInfo": "",
     "password": "E5G3NRAD",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 759,
@@ -10637,7 +10637,7 @@ const cardList = [
     "effect": "Increases the power of BEAST monsters by 500 points.",
     "fusionInfo": "",
     "password": "09QXWHG3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 760,
@@ -10651,7 +10651,7 @@ const cardList = [
     "effect": "Increases the power of any monster with a shell by 500 points.",
     "fusionInfo": "",
     "password": "CZLKYXQX",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 761,
@@ -10665,7 +10665,7 @@ const cardList = [
     "effect": "Increases the power of PLANT monsters by 500 points.",
     "fusionInfo": "",
     "password": "NZWMCKEZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 762,
@@ -10679,7 +10679,7 @@ const cardList = [
     "effect": "Increases the power of SPELLCASTER monsters of DARK by 500 points.",
     "fusionInfo": "",
     "password": "C1STS9UK",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 763,
@@ -10693,7 +10693,7 @@ const cardList = [
     "effect": "Increases the power of FAIRY monsters by 500 points.",
     "fusionInfo": "",
     "password": "CK4Z6Z83",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 764,
@@ -10707,7 +10707,7 @@ const cardList = [
     "effect": "Increases the power of horned monsters other than DARK by 500 points.",
     "fusionInfo": "",
     "password": "8HGMSP2B",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 765,
@@ -10721,7 +10721,7 @@ const cardList = [
     "effect": "Increases the power of horned monsters of DARK by 500 points.",
     "fusionInfo": "",
     "password": "S14FGKQ1",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 766,
@@ -10735,7 +10735,7 @@ const cardList = [
     "effect": "Increases the power of DRAGON and SEA SERPENT monsters by 500 points.",
     "fusionInfo": "",
     "password": "SR29W18X",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 767,
@@ -10749,7 +10749,7 @@ const cardList = [
     "effect": "Increases the power of female monsters by 500 points.",
     "fusionInfo": "",
     "password": "CV696X0K",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 768,
@@ -10763,7 +10763,7 @@ const cardList = [
     "effect": "Increases the power of female monsters by 500 points.",
     "fusionInfo": "",
     "password": "WTUHJ941",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 769,
@@ -10777,7 +10777,7 @@ const cardList = [
     "effect": "Increases the power of BEAST and BEAST-WARRIOR monsters by 500 points.",
     "fusionInfo": "",
     "password": "S7G5LXE1",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 770,
@@ -10791,7 +10791,7 @@ const cardList = [
     "effect": "Increases the power of FIEND female monsters by 500 points.",
     "fusionInfo": "",
     "password": "0H6TS38D",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 771,
@@ -10805,7 +10805,7 @@ const cardList = [
     "effect": "Increases the power of SPELLCASTER monsters other than DARK by 500 points.",
     "fusionInfo": "",
     "password": "S1SBY1QZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 772,
@@ -10819,7 +10819,7 @@ const cardList = [
     "effect": "Increases the power of ZOMBIE monsters by 500 points.",
     "fusionInfo": "",
     "password": "SPUHNMU9",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 773,
@@ -10833,7 +10833,7 @@ const cardList = [
     "effect": "Increases the power of EARTH monsters by 300 points.",
     "fusionInfo": "",
     "password": "WBAMUM2M",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 774,
@@ -10847,7 +10847,7 @@ const cardList = [
     "effect": "Increases the power of MACHINE monsters by 500 points.",
     "fusionInfo": "",
     "password": "4H6P8BGT",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 775,
@@ -10861,7 +10861,7 @@ const cardList = [
     "effect": "Increases the power of DINOSAUR and REPTILE monsters by 500 points. ",
     "fusionInfo": "",
     "password": "2X8X4D65",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 776,
@@ -10875,7 +10875,7 @@ const cardList = [
     "effect": "Increases the power of Winged-Beast monsters by 500 points.",
     "fusionInfo": "",
     "password": "AF85EKJ7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 777,
@@ -10889,7 +10889,7 @@ const cardList = [
     "effect": "Increases the power of WATER monsters by 500 points.",
     "fusionInfo": "",
     "password": "270RWHAK",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 778,
@@ -10903,7 +10903,7 @@ const cardList = [
     "effect": "Increases the power of WARRIOR and BEAST-WARRIOR monsters by 500 points.",
     "fusionInfo": "",
     "password": "EM8ZA50M",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 779,
@@ -10917,7 +10917,7 @@ const cardList = [
     "effect": "Increases the power of FIRE monsters by 500 points.",
     "fusionInfo": "",
     "password": "E9S10B6B",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 780,
@@ -10931,7 +10931,7 @@ const cardList = [
     "effect": "Increases the power of any monster by 300 points.",
     "fusionInfo": "",
     "password": "ETU965GM",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 781,
@@ -10945,7 +10945,7 @@ const cardList = [
     "effect": "Increases the power of LIGHT monsters by 500 points.",
     "fusionInfo": "",
     "password": "03JXLZY9",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 782,
@@ -10959,7 +10959,7 @@ const cardList = [
     "effect": "Increases the power of FIEND monsters by 500 points.",
     "fusionInfo": "",
     "password": "EP8ZQVS7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 783,
@@ -10973,7 +10973,7 @@ const cardList = [
     "effect": "Increases the power of FISH and SEA SERPENT monsters by 500 points.",
     "fusionInfo": "",
     "password": "SBLZ6KCB",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 784,
@@ -10987,7 +10987,7 @@ const cardList = [
     "effect": "Increases the power of THUNDER, AQUA, PYRO and ROCK monsters by 500 points.",
     "fusionInfo": "",
     "password": "GFEXG3LX",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 785,
@@ -11001,7 +11001,7 @@ const cardList = [
     "effect": "Increases the power of WIND monsters by 500 points.",
     "fusionInfo": "",
     "password": "CX4KL9ST",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 786,
@@ -11015,7 +11015,7 @@ const cardList = [
     "effect": "Increases the power of PYRO monsters by 500 points.",
     "fusionInfo": "",
     "password": "4ZE9E9E1",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 787,
@@ -11029,7 +11029,7 @@ const cardList = [
     "effect": "Increases the power of Slot Machine by 700 points.",
     "fusionInfo": "",
     "password": "SHY143J5",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 788,
@@ -11043,7 +11043,7 @@ const cardList = [
     "effect": "Increases the power of DRAGON monsters of DARK by 700 points.",
     "fusionInfo": "",
     "password": "CZL5LMQ5",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 789,
@@ -11057,7 +11057,7 @@ const cardList = [
     "effect": "Reduces opponent's LP by half and adds the reduced amount to the powers of all monsters.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 790,
@@ -11071,7 +11071,7 @@ const cardList = [
     "effect": "Grants Kuriboh the power to resurrect on any Summoning Area other than the one it's defeated in. Also, when the monster flips face-up, another Kuriboh is generated face-down in your own Summoning Area.",
     "fusionInfo": "",
     "password": "0P056187",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 791,
@@ -11085,7 +11085,7 @@ const cardList = [
     "effect": "WARRIOR monsters automatically destroy DRAGON monsters in battle. The opposing enemy's effects are rendered ineffective.",
     "fusionInfo": "",
     "password": "JDCREZGX",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 792,
@@ -11099,7 +11099,7 @@ const cardList = [
     "effect": "FAIRY monsters automatically destroy FIEND monsters in battle. The opposing enemy's effects are rendered ineffective.",
     "fusionInfo": "",
     "password": "W7SK8TL9",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 793,
@@ -11113,7 +11113,7 @@ const cardList = [
     "effect": "PLANT monsters automatically destroy SPELLCASTER monsters in battle. The opposing enemy's effects are rendered ineffective.",
     "fusionInfo": "",
     "password": "UMC5Y9GV",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 794,
@@ -11127,7 +11127,7 @@ const cardList = [
     "effect": "Strengthens all monsters with ATKs of 1000 or below. When defeated in battle, the adjacent spaces are transformed into CRUSH terrain. The opposing enemy's destruction effects are rendered ineffective.",
     "fusionInfo": "",
     "password": "SRA7L5YR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 795,
@@ -11141,7 +11141,7 @@ const cardList = [
     "effect": "Renders all monsters other than MACHINE eternally spellbound.",
     "fusionInfo": "",
     "password": "ET65Q52V",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 796,
@@ -11155,7 +11155,7 @@ const cardList = [
     "effect": "Cancels all spellbind and power increase/decrease effects. Does not cancel any bonus effects involving terrain and leader abilities.",
     "fusionInfo": "",
     "password": "N54ZQ9WT",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 797,
@@ -11169,7 +11169,7 @@ const cardList = [
     "effect": "Changes Harpie Lady to Harpie Lady Sisters.",
     "fusionInfo": "",
     "password": "EMN7W9N5",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 798,
@@ -11183,7 +11183,7 @@ const cardList = [
     "effect": "Changes Larvae Moth, Petit Moth, Kattapillar, Needle Worm and Acid Crawler to Larva of Moth.",
     "fusionInfo": "",
     "password": "URWTWDEH",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 799,
@@ -11197,7 +11197,7 @@ const cardList = [
     "effect": "Transforms Red-Eyes B. Dragon and Zoa to metal monsters.",
     "fusionInfo": "",
     "password": "0RJBAT4V",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 800,
@@ -11211,7 +11211,7 @@ const cardList = [
     "effect": "Randomly transforms any monster with \"Egg\" in its name to another monster.",
     "fusionInfo": "",
     "password": "69WHWZ67",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 801,
@@ -11225,7 +11225,7 @@ const cardList = [
     "effect": "Disposable trap that spellbinds activated enemy card for 3 turns and reduces its strength by 600 points.",
     "fusionInfo": "",
     "password": "U12F2PWR",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 802,
@@ -11239,7 +11239,7 @@ const cardList = [
     "effect": "Disposable trap that spellbinds activated enemy card for 3 turns, and reduces its strength by 1000 points.",
     "fusionInfo": "",
     "password": "4HC94VN9",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 803,
@@ -11253,7 +11253,7 @@ const cardList = [
     "effect": "Disposable trap that spellbinds activated enemy card for 1 turn, and reduces it strength by 800 points.",
     "fusionInfo": "",
     "password": "CDA3JZWF",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 804,
@@ -11267,7 +11267,7 @@ const cardList = [
     "effect": "Disposable trap that spellbinds activated enemy card for 1 turn, and reduces it strength by 600 points.",
     "fusionInfo": "",
     "password": "872ZSFGB",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 805,
@@ -11281,7 +11281,7 @@ const cardList = [
     "effect": "Disposable trap that spellbinds activated enemy card for 3 turns.",
     "fusionInfo": "",
     "password": "CHJTNBQ3",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 806,
@@ -11295,7 +11295,7 @@ const cardList = [
     "effect": "Disposable trap that eternally spellbinds activated enemy card, and reduces its strength by 1500 points.",
     "fusionInfo": "",
     "password": "0HNFG9WX",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 807,
@@ -11309,7 +11309,7 @@ const cardList = [
     "effect": "Disposable trap that triggers against a monster with ATK of 1000 or below, and destroys it.",
     "fusionInfo": "",
     "password": "05QHNT09",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 808,
@@ -11323,7 +11323,7 @@ const cardList = [
     "effect": "Disposable trap that triggers against a monster with ATK of 1500 or below, and destroys it.",
     "fusionInfo": "",
     "password": "LBYHY1EM",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 809,
@@ -11337,7 +11337,7 @@ const cardList = [
     "effect": "Disposable trap that triggers against a monster with ATK of 2000 or below, and destroys it.",
     "fusionInfo": "",
     "password": "JPJZE34T",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 810,
@@ -11351,7 +11351,7 @@ const cardList = [
     "effect": "Disposable trap that triggers against a monster with ATK of 3000 or below, and destroys it.",
     "fusionInfo": "",
     "password": "L7YZYMGZ",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 811,
@@ -11365,7 +11365,7 @@ const cardList = [
     "effect": "Disposable trap that triggers against a monster with ATK of 4000 or below, and destroys it.",
     "fusionInfo": "",
     "password": "63QXGPJB",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 812,
@@ -11379,7 +11379,7 @@ const cardList = [
     "effect": "Disposable trap that triggers against any enemy card and destroys every card located within a 3x3 space area.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 813,
@@ -11393,7 +11393,7 @@ const cardList = [
     "effect": "Disposable trap that triggers against an opponent's spell and destroys it.",
     "fusionInfo": "",
     "password": "L3AF0F0B",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 814,
@@ -11407,7 +11407,7 @@ const cardList = [
     "effect": "Permanent trap that triggers against an opponent's direct LP-attacking Riryoku and reverses the inflicted damage.",
     "fusionInfo": "",
     "password": "92886423",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 815,
@@ -11421,7 +11421,7 @@ const cardList = [
     "effect": "Permanent trap that triggers against LP recovery and reduces an opponent's LP by the same amount.",
     "fusionInfo": "",
     "password": "E94X6MQB",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 816,
@@ -11435,7 +11435,7 @@ const cardList = [
     "effect": "Permanent trap that triggers against power-ups involving increases in ATK and DEF, reversing the positive effect to a negative amount.",
     "fusionInfo": "",
     "password": "GM8RU1QF",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 817,
@@ -11449,7 +11449,7 @@ const cardList = [
     "effect": "Disposable trap that triggers when an enemy card completes its move in the attack position. Cancels the card's actions and ends further movement.",
     "fusionInfo": "",
     "password": "SHNXWP69",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 818,
@@ -11463,7 +11463,7 @@ const cardList = [
     "effect": "Permanent trap that triggers when an enemy card completes its move in the defense position. Automatically changes the card to offense position.",
     "fusionInfo": "",
     "password": "QXS9WH8V",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 819,
@@ -11477,7 +11477,7 @@ const cardList = [
     "effect": "Permanent trap that triggers when an enemy card completes its move in the defense position. Automatically cancels the enemy card's move and eternally spellbinds it.",
     "fusionInfo": "",
     "password": "WDG3A7E1",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 820,
@@ -11491,7 +11491,7 @@ const cardList = [
     "effect": "Disposable trap that triggers when Harpie's Feather Duster is activated, and nullifies the card's effect.",
     "fusionInfo": "",
     "password": "WHQFGZ6B",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 821,
@@ -11505,7 +11505,7 @@ const cardList = [
     "effect": "Permanent trap that triggers when Raigeki is activated, and nullifies the card's effect.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 822,
@@ -11519,7 +11519,7 @@ const cardList = [
     "effect": "Permanent trap that triggers when a card is resurrected from the Graveyard, and cancels the card's effect.",
     "fusionInfo": "",
     "password": "UTWKW5GX",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 823,
@@ -11533,7 +11533,7 @@ const cardList = [
     "effect": "Disposable trap that triggers when an opponent's MAGIC or RITUAL Card is activated, and cancels the cards's effect.",
     "fusionInfo": "",
     "password": "AM4KQBQM",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 824,
@@ -11547,7 +11547,7 @@ const cardList = [
     "effect": "Permanent trap that triggers when a Dark Hole is activated. Protects all your cards on the Field from destruction.",
     "fusionInfo": "",
     "password": "LVGZAMUT",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 825,
@@ -11561,7 +11561,7 @@ const cardList = [
     "effect": "Permanent trap that triggers against any activated TRAP card and nullifies the card.",
     "fusionInfo": "",
     "password": "8TETQHE1",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 826,
@@ -11575,7 +11575,7 @@ const cardList = [
     "effect": "Permanent trap that triggers against any activated RITUAL card and nullifies the effect.",
     "fusionInfo": "",
     "password": "C3EZ47NB",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 827,
@@ -11589,7 +11589,7 @@ const cardList = [
     "effect": "Disposable trap that triggers when an enemy initiates an attack against your Leader or other cards on the field. Destroys every one of your opponent's attack-positioned cards on the field.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 828,
@@ -11603,7 +11603,7 @@ const cardList = [
     "effect": "Disposable trap that triggers when an enemy initiates an attack against your Leader or other cards on the field and cancels the attack.",
     "fusionInfo": "",
     "password": "6TAZ6P4R",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 829,
@@ -11617,7 +11617,7 @@ const cardList = [
     "effect": "Permanent trap that triggers when an enemy initiates an attack against your Leader or other cards on the Field and reduces the ATK of the enemy by half.",
     "fusionInfo": "",
     "password": "53297534",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 830,
@@ -11631,7 +11631,7 @@ const cardList = [
     "effect": "Sacrifice 3 monsters with DEF of 2000 or higher to summon Millennium Shield.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 831,
@@ -11645,7 +11645,7 @@ const cardList = [
     "effect": "Sacrifice 3 monsters respectively of BEAST-WARRIOR, DRAGON and PYRO to summon Yamadron.",
     "fusionInfo": "",
     "password": "2MQBQT2M",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 832,
@@ -11659,7 +11659,7 @@ const cardList = [
     "effect": "Sacrifice Kazejin, Suijin and Sanga of the Thunder to summon Gate Guardian.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 833,
@@ -11673,7 +11673,7 @@ const cardList = [
     "effect": "Sacrifice 2 monsters with ATKs of 1500 or lower with Gaia The Fierce Knight to summon Black Luster Soldier.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 834,
@@ -11687,7 +11687,7 @@ const cardList = [
     "effect": "Sacrifice 2 FIEND monsters with King of Yamimakai to summon Zera The Mant",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 835,
@@ -11701,7 +11701,7 @@ const cardList = [
     "effect": "Sacrifice 2 BEAST monsters with Leogun to summon Super War-Lion.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 836,
@@ -11715,7 +11715,7 @@ const cardList = [
     "effect": "Sacrifice 1 FIEND monster with Wicked Mirror and Fiend Reflection #1 to summon Fiend's Mirror.",
     "fusionInfo": "",
     "password": "0MJ1Q3WF",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 837,
@@ -11729,7 +11729,7 @@ const cardList = [
     "effect": "Sacrifice 3 Blue-Eyes White Dragons to summon Blue-Eyes Ultimate Dragon.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 838,
@@ -11743,7 +11743,7 @@ const cardList = [
     "effect": "Sacrifice 1 WINGED-BEAST monster and 1 WARRIOR monster with Water Omotics to summon Performance of Sword.",
     "fusionInfo": "",
     "password": "YM6ZQTJ9",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 839,
@@ -11757,7 +11757,7 @@ const cardList = [
     "effect": "Sacrifice Battle Steer, Bio Plant and Griggle to summon Hungry Burger.",
     "fusionInfo": "",
     "password": "098RSB05",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 840,
@@ -11771,7 +11771,7 @@ const cardList = [
     "effect": "Sacrifice 2 BEAST-WARRIOR monsters and Millennium Golem to summon Sengenjin.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 841,
@@ -11785,7 +11785,7 @@ const cardList = [
     "effect": "Sacrifice 2 WARRIOR monsters and Mystical Elf to summon Skull Guardian.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 842,
@@ -11799,7 +11799,7 @@ const cardList = [
     "effect": "Sacrifice Curse of Dragon, Feral Imp and Koumori Dragon to summon Tri-Horned Dragon.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 843,
@@ -11813,7 +11813,7 @@ const cardList = [
     "effect": "Sacrifice 1 WARRIOR monster, 1 WINGED-BEAST monster, and Darkfire Dragon to summon Serpent Night Dragon.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 844,
@@ -11827,7 +11827,7 @@ const cardList = [
     "effect": "Sacrifice 2 AQUA monsters and 30,000-Year White Turtle to summon Crab Turtle.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 845,
@@ -11841,7 +11841,7 @@ const cardList = [
     "effect": "Sacrifice 2 SPELLCASTER monsters and Mask of Darkness to summon Mask of Shine & Dark.",
     "fusionInfo": "",
     "password": "2K8B2HU7",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 846,
@@ -11855,7 +11855,7 @@ const cardList = [
     "effect": "Sacrifice 2 monsters with ATKs of 1000 or less and Versago the Destroyer to summon Chakra.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 847,
@@ -11869,7 +11869,7 @@ const cardList = [
     "effect": "Sacrifice 2 MACHINE monsters and Mysterious Puppeteer to summon Psycho-Puppet.",
     "fusionInfo": "",
     "password": "AZ6P2KCX",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 848,
@@ -11883,7 +11883,7 @@ const cardList = [
     "effect": "Sacrifice 2 INSECT monsters and Hercules Beetle to summon Javelin Beetle.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 849,
@@ -11897,7 +11897,7 @@ const cardList = [
     "effect": "Sacrifice 2 WARRIOR monsters and Swordstalker to summon Garma Sword.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 850,
@@ -11911,7 +11911,7 @@ const cardList = [
     "effect": "Sacrifice Queen of Autumn Leaves, Princess of Tsurugi and Dark Elf to summon Cosmo Queen.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 851,
@@ -11925,7 +11925,7 @@ const cardList = [
     "effect": "Sacrifice 1 ZOMBIE monster, 1 MACHINE monster and 1 INSECT monster to summon Dokurorider.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 852,
@@ -11939,7 +11939,7 @@ const cardList = [
     "effect": "Sacrifice 2 FISH monsters and Mech Bass to summon Fortress Whale.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   },
   {
     "id": 853,
@@ -11953,7 +11953,7 @@ const cardList = [
     "effect": "Sacrifice 2 monsters with ATKs of 1500 or less and Dark Magician to summon Magician of Black Chaos.",
     "fusionInfo": "",
     "password": "",
-    "extra": ""
+    "archetype": ""
   }
 ]
 
