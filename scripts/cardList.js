@@ -1,4 +1,4 @@
-var cardList = [
+const cardList = [
   {
     "id": 0,
     "name": "Blue-Eyes White Dragon",
@@ -11957,7 +11957,7 @@ var cardList = [
   }
 ]
 
-var cardNamelist = [
+const cardNamelist = [
   "blue-eyes white dragon",
   "seiyaryu",
   "blue-eyes ultimate dragon",
