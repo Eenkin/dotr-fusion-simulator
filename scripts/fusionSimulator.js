@@ -85,7 +85,7 @@ function fuseBase36(){
    // console.log(hashResult);
 
    window.location.hash = hashResult;
-   location.reload(true);
+   location.reload();
 }
 
 function fuseCards() {
