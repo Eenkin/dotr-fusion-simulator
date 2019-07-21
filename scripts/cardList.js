@@ -8306,7 +8306,7 @@ var cardInfo = [
     "atk": 3000,
     "def": 2300,
     "effect": "",
-    "fusionInfo": "\"Metalmorph\" + \"Zoa\",
+    "fusionInfo": "\"Metalmorph\" + \"Zoa\"",
     "password": "",
     "extra": "Horned"
   },
