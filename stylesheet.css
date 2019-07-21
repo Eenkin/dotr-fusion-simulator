@@ -8,7 +8,6 @@ body {
    margin: 5px auto;
 }
 
-
 header, h2 {
    text-align: center;
 }
@@ -31,7 +30,6 @@ a:hover {
 a:visited {
    color: #4680db;
 }
-
 
 * {
    box-sizing: border-box;
@@ -68,14 +66,6 @@ input[type=text] {
 }
 
 input[type=button], .fuseSimBtn {
-   background-color: #3457ac;
-   color: #fff;
-   cursor: pointer;
-   padding: 10px;
-   display: inline-block;
-   font: 16px Verdana;
-   user-select: none;
-   border: none;
    /* supported by Chrome and Opera */
    -webkit-user-select: none;
    /* Safari */
@@ -85,9 +75,18 @@ input[type=button], .fuseSimBtn {
    /* Firefox */
    -ms-user-select: none;
    /* Internet Explorer/Edge */
+   -webkit-appearance: none;
+   background-color: #3457ac;
+   color: #fff;
+   cursor: pointer;
+   padding: 10px;
+   display: inline-block;
+   font: 16px Verdana;
+   user-select: none;
+   border: none;
 }
 
-#fuseCardsBtn{
+#fuseCardsBtn {
    background-color: DodgerBlue;
 }
 
@@ -107,14 +106,14 @@ input[type=button], .fuseSimBtn {
 }
 
 .fusionDetail {
-    display: block;
-    font-size: 13px;
-    font-style: oblique;
+   display: block;
+   font-size: 13px;
+   font-style: oblique;
 }
 
 .resultStats {
-    display: block;
-    font-size: 15px;
+   display: block;
+   font-size: 15px;
 }
 
 #errorSection {
