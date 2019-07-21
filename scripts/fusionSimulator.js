@@ -4,16 +4,16 @@ var abcList = [];
 var shareLink = '';
 
 function btnMouseDown(id){
-   document.getElementById(id).style.backgroundColor = 'red';
+   // document.getElementById(id).style.backgroundColor = 'red';
 }
 
 function btnMouseUp(id){
 
-   if (id == 'fuseCardsBtn') {
-      document.getElementById(id).style.backgroundColor = 'DodgerBlue';
-   } else {
-      document.getElementById(id).style.backgroundColor = '';
-   }
+   // if (id == 'fuseCardsBtn') {
+   //    document.getElementById(id).style.backgroundColor = 'DodgerBlue';
+   // } else {
+   //    document.getElementById(id).style.backgroundColor = '';
+   // }
 
 }
 
