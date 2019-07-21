@@ -4,60 +4,18 @@ body {
    padding: 10px 0;
 }
 
-nav {
-   text-align: center;
-   //width: 300px;
-   margin: 10px auto 0 auto;
-   color: #4680db;
-   font: 15px Arial;
-   font-weight: bold;
-}
-
-input[type=checkbox] {
-   position: relative;
-   top: 2px;
-}
-
 .cardInput, .fuseSimBtn {
    margin: 5px auto;
 }
 
-nav>a {
-   cursor: pointer;
-}
 
 header, h2 {
    text-align: center;
 }
 
-h2 {
+h2, h1 {
    font-family: Cambria;
    margin: 0 auto;
-}
-
-#cardDetails {
-   width: 1000px;
-   margin: 5px auto 10px auto;
-   font-size: 13px;
-   text-align: center;
-}
-
-#filterSection {
-   font-size: 13px;
-}
-
-#keyLegend {
-   display: flex;
-   font-size: 15px;
-   width: 500px;
-   margin: 10px auto 10px auto;
-}
-
-#pageHeading {
-   margin: 0 auto;
-   font-family: Cambria;
-   font-variant: small-caps;
-   text-align: center;
 }
 
 a:link {
@@ -72,216 +30,8 @@ a:hover {
 
 a:visited {
    color: #4680db;
-   //text-decoration: none;
 }
 
-#tableHeaderMain {
-   background-color: yellow;
-}
-
-table {
-   border-collapse: collapse;
-   margin: 0 auto 20px auto;
-   border: 1px lightgray solid;
-}
-
-thead {
-   //font-family: Cambria;
-   font-size: 13px;
-   text-align: left;
-}
-
-tr.fusionCard, .fusionKey {
-   background-color: #edd4f8;
-}
-
-tr.magicCard, .magicKey {
-   background-color: #daf6e0;
-}
-
-tbody {
-   font: 15px Verdana;
-}
-
-tr.trapCard, .trapKey {
-   background-color: #eddce0;
-}
-
-tr.ritualCard, .ritualKey {
-   background-color: #d5e1f4;
-}
-
-.fusionKey, .magicKey, .trapKey, .ritualKey {
-   width: 15px;
-   height: 15px;
-   border: 1px #aeaeae solid;
-   border-radius: 5px;
-   position: relative;
-   top: 2px;
-}
-
-/*tr:hover {
-   background-color: rgba(230, 234, 182, .25);
-   transition: all .125s ease-in;
-}*/
-td, th, .resultSequence {
-   padding: 5px 10px;
-   border: 1px lightgray solid;
-}
-
-td {
-   font-size: 13px;
-}
-
-thead {
-   background-color: #e4f088;
-}
-
-tbody>tr, .resultSequence {
-   background-color: ghostwhite;
-}
-
-.fusionDetail {
-   display: block;
-   font-size: 13px;
-   font-style: oblique;
-}
-
-.resultStats {
-   display: block;
-   font-size: 15px;
-}
-
-/*.cardLink:hover, #backArrow:hover, #nextArrow:hover {
-   cursor: pointer;
-}*/
-.cardLink {
-   color: #266ecd;
-   //font-family: Cambria;
-   //font-variant: small-caps;
-}
-
-a.cardLink {
-   text-decoration: underline;
-}
-
-a.cardLink:hover {
-   text-decoration: none;
-}
-
-.fusionHeader {
-   background-color: #f1ccff;
-}
-
-#fusionTable, #fusionComboTable {
-   width: 575px;
-   margin: 10px auto;
-}
-
-.tooltip {
-   position: relative;
-   display: inline-block;
-   border-bottom: 1px dotted black;
-}
-
-.tooltip .tooltiptext {
-   visibility: hidden;
-   min-width: 160px;
-   max-width: 500px;
-   background-color: #3c3c73;
-   color: #fff;
-   text-align: left;
-   border-radius: 3px;
-   padding: 10px 10px;
-   /* Position the tooltip */
-   position: absolute;
-   z-index: 1;
-   top: -10px;
-   left: 105%;
-}
-
-.tooltip:hover .tooltiptext {
-   visibility: visible;
-}
-
-tr:nth-child(even) {
-   //filter: brightness(97%);
-}
-
-header {
-   position: relative;
-}
-
-#backArrow, #nextArrow, #backArrow>a, #nextArrow>a {
-   text-decoration: none;
-   color: black;
-   font-size: 30px;
-   position: absolute;
-}
-
-#backArrow {
-   left: 200px;
-}
-
-#nextArrow {
-   right: 225px;
-}
-
-#materialContainer {
-   width: 100%;
-   display: flex;
-   justify-content: space-between;
-}
-
-#fusionMaterialsHeader {
-   width: 100%;
-   text-align: center;
-   padding: 10px;
-}
-
-.fusionMaterialSide {
-   width: 48%;
-}
-
-#tableB td {
-   background-color: rgb(217, 233, 245);
-}
-
-#myBtn {
-   /* display: none; /* Hidden by default */
-   position: fixed;
-   /* Fixed/sticky position */
-   bottom: 20px;
-   /* Place the button at the bottom of the page */
-   right: 30px;
-   /* Place the button 30px from the right */
-   z-index: 99;
-   /* Make sure it does not overlap */
-   border: none;
-   /* Remove borders */
-   outline: none;
-   /* Remove outline */
-   background-color: #619ae7;
-   /* Set a background color */
-   color: white;
-   /* Text color */
-   cursor: pointer;
-   /* Add a mouse pointer on hover */
-   padding: 10px;
-   /* Some padding */
-   border-radius: 8px;
-   /* Rounded corners */
-   font-size: 15px;
-   /* Increase font size */
-   font-weight: bold;
-   //font-family: Candara;
-   visibility: hidden;
-}
-
-#myBtn:hover {
-   background-color: #555;
-   /* Add a dark-grey background on hover */
-}
 
 * {
    box-sizing: border-box;
@@ -314,6 +64,7 @@ input {
 input[type=text] {
    background-color: #f1f1f1;
    width: 100%;
+   font-size: 12px;
 }
 
 input[type=button], .fuseSimBtn {
@@ -324,6 +75,7 @@ input[type=button], .fuseSimBtn {
    display: inline-block;
    font: 16px Verdana;
    user-select: none;
+   border: none;
    /* supported by Chrome and Opera */
    -webkit-user-select: none;
    /* Safari */
@@ -335,18 +87,34 @@ input[type=button], .fuseSimBtn {
    /* Internet Explorer/Edge */
 }
 
+#fuseCardsBtn{
+   background-color: DodgerBlue;
+}
+
 .resultSequence {
    text-align: center;
    margin: 10px auto;
    width: 100%;
-   //   background-color: #ecebe7;
    padding: 10px;
    border-radius: 10px;
+   background-color: ghostwhite;
+   border: 1px lightgray solid;
 }
 
 .resultOrder {
    display: block;
    margin: 10px 0;
+}
+
+.fusionDetail {
+    display: block;
+    font-size: 13px;
+    font-style: oblique;
+}
+
+.resultStats {
+    display: block;
+    font-size: 15px;
 }
 
 #errorSection {
