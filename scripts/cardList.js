@@ -14080,7 +14080,7 @@ function createCardResults(groundExists, newSequence, finalResult, numberOrder) 
       spanResultStat.innerHTML = '<br>Type: ' + finalResult.type + '&emsp;Attribute: ' + finalResult.attribute + '&emsp;ATK/DEF:' + finalResult.atk + '/' + finalResult.def;
 
       spanResultStat.innerHTML += finalResult.extra ? '&emsp;Archetype: ' + finalResult.extra.split(',') : '';
-      spanResultStat.innerHTML += finalResult.effect ? '<br><br>' + finalResult.effect : '';
+      spanResultStat.innerHTML += finalResult.effect ? '<br><br>' + finalResult.effect.replace(/\n/g, '<br>') : '';
       spanResultStat.innerHTML += '<br><br><hr style="width: 60%">'
 
       createBold.appendChild(createTitle);
