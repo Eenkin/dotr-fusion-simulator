@@ -7452,7 +7452,7 @@ var cardInfo = [
     "atk": 0,
     "def": 2000,
     "effect": "MOVEMENT: Cannot move.\n\nNATURE: Transforms into Pupa of Moth if this card survives 5 turns in face-up, defense position after being flipped face-up by the controlling player. If destroyed prior to transformation, the card is revived as Larvae Moth in own Summoning Area other than current location.",
-    "fusionInfo": "\"Cocoon of Evolution\" + \"Acid Crawler\", \"Larvae Moth\", \"Kattapillar\", \"Petit Moth\",
+    "fusionInfo": "\"Cocoon of Evolution\" + \"Acid Crawler\", \"Larvae Moth\", \"Kattapillar\", \"Needle Worm\" or \"Petit Moth\"",
     "password": "",
     "extra": ""
   },
