@@ -1,5 +1,4 @@
-const versionNum = 'ver1.0.2a';
-console.log(versionNum);
+console.log('ver1.0.2b');
 
 var abcList = [];
 
@@ -782,37 +781,50 @@ function bruteFusion(order) {
    let object = {};
 
    object.sequence = [];
-   let isFusable = false;
+   let isFusable;
 
    for (var i = 0; i < order.length - 1; i++) {
       //Card A = first card in sequence. Otherwise, it equals the result of the previous card
       let cardA = i > 0 ? object.resultCard : order[i];
       let cardB = order[i + 1];
 
-      let optionA = cardA + ',' + cardB;
-      let optionB = cardB + ',' + cardA;
+      let pair = Math.min(cardA, cardB) + "," + Math.max(cardA, cardB);
 
-      for (var j = 0; j < fusionCardIds.length; j++) {
-         let fusionCard = fusionCombos[fusionCardIds[j]]
-
-         //Checks if combo exist in any fusion card
-         if (fusionCard.combo.includes(optionA) || fusionCard.combo.includes(optionB)) {
-            object.resultCard = fusionCard.id;
-
-            if (object.sequence < 1) {
-               //adds very first card to sequence
-               object.sequence.push(cardA);
-            }
-            object.sequence.push(cardB, object.resultCard);
-            isFusable = true;
-            break;
+      if (pair in fusionCombos) {
+         object.resultCard = fusionCombos[pair];
+         if (object.sequence < 1) {
+            // adds very first card to sequence
+            object.sequence.push(cardA);
          }
-      }
-
-      if (!isFusable) {
-         //stop fusion altogether. This order doesn't work.
+         object.sequence.push(cardB, object.resultCard);
+      } else {
          return false;
       }
+
+      // let optionA = cardA + ',' + cardB;
+      // let optionB = cardB + ',' + cardA;
+      //
+      // for (var j = 0; j < fusionCardIds.length; j++) {
+      //    let fusionCard = fusionCombos[fusionCardIds[j]]
+      //
+      //    //Checks if combo exist in any fusion card
+      //    if (fusionCard.combo.includes(optionA) || fusionCard.combo.includes(optionB)) {
+      //       object.resultCard = fusionCard.id;
+      //
+      //       if (object.sequence < 1) {
+      //          //adds very first card to sequence
+      //          object.sequence.push(cardA);
+      //       }
+      //       object.sequence.push(cardB, object.resultCard);
+      //       isFusable = true;
+      //       break;
+      //    }
+      // // }
+      //
+      // if (!isFusable) {
+      //    //stop fusion altogether. This order doesn't work.
+      //    return false;
+      // }
 
    }
 
