@@ -5296,7 +5296,7 @@ var cardInfo = [
     "atk": 1950,
     "def": 2100,
     "effect": "FLIP: When this card is flipped face-up, Harpie's Pet Dragon increases 900 points.",
-    "fusionInfo": "",
+    "fusionInfo": "\"Elegant Egotist\" + \"Harpie Lady\"",
     "password": "",
     "extra": "Female"
   },
@@ -7452,7 +7452,7 @@ var cardInfo = [
     "atk": 0,
     "def": 2000,
     "effect": "MOVEMENT: Cannot move.\n\nNATURE: Transforms into Pupa of Moth if this card survives 5 turns in face-up, defense position after being flipped face-up by the controlling player. If destroyed prior to transformation, the card is revived as Larvae Moth in own Summoning Area other than current location.",
-    "fusionInfo": "",
+    "fusionInfo": "\"Cocoon of Evolution\" + \"Acid Crawler\", \"Larvae Moth\", \"Kattapillar\", \"Petit Moth\",
     "password": "",
     "extra": ""
   },
@@ -8306,7 +8306,7 @@ var cardInfo = [
     "atk": 3000,
     "def": 2300,
     "effect": "",
-    "fusionInfo": "",
+    "fusionInfo": "\"Metalmorph\" + \"Zoa\",
     "password": "",
     "extra": "Horned"
   },
@@ -8488,7 +8488,7 @@ var cardInfo = [
     "atk": 2800,
     "def": 2400,
     "effect": "",
-    "fusionInfo": "",
+    "fusionInfo": "\"Metalmorph\" + \"Red-Eyes B. Dragon\"",
     "password": "",
     "extra": "Horned"
   },
