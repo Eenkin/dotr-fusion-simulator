@@ -119,3 +119,11 @@ input[type=button], .fuseSimBtn {
 #errorSection {
    font-weight: bold;
 }
+
+hr{
+   width: 60%;
+}
+
+.jumpAnch{
+   white-space: nowrap;
+}
