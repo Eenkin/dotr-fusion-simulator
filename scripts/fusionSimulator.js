@@ -891,7 +891,7 @@ function checkHash(){
 }
 
 window.onload = function() {
-   checkHash();
+  // checkHash();
 };
 
 window.onhashchange = function() {
