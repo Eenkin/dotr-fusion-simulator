@@ -3,6 +3,20 @@ var abcList = [];
 
 var shareLink = '';
 
+function btnMouseDown(id){
+   document.getElementById(id).style.backgroundColor = 'red';
+}
+
+function btnMouseUp(id){
+
+   if (id == 'fuseCardsBtn') {
+      document.getElementById(id).style.backgroundColor = 'DodgerBlue';
+   } else {
+      document.getElementById(id).style.backgroundColor = '';
+   }
+
+}
+
 function scrollToTop() {
    document.body.scrollTop = 0;
    document.documentElement.scrollTop = 0;
