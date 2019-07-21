@@ -14202,14 +14202,3 @@ function randomFusion() {
 
 window.onload = function() {
 };
-
-window.addEventListener('scroll', function(e) {
-
-   if (window.scrollY > 0 && !scrolled) {
-      document.getElementById('myBtn').style.visibility = 'visible';
-      scrolled = true;
-   } else {
-      //document.getElementById('myBtn').style.visibility = 'hidden';
-   }
-
-});
