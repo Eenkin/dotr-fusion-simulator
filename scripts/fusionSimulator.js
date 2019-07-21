@@ -895,5 +895,5 @@ window.onload = function() {
 };
 
 window.onhashchange = function() {
-   checkHash();
+   //checkHash();
 }
