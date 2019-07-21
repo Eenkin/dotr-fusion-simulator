@@ -13,14 +13,22 @@ function scrollToTop() {
 
 function fuseBase36(){
    //Converting Cards into base36 to add to # on window url
+
    let cardInput = document.getElementsByClassName('cardInput');
    let errorSection = document.getElementById('errorSection');
+   let fusionResults = document.getElementById('fusionResults');
+   let jumpToSection = document.getElementById('jumpToSection');
 
    let errorMessage;
    let countBlanks = 0;
 
    let hashString = [];
    let hashResult = '';
+
+   //Empties out sections
+   errorSection.innerHTML = '';
+   fusionResults.innerHTML = '';
+   jumpToSection.innerHTML = '';
 
    for (var i = 0; i < cardInput.length; i++) {
       if (i == 0) {
@@ -45,7 +53,7 @@ function fuseBase36(){
          //If card is misspelled or don't exist, then error
          errorMessage = "One or more cards do not exist. Please check if the spelling is correct!"
          //Highlight problem input
-         selectClass[i].style.backgroundColor = 'lightcoral';
+         cardInput[i].style.backgroundColor = 'lightcoral';
       }
 
       if (countBlanks > 4 && !errorMessage) {
@@ -860,7 +868,7 @@ function checkHash(){
 
    if (hashString && hashString.length === 12 && hashString.match(/^[a-z0-9]+$/i)) {
       //Hash should be 12 characters converted from base36 to decimal
-      console.log(hashString)
+      // console.log(hashString)
       let cardInput = document.getElementsByClassName('cardInput');
 
       let hashArr = [0,0,0,0,0,0]
@@ -873,12 +881,12 @@ function checkHash(){
          //subHash = subHash > 853 ? null : subHash;
 
          cardInput[i].value = subHash > 853 ? null : cardList[subHash].name;
-         hashArr[i] = subHash;
+         // hashArr[i] = subHash;
 
          fuseCards();
       }
 
-      console.log(hashArr);
+      // console.log(hashArr);
    }
 }
 
