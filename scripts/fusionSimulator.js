@@ -1,3 +1,4 @@
+//ver1.0.1
 var abcList = [];
 
 var shareLink = '';
