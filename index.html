@@ -6,7 +6,15 @@
    <meta charset="utf-8" />
    <title>Yu-Gi-Oh! The Duelists of the Roses - Fusion Simulator</title>
    <script src="scripts/cardList.js"></script>
+   <script src="scripts/fusionList.js"></script>
+   <script src="scripts/fusionSimulator.js"></script>
    <link rel="stylesheet" href="stylesheet.css">
+
+   <style>
+      a{
+         color: blue;
+      }
+   </style>
 </head>
 
 <body>
@@ -737,15 +745,8 @@
          </div>
       </form>
 
-      <!--<div id='buttonSection' style='margin-top:10px;'>
-         <input type='button' value='Fuse Cards' onclick='fuseCards()' style='background-color: DodgerBlue;'>
-         <input type='button' value='Show Set Example' onclick='exampleFusion()'>
-         <input type='button' value='Random Example' onclick='randomFusion()'>
-         <input type='button' value='Reset' onclick='resetFusionInputs()'>
-      </div>-->
-
       <div id='buttonSection'>
-         <div class="fuseSimBtn" id='fuseCardsBtn' onclick='fuseCards()' style='background-color: DodgerBlue;'>Fuse Cards</div>
+         <div class="fuseSimBtn" id='fuseCardsBtn' onclick='fuseBase36()' style='background-color: DodgerBlue;'>Fuse Cards</div>
          <div class="fuseSimBtn" id="exampleBtn" onclick='exampleFusion()'>Use Preset Example</div>
          <div class="fuseSimBtn" id="rndmBtn" onclick='randomFusion()'>Randomize Cards</div>
          <div class="fuseSimBtn" id="resetBtn" onclick='resetFusionInputs()'>Reset</div>
@@ -758,10 +759,6 @@
    <div id='jumpToSection' style='margin:10px 0'></div>
 
    <div id='fusionResults'></div>
-
-
-
-   <!--<button onclick="scrollToTop()" id="myBtn" title="Go to top">Scroll to Top</button>-->
 
 
 </body>
