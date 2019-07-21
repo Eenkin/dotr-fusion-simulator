@@ -781,13 +781,13 @@ function bruteFusion(order) {
    let object = {};
 
    object.sequence = [];
-   let isFusable;
+   //let isFusable;
+
 
    for (var i = 0; i < order.length - 1; i++) {
       //Card A = first card in sequence. Otherwise, it equals the result of the previous card
       let cardA = i > 0 ? object.resultCard : order[i];
       let cardB = order[i + 1];
-
       let pair = Math.min(cardA, cardB) + "," + Math.max(cardA, cardB);
 
       if (pair in fusionCombos) {
@@ -798,6 +798,7 @@ function bruteFusion(order) {
          }
          object.sequence.push(cardB, object.resultCard);
       } else {
+
          return false;
       }
 
@@ -825,6 +826,7 @@ function bruteFusion(order) {
       //    //stop fusion altogether. This order doesn't work.
       //    return false;
       // }
+
 
    }
 
