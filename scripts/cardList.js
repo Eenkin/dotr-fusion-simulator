@@ -1655,7 +1655,7 @@ var cardInfo = [
     "dc": 44,
     "atk": 1600,
     "def": 1800,
-    "effect": "ATTACK: Transforms surrounding spaces into NORMAL terrain when engaged in battle.\n\nFLIP: Transforms surrounding spaces into NORMAL terrain when this card is flipped face-up.",
+    "effect": "ATTACK: Transforms surrounding spaces into NORMAL terrain when engaged in battle.\nFLIP: Transforms surrounding spaces into NORMAL terrain when this card is flipped face-up.",
     "fusionInfo": "",
     "password": "",
     "extra": "Horned"
@@ -1711,7 +1711,7 @@ var cardInfo = [
     "dc": 48,
     "atk": 2200,
     "def": 2600,
-    "effect": "SPECIAL POWER UP: Strong in TOON terrain.\n\nSPECIAL POWER UP: Randomly transforms into DRAGON/FIRE monster when powered up with Insect Imitation.",
+    "effect": "SPECIAL POWER UP: Strong in TOON terrain.\nSPECIAL POWER UP: Randomly transforms into DRAGON/FIRE monster when powered up with Insect Imitation.",
     "fusionInfo": "",
     "password": "65YDA3WR",
     "extra": "Toon, Horned, Egg"
@@ -2047,7 +2047,7 @@ var cardInfo = [
     "dc": 20,
     "atk": 600,
     "def": 900,
-    "effect": "SPECIAL POWER UP: Strong in TOON terrain.\n\nFLIP: Spellbinds an opponent for 1 turn when this card is flipped face-up in battle.",
+    "effect": "SPECIAL POWER UP: Strong in TOON terrain.\nFLIP: Spellbinds an opponent for 1 turn when this card is flipped face-up in battle.",
     "fusionInfo": "",
     "password": "NBN9Y7AZ",
     "extra": "Toon"
@@ -3363,7 +3363,7 @@ var cardInfo = [
     "dc": 56,
     "atk": 2050,
     "def": 2500,
-    "effect": "ATTACK: 900-pt bonus when battling FIEND monsters.\n\nFLIP: When this card is flipped face-up, strengthens all LIGHT monsters by 300 points.",
+    "effect": "ATTACK: 900-pt bonus when battling FIEND monsters.\nFLIP: When this card is flipped face-up, strengthens all LIGHT monsters by 300 points.",
     "fusionInfo": "",
     "password": "",
     "extra": ""
@@ -3391,7 +3391,7 @@ var cardInfo = [
     "dc": 24,
     "atk": 800,
     "def": 600,
-    "effect": "ATTACK: Whenever damage is inflicted to LP in battle, the damage amount is reduced to 0.\n\nFLIP: When this card is flipped face-up, adds one more Kageningen face-up in own Summoning Area.",
+    "effect": "ATTACK: Whenever damage is inflicted to LP in battle, the damage amount is reduced to 0.\nFLIP: When this card is flipped face-up, adds one more Kageningen face-up in own Summoning Area.",
     "fusionInfo": "",
     "password": "J92HSFN3",
     "extra": ""
@@ -3531,7 +3531,7 @@ var cardInfo = [
     "dc": 44,
     "atk": 2000,
     "def": 1850,
-    "effect": "ATTACK: Allows the one-sided destruction of the opposition when battling BEAST monsters.\n\nSPECIAL POWER UP: Strong in TOON terrain.",
+    "effect": "ATTACK: Allows the one-sided destruction of the opposition when battling BEAST monsters.\nSPECIAL POWER UP: Strong in TOON terrain.",
     "fusionInfo": "",
     "password": "",
     "extra": "Toon"
@@ -5253,7 +5253,7 @@ var cardInfo = [
     "dc": 22,
     "atk": 900,
     "def": 800,
-    "effect": "NATURE: While this card is face-up in the defense position, all recovery values to LP are doubled.\n\nSPECIAL POWER UP: Strong in TOON terrain.",
+    "effect": "NATURE: While this card is face-up in the defense position, all recovery values to LP are doubled.\nSPECIAL POWER UP: Strong in TOON terrain.",
     "fusionInfo": "",
     "password": "UFL3G9JM",
     "extra": "Toon"
@@ -5281,7 +5281,7 @@ var cardInfo = [
     "dc": 32,
     "atk": 1300,
     "def": 1400,
-    "effect": "FLIP: When this card is flipped face-up, Harpie's Pet Dragon increases 300 points.\n\nSPECIAL POWER UP: When strengthened with Elegant Egotist, transforms into Harpie Lady Sisters.",
+    "effect": "FLIP: When this card is flipped face-up, Harpie's Pet Dragon increases 300 points.\nSPECIAL POWER UP: When strengthened with Elegant Egotist, transforms into Harpie Lady Sisters.",
     "fusionInfo": "",
     "password": "UXST0VC3",
     "extra": "Female"
@@ -7185,7 +7185,7 @@ var cardInfo = [
     "dc": 33,
     "atk": 2200,
     "def": 100,
-    "effect": "NATURE: Cancels all power increases or decreases of an enemy monster in battle. Does not cancel bonus effects such as terrain or Leader ability effects.\n\nMOVEMENT: Decreases LP by 100 points for each space moved.",
+    "effect": "NATURE: Cancels all power increases or decreases of an enemy monster in battle. Does not cancel bonus effects such as terrain or Leader ability effects.\nMOVEMENT: Decreases LP by 100 points for each space moved.",
     "fusionInfo": "",
     "password": "",
     "extra": ""
@@ -7451,7 +7451,7 @@ var cardInfo = [
     "dc": 25,
     "atk": 0,
     "def": 2000,
-    "effect": "MOVEMENT: Cannot move.\n\nNATURE: Transforms into Pupa of Moth if this card survives 5 turns in face-up, defense position after being flipped face-up by the controlling player. If destroyed prior to transformation, the card is revived as Larvae Moth in own Summoning Area other than current location.",
+    "effect": "MOVEMENT: Cannot move.\nNATURE: Transforms into Pupa of Moth if this card survives 5 turns in face-up, defense position after being flipped face-up by the controlling player. If destroyed prior to transformation, the card is revived as Larvae Moth in own Summoning Area other than current location.",
     "fusionInfo": "\"Cocoon of Evolution\" + \"Acid Crawler\", \"Larvae Moth\", \"Kattapillar\", \"Needle Worm\" or \"Petit Moth\"",
     "password": "",
     "extra": ""
@@ -7465,7 +7465,7 @@ var cardInfo = [
     "dc": 25,
     "atk": 0,
     "def": 2000,
-    "effect": "MOVEMENT: Cannot move.\n\nNATURE: Transforms into Perfectly Ultimate Great Moth if this card survives 1 turn in face-up, defense position after being flipped face-up by the controlling player. If destroyed in battle, the card is revived as Great Moth in own Summoning Area other than current location.",
+    "effect": "MOVEMENT: Cannot move.\nNATURE: Transforms into Perfectly Ultimate Great Moth if this card survives 1 turn in face-up, defense position after being flipped face-up by the controlling player. If destroyed in battle, the card is revived as Great Moth in own Summoning Area other than current location.",
     "fusionInfo": "",
     "password": "",
     "extra": ""
@@ -7479,7 +7479,7 @@ var cardInfo = [
     "dc": 50,
     "atk": 2000,
     "def": 2000,
-    "effect": "ATTACK: All spaces within an area of 2 spaces are transformed into FOREST terrain. \n\nFLIP: If an INSECT monster is Leader, this card's power is strengthened by 1500 points when this card is flipped face-up.",
+    "effect": "ATTACK: All spaces within an area of 2 spaces are transformed into FOREST terrain. \nFLIP: If an INSECT monster is Leader, this card's power is strengthened by 1500 points when this card is flipped face-up.",
     "fusionInfo": "",
     "password": "",
     "extra": ""
@@ -9355,7 +9355,7 @@ var cardInfo = [
     "dc": 49,
     "atk": 2100,
     "def": 1800,
-    "effect": "ATTACK: When engaged in battle, transforms the space it occupies into Sea terrain.\n\nFLIP: When this card is flipped face-up, transforms all adjacent spaces into Sea terrain.",
+    "effect": "ATTACK: When engaged in battle, transforms the space it occupies into Sea terrain.\nFLIP: When this card is flipped face-up, transforms all adjacent spaces into Sea terrain.",
     "fusionInfo": "",
     "password": "NVQFSF61",
     "extra": ""
@@ -10881,7 +10881,7 @@ var cardInfo = [
     "dc": 18,
     "atk": 200,
     "def": 100,
-    "effect": "FLIP: When this parasite card is flipped face-up in battle, it takes control of the opposing card. When the controlled monster is destroyed in battle, this card is revived in the controlling player's Summoning Area, other than its current location. The nature effect and destruction features of the monster that's taken over are rendered ineffective.\n\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
+    "effect": "FLIP: When this parasite card is flipped face-up in battle, it takes control of the opposing card. When the controlled monster is destroyed in battle, this card is revived in the controlling player's Summoning Area, other than its current location. The nature effect and destruction features of the monster that's taken over are rendered ineffective.\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
     "fusionInfo": "",
     "password": "",
     "extra": ""
@@ -10895,7 +10895,7 @@ var cardInfo = [
     "dc": 27,
     "atk": 1200,
     "def": 0,
-    "effect": "NATURE: When this card enters a turn face-up and in the defense position, all MONSTER cards are removed from the respective Graveyards, and the number of these removed cards are multiplied by 200 points. The result is added to the power of this card.\n\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
+    "effect": "NATURE: When this card enters a turn face-up and in the defense position, all MONSTER cards are removed from the respective Graveyards, and the number of these removed cards are multiplied by 200 points. The result is added to the power of this card.\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
     "fusionInfo": "",
     "password": "",
     "extra": ""
@@ -10909,7 +10909,7 @@ var cardInfo = [
     "dc": 38,
     "atk": 1900,
     "def": 400,
-    "effect": "FLIP: When this card is flipped face-up, all your IMMORTAL cards are strengthened by 500 points.\n\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
+    "effect": "FLIP: When this card is flipped face-up, all your IMMORTAL cards are strengthened by 500 points.\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
     "fusionInfo": "",
     "password": "73153736",
     "extra": ""
@@ -10923,7 +10923,7 @@ var cardInfo = [
     "dc": 44,
     "atk": 1200,
     "def": 1700,
-    "effect": "NATURE: Shapesnatch's ATK and DEF copies the enemy Leader's ATK for attacks and your own Leader's DEF when defending.\n\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
+    "effect": "NATURE: Shapesnatch's ATK and DEF copies the enemy Leader's ATK for attacks and your own Leader's DEF when defending.\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
     "fusionInfo": "",
     "password": "",
     "extra": ""
@@ -10937,7 +10937,7 @@ var cardInfo = [
     "dc": 72,
     "atk": 2600,
     "def": 3100,
-    "effect": "NATURE: When this card enters a turn face-up and in the defense position, all cards are drawn 1 space towards Carat Idol!\n\nDESTRUCTION: Transforms adjacent spaces to CRUSH terrain when this card is destroyed in battle!",
+    "effect": "NATURE: When this card enters a turn face-up and in the defense position, all cards are drawn 1 space towards Carat Idol!\nDESTRUCTION: Transforms adjacent spaces to CRUSH terrain when this card is destroyed in battle!",
     "fusionInfo": "",
     "password": "",
     "extra": ""
@@ -10951,7 +10951,7 @@ var cardInfo = [
     "dc": 31,
     "atk": 200,
     "def": 1400,
-    "effect": "FLIP: When this card is flipped face-up, a player gains control of all opposing MACHINE monsters for the turn in play.\n\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
+    "effect": "FLIP: When this card is flipped face-up, a player gains control of all opposing MACHINE monsters for the turn in play.\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
     "fusionInfo": "",
     "password": "",
     "extra": ""
@@ -10965,7 +10965,7 @@ var cardInfo = [
     "dc": 51,
     "atk": 1900,
     "def": 1700,
-    "effect": "NATURE: While this card is face-up in the defense position, the countdown speed for spellbound cards are doubled should a Turn Count be involved.\n\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
+    "effect": "NATURE: While this card is face-up in the defense position, the countdown speed for spellbound cards are doubled should a Turn Count be involved.\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
     "fusionInfo": "",
     "password": "",
     "extra": ""
@@ -10979,7 +10979,7 @@ var cardInfo = [
     "dc": 16,
     "atk": 0,
     "def": 100,
-    "effect": "MOVEMENT: Each time Mucus Yolk moves, an opponent's LP is reduced by 50 points.\n\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
+    "effect": "MOVEMENT: Each time Mucus Yolk moves, an opponent's LP is reduced by 50 points.\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
     "fusionInfo": "",
     "password": "",
     "extra": ""
@@ -10993,7 +10993,7 @@ var cardInfo = [
     "dc": 27,
     "atk": 700,
     "def": 500,
-    "effect": "NATURE: While this card is face-up in the defense position, an additional point is added each turn during the recovery of the player's Summoning Power points.\n\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
+    "effect": "NATURE: While this card is face-up in the defense position, an additional point is added each turn during the recovery of the player's Summoning Power points.\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
     "fusionInfo": "",
     "password": "",
     "extra": ""
@@ -11007,7 +11007,7 @@ var cardInfo = [
     "dc": 32,
     "atk": 1600,
     "def": 100,
-    "effect": "FLIP: When this card is flipped face-up, all players must discard their current hand to their respective Graveyards.\n\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
+    "effect": "FLIP: When this card is flipped face-up, all players must discard their current hand to their respective Graveyards.\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
     "fusionInfo": "",
     "password": "",
     "extra": ""
@@ -11021,7 +11021,7 @@ var cardInfo = [
     "dc": 72,
     "atk": 2800,
     "def": 2900,
-    "effect": "NATURE: While this card is face-up in the defense position, the opposing leader's powers are rendered ineffective.\n\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
+    "effect": "NATURE: While this card is face-up in the defense position, the opposing leader's powers are rendered ineffective.\nDESTRUCTION: Transforms adjacent spaces into CRUSH terrain when this card is destroyed in battle.",
     "fusionInfo": "",
     "password": "",
     "extra": ""
