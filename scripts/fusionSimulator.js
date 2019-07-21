@@ -1,14 +1,16 @@
 var abcList = [];
 
+var shareLink = '';
+
 function scrollToTop() {
-   document.getElementById('myBtn').style.visibility = 'hidden';
-   scrolled = false;
    document.body.scrollTop = 0;
    document.documentElement.scrollTop = 0;
 
-   if (window.location.href.includes('fusionSimulator.html')) {
-      resetFusionSectionColors();
-   }
+   resetFusionSectionColors();
+}
+
+function shareBtn(){
+
 }
 
 function fuseBase36(){
@@ -43,10 +45,10 @@ function fuseBase36(){
       if (cardNamelist.includes(temp)) {
          //if exists, convert card id into base36
          let deciNum = cardNamelist.indexOf(temp);
-         hashString[i] = deciNum;
+         hashString[i] = deciNum < 36 ? '0' + deciNum.toString(36) : deciNum.toString(36); //Converts ID # to base 36; add a leading 0 if result only has 1 character
       } else if(!temp){
          //if blank, then assign non-existent card id to leave input blank
-         hashString[i] = 854;
+         hashString[i] = 854; //#854
          //Add counter to make sure there are less than 5 blank inputs
          countBlanks++;
       } else {
@@ -66,26 +68,30 @@ function fuseBase36(){
          return
       }
 
+      hashResult += hashString[i];
+
    }
+
 
    // console.log(hashString);
 
-   for (i = 0; i < 6; i++) {
-      hashString[i] = hashString[i].toString(36);
-
-      //Add a leading 0 so there's at least 2 characters for the algorithm
-      while (hashString[i].length < 2) {
-         hashString[i] = '0' + hashString[i]
-      }
-
-      hashResult += hashString[i];
-   }
+   // for (i = 0; i < 6; i++) {
+   //    hashString[i] = hashString[i].toString(36);
+   //
+   //    //Add a leading 0 so there's at least 2 characters for the algorithm
+   //    while (hashString[i].length < 2) {
+   //       hashString[i] = '0' + hashString[i]
+   //    }
+   //
+   //    hashResult += hashString[i];
+   // }
 
    // console.log(hashString);
    // console.log(hashResult);
 
    window.location.hash = hashResult;
    //location.reload();
+   //history.pushState(stateObj, null, "index.html/#" + hashResult);
    fuseCards();
 }
 
@@ -586,7 +592,7 @@ function fuseCards() {
    let groundCards = [];
    let handCards = [];
 
-   let selectClass = document.getElementsByClassName('cardInput');
+   let cardInput = document.getElementsByClassName('cardInput');
    let errorSection = document.getElementById('errorSection');
    let fusionResults = document.getElementById('fusionResults');
    let jumpToSection = document.getElementById('jumpToSection');
@@ -601,14 +607,14 @@ function fuseCards() {
 
 
    //Convert class values into card id# and check for any spelling errors
-   for (var i = 0; i < selectClass.length; i++) {
+   for (var i = 0; i < cardInput.length; i++) {
       if (i == 0) {
-         selectClass[i].style.backgroundColor = 'lightblue';
+         cardInput[i].style.backgroundColor = 'lightblue';
       } else {
-         selectClass[i].style.backgroundColor = '#f1f1f1';
+         cardInput[i].style.backgroundColor = '#f1f1f1';
       }
 
-      let temp = selectClass[i].value.toLowerCase();
+      let temp = cardInput[i].value.toLowerCase();
       if (cardNamelist.includes(temp)) {
          //Conver name into value number.
          cardSelected.push(cardNamelist.indexOf(temp));
@@ -619,7 +625,7 @@ function fuseCards() {
          errorCheck = true;
          errorMessages = "One or more cards do not exist. Please check if the spelling is correct!"
          //Highlights problematic input boxes
-         selectClass[i].style.backgroundColor = 'lightcoral';
+         cardInput[i].style.backgroundColor = 'lightcoral';
       }
    }
 
@@ -632,12 +638,11 @@ function fuseCards() {
    //List all possible error messages
    if (errorCheck) {
       errorSection.innerHTML = errorMessages;
-      // alert(errorMessages);
       return;
    }
 
    //Check if 'Card on Field' has value inside and then seperate it into 2 seperate lists
-   if (selectClass[0].value) {
+   if (cardInput[0].value) {
       groundExists = true;
       groundCards = cardSelected.slice(0);
       handCards = cardSelected.slice(1);
@@ -692,9 +697,6 @@ function fuseCards() {
       jumpToSection.innerHTML = 'Jump To: '; //+ allResults;
       allResults.forEach(function(element) {
          let jumpToLink = 'card' + element.replace(/ /g, '').replace(/\./g, '').replace(/#/g, '').replace(/,/g, '').replace(/-/g, '');
-         //element = element.
-
-         // jumpToSection.innerHTML += '&emsp; <a href="#' + jumpToLink + '" onclick=" highlightResult(' + jumpToLink + ')">' + element + '</a>'
          jumpToSection.innerHTML += '&emsp; <a onclick=" highlightResult(' + jumpToLink + ')">' + element + '</a>'
       })
    }
@@ -836,8 +838,33 @@ function exampleFusion() {
    cardInput[4].value = 'Dancing Elf';
    cardInput[5].value = 'Key Mace #2';
 
-   fuseBase36();
+   window.location.hash = '#aei5852tay9w'
 
+   fuseCards();
+
+}
+
+function randomFusion() {
+   //Creates random entries in fusion simulator
+   let cardInput = document.getElementsByClassName('cardInput');
+
+   let hashString = '';
+   for (var i = 0; i < cardInput.length; i++) {
+      let random = Math.floor(Math.random() * (683 + 3))
+      if (random == 657) {
+         //If Summoned Lord Exodia, switch to lower id;
+         random--;
+      } else if (random > 683) {
+         //Adds Power Up fusions into randomizer
+         random += 114;
+      }
+      cardInput[i].value = cardList[random].name;
+      hashString += random < 36 ? '0' + random.toString(36) : random.toString(36); //Convert random id to base 36; add leading 0 if result is below 2 characters.
+   }
+
+   window.location.hash = hashString;
+
+   fuseCards();
 }
 
 function resetFusionInputs() {
@@ -848,22 +875,6 @@ function resetFusionInputs() {
    }
 }
 
-function randomFusion() {
-   //Creates random entries in fusion simulator
-   let cardInput = document.getElementsByClassName('cardInput');
-   for (var i = 0; i < cardInput.length; i++) {
-      let random = Math.floor(Math.random() * (683 + 3))
-      if (random == 657) {
-         random--;
-      } else if (random > 683) {
-         random += 114;
-      }
-      cardInput[i].value = cardList[random].name;
-   }
-
-   fuseBase36();
-}
-
 function checkHash(){
    let hashString = window.location.hash ? window.location.hash.slice(1) : '';
 
@@ -872,7 +883,7 @@ function checkHash(){
       // console.log(hashString)
       let cardInput = document.getElementsByClassName('cardInput');
 
-      let hashArr = [0,0,0,0,0,0]
+      //let hashArr = [0,0,0,0,0,0]
 
       for (var i = 0; i < 6; i++) {
          //break off every 2 characters of the string
@@ -886,15 +897,18 @@ function checkHash(){
 
          fuseCards();
       }
-
       // console.log(hashArr);
    }
 }
 
 window.onload = function() {
-  checkHash();
+   if (window.location.hash) {
+      checkHash();
+   }
 };
 
 window.onhashchange = function() {
-   checkHash();
+   if (window.location.hash) {
+      checkHash();
+   }
 }
