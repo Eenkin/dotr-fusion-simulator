@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <title>Yu-Gi-Oh! The Duelists of the Roses - Naming/Starter Deck Simulator</title>
+   <script src="scripts/cardList.js"></script>
+   <script src="scripts/starterDeckSim.js"></script>
+   <link rel="stylesheet" href="stylesheet.css">
+
+   <style>
+   </style>
+</head>
+
+<body>
+   <nav><a href='index.html'>Fusion Simulator</a> &emsp; <a href='naming_simulator.html'>Naming/Starter Deck Simulator</a></nav>
+   <h1>Yu-Gi-Oh! The Duelists of the Roses - Naming/Starter Deck Simulator</h1><br>
+
+   <h2>This is a Work-In-Progress. Results may not be accurate as of yet.</h2>
+
+   <p id='notes'>This simulator is to help figure out which three starter decks you can choose from out of the 17 that are in the game. This is determined by what name you decide to call yourself (check here for more info <a href="https://www.speedrun.com/Yu-Gi-Oh_The_Duelists_of_the_Roses/thread/ch2hb"><u>"Starter decks and names"</u></a>).</P>
+
+   <p>Please use alphenumeric characters (A-Z, a-z, 0-9) and any of the following special characters: <span style="white-space:nowrap;">!"#$%&'=^-¥./_ ,()[]</span>. A maximum of 12 characters can be used.</p>
+
+   <div id='inputName'>
+      <input type="text" id='nameInput' placeholder='Input Name' maxlength="12" style='width: 200px;'>
+      <input type='button' id='submitBtn' onclick="checkName()" value="Submit">
+   </div>
+   <p id='resultSection'></p>
+
+   <sub>If you would like to use a specific starting deck while generally keeping the same name, add 1 letter from A-P. Keep cycling out the extra letter until your reach the card you wanted.</sub>
+
+</body>
+
+</html>
