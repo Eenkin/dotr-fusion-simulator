@@ -1,4 +1,4 @@
-console.log('ver1.0.2c');
+console.log('ver1.0.3a');
 
 var abcList = [];
 
@@ -495,6 +495,93 @@ const comboGroundOrder = [
    [0, 5, 4, 3, 2, 1]
 ];
 
+function displayFusionList(view) {
+   document.getElementById('fusionPopUp').style.display = view;
+}
+
+// function createTable() {
+//    let fusionTable = document.getElementById('fusionTableABC');
+//    fusionTable.innerHTML = '';
+//    let tbody = document.createElement('tbody');
+//
+//    let abcFusion = [...fusionCards];
+//
+//    abcFusion.sort((a, b) => {
+//       return cardList[a].name.localeCompare(cardList[b].name)
+//    })
+//
+//    console.log(abcFusion);
+//
+//    function tdNode(text, className, colspan) {
+//       let td = document.createElement('td');
+//       td.innerHTML = text;
+//
+//       if (className) {
+//          td.className = className;
+//       }
+//
+//       if (colspan) {
+//          td.colSpan = 2;
+//       }
+//
+//       return td;
+//    }
+//
+//    for (var i = 0; i < abcFusion.length; i++) {
+//       let tr = document.createElement('tr');
+//
+//       let fusion = cardList[abcFusion[i]];
+//
+//       //Id and Name Row
+//       let tdId = tdNode(fusion.id, 'tdFusionId');
+//       tr.appendChild(tdId);
+//
+//       let tdName = tdNode(fusion.name, 'tdFusionName')
+//       tr.appendChild(tdName);
+//
+//       tbody.appendChild(tr);
+//
+//       //Stats
+//       let tr2 = document.createElement('tr');
+//
+//       //Fusion Material
+//       let statText = '<i>Fusion Materials: ' + fusion.fusionInfo.replace(/\n/gi, '<br>') + '</i>';
+//
+//       //Base Stats
+//       statText += '<p>' + fusion.type + '/' + fusion.attribute + '/LV ' + fusion.lv + '/ATK ' + fusion.atk + '/DEF ' + fusion.def;
+//       statText += fusion.archetype ? '<br>Archetype(s): ' + fusion.archetype + '</p>' : '</p>';
+//
+//       //Effect
+//       statText += fusion.effect ? '<p>' + fusion.effect.replace(/\n/gi, '<br>') + '</p>' : '';
+//
+//
+//
+//       let tdStat = tdNode(statText, 'tdFusionStat', 2);
+//       tr2.appendChild(tdStat);
+//
+//       tbody.appendChild(tr2);
+//
+//
+//    }
+//
+//    fusionTable.appendChild(tbody);
+// }
+
+function swapTable(swap) {
+   let table123 = document.getElementById('fusionTable123');
+   let tableABC = document.getElementById('fusionTableABC');
+
+   switch (swap) {
+      case '123':
+         tableABC.style.display = 'none';
+         table123.style.display = 'inherit';
+         break;
+      default:
+         table123.style.display = 'none';
+         tableABC.style.display = 'inherit';
+   }
+}
+
 function scrollToTop() {
    document.body.scrollTop = 0;
    document.documentElement.scrollTop = 0;
@@ -530,12 +617,19 @@ function fuseBase36() {
          cardInput[i].style.backgroundColor = '#f1f1f1'; //Reset all other input colors
       }
 
+
       let temp = cardInput[i].value.toLowerCase();
+      let deciNum = parseInt(cardInput[i].value);
 
       //Find if card exists
-      if (cardNamelist.includes(temp)) {
+      if (Number.isInteger(deciNum) && deciNum < 854 && deciNum >= 0) {
+         //If exists and input was ID# and exists
+         cardInput[i].value = cardList[deciNum].name;
+         hashString[i] = deciNum < 36 ? '0' + deciNum.toString(36) : deciNum.toString(36); //Converts ID # to base 36; add a leading 0 if result only has 1 character
+         deciArr.push(deciNum);
+      } else if (cardNamelist.includes(temp)) {
          //if exists, convert card id into base36
-         let deciNum = cardNamelist.indexOf(temp);
+         deciNum = cardNamelist.indexOf(temp);
          hashString[i] = deciNum < 36 ? '0' + deciNum.toString(36) : deciNum.toString(36); //Converts ID # to base 36; add a leading 0 if result only has 1 character
          deciArr.push(deciNum);
       } else if (!temp) {
@@ -560,9 +654,10 @@ function fuseBase36() {
          return
       }
 
-      hashResult += hashString[i];
 
    }
+
+   hashResult = hashString.join('');
 
 
    window.location.hash = hashResult;
@@ -703,7 +798,7 @@ function createCardResults(groundExists, newSequence, finalResult, numberOrder) 
       newSequence[i] = cardList[newSequence[i]].name;
    }
 
-   finalResult = cardList[finalResult]
+   finalResult = cardList[finalResult];
 
    //let fusionDetail = finalResult.fusionInfo.replace(/\] \[/g, '] &ensp;or&ensp; [');
    let fusionDetail = finalResult.fusionInfo.replace(/\n/g, '<br>')

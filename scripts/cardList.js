@@ -2192,7 +2192,7 @@ const cardList = [
     "dc": 31,
     "atk": 1400,
     "def": 1200,
-    "effect": "NATURE: While this card is face-up in the defense position, all effects involving the taking of a card's control are rendered ineffective.",
+    "effect": "NATURE: While this card is face-up in the defense position, all effects involving the taking of a card's control are rendered ineffective.\n(*Celtic Guardian is considered an Elf for fusions, but not for Power Ups.)",
     "fusionInfo": "Warrior + Elf",
     "password": "QXYT4D4T",
     "archetype": "Elf"
@@ -7541,7 +7541,7 @@ const cardList = [
     "atk": 2800,
     "def": 2100,
     "effect": "",
-    "fusionInfo": "Thunder + Dragon (2000+ ATK)",
+    "fusionInfo": "Thunder + Dragon (2000+ ATK)\n*\"Aqua Dragon\", \"Sea King Dragon\", and \"Stone D.\" counts as Dragons for this fusion despite not being a Dragon-type",
     "password": "",
     "archetype": "Horned"
   },
@@ -10522,7 +10522,7 @@ const cardList = [
     "dc": 75,
     "atk": null,
     "def": null,
-    "effect": "All cards in play on the Field with the exception of the Leaders are transported to contrasting spaces diagonal to their current positions.",
+    "effect": "All cards in play on the Field with the exception of the Leaders are transported to contrasting spaces diagonal to their current positions.\n(*This cards swaps the X and Y coordinates of each card.)",
     "fusionInfo": "",
     "password": "",
     "archetype": ""
@@ -10788,7 +10788,7 @@ const cardList = [
     "dc": 10,
     "atk": null,
     "def": null,
-    "effect": "Increases the power of FIEND female monsters by 500 points.",
+    "effect": "Increases the power of FIEND or female monsters by 500 points.\n(*The game mislabels this as FIEND female monsters instead of FIEND or Female.)",
     "fusionInfo": "",
     "password": "0H6TS38D",
     "archetype": ""
@@ -10858,7 +10858,7 @@ const cardList = [
     "dc": 10,
     "atk": null,
     "def": null,
-    "effect": "Increases the power of DINOSAUR and REPTILE monsters by 500 points. ",
+    "effect": "Increases the power of DINOSAUR and REPTILE monsters by 500 points.\n(*The game mislabels DINOSAUR as DRAGON for this card)",
     "fusionInfo": "",
     "password": "2X8X4D65",
     "archetype": ""
