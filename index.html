@@ -119,6 +119,10 @@
       #buttonSection{
          margin-top: 10px;
       }
+
+      .footnote{
+         font-size: 10px;
+      }
    </style>
 </head>
 
@@ -827,27 +831,27 @@
 
          <form autocomplete="on" style=''>
             <div class="inputDiv" style="">
-               <input list='listOfCards' class="cardInput" id="cardOnField" type="text" onblur="checkName(0)" placeholder="Card on Field" style=" background-color: lightblue">
+               <input list='listOfCards' class="cardInput" id="cardOnField" type="text" onblur="checkName(0)" onfocus="this.select()" placeholder="Card on Field" style=" background-color: lightblue">
                <p class='materialStats'></p>
             </div>
             <div class="inputDiv" style="">
-               <input list="listOfCards" class="cardInput" type="text" onblur="checkName(1)" placeholder="Card 1">
+               <input list="listOfCards" class="cardInput" type="text" onblur="checkName(1)" onfocus="this.select()" placeholder="Card 1">
                <p class='materialStats'></p>
             </div>
             <div class="inputDiv" style="">
-               <input list='listOfCards' class="cardInput" type="text" onblur="checkName(2)" placeholder="Card 2">
+               <input list='listOfCards' class="cardInput" type="text" onblur="checkName(2)" onfocus="this.select()" placeholder="Card 2">
                <p class='materialStats'></p>
             </div>
             <div class="inputDiv" style="">
-               <input list='listOfCards' class="cardInput" type="text" onblur="checkName(3)" placeholder="Card 3">
+               <input list='listOfCards' class="cardInput" type="text" onblur="checkName(3)" onfocus="this.select()" placeholder="Card 3">
                <p class='materialStats'></p>
             </div>
             <div class="inputDiv" style="">
-               <input list='listOfCards' class="cardInput" type="text" onblur="checkName(4)" placeholder="Card 4">
+               <input list='listOfCards' class="cardInput" type="text" onblur="checkName(4)" onfocus="this.select()" placeholder="Card 4">
                <p class='materialStats'></p>
             </div>
             <div class="inputDiv" style="">
-               <input list='listOfCards' class="cardInput" type="text" onblur="checkName(5)" placeholder="Card 5">
+               <input list='listOfCards' class="cardInput" type="text" onblur="checkName(5)" onfocus="this.select()" placeholder="Card 5">
                <p class='materialStats'></p>
             </div>
          </form>
@@ -882,13 +886,13 @@
 
          <div id="fusionListNote">
 
-            <p>A general rule of thumb is that a fusion material's original ATK cannot be higher than the ATK of the monster you are trying to fuse for (with a few, rare exceptions).</p>
+            <p>A general rule of thumb is that a fusion material's <u>original</u> ATK cannot be higher than the fusion monster's ATK (with a few, rare exceptions).</p>
 
-            <p>Some fusions will have minimum ATK or LV requirement (i.e. 1500+ ATK or LV 5+). Only the fusion materials' <u>original</u> type, ATK, and attribute matters. Changing a monster's stat will not affect the fusion result.</p>
+            <p>Some fusions will have minimum ATK or LV requirement (i.e. 1500+ ATK or LV 5+). Only the fusion materials' <u>original</u> type, ATK, attribute, etc. matters. Changing a monster's stat will not affect the fusion result.</p>
 
-            <p>Some fusions requires Female, Elf, or Turtle archetypes. Elf monsters have "Elf" in its name ("Celtic Guardian" is considered as an elf for fusions). Turtle monsters have "Turtle" or "Tortoise" in its name. Female monsters can be identified if they can equip female Power Ups like "Cyber Shield". Fusions that involve these archetypes as fusion materials will usually be placed in a higher priority than fusions that only, exclusively deal with a monster's type. For example, a female, Fairy with less than 1300 ATK and a Fish will prioritize fusing for "Amazon of the Seas" (Female + Fish) over "7 Colored Fish" (Fairy + Fish).</p>
+            <p>Some fusions requires a monster from the Female, Elf, or Turtle archetypes. Elf monsters have "Elf" in its name ("Celtic Guardian" is considered as an elf for fusions), Turtle monsters have "Turtle" or "Tortoise" in its name, and Female monsters can be identified if they can equip female Power Ups like "Cyber Shield". Fusions involving these archetypes as fusion materials will typically be placed in a higher priority than fusions that exclusively deal with a monster's type. For example, a female, Fairy with less than 1300 ATK and a Fish will prioritize fusing for "Amazon of the Seas" (Female + Fish) over "7 Colored Fish" (Fairy + Fish).</p>
 
-            <p>Due to how the game is programmed, there are some inconsistencies of some card combinations that should work when they don't, or do work when they shouldn't. Please use the fusion simulator to double check.</p>
+            <p>Due to how the game is programmed, there are some inconsistencies of some card combinations that should and shouldn't work. Please use the fusion simulator to double check.</p>
          </div>
 
          Sort by: <input type="radio" name="sortList" onclick="swapTable('123')"> ID#/Type &emsp; <input type="radio" onclick="swapTable('ABC')" name="sortList" checked> Name
@@ -1325,7 +1329,7 @@
                   <td class="tdFusionName">Ushi Oni</td>
                </tr>
                <tr>
-                  <td class="tdFusionStat" colspan="2"><i>Fusion Materials: "Ancient Jar", "Morphing Jar", "Pot of Trick" or "Charubin the Fire Knight" + Spellcaster (1500+ ATK)</i>
+                  <td class="tdFusionStat" colspan="2"><i>Fusion Materials: "Ancient Jar", "Morphing Jar", "Pot the Trick" or "Charubin the Fire Knight" + Spellcaster (1500+ ATK)</i>
                      <p>Fiend/DARK/LV 6/ATK 2150/DEF 1950<br>Archetype(s): Horned</p>
                   </td>
                </tr>
@@ -2658,7 +2662,7 @@
                   <td class="tdFusionName">Ushi Oni</td>
                </tr>
                <tr>
-                  <td class="tdFusionStat" colspan="2"><i>Fusion Materials: "Ancient Jar", "Morphing Jar", "Pot of Trick" or "Charubin the Fire Knight" + Spellcaster (1500+ ATK)</i>
+                  <td class="tdFusionStat" colspan="2"><i>Fusion Materials: "Ancient Jar", "Morphing Jar", "Pot the Trick" or "Charubin the Fire Knight" + Spellcaster (1500+ ATK)</i>
                      <p>Fiend/DARK/LV 6/ATK 2150/DEF 1950<br>Archetype(s): Horned</p>
                   </td>
                </tr>
@@ -2719,6 +2723,12 @@
                </tr>
             </tbody>
          </table>
+
+         <p class='footnote'>
+            *Using Insects as fusion materials for "Sword Arm of Dragon" are a glitch in the game. They were supposed to be warriors whose ID#'s are 200 less than those Insects. This is why "Perfectly Ultimate Great Moth" can work in this fusion despite having twice the amount of ATK.'<br>
+            **Due to the pot and jar themed fusions for "Ushi Oni", "Charubin the Fire Knight" may have originally been intended to be "Dragon Piper".<br>
+            ***"Celtic Guardian" can be used for "Elf" fusions due to its Japanese name being "Elf Swordsman".
+         </p>
 
       </div>
    </div>
