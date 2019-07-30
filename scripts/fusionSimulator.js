@@ -1,4 +1,4 @@
-console.log('ver1.0.3a');
+console.log('ver1.0.3b');
 
 var abcList = [];
 
@@ -589,6 +589,65 @@ function scrollToTop() {
    resetFusionSectionColors();
 }
 
+function checkName(x){
+
+   //Spelling Error is working incorrectly.
+
+   let cardInput = document.getElementsByClassName('cardInput');
+   let materialStats = document.getElementsByClassName('materialStats');
+
+   materialStats[x].innerHTML = '';
+
+   cardInput[x].style.backgroundColor = ''; //Reset input colors
+
+   let temp = cardInput[x].value.toLowerCase();
+   let deciNum = parseInt(cardInput[x].value);
+
+   //Find if card exists
+   if (Number.isInteger(deciNum)) {
+      //If input was a number,
+      if (deciNum < 854 && deciNum >= 0) {
+         //If exists and input was ID# and exists
+         cardInput[x].value = cardList[deciNum].name;
+      } else {
+         //If number input was used but ID doesn't exist, then make input blank;
+         cardInput[x].value = '';
+         deciNum = false;
+      }
+   } else if (cardNamelist.includes(temp)) {
+      //if exists, convert then grab deciNum
+      deciNum = cardNamelist.indexOf(temp);
+   } else if (!temp) {
+      //Skip if empty
+      deciNum = false;
+   } else {
+      //If card is misspelled or don't exist, then error
+      cardInput[x].style.backgroundColor = 'lightcoral'; //Highlight problem input
+      materialStats[x].innerHTML = '<span class="warningHighlight">This card does not exist. Please check spelling.</span>'; //Show Warning
+      //display error message
+      deciNum = false;
+   }
+
+   //Show Fusion Material Stats
+   if (deciNum) {
+      let tempCard = cardList[deciNum];
+
+      let tempText = ''
+
+      tempText += 'ID# ' + tempCard.id + ' | ' + tempCard.type; //ID and Type
+      tempText += tempCard.attribute ? '/' + tempCard.attribute : ''; //Attribute
+      tempText += tempCard.dc ? '/DC ' + tempCard.dc : ''; //Deck Cost
+      tempText += tempCard.lv ? '/LV ' + tempCard.lv : ''; //Level
+      tempText += tempCard.atk ? '/ATK ' + tempCard.atk + '/DEF ' + tempCard.def : ''; //ATK/DEF
+      tempText += tempCard.archetype ? '<br>Archetype(s): ' + tempCard.archetype : ''; //Archetypes
+
+      tempText += fusableCards.includes(deciNum) ? '' : '<br><span class="warningHighlight">Note: This card does not fuse with other cards.</span>' //Warns this card can't fuse
+
+      materialStats[x].innerHTML = tempText; //Add stats below card input
+   }
+
+}
+
 function fuseBase36() {
    //Converting Cards into base36 to add to # on window url
 
@@ -611,12 +670,7 @@ function fuseBase36() {
    jumpToSection.innerHTML = '';
 
    for (var i = 0; i < cardInput.length; i++) {
-      if (i == 0) {
-         cardInput[i].style.backgroundColor = 'lightblue'; //Reset Ground Color
-      } else {
-         cardInput[i].style.backgroundColor = '#f1f1f1'; //Reset all other input colors
-      }
-
+      cardInput[i].style.backgroundColor = ''; //Reset input colors
 
       let temp = cardInput[i].value.toLowerCase();
       let deciNum = parseInt(cardInput[i].value);
@@ -686,11 +740,7 @@ function fuseCards(idArrSkip, clearSkip) {
 
    if (!clearSkip) {
       for (var i = 0; i < cardInput.length; i++) {
-         if (i == 0) {
-            cardInput[i].style.backgroundColor = 'lightblue'; //Reset Ground Color
-         } else {
-            cardInput[i].style.backgroundColor = '#f1f1f1'; //Reset all other input colors
-         }
+            cardInput[i].style.backgroundColor = ''; //Reset input colors
       }
    }
 
@@ -822,11 +872,14 @@ function createCardResults(groundExists, newSequence, finalResult, numberOrder) 
 
       let spanResultStat = document.createElement('span');
       spanResultStat.setAttribute('class', 'resultStats');
-      spanResultStat.innerHTML = '<br>Type: ' + finalResult.type + '&emsp;Attribute: ' + finalResult.attribute + '&emsp;ATK/DEF:' + finalResult.atk + '/' + finalResult.def;
 
-      spanResultStat.innerHTML += finalResult.archetype ? '&emsp;Archetype: ' + finalResult.archetype : '';
-      spanResultStat.innerHTML += finalResult.effect ? '<br><br>' + finalResult.effect.replace(/\n/g, '<br>') : '';
-      spanResultStat.innerHTML += '<br><br><hr>'
+      let statText = '<p>Type: ' + finalResult.type + '&emsp;Attribute: ' + finalResult.attribute + '&emsp;ATK/DEF:' + finalResult.atk + '/' + finalResult.def;
+
+      statText += finalResult.archetype ? '&emsp;Archetype: ' + finalResult.archetype + '</p>': '</p>';
+      statText += finalResult.effect ? '<div class="fusionEffect"> <p>' + finalResult.effect.replace(/\n/g, '<br>') + '</p></div>': '';
+      statText += '<hr>';
+
+      spanResultStat.innerHTML = statText
 
       createBold.appendChild(createTitle);
       createDiv.appendChild(createBold);
@@ -912,6 +965,10 @@ function exampleFusion() {
 
    window.location.hash = '#aei5852tay9w'
 
+   for (var i = 0; i < cardInput.length; i++) {
+      checkName(i);
+   }
+
    fuseCards([374, 653, 293, 101, 394, 356]);
 
 }
@@ -934,6 +991,8 @@ function randomFusion() {
       cardInput[i].value = cardList[random].name;
       hashString += random < 36 ? '0' + random.toString(36) : random.toString(36); //Convert random id to base 36; add leading 0 if result is below 2 characters.
       deciArr.push(random)
+
+      checkName(i);
    }
 
    window.location.hash = hashString;
@@ -944,9 +1003,16 @@ function randomFusion() {
 function resetFusionInputs() {
    //Empties all input boxes in fusion simulator
    let cardInput = document.getElementsByClassName('cardInput');
+   let materialStats = document.getElementsByClassName('materialStats');
+
    for (var i = 0; i < cardInput.length; i++) {
       cardInput[i].value = null;
+      materialStats[i].innerHTML = '';
+
+      cardInput[i].style.backgroundColor = ''; //Reset input colors
+
    }
+
 }
 
 function checkHash() {
@@ -969,8 +1035,10 @@ function checkHash() {
          cardInput[i].value = subHash > 853 ? null : cardList[subHash].name;
          // hashArr[i] = subHash;
 
-         fuseCards();
+         checkName(i);
       }
+
+      fuseCards();
       // console.log(hashArr);
    }
 }
