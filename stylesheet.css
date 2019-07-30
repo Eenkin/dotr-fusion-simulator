@@ -4,6 +4,11 @@ body {
    padding: 10px 0;
 }
 
+.noWrap{
+   white-space: nowrap;
+   display: inline-block;
+}
+
 .cardInput, .fuseSimBtn {
    margin: 5px auto;
 }
@@ -53,16 +58,19 @@ body {
 }
 
 input {
-   border: 1px solid transparent;
-   background-color: #f1f1f1;
+   //border: 1px solid transparent;
    padding: 10px;
    font: 16px Verdana;
 }
 
 input[type=text] {
-   background-color: #f1f1f1;
+   border: 1px solid transparent;
+   border-bottom: 1px solid;
+   background-color: white;
    width: 100%;
    font-size: 12px;
+   height: 25px;
+   padding: 3px;
 }
 
 input[type=button], .fuseSimBtn {
