@@ -980,15 +980,21 @@ function randomFusion() {
 
    let hashString = '';
    for (var i = 0; i < cardInput.length; i++) {
-      let random = Math.floor(Math.random() * (683 + 3))
-      if (random == 657) {
-         //If Summoned Lord Exodia, switch to lower id;
-         random--;
-      } else if (random > 683) {
-         //Adds Power Up fusions into randomizer
-         random += 114;
-      }
+      // let random = Math.floor(Math.random() * (683 + 3))
+      // if (random == 657) {
+      //    //If Summoned Lord Exodia, switch to lower id;
+      //    random--;
+      // } else if (random > 683) {
+      //    //Adds Power Up fusions into randomizer
+      //    random += 114;
+      // }
+      // cardInput[i].value = cardList[random].name;
+
+      let random = Math.floor(Math.random() * fusableCards.length);
+      random = fusableCards[random];
+
       cardInput[i].value = cardList[random].name;
+
       hashString += random < 36 ? '0' + random.toString(36) : random.toString(36); //Convert random id to base 36; add leading 0 if result is below 2 characters.
       deciArr.push(random)
 

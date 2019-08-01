@@ -3845,7 +3845,7 @@ const cardList = [
     "atk": 1400,
     "def": 1200,
     "effect": "FLIP: When this card is flipped face-up, add a Boo Koo face-down to own Summoning Area.",
-    "fusionInfo": "\"Boo Koo \"+ Winged Beast",
+    "fusionInfo": "\"Boo Koo\" + Winged Beast",
     "password": "69JKCPJK",
     "archetype": ""
   },
@@ -4811,7 +4811,7 @@ const cardList = [
     "atk": 2150,
     "def": 1950,
     "effect": "",
-    "fusionInfo": "\"Ancient Jar\", \"Morphing Jar\", \"Pot of Trick\" or \"Charubin the Fire Knight\" + Spellcaster (1500+ ATK)",
+    "fusionInfo": "\"Ancient Jar\", \"Morphing Jar\", \"Pot the Trick\" or \"Charubin the Fire Knight\" + Spellcaster (1500+ ATK)",
     "password": "",
     "archetype": "Horned"
   },
