@@ -82,8 +82,14 @@ function nameConversion(name) {
 
 
    for (var i = 0; i < result.length; i++) {
-      let replaceSpaces = result[i].replace(/ /gi, '_');
+      let replaceSpaces = result[i].trim().replace(/ /gi, '_');
       let leader = result[i];
+
+      // if (i > 0) {
+      //    result[i] = ' ';
+      //    replaceSpaces
+      // }
+
       result[i] = i > 0 ? ' ' : '';
       result[i] += '<a class="link" href="deck_builder#' + replaceSpaces + '">' + leader + '</a>';
    }
