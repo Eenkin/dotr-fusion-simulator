@@ -107,6 +107,11 @@
          height: 50px;
          right:10px;
       }
+
+      #buttonSection{
+         font-size: 12px;
+         text-align: left;
+      }
    </style>
 </head>
 
@@ -984,18 +989,12 @@
       </datalist>
 
       <form autocomplete="on" style='width:100%; margin: 0 auto; display:inline-block;'>
-         <input list="listOfCards" class="cardInput" onfocus="this.select()" id="cardInput" onkeypress="handle(event, this)" type="text" style="width:50%" placeholder="Enter the name or ID# of a card">
-         <input type="button" value="Add Card" class="fuseSimBtn" id='addCardBtn' onclick='addCard()'>
-         <input type="button" value="Randomize Deck" class="fuseSimBtn" id="rndmBtn" onclick='randomDeck()'>
+         <input list="listOfCards" class="cardInput" onfocus="this.select()" id="cardInput" onkeypress="handle(event, this)" type="text" style="width:60%" placeholder="Enter the name or ID# of a card">
+         <input type="button" value="+" class="fuseSimBtn" id='addCardBtn' onclick='addCard()'>
+         <!-- <input type="button" value="Randomize Deck" class="fuseSimBtn" id="rndmBtn" onclick='randomDeck()'> -->
          <input type="button" value="Reset Deck" class="fuseSimBtn" id="resetBtn" onclick='resetDeck()'>
 
       </form>
-      <!--<div id='buttonSection'>
-         <div class="fuseSimBtn" onmousedown="btnMouseDown('fuseCardsBtn')"  onmouseup="btnMouseUp('fuseCardsBtn')" id='fuseCardsBtn' onclick='fuseBase36()' style='background-color: DodgerBlue;'>Fuse Cards</div>
-         <div class="fuseSimBtn" onmousedown="btnMouseDown('exampleBtn')"  onmouseup="btnMouseUp('exampleBtn')" id="exampleBtn" onclick='exampleFusion()'>Use Preset Example</div>
-         <div class="fuseSimBtn" onmousedown="btnMouseDown('rndmBtn')"  onmouseup="btnMouseUp('rndmBtn')" id="rndmBtn" onclick='randomFusion()'>Randomize Cards</div>
-         <div class="fuseSimBtn" onmousedown="btnMouseDown('resetBtn')"  onmouseup="btnMouseUp('resetBtn')" id="resetBtn" onclick='resetFusionInputs()'>Reset</div>
-      </div>-->
 
       <div id="warningSection">
          <p class="warningParagraph" id='limitWarning'>40 cards have already been added to the deck. You cannot add any more cards to the deck.</p>
@@ -1006,72 +1005,84 @@
       </div>
 
       <div id="buttonSection">
-         <select id="fuseSpeed" onchange="loadingFusions(this.value)">
-            <option value='none' disabled>---Choose how many fusions can be shown---</option>
-            <option value='none' disabled></option>
-            <option value='none' disabled>---Fasest Loading Speed---</option>
-            <option value="none">Do not fuse deck</option>
-            <option value='none' disabled>---Moderate Loading Speed---</option>
-            <option value="some">Fuse any 2 cards in the deck</option>
-            <option value='none' disabled>---Longest Loading Speed (Mobile Unfriendly)---</option>
-            <option value="all">All possible multi-chain fusions</option>
-         </select>
-         <select id="presetForm">
-            <option value="">None</option>
-            <option disabled>---Starter Decks---</option>
-            <option value="Airknight Parshath">Airknight Parshath</option>
-            <option value="Birdface">Birdface</option>
-            <option value="Fairy King Truesdale">Fairy King Truesdale</option>
-            <option value="Injection Fairy Lily">Injection Fairy Lily</option>
-            <option value="King Tiger Wanghu">King Tiger Wanghu</option>
-            <option value="Kryuel">Kryuel</option>
-            <option value="Luminous Soldier">Luminous Soldier</option>
-            <option value="Maiden of the Aqua">Maiden of the Aqua</option>
-            <option value="Molten Behemoth">Molten Behemoth</option>
-            <option value="Patrician of Darkness">Patrician of Darkness</option>
-            <option value="Robotic Knight">Robotic Knight</option>
-            <option value="Serpentine Princess">Serpentine Princess</option>
-            <option value="Tactical Warrior">Tactical Warrior</option>
-            <option value="The Illusory Gentleman"> The Illusory Gentleman</option>
-            <option value="Thunder Nyan Nyan">Thunder Nyan Nyan</option>
-            <option value="Twin-Headed Behemoth">Twin-Headed Behemoth</option>
-            <option value="Wolf Axwielder">Wolf Axwielder</option>
-            <option disabled>---Story CPU Decks---</option>
-            <option value="Bakura">Bakura</option>
-            <option value="Darkness-ruler">Darkness-ruler</option>
-            <option value="Ishtar">Ishtar</option>
-            <option value="J. Shadi Morton">J. Shadi Morton</option>
-            <option value="Jasper Dice Tudor">Jasper Dice Tudor</option>
-            <option value="Joey">Joey</option>
-            <option value="Keith">Keith</option>
-            <option value="Labyrinth-ruler">Labyrinth-ruler</option>
-            <option value="Mako">Mako</option>
-            <option value="Manawyddan fab Llyr (Chakra)">Manawyddan fab Llyr (Chakra)</option>
-            <option value="Manawyddan fab Llyr (Skull Knight)">Manawyddan fab Llyr (Skull Knight)</option>
-            <option value="Margaret Mai Beaufort">Margaret Mai Beaufort</option>
-            <option value="Necromancer">Necromancer</option>
-            <option value="Pegasus Crawford">Pegasus Crawford</option>
-            <option value="Rex Raptor">Rex Raptor</option>
-            <option value="Richard Slysheen of York">Richard Slysheen of York</option>
-            <option value="Seto">Seto</option>
-            <option value="T. Tristan Grey">T. Tristan Grey</option>
-            <option value="Tea">Tea</option>
-            <option value="Weevil Underwood">Weevil Underwood</option>
-            <option value="Yugi">Yugi</option>
-            <option disabled>---Deck Master Decks---</option>
-            <option value="Deck Master I">Deck Master I</option>
-            <option value="Deck Master S">Deck Master S</option>
-            <option value="Deck Master T">Deck Master T</option>
-         </select>
-         <input type="button" value="Select Preset" class="fuseSimBtn" id="presetBtn" onclick='usePreset()'>
+         <p>Sort By:
+            <select id="sorting" onchange="sortDeck(true)">
+               <option value="123">ID#/Type</option>
+               <option value="abc">Name</option>
+            </select></p>
+
+         <p>Check for fusions:
+            <select id="fuseSpeed" onchange="loadingFusions(this.value)">
+               <option value='none' disabled>---Choose how many fusions can be shown---</option>
+               <option value='none' disabled></option>
+               <option value='none' disabled>---Fasest Loading Speed---</option>
+               <option value="none">Do not fuse deck</option>
+               <option value='none' disabled>---Moderate Loading Speed---</option>
+               <option value="some">Fuse any 2 cards in the deck</option>
+               <option value='none' disabled>---Longest Loading Speed (Mobile Unfriendly)---</option>
+               <option value="all">All possible multi-chain fusions</option>
+            </select>
+         </p>
+
+         <p>Select Preset Deck:
+            <select id="presetForm" onchange="usePreset()">
+               <option value="">None</option>
+               <option disabled>---Starter Decks---</option>
+               <option value="Airknight Parshath">Airknight Parshath</option>
+               <option value="Birdface">Birdface</option>
+               <option value="Fairy King Truesdale">Fairy King Truesdale</option>
+               <option value="Injection Fairy Lily">Injection Fairy Lily</option>
+               <option value="King Tiger Wanghu">King Tiger Wanghu</option>
+               <option value="Kryuel">Kryuel</option>
+               <option value="Luminous Soldier">Luminous Soldier</option>
+               <option value="Maiden of the Aqua">Maiden of the Aqua</option>
+               <option value="Molten Behemoth">Molten Behemoth</option>
+               <option value="Patrician of Darkness">Patrician of Darkness</option>
+               <option value="Robotic Knight">Robotic Knight</option>
+               <option value="Serpentine Princess">Serpentine Princess</option>
+               <option value="Tactical Warrior">Tactical Warrior</option>
+               <option value="The Illusory Gentleman"> The Illusory Gentleman</option>
+               <option value="Thunder Nyan Nyan">Thunder Nyan Nyan</option>
+               <option value="Twin-Headed Behemoth">Twin-Headed Behemoth</option>
+               <option value="Wolf Axwielder">Wolf Axwielder</option>
+               <option disabled>---Story CPU Decks---</option>
+               <option value="Bakura">Bakura</option>
+               <option value="Darkness-ruler">Darkness-ruler</option>
+               <option value="Ishtar">Ishtar</option>
+               <option value="J. Shadi Morton">J. Shadi Morton</option>
+               <option value="Jasper Dice Tudor">Jasper Dice Tudor</option>
+               <option value="Joey">Joey</option>
+               <option value="Keith">Keith</option>
+               <option value="Labyrinth-ruler">Labyrinth-ruler</option>
+               <option value="Mako">Mako</option>
+               <option value="Manawyddan fab Llyr (Chakra)">Manawyddan fab Llyr (Chakra)</option>
+               <option value="Manawyddan fab Llyr (Skull Knight)">Manawyddan fab Llyr (Skull Knight)</option>
+               <option value="Margaret Mai Beaufort">Margaret Mai Beaufort</option>
+               <option value="Necromancer">Necromancer</option>
+               <option value="Pegasus Crawford">Pegasus Crawford</option>
+               <option value="Rex Raptor">Rex Raptor</option>
+               <option value="Richard Slysheen of York">Richard Slysheen of York</option>
+               <option value="Seto">Seto</option>
+               <option value="T. Tristan Grey">T. Tristan Grey</option>
+               <option value="Tea">Tea</option>
+               <option value="Weevil Underwood">Weevil Underwood</option>
+               <option value="Yugi">Yugi</option>
+               <option disabled>---Deck Master Decks---</option>
+               <option value="Deck Master I">Deck Master I</option>
+               <option value="Deck Master S">Deck Master S</option>
+               <option value="Deck Master T">Deck Master T</option>
+            </select>
+         </p>
+         <!-- <input type="button" value="Select Preset" class="fuseSimBtn" id="presetBtn" onclick='usePreset()'> -->
       </div>
 
-      <div id='deckStatSection'><p>
-         <span class="noWrap">Total DC: <span id="dcTotal">0</span></span>
-         &emsp;|&emsp;
-         <span class="noWrap">Average LV: <span id="averageLV">0</span></span>
-         &emsp;|&emsp;
-         <span class="noWrap">Cards in Deck: <span id="totalCards">0</span>/40</span></p>
+      <div id='deckStatSection'>
+         <p>
+            <span class="noWrap">Total DC: <span id="dcTotal">0</span></span>
+            &emsp;|&emsp;
+            <span class="noWrap">Average LV: <span id="averageLV">0</span></span>
+            &emsp;|&emsp;
+            <span class="noWrap">Cards in Deck: <span id="totalCards">0</span>/40</span></p>
 
          <!-- <p>Total of Each Type<br><span id="eachType"></span></p>
          <p>Total of Each Attribute<br><span id="eachAttribute"></span></p>
@@ -1080,7 +1091,11 @@
 
       <div id='deckBuildSection'>
          <table id="deckTable">
-            <thead><tr><th colspan="4">Deck</th></tr></thead>
+            <thead>
+               <tr>
+                  <th colspan="4">Deck</th>
+               </tr>
+            </thead>
             <tbody>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">1</td>
