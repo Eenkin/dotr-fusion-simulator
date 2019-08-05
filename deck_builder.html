@@ -119,7 +119,7 @@
 
    <div id='note' style='font-size: 14px; width: 78%;text-align: left; margin: 20px auto;'>
 
-      <p>This will determine the your deck cost, number of types and attributes, average monster level, and any basic fusions in the deck. (This will not calculate fusions between 2 fusions.)</p>
+      <p>This will determine the your deck cost, number of types and attributes, average monster level, and any basic fusions in the deck. (This will not calculate fusions between 2 fusions.) <b>For minimal loading times, please select "Do not fuse deck" or "Fuse any 2 cards in the deck" when removing cards, adding cards, or selecting a preset deck.</b></p>
       <p>All cards with a green box on their ID# are cards that you can win from the slots from either Deck Master K or against a CPU if you select a preset deck.</p>
 
    </div>
@@ -986,6 +986,8 @@
       <form autocomplete="on" style='width:100%; margin: 0 auto; display:inline-block;'>
          <input list="listOfCards" class="cardInput" onfocus="this.select()" id="cardInput" onkeypress="handle(event, this)" type="text" style="width:50%" placeholder="Enter the name or ID# of a card">
          <input type="button" value="Add Card" class="fuseSimBtn" id='addCardBtn' onclick='addCard()'>
+         <input type="button" value="Randomize Deck" class="fuseSimBtn" id="rndmBtn" onclick='randomDeck()'>
+         <input type="button" value="Reset Deck" class="fuseSimBtn" id="resetBtn" onclick='resetDeck()'>
 
       </form>
       <!--<div id='buttonSection'>
@@ -999,16 +1001,21 @@
          <p class="warningParagraph" id='limitWarning'>40 cards have already been added to the deck. You cannot add any more cards to the deck.</p>
          <p class="warningParagraph" id='spellingWarning'>This card doesn't exist. Please check spelling.</p>
          <p class="warningParagraph" id='exodiaWarning'>"Summoned Lord Exodia" is not a card that can be added to the deck.</p>
-         <p class="warningParagraph" id='unobtainableWarning'>One or more unobtainable cards are in the deck.</p>
+         <p class="warningParagraph" id='unobtainableWarning'>The following unobtainable cards are in the deck: <span id="unobtainListSection"></span></p>
          <p class="warningParagraph" id='multipleCardsWarning'>The deck has more than 3 copies of one or more cards.</p>
       </div>
 
       <div id="buttonSection">
-         <!--<input type="button" value="Fuse Cards" class="fuseSimBtn" id='fuseCardsBtn' onclick='fuseBase36()'>
-         <input type="button" value="Use Preset Example" class="fuseSimBtn" id="exampleBtn" onclick='exampleFusion()'>-->
-         <input type="button" value="Randomize Deck" class="fuseSimBtn" id="rndmBtn" onclick='randomDeck()'>
-         <input type="button" value="Reset" class="fuseSimBtn" id="resetBtn" onclick='resetDeck()'>
-
+         <select id="fuseSpeed" onchange="loadingFusions(this.value)">
+            <option value='none' disabled>---Choose how many fusions can be shown---</option>
+            <option value='none' disabled></option>
+            <option value='none' disabled>---Fasest Loading Speed---</option>
+            <option value="none">Do not fuse deck</option>
+            <option value='none' disabled>---Moderate Loading Speed---</option>
+            <option value="some">Fuse any 2 cards in the deck</option>
+            <option value='none' disabled>---Longest Loading Speed (Mobile Unfriendly)---</option>
+            <option value="all">All possible multi-chain fusions</option>
+         </select>
          <select id="presetForm">
             <option value="">None</option>
             <option disabled>---Starter Decks---</option>
@@ -1056,7 +1063,6 @@
             <option value="Deck Master S">Deck Master S</option>
             <option value="Deck Master T">Deck Master T</option>
          </select>
-
          <input type="button" value="Select Preset" class="fuseSimBtn" id="presetBtn" onclick='usePreset()'>
       </div>
 
@@ -1074,6 +1080,7 @@
 
       <div id='deckBuildSection'>
          <table id="deckTable">
+            <thead><tr><th colspan="4">Deck</th></tr></thead>
             <tbody>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">1</td>
@@ -1453,8 +1460,6 @@
 
 
       <div id='jumpToSection' style='margin:10px 0'></div>
-
-      <div id='fusionResults'></div>
 
       <div id="fusionPopUp">
          <div style="float:right;"><input id="closeFusionListBtn" type="button" value="X" onclick="document.getElementById('fusionPopUp').style.display = ''"></div>
