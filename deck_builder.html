@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <title>Yu-Gi-Oh! The Duelists of the Roses - Fusion Simulator</title>
+   <script src="scripts/cardList.js"></script>
+   <script src="scripts/fusionList.js"></script>
+   <script src="scripts/deckBuilder.js"></script>
+   <link rel="stylesheet" href="stylesheet.css">
+
+   <style>
+      a{
+         color: blue;
+      }
+
+      table, td, th {
+         border-collapse: collapse;
+         border: 1px black solid;
+         font-size: 12px;
+      }
+
+      #deckBuildSection{
+         width:100%;
+         display: inline-flex;
+      }
+
+      #deckTable > tbody > tr:nth-child(odd), th, #fusionTable > tbody > tr:nth-child(odd) {
+         height: 20px;
+      }
+
+      #deckTable > tbody > tr:nth-child(even), #fusionTable > tbody > tr:nth-child(even){
+         height: 30px;
+         background-color: #dadada;
+      }
+
+      #deckTable, #fusionTable{
+         width: 49%;
+         display: inline-table;
+      }
+
+      #fusionTable{
+         margin-left: 2%;
+      }
+
+      .tdRemove{
+         width:60px;
+      }
+
+      .tdCardId, .tdFusionId{
+         width:40px;
+      }
+
+      .cardSlot{
+         width: 30px;
+      }
+
+      .tdCardName, .tdCardStat, .tdFusionName, .tdFusionStat{
+         text-align: left;
+         padding: 0 5px;
+      }
+
+      #warningSection{
+         font-size: 10px;
+         margin-left: 5px auto;
+         margin-top: -5px;
+      }
+
+      .warningParagraph{
+         background-color: yellow;
+         margin: 5px auto;
+         display:none;
+      }
+
+      #deckStatSection{
+         font-size: 12px;
+      }
+
+      #fusionPopUp{
+         position:fixed;
+         top: 0;
+         left: 0;
+         text-align: left;
+         width: 100%;
+         height: 100%;
+         background-color: #000000b5;
+         padding: 20px;
+         display: none;
+
+      }
+
+      #listBG{
+         background-color: white;
+         padding: 20px;
+         font-size: 14px;
+         border: 2px red solid;
+         overflow: auto;
+         height: 100%;
+      }
+
+      #closeFusionListBtn{
+         background-color: red;
+         position: fixed;
+         top: 20px;
+         width: 50px;
+         height: 50px;
+         right:10px;
+      }
+   </style>
+</head>
+
+<body>
+
+   <nav><a href='.'>Fusion Simulator</a> &emsp; <a href='naming_simulator'>Naming/Starter Deck Simulator</a> &emsp; <a href='deck_builder'>Deck Builder</a></nav>
+
+
+   <h1 id="pageHeading" style="width: 80%;">Yu-Gi-Oh! The Duelists of the Roses - Deck Builder</h1>
+
+   <div id='note' style='font-size: 14px; width: 78%;text-align: left; margin: 20px auto;'>
+
+      <p>This will determine the your deck cost, number of types and attributes, average monster level, and any basic fusions in the deck. (This will not calculate fusions between 2 fusions.)</p>
+      <p>All cards with a green box on their ID# are cards that you can win from the slots from either Deck Master K or against a CPU if you select a preset deck.</p>
+
+   </div>
+
+   <div id='forms' style='width:80%; margin: 20px auto;'>
+
+      <datalist id="listOfCards">
+         <option value="30,000-Year White Turtle"></option>
+         <option value="7 Colored Fish"></option>
+         <option value="7 Completed"></option>
+         <option value="Abyss Flower"></option>
+         <option value="Acid Crawler"></option>
+         <option value="Acid Trap Hole"></option>
+         <option value="Air Eater"></option>
+         <option value="Air Marmot of Nefariousness"></option>
+         <option value="Airknight Parshath"></option>
+         <option value="Akakieisu"></option>
+         <option value="Akihiron"></option>
+         <option value="Alinsection"></option>
+         <option value="Amazon of the Seas"></option>
+         <option value="Ameba"></option>
+         <option value="Amphibious Bugroth"></option>
+         <option value="Ancient Brain"></option>
+         <option value="Ancient Elf"></option>
+         <option value="Ancient Jar"></option>
+         <option value="Ancient Lizard Warrior"></option>
+         <option value="Ancient One of the Deep Forest"></option>
+         <option value="Ancient Sorcerer"></option>
+         <option value="Ancient Tool"></option>
+         <option value="Ancient Tree of Enlightenment"></option>
+         <option value="Ansatsu"></option>
+         <option value="Anthrosaurus"></option>
+         <option value="Anti Raigeki"></option>
+         <option value="Anti-Magic Fragrance"></option>
+         <option value="Aqua Chorus"></option>
+         <option value="Aqua Dragon"></option>
+         <option value="Aqua Madoor"></option>
+         <option value="Aqua Snake"></option>
+         <option value="Arlownay"></option>
+         <option value="Arma Knight"></option>
+         <option value="Armaill"></option>
+         <option value="Armed Ninja"></option>
+         <option value="Armored Lizard"></option>
+         <option value="Armored Rat"></option>
+         <option value="Armored Starfish"></option>
+         <option value="Armored Zombie"></option>
+         <option value="Arsenal Bug"></option>
+         <option value="Axe Raider"></option>
+         <option value="Axe of Despair"></option>
+         <option value="B. Dragon Jungle King"></option>
+         <option value="B. Skull Dragon"></option>
+         <option value="Baby Dragon"></option>
+         <option value="Bad Reaction to Simochi"></option>
+         <option value="Baron of the Fiend Sword"></option>
+         <option value="Barox"></option>
+         <option value="Barrel Dragon"></option>
+         <option value="Barrel Lily"></option>
+         <option value="Barrel Rock"></option>
+         <option value="Basic Insect"></option>
+         <option value="Bat"></option>
+         <option value="Battle Ox"></option>
+         <option value="Battle Steer"></option>
+         <option value="Battle Warrior"></option>
+         <option value="Beaked Snake"></option>
+         <option value="Bean Soldier"></option>
+         <option value="Bear Trap"></option>
+         <option value="Beast Fangs"></option>
+         <option value="Beastking of the Swamps"></option>
+         <option value="Beastly Mirror Ritual"></option>
+         <option value="Beautiful Beast Trainer"></option>
+         <option value="Beautiful Headhuntress"></option>
+         <option value="Beaver Warrior"></option>
+         <option value="Behegon"></option>
+         <option value="Berfomet"></option>
+         <option value="Bickuribox"></option>
+         <option value="Big Eye"></option>
+         <option value="Big Insect"></option>
+         <option value="Binding Chain"></option>
+         <option value="Bio Plant"></option>
+         <option value="Birdface"></option>
+         <option value="Black Luster Ritual"></option>
+         <option value="Black Luster Soldier"></option>
+         <option value="Black Pendant"></option>
+         <option value="Blackland Fire Dragon"></option>
+         <option value="Bladefly"></option>
+         <option value="Blast Juggler"></option>
+         <option value="Blast Sphere"></option>
+         <option value="Block Attack"></option>
+         <option value="Blocker"></option>
+         <option value="Blue-Eyed Silver Zombie"></option>
+         <option value="Blue-Eyes Ultimate Dragon"></option>
+         <option value="Blue-Eyes White Dragon"></option>
+         <option value="Blue-Winged Crown"></option>
+         <option value="Bolt Escargot"></option>
+         <option value="Bolt Penguin"></option>
+         <option value="Bone Mouse"></option>
+         <option value="Boo Koo"></option>
+         <option value="Book of Secret Arts"></option>
+         <option value="Bottom Dweller"></option>
+         <option value="Boulder Tortoise"></option>
+         <option value="Bracchio-raidus"></option>
+         <option value="Brain Control"></option>
+         <option value="Brave Scizzar"></option>
+         <option value="Breath of Light"></option>
+         <option value="Bright Castle"></option>
+         <option value="Burglar"></option>
+         <option value="Burning Land"></option>
+         <option value="Burning Spear"></option>
+         <option value="Call Of The Haunted"></option>
+         <option value="Call of the Grave"></option>
+         <option value="Candle of Fate"></option>
+         <option value="Cannon Soldier"></option>
+         <option value="Carat Idol"></option>
+         <option value="Castle of Dark Illusions"></option>
+         <option value="Catapult Turtle"></option>
+         <option value="Celtic Guardian"></option>
+         <option value="Chakra"></option>
+         <option value="Change Slime"></option>
+         <option value="Change of Heart"></option>
+         <option value="Charubin the Fire Knight"></option>
+         <option value="Chimera the Flying Mythical Beast"></option>
+         <option value="Claw Reacher"></option>
+         <option value="Clown Zombie"></option>
+         <option value="Cockroach Knight"></option>
+         <option value="Cocoon of Evolution"></option>
+         <option value="Cold Wave"></option>
+         <option value="Commencement Dance"></option>
+         <option value="Contruct of Mask"></option>
+         <option value="Copycat"></option>
+         <option value="Corroding Shark"></option>
+         <option value="Cosmo Queen"></option>
+         <option value="Cosmo Queen's Prayer"></option>
+         <option value="Crab Turtle"></option>
+         <option value="Crass Clown"></option>
+         <option value="Crawling Dragon"></option>
+         <option value="Crawling Dragon #2"></option>
+         <option value="Crazy Fish"></option>
+         <option value="Creature Swap"></option>
+         <option value="Crimson Sunbird"></option>
+         <option value="Crow Goblin"></option>
+         <option value="Crush Card"></option>
+         <option value="Curse of Dragon"></option>
+         <option value="Curse of Millennium Shield"></option>
+         <option value="Curse of Tri-Horned Dragon"></option>
+         <option value="Cursebreaker"></option>
+         <option value="Curtain of the Dark Ones"></option>
+         <option value="Cyber Commander"></option>
+         <option value="Cyber Saurus"></option>
+         <option value="Cyber Shield"></option>
+         <option value="Cyber Soldier"></option>
+         <option value="Cyber Soldier of Darkworld"></option>
+         <option value="Cyber-Stein"></option>
+         <option value="D. Human"></option>
+         <option value="Dancing Elf"></option>
+         <option value="Dark Artist"></option>
+         <option value="Dark Assailant"></option>
+         <option value="Dark Chimera"></option>
+         <option value="Dark Elf"></option>
+         <option value="Dark Energy"></option>
+         <option value="Dark Gray"></option>
+         <option value="Dark Hole"></option>
+         <option value="Dark King of the Abyss"></option>
+         <option value="Dark Magic Ritual"></option>
+         <option value="Dark Magician"></option>
+         <option value="Dark Magician Girl"></option>
+         <option value="Dark Plant"></option>
+         <option value="Dark Prisoner"></option>
+         <option value="Dark Rabbit"></option>
+         <option value="Dark Shade"></option>
+         <option value="Dark Titan of Terror"></option>
+         <option value="Dark Witch"></option>
+         <option value="Dark-Piercing Light"></option>
+         <option value="Darkfire Dragon"></option>
+         <option value="Darkness Approaches"></option>
+         <option value="Darkworld Thorns"></option>
+         <option value="Deepsea Shark"></option>
+         <option value="Destroyer Golem"></option>
+         <option value="Dharma Cannon"></option>
+         <option value="Dian Keto the Cure Master"></option>
+         <option value="Dice Armadillo"></option>
+         <option value="Dig Beak"></option>
+         <option value="Dimensional Warrior"></option>
+         <option value="Dimensionhole"></option>
+         <option value="Disk Magician"></option>
+         <option value="Dissolverock"></option>
+         <option value="Djinn the Watcher of the Wind"></option>
+         <option value="Dokuroizo the Grim Reaper"></option>
+         <option value="Dokurorider"></option>
+         <option value="Doma The Angel of Silence"></option>
+         <option value="Doron"></option>
+         <option value="Dorover"></option>
+         <option value="Dragon Capture Jar"></option>
+         <option value="Dragon Piper"></option>
+         <option value="Dragon Seeker"></option>
+         <option value="Dragon Statue"></option>
+         <option value="Dragon Treasure"></option>
+         <option value="Dragon Zombie"></option>
+         <option value="Dragoness the Wicked Knight"></option>
+         <option value="Dream Clown"></option>
+         <option value="Droll Bird"></option>
+         <option value="Drooling Lizard"></option>
+         <option value="Dryad"></option>
+         <option value="Dungeon Worm"></option>
+         <option value="Dust Tornado"></option>
+         <option value="Earthshaker"></option>
+         <option value="Eatgaboon"></option>
+         <option value="Eldeen"></option>
+         <option value="Electric Lizard"></option>
+         <option value="Electric Snake"></option>
+         <option value="Electro-Whip"></option>
+         <option value="Electromagnetic Bagworm"></option>
+         <option value="Elegant Egotist"></option>
+         <option value="Elf's Light"></option>
+         <option value="Embryonic Beast"></option>
+         <option value="Emperor of the Land and Sea"></option>
+         <option value="Empress Judge"></option>
+         <option value="Enchanted Javelin"></option>
+         <option value="Enchanting Mermaid"></option>
+         <option value="Eradicating Aerosol"></option>
+         <option value="Eternal Draught"></option>
+         <option value="Eternal Rest"></option>
+         <option value="Exile of the Wicked"></option>
+         <option value="Exodia the Forbidden One"></option>
+         <option value="Eyearmor"></option>
+         <option value="Fairy Dragon"></option>
+         <option value="Fairy King Truesdale"></option>
+         <option value="Fairy Meteor Crush"></option>
+         <option value="Fairy of the Fountain"></option>
+         <option value="Fairy's Gift"></option>
+         <option value="Fairywitch"></option>
+         <option value="Faith Bird"></option>
+         <option value="Fake Trap"></option>
+         <option value="Feral Imp"></option>
+         <option value="Fiend Castle"></option>
+         <option value="Fiend Kraken"></option>
+         <option value="Fiend Reflection #1"></option>
+         <option value="Fiend Reflection #2"></option>
+         <option value="Fiend Sword"></option>
+         <option value="Fiend's Hand"></option>
+         <option value="Fiend's Mirror"></option>
+         <option value="Final Flame"></option>
+         <option value="Fire Eye"></option>
+         <option value="Fire Kraken"></option>
+         <option value="Fire Reaper"></option>
+         <option value="Firegrass"></option>
+         <option value="Firewing Pegasus"></option>
+         <option value="Fireyarou"></option>
+         <option value="Fissure"></option>
+         <option value="Flame Cerebrus"></option>
+         <option value="Flame Ghost"></option>
+         <option value="Flame Manipulator"></option>
+         <option value="Flame Snake"></option>
+         <option value="Flame Swordsman"></option>
+         <option value="Flower Wolf"></option>
+         <option value="Flying Penguin"></option>
+         <option value="Follow Wind"></option>
+         <option value="Forest"></option>
+         <option value="Fortress Whale"></option>
+         <option value="Fortress Whale's Oath"></option>
+         <option value="Frenzied Panda"></option>
+         <option value="Frog The Jam"></option>
+         <option value="Fungi of the Musk"></option>
+         <option value="Fusionist"></option>
+         <option value="Gaia the Dragon Champion"></option>
+         <option value="Gaia the Fierce Knight"></option>
+         <option value="Gale Dogra"></option>
+         <option value="Ganigumo"></option>
+         <option value="Garma Sword"></option>
+         <option value="Garma Sword Oath"></option>
+         <option value="Garoozis"></option>
+         <option value="Garvas"></option>
+         <option value="Gate Deeg"></option>
+         <option value="Gate Guardian"></option>
+         <option value="Gate Guardian Ritual"></option>
+         <option value="Gatekeeper"></option>
+         <option value="Gazelle the King of Mythical Beasts"></option>
+         <option value="Gear Golem the Moving Fortress"></option>
+         <option value="Gemini Elf"></option>
+         <option value="Genin"></option>
+         <option value="Ghoul with an Appetite"></option>
+         <option value="Giant Flea"></option>
+         <option value="Giant Mech-Soldier"></option>
+         <option value="Giant Red Seasnake"></option>
+         <option value="Giant Scorpion of the Tundra"></option>
+         <option value="Giant Soldier of Stone"></option>
+         <option value="Giant Turtle Who Feeds on Flames"></option>
+         <option value="Gift of The Mystical Elf"></option>
+         <option value="Giga-tech Wolf"></option>
+         <option value="Giltia the D. Knight"></option>
+         <option value="Goblin Fan"></option>
+         <option value="Goblin's Secret Remedy"></option>
+         <option value="Goddess of Whim"></option>
+         <option value="Goddess with the Third Eye"></option>
+         <option value="Gokibore"></option>
+         <option value="Golgoil"></option>
+         <option value="Gorgon Egg"></option>
+         <option value="Gorgon's Eye"></option>
+         <option value="Grappler"></option>
+         <option value="Graverobber"></option>
+         <option value="Graveyard and the Hand of Invitation"></option>
+         <option value="Gravity Bind"></option>
+         <option value="Great Bill"></option>
+         <option value="Great Mammoth of Goldfine"></option>
+         <option value="Great Moth"></option>
+         <option value="Great White"></option>
+         <option value="Green Phantom King"></option>
+         <option value="Greenkappa"></option>
+         <option value="Griffore"></option>
+         <option value="Griggle"></option>
+         <option value="Ground Attacker Bugroth"></option>
+         <option value="Gruesome Goo"></option>
+         <option value="Guardian of the Labyrinth"></option>
+         <option value="Guardian of the Sea"></option>
+         <option value="Guardian of the Throne Room"></option>
+         <option value="Gust Fan"></option>
+         <option value="Gyakutenno Megami"></option>
+         <option value="Hamburger Recipe"></option>
+         <option value="Hane-Hane"></option>
+         <option value="Haniwa"></option>
+         <option value="Hannibal Necromancer"></option>
+         <option value="Happy Lover"></option>
+         <option value="Hard Armor"></option>
+         <option value="Harpie Lady"></option>
+         <option value="Harpie Lady Sisters"></option>
+         <option value="Harpie's Feather Duster"></option>
+         <option value="Harpie's Pet Dragon"></option>
+         <option value="Heavy Storm"></option>
+         <option value="Hercules Beetle"></option>
+         <option value="Hero of the East"></option>
+         <option value="Hibikime"></option>
+         <option value="High Tide Gyojin"></option>
+         <option value="Hightide"></option>
+         <option value="Hinotama"></option>
+         <option value="Hinotama Soul"></option>
+         <option value="Hiro's Shadow Scout"></option>
+         <option value="Hitodenchak"></option>
+         <option value="Hitotsu-Me Giant"></option>
+         <option value="Holograh"></option>
+         <option value="Horn Imp"></option>
+         <option value="Horn of Light"></option>
+         <option value="Horn of the Unicorn"></option>
+         <option value="Hoshiningen"></option>
+         <option value="Hourglass of Courage"></option>
+         <option value="Hourglass of Life"></option>
+         <option value="House of Adhesive Tape"></option>
+         <option value="Hungry Burger"></option>
+         <option value="Hunter Spider"></option>
+         <option value="Hurricail"></option>
+         <option value="Hyo"></option>
+         <option value="Hyosube"></option>
+         <option value="Ice Water"></option>
+         <option value="Ill Witch"></option>
+         <option value="Illusionist Faceless Mage"></option>
+         <option value="Infinite Dismissal"></option>
+         <option value="Injection Fairy Lily"></option>
+         <option value="Insect Armor with Laser Cannon"></option>
+         <option value="Insect Imitation"></option>
+         <option value="Insect Soldiers of the Sky"></option>
+         <option value="Invader from Another Dimension"></option>
+         <option value="Invader of the Throne"></option>
+         <option value="Invigoration"></option>
+         <option value="Invisible Wire"></option>
+         <option value="Invitation to a Dark Sleep"></option>
+         <option value="Javelin Beetle"></option>
+         <option value="Javelin Beetle Pact"></option>
+         <option value="Jellyfish"></option>
+         <option value="Jigen Bakudan"></option>
+         <option value="Jinzo #7"></option>
+         <option value="Jirai Gumo"></option>
+         <option value="Job-Change Mirror"></option>
+         <option value="Jowls of Dark Demise"></option>
+         <option value="Judge Man"></option>
+         <option value="Just Desserts"></option>
+         <option value="Kagemusha of the Blue Flame"></option>
+         <option value="Kageningen"></option>
+         <option value="Kairyu-Shin"></option>
+         <option value="Kaiser Dragon"></option>
+         <option value="Kamakiriman"></option>
+         <option value="Kaminari Attack"></option>
+         <option value="Kaminarikozou"></option>
+         <option value="Kamionwizard"></option>
+         <option value="Kanan the Swordmistress"></option>
+         <option value="Kanikabuto"></option>
+         <option value="Kappa Avenger"></option>
+         <option value="Karbonala Warrior"></option>
+         <option value="Kattapillar"></option>
+         <option value="Kazejin"></option>
+         <option value="Key Mace"></option>
+         <option value="Key Mace #2"></option>
+         <option value="Killer Needle"></option>
+         <option value="Kinetic Soldier"></option>
+         <option value="King Fog"></option>
+         <option value="King Tiger Wanghu"></option>
+         <option value="King of Yamimakai"></option>
+         <option value="Kojikocy"></option>
+         <option value="Korogashi"></option>
+         <option value="Koumori Dragon"></option>
+         <option value="Krokodilus"></option>
+         <option value="Kryuel"></option>
+         <option value="Kumootoko"></option>
+         <option value="Kunai with Chain"></option>
+         <option value="Kurama"></option>
+         <option value="Kuriboh"></option>
+         <option value="Kuwagata α"></option>
+         <option value="Kwagar Hercules"></option>
+         <option value="La Jinn the Mystical Genie of the Lamp"></option>
+         <option value="LaLa Li-oon"></option>
+         <option value="LaMoon"></option>
+         <option value="Labyrinth Tank"></option>
+         <option value="Labyrinth Wall"></option>
+         <option value="Lady of Faith"></option>
+         <option value="Larva of Moth"></option>
+         <option value="Larvae Moth"></option>
+         <option value="Larvas"></option>
+         <option value="Laser Cannon Armor"></option>
+         <option value="Last Day of Witch"></option>
+         <option value="Laughing Flower"></option>
+         <option value="Launcher Spider"></option>
+         <option value="Lava Battleguard"></option>
+         <option value="Left Arm of the Forbidden One"></option>
+         <option value="Left Leg of the Forbidden One"></option>
+         <option value="Legendary Sword"></option>
+         <option value="Leghul"></option>
+         <option value="Leo Wizard"></option>
+         <option value="Leogun"></option>
+         <option value="Lesser Dragon"></option>
+         <option value="Limiter Removal"></option>
+         <option value="Liquid Beast"></option>
+         <option value="Lisark"></option>
+         <option value="Little Chimera"></option>
+         <option value="Little D"></option>
+         <option value="Living Vase"></option>
+         <option value="Lord of D."></option>
+         <option value="Lord of Zemia"></option>
+         <option value="Lord of the Lamp"></option>
+         <option value="Lucky Trinket"></option>
+         <option value="Luminous Soldier"></option>
+         <option value="Lunar Queen Elzaim"></option>
+         <option value="M-Warrior #1"></option>
+         <option value="M-Warrior #2"></option>
+         <option value="Mabarrel"></option>
+         <option value="Machine Attacker"></option>
+         <option value="Machine Conversion Factory"></option>
+         <option value="Machine King"></option>
+         <option value="Madjinn Gunn"></option>
+         <option value="Magic Drain"></option>
+         <option value="Magic Jammer"></option>
+         <option value="Magical Ghost"></option>
+         <option value="Magical Labyrinth"></option>
+         <option value="Magical Neutralizing Force Field"></option>
+         <option value="Magician of Black Chaos"></option>
+         <option value="Magician of Faith"></option>
+         <option value="Maha Vailo"></option>
+         <option value="Maiden of the Aqua"></option>
+         <option value="Maiden of the Moonlight"></option>
+         <option value="Malevolent Nuzzler"></option>
+         <option value="Mammoth Graveyard"></option>
+         <option value="Man Eater"></option>
+         <option value="Man-Eater Bug"></option>
+         <option value="Man-Eating Plant"></option>
+         <option value="Man-Eating Treasure Chest"></option>
+         <option value="Man-eating Black Shark"></option>
+         <option value="Manga Ryu-Ran"></option>
+         <option value="Marine Beast"></option>
+         <option value="Masaki the Legendary Swordsman"></option>
+         <option value="Mask of Darkness"></option>
+         <option value="Mask of Shine &amp; Dark"></option>
+         <option value="Masked Clown"></option>
+         <option value="Masked Sorcerer"></option>
+         <option value="Master &amp; Expert"></option>
+         <option value="Mavelus"></option>
+         <option value="Mech Bass"></option>
+         <option value="Mech Mole Zombie"></option>
+         <option value="Mechaleon"></option>
+         <option value="Mechanical Snail"></option>
+         <option value="Mechanical Spider"></option>
+         <option value="Mechanicalchaser"></option>
+         <option value="Meda Bat"></option>
+         <option value="Mega Thunderball"></option>
+         <option value="Megamorph"></option>
+         <option value="Megasonic Eye"></option>
+         <option value="Megazowler"></option>
+         <option value="Megirus Light"></option>
+         <option value="Meotoko"></option>
+         <option value="Mesmeric Control"></option>
+         <option value="Metal Dragon"></option>
+         <option value="Metal Fish"></option>
+         <option value="Metal Guardian"></option>
+         <option value="Metalmorph"></option>
+         <option value="Metalzoa"></option>
+         <option value="Meteor B. Dragon"></option>
+         <option value="Meteor Dragon"></option>
+         <option value="Midnight Fiend"></option>
+         <option value="Mikazukinoyaiba"></option>
+         <option value="Millennium Golem"></option>
+         <option value="Millennium Shield"></option>
+         <option value="Milus Radiant"></option>
+         <option value="Mimicat"></option>
+         <option value="Minar"></option>
+         <option value="Minomushi Warrior"></option>
+         <option value="Mirror Force"></option>
+         <option value="Mirror Wall"></option>
+         <option value="Misairuzame"></option>
+         <option value="Moisture Creature"></option>
+         <option value="Molten Behemoth"></option>
+         <option value="Mon Larvas"></option>
+         <option value="Monster Egg"></option>
+         <option value="Monster Eye"></option>
+         <option value="Monster Reborn"></option>
+         <option value="Monster Recovery"></option>
+         <option value="Monster Tamer"></option>
+         <option value="Monstrous Bird"></option>
+         <option value="Monsturtle"></option>
+         <option value="Moon Envoy"></option>
+         <option value="Mooyan Curry"></option>
+         <option value="Morinphen"></option>
+         <option value="Morphing Jar"></option>
+         <option value="Mountain"></option>
+         <option value="Mountain Warrior"></option>
+         <option value="Mucus Yolk"></option>
+         <option value="Muka Muka"></option>
+         <option value="Multiply"></option>
+         <option value="Muse-A"></option>
+         <option value="Mushroom Man"></option>
+         <option value="Mushroom Man #2"></option>
+         <option value="Musician King"></option>
+         <option value="Mysterious Puppeteer"></option>
+         <option value="Mystery Hand"></option>
+         <option value="Mystic Clown"></option>
+         <option value="Mystic Horseman"></option>
+         <option value="Mystic Lamp"></option>
+         <option value="Mystical Capture Chain"></option>
+         <option value="Mystical Elf"></option>
+         <option value="Mystical Moon"></option>
+         <option value="Mystical Sand"></option>
+         <option value="Mystical Sheep #1"></option>
+         <option value="Mystical Sheep #2"></option>
+         <option value="Nails of Bane"></option>
+         <option value="Neck Hunter"></option>
+         <option value="Necrolancer the Timelord"></option>
+         <option value="Needle Ball"></option>
+         <option value="Needle Worm"></option>
+         <option value="Negate Attack"></option>
+         <option value="Nekogal #1"></option>
+         <option value="Nekogal #2"></option>
+         <option value="Nemuriko"></option>
+         <option value="Neo the Magic Swordsman"></option>
+         <option value="Night Lizard"></option>
+         <option value="Nightmare Scorpion"></option>
+         <option value="Niwatori"></option>
+         <option value="Novox's Prayer"></option>
+         <option value="Obese Marmot of Nefariousness"></option>
+         <option value="Octoberser"></option>
+         <option value="Ocubeam"></option>
+         <option value="Ogre of the Black Shadow"></option>
+         <option value="One Who Hunts Souls"></option>
+         <option value="One-Eyed Shield Dragon"></option>
+         <option value="Ooguchi"></option>
+         <option value="Ookazi"></option>
+         <option value="Orion the Battle King"></option>
+         <option value="Oscillo Hero"></option>
+         <option value="Oscillo Hero #2"></option>
+         <option value="Pale Beast"></option>
+         <option value="Panther Warrior"></option>
+         <option value="Paralyzing Potion"></option>
+         <option value="Parrot Dragon"></option>
+         <option value="Patrician of Darkness"></option>
+         <option value="Patrol Robo"></option>
+         <option value="Peacock"></option>
+         <option value="Pendulum Machine"></option>
+         <option value="Penguin Knight"></option>
+         <option value="Penguin Soldier"></option>
+         <option value="Perfectly Ultimate Great Moth"></option>
+         <option value="Performance of Sword"></option>
+         <option value="Petit Angel"></option>
+         <option value="Petit Dragon"></option>
+         <option value="Petit Moth"></option>
+         <option value="Phantom Dewan"></option>
+         <option value="Phantom Ghost"></option>
+         <option value="Pot the Trick"></option>
+         <option value="Power of Kaishin"></option>
+         <option value="Pragtical"></option>
+         <option value="Prevent Rat"></option>
+         <option value="Princess of Tsurugi"></option>
+         <option value="Prisman"></option>
+         <option value="Protector of the Throne"></option>
+         <option value="Psychic Kappa"></option>
+         <option value="Psycho-Puppet"></option>
+         <option value="Pumpking the King of Ghosts"></option>
+         <option value="Punished Eagle"></option>
+         <option value="Pupa of Moth"></option>
+         <option value="Puppet Ritual"></option>
+         <option value="Queen Bird"></option>
+         <option value="Queen of Autumn Leaves"></option>
+         <option value="Queen's Double"></option>
+         <option value="Rabid Horseman"></option>
+         <option value="Raigeki"></option>
+         <option value="Rain of Mercy"></option>
+         <option value="Rainbow Flower"></option>
+         <option value="Rainbow Marine Mermaid"></option>
+         <option value="Raise Body Heat"></option>
+         <option value="Rare Fish"></option>
+         <option value="Ray &amp; Temperature"></option>
+         <option value="Reaper of the Cards"></option>
+         <option value="Red Archery Girl"></option>
+         <option value="Red Medicine"></option>
+         <option value="Red-Eyes B. Dragon"></option>
+         <option value="Red-Eyes Black Metal Dragon"></option>
+         <option value="Resurrection of Chakra"></option>
+         <option value="Reverse Trap"></option>
+         <option value="Revival of Dokurorider"></option>
+         <option value="Revival of Sennen Genjin"></option>
+         <option value="Revived Serpent Night Dragon"></option>
+         <option value="Rhaimundos of the Red Sword"></option>
+         <option value="Right Arm of the Forbidden One"></option>
+         <option value="Right Leg of the Forbidden One"></option>
+         <option value="Rigras Leever"></option>
+         <option value="Riryoku"></option>
+         <option value="Roaring Ocean Snake"></option>
+         <option value="Robotic Knight"></option>
+         <option value="Rock Ogre Grotto #1"></option>
+         <option value="Rock Ogre Grotto #2"></option>
+         <option value="Rock Spirit"></option>
+         <option value="Rogue Doll"></option>
+         <option value="Root Water"></option>
+         <option value="Rose Spectre of Dunn"></option>
+         <option value="Royal Decree"></option>
+         <option value="Royal Guard"></option>
+         <option value="Rude Kaiser"></option>
+         <option value="Ryu-Kishin"></option>
+         <option value="Ryu-Kishin Powered"></option>
+         <option value="Ryu-Ran"></option>
+         <option value="Saber Slasher"></option>
+         <option value="Saggi the Dark Clown"></option>
+         <option value="Salamandra"></option>
+         <option value="Sand Stone"></option>
+         <option value="Sanga of the Thunder"></option>
+         <option value="Sangan"></option>
+         <option value="Sea Kamen"></option>
+         <option value="Sea King Dragon"></option>
+         <option value="Seal of the Ancients"></option>
+         <option value="Sebek's Blessing"></option>
+         <option value="Sectarian of Secrets"></option>
+         <option value="Seiyaryu"></option>
+         <option value="Sengenjin"></option>
+         <option value="Serpent Marauder"></option>
+         <option value="Serpent Night Dragon"></option>
+         <option value="Serpentine Princess"></option>
+         <option value="Servant of Catabolism"></option>
+         <option value="Shadow Ghoul"></option>
+         <option value="Shadow Specter"></option>
+         <option value="Shadow Spell"></option>
+         <option value="Shadow of Eyes"></option>
+         <option value="Shapesnatch"></option>
+         <option value="Shield &amp; Sword"></option>
+         <option value="Shift"></option>
+         <option value="Shining Friendship"></option>
+         <option value="Shovel Crusher"></option>
+         <option value="Silver Bow and Arrow"></option>
+         <option value="Silver Fang"></option>
+         <option value="Sinister Serpent"></option>
+         <option value="Skelengel"></option>
+         <option value="Skelgon"></option>
+         <option value="Skull Guardian"></option>
+         <option value="Skull Knight"></option>
+         <option value="Skull Red Bird"></option>
+         <option value="Skull Servant"></option>
+         <option value="Skull Stalker"></option>
+         <option value="Skullbird"></option>
+         <option value="Sky Dragon"></option>
+         <option value="Slate Warrior"></option>
+         <option value="Sleeping Lion"></option>
+         <option value="Slot Machine"></option>
+         <option value="Snakeyashi"></option>
+         <option value="Sogen"></option>
+         <option value="Solitude"></option>
+         <option value="Solomon's Lawbook"></option>
+         <option value="Sonic Maid"></option>
+         <option value="Sorcerer of the Doomed"></option>
+         <option value="Soul Hunter"></option>
+         <option value="Soul of the Pure"></option>
+         <option value="Souleater"></option>
+         <option value="Space Megatron"></option>
+         <option value="Sparks"></option>
+         <option value="Spellbinding Circle"></option>
+         <option value="Spike Clubber"></option>
+         <option value="Spike Seadra"></option>
+         <option value="Spiked Snail"></option>
+         <option value="Spirit of the Books"></option>
+         <option value="Spirit of the Harp"></option>
+         <option value="Spirit of the Mountain"></option>
+         <option value="Spirit of the Winds"></option>
+         <option value="Spring of Rebirth"></option>
+         <option value="Stain Storm"></option>
+         <option value="Star Boy"></option>
+         <option value="Steel Ogre Grotto #1"></option>
+         <option value="Steel Ogre Grotto #2"></option>
+         <option value="Steel Scorpion"></option>
+         <option value="Steel Shell"></option>
+         <option value="Stone Armadiller"></option>
+         <option value="Stone D."></option>
+         <option value="Stone Ghost"></option>
+         <option value="Stone Ogre Grotto"></option>
+         <option value="Stone Statue of the Aztecs"></option>
+         <option value="Stop Defense"></option>
+         <option value="Stuffed Animal"></option>
+         <option value="Succubus Knight"></option>
+         <option value="Suijin"></option>
+         <option value="Summoned Lord Exodia"></option>
+         <option value="Summoned Skull"></option>
+         <option value="Super War-Lion"></option>
+         <option value="Supporter in the Shadows"></option>
+         <option value="Swamp Battleguard"></option>
+         <option value="Sword Arm of Dragon"></option>
+         <option value="Sword of Dark Destruction"></option>
+         <option value="Sword of Dragon's Soul"></option>
+         <option value="Swords of Revealing Light"></option>
+         <option value="Swordsman from a Foreign Land"></option>
+         <option value="Swordstalker"></option>
+         <option value="Synchar"></option>
+         <option value="Tactical Warrior"></option>
+         <option value="Tainted Wisdom"></option>
+         <option value="Takriminos"></option>
+         <option value="Takuhee"></option>
+         <option value="Tao the Chanter"></option>
+         <option value="Tatsunootoshigo"></option>
+         <option value="Tears of the Mermaid"></option>
+         <option value="Temple of Skulls"></option>
+         <option value="Tenderness"></option>
+         <option value="Tentacle Plant"></option>
+         <option value="Terra the Terrible"></option>
+         <option value="That Which Feeds on Life"></option>
+         <option value="The 13th Grave"></option>
+         <option value="The Bewitching Phantom Thief"></option>
+         <option value="The Bistro Butcher"></option>
+         <option value="The Drdek"></option>
+         <option value="The Eye of Truth"></option>
+         <option value="The Furious Sea King"></option>
+         <option value="The Illusory Gentleman"></option>
+         <option value="The Immortal of Thunder"></option>
+         <option value="The Inexperienced Spy"></option>
+         <option value="The Judgement Hand"></option>
+         <option value="The Little Swordsman of Aile"></option>
+         <option value="The Melting Red Shadow"></option>
+         <option value="The Shadow Who Controls the Dark"></option>
+         <option value="The Snake Hair"></option>
+         <option value="The Statue of Easter Island"></option>
+         <option value="The Stern Mystic"></option>
+         <option value="The Thing That Hides in the Mud"></option>
+         <option value="The Unhappy Maiden"></option>
+         <option value="The Wandering Doomed"></option>
+         <option value="The Wicked Worm Beast"></option>
+         <option value="Thousand Dragon"></option>
+         <option value="Three-Headed Geedo"></option>
+         <option value="Three-Legged Zombies"></option>
+         <option value="Thunder Dragon"></option>
+         <option value="Thunder Nyan Nyan"></option>
+         <option value="Tiger Axe"></option>
+         <option value="Time Seal"></option>
+         <option value="Time Wizard"></option>
+         <option value="Timeater"></option>
+         <option value="Toad Master"></option>
+         <option value="Togex"></option>
+         <option value="Tomozaurus"></option>
+         <option value="Tongyo"></option>
+         <option value="Toon Alligator"></option>
+         <option value="Toon Mermaid"></option>
+         <option value="Toon Summoned Skull"></option>
+         <option value="Toon World"></option>
+         <option value="Torike"></option>
+         <option value="Trakadon"></option>
+         <option value="Trap Master"></option>
+         <option value="Tremendous Fire"></option>
+         <option value="Trent"></option>
+         <option value="Tri-Horned Dragon"></option>
+         <option value="Trial of Nightmare"></option>
+         <option value="Tripwire Beast"></option>
+         <option value="Turtle Bird"></option>
+         <option value="Turtle Oath"></option>
+         <option value="Turtle Raccoon"></option>
+         <option value="Turtle Tiger"></option>
+         <option value="Turu-Purun"></option>
+         <option value="Twin Long Rods #1"></option>
+         <option value="Twin Long Rods #2"></option>
+         <option value="Twin-Headed Behemoth"></option>
+         <option value="Twin-Headed Thunder Dragon"></option>
+         <option value="Two-Headed King Rex"></option>
+         <option value="Two-Mouth Darkruler"></option>
+         <option value="Tyhone"></option>
+         <option value="Tyhone #2"></option>
+         <option value="Type Zero Magic Crusher"></option>
+         <option value="Ultimate Dragon"></option>
+         <option value="Umi"></option>
+         <option value="Unknown Warrior of Fiend"></option>
+         <option value="Uraby"></option>
+         <option value="Ushi Oni"></option>
+         <option value="Vermillion Sparrow"></option>
+         <option value="Versago the Destroyer"></option>
+         <option value="Vile Germs"></option>
+         <option value="Violent Rain"></option>
+         <option value="Violet Crystal"></option>
+         <option value="Vishwar Randi"></option>
+         <option value="Wall Shadow"></option>
+         <option value="Wall of Illusion"></option>
+         <option value="War-Lion Ritual"></option>
+         <option value="Warrior Elimination"></option>
+         <option value="Warrior of Tradition"></option>
+         <option value="Wasteland"></option>
+         <option value="Water Element"></option>
+         <option value="Water Girl"></option>
+         <option value="Water Magician"></option>
+         <option value="Water Omotics"></option>
+         <option value="Waterdragon Fairy"></option>
+         <option value="Weather Control"></option>
+         <option value="Weather Report"></option>
+         <option value="Wetha"></option>
+         <option value="Whiptail Crow"></option>
+         <option value="White Dolphin"></option>
+         <option value="White Hole"></option>
+         <option value="White Magical Hat"></option>
+         <option value="Wicked Dragon with the Ersatz Head"></option>
+         <option value="Wicked Mirror"></option>
+         <option value="Widespread Ruin"></option>
+         <option value="Wilmee"></option>
+         <option value="Windstorm of Etaqua"></option>
+         <option value="Wing Eagle"></option>
+         <option value="Wing Egg Elf"></option>
+         <option value="Winged Cleaver"></option>
+         <option value="Winged Dragon, Guardian of the Fortress #1"></option>
+         <option value="Winged Dragon, Guardian of the Fortress #2"></option>
+         <option value="Winged Egg of New Life"></option>
+         <option value="Winged Trumpeter"></option>
+         <option value="Wings of Wicked Flame"></option>
+         <option value="Witch of the Black Forest"></option>
+         <option value="Witch's Apprentice"></option>
+         <option value="Witty Phantom"></option>
+         <option value="Wodan the Resident of the Forest"></option>
+         <option value="Wolf"></option>
+         <option value="Wolf Axwielder"></option>
+         <option value="Wood Clown"></option>
+         <option value="Wood Remains"></option>
+         <option value="Woodland Sprite"></option>
+         <option value="Wow Warrior"></option>
+         <option value="Wretched Ghost of the Attic"></option>
+         <option value="Yado Karu"></option>
+         <option value="Yaiba Robo"></option>
+         <option value="Yamadron"></option>
+         <option value="Yamadron Ritual"></option>
+         <option value="Yamatano Dragon Scroll"></option>
+         <option value="Yami"></option>
+         <option value="Yaranzo"></option>
+         <option value="Yashinoki"></option>
+         <option value="Yellow Luster Shield"></option>
+         <option value="Yormungarde"></option>
+         <option value="Zanki"></option>
+         <option value="Zarigun"></option>
+         <option value="Zera Ritual"></option>
+         <option value="Zera The Mant"></option>
+         <option value="Zoa"></option>
+         <option value="Zombie Warrior"></option>
+         <option value="Zone Eater"></option>
+      </datalist>
+
+      <form autocomplete="on" style='width:100%; margin: 0 auto; display:inline-block;'>
+         <input list="listOfCards" class="cardInput" onfocus="this.select()" id="cardInput" onkeypress="handle(event, this)" type="text" style="width:50%" placeholder="Enter the name or ID# of a card">
+         <input type="button" value="Add Card" class="fuseSimBtn" id='addCardBtn' onclick='addCard()'>
+
+      </form>
+      <!--<div id='buttonSection'>
+         <div class="fuseSimBtn" onmousedown="btnMouseDown('fuseCardsBtn')"  onmouseup="btnMouseUp('fuseCardsBtn')" id='fuseCardsBtn' onclick='fuseBase36()' style='background-color: DodgerBlue;'>Fuse Cards</div>
+         <div class="fuseSimBtn" onmousedown="btnMouseDown('exampleBtn')"  onmouseup="btnMouseUp('exampleBtn')" id="exampleBtn" onclick='exampleFusion()'>Use Preset Example</div>
+         <div class="fuseSimBtn" onmousedown="btnMouseDown('rndmBtn')"  onmouseup="btnMouseUp('rndmBtn')" id="rndmBtn" onclick='randomFusion()'>Randomize Cards</div>
+         <div class="fuseSimBtn" onmousedown="btnMouseDown('resetBtn')"  onmouseup="btnMouseUp('resetBtn')" id="resetBtn" onclick='resetFusionInputs()'>Reset</div>
+      </div>-->
+
+      <div id="warningSection">
+         <p class="warningParagraph" id='limitWarning'>40 cards have already been added to the deck. You cannot add any more cards to the deck.</p>
+         <p class="warningParagraph" id='spellingWarning'>This card doesn't exist. Please check spelling.</p>
+         <p class="warningParagraph" id='exodiaWarning'>"Summoned Lord Exodia" is not a card that can be added to the deck.</p>
+         <p class="warningParagraph" id='unobtainableWarning'>One or more unobtainable cards are in the deck.</p>
+         <p class="warningParagraph" id='multipleCardsWarning'>The deck has more than 3 copies of one or more cards.</p>
+      </div>
+
+      <div id="buttonSection">
+         <!--<input type="button" value="Fuse Cards" class="fuseSimBtn" id='fuseCardsBtn' onclick='fuseBase36()'>
+         <input type="button" value="Use Preset Example" class="fuseSimBtn" id="exampleBtn" onclick='exampleFusion()'>-->
+         <input type="button" value="Randomize Deck" class="fuseSimBtn" id="rndmBtn" onclick='randomDeck()'>
+         <input type="button" value="Reset" class="fuseSimBtn" id="resetBtn" onclick='resetDeck()'>
+
+         <select id="presetForm">
+            <option value="">None</option>
+            <option disabled>---Starter Decks---</option>
+            <option value="Airknight Parshath">Airknight Parshath</option>
+            <option value="Birdface">Birdface</option>
+            <option value="Fairy King Truesdale">Fairy King Truesdale</option>
+            <option value="Injection Fairy Lily">Injection Fairy Lily</option>
+            <option value="King Tiger Wanghu">King Tiger Wanghu</option>
+            <option value="Kryuel">Kryuel</option>
+            <option value="Luminous Soldier">Luminous Soldier</option>
+            <option value="Maiden of the Aqua">Maiden of the Aqua</option>
+            <option value="Molten Behemoth">Molten Behemoth</option>
+            <option value="Patrician of Darkness">Patrician of Darkness</option>
+            <option value="Robotic Knight">Robotic Knight</option>
+            <option value="Serpentine Princess">Serpentine Princess</option>
+            <option value="Tactical Warrior">Tactical Warrior</option>
+            <option value="The Illusory Gentleman"> The Illusory Gentleman</option>
+            <option value="Thunder Nyan Nyan">Thunder Nyan Nyan</option>
+            <option value="Twin-Headed Behemoth">Twin-Headed Behemoth</option>
+            <option value="Wolf Axwielder">Wolf Axwielder</option>
+            <option disabled>---Story CPU Decks---</option>
+            <option value="Bakura">Bakura</option>
+            <option value="Darkness-ruler">Darkness-ruler</option>
+            <option value="Ishtar">Ishtar</option>
+            <option value="J. Shadi Morton">J. Shadi Morton</option>
+            <option value="Jasper Dice Tudor">Jasper Dice Tudor</option>
+            <option value="Joey">Joey</option>
+            <option value="Keith">Keith</option>
+            <option value="Labyrinth-ruler">Labyrinth-ruler</option>
+            <option value="Mako">Mako</option>
+            <option value="Manawyddan fab Llyr (Chakra)">Manawyddan fab Llyr (Chakra)</option>
+            <option value="Manawyddan fab Llyr (Skull Knight)">Manawyddan fab Llyr (Skull Knight)</option>
+            <option value="Margaret Mai Beaufort">Margaret Mai Beaufort</option>
+            <option value="Necromancer">Necromancer</option>
+            <option value="Pegasus Crawford">Pegasus Crawford</option>
+            <option value="Rex Raptor">Rex Raptor</option>
+            <option value="Richard Slysheen of York">Richard Slysheen of York</option>
+            <option value="Seto">Seto</option>
+            <option value="T. Tristan Grey">T. Tristan Grey</option>
+            <option value="Tea">Tea</option>
+            <option value="Weevil Underwood">Weevil Underwood</option>
+            <option value="Yugi">Yugi</option>
+            <option disabled>---Deck Master Decks---</option>
+            <option value="Deck Master I">Deck Master I</option>
+            <option value="Deck Master S">Deck Master S</option>
+            <option value="Deck Master T">Deck Master T</option>
+         </select>
+
+         <input type="button" value="Select Preset" class="fuseSimBtn" id="presetBtn" onclick='usePreset()'>
+      </div>
+
+      <div id='deckStatSection'><p>
+         <span class="noWrap">Total DC: <span id="dcTotal">0</span></span>
+         &emsp;|&emsp;
+         <span class="noWrap">Average LV: <span id="averageLV">0</span></span>
+         &emsp;|&emsp;
+         <span class="noWrap">Cards in Deck: <span id="totalCards">0</span>/40</span></p>
+
+         <!-- <p>Total of Each Type<br><span id="eachType"></span></p>
+         <p>Total of Each Attribute<br><span id="eachAttribute"></span></p>
+         <p>Total of Each Archetype<br><span class="eachArcheType"></span></p> -->
+      </div>
+
+      <div id='deckBuildSection'>
+         <table id="deckTable">
+            <tbody>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">1</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(0)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">2</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(1)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">3</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(2)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">4</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(3)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">5</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(4)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">6</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(5)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">7</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(6)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">8</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(7)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">9</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(8)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">10</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(9)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">11</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(10)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">12</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(11)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">13</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(12)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">14</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(13)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">15</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(14)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">16</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(15)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">17</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(16)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">18</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(17)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">19</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(18)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">20</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(19)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">21</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(20)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">22</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(21)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">23</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(22)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">24</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(23)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">25</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(24)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">26</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(25)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">27</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(26)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">28</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(27)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">29</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(28)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">30</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(29)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">31</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(30)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">32</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(31)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">33</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(32)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">34</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(33)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">35</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(34)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">36</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(35)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">37</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(36)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">38</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(37)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">39</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(38)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+               <tr class="trCardMain">
+                  <td class="cardSlot" rowspan="2">40</td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(39)">Remove</a></td>
+                  <td class="tdCardId"></td>
+                  <td class="tdCardName"></td>
+               </tr>
+               <tr class="trCardSub">
+                  <td class="tdCardStat" colspan="3"></td>
+               </tr>
+            </tbody>
+         </table>
+
+         <table id='fusionTable'>
+            <thead>
+               <tr>
+                  <th colspan="2">Fusions</th>
+               </tr>
+            </thead>
+            <tbody id="fusionTBody"></tbody>
+         </table>
+      </div>
+
+      <div id='errorSection' style='margin:10px 0'></div>
+
+
+
+      <div id='jumpToSection' style='margin:10px 0'></div>
+
+      <div id='fusionResults'></div>
+
+      <div id="fusionPopUp">
+         <div style="float:right;"><input id="closeFusionListBtn" type="button" value="X" onclick="document.getElementById('fusionPopUp').style.display = ''"></div>
+         <div id="listBG"></div>
+      </div>
+
+      <script>
+         function handle(e, input) {
+            if (e.keyCode === 13) {
+               e.preventDefault();
+
+               addCard();
+               input.select();
+
+            }
+         }
+      </script>
+
+
+</body>
+
+</html>
