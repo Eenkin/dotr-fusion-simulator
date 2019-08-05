@@ -350,7 +350,7 @@ function sortDeck(skipHash) {
    document.getElementById('dcTotal').innerText = dcTotal;
 
    averageLV = Math.ceil(monsterSLV / numOfMonsters * 100) / 100;
-   averageLV = averageLV.toFixed(2);
+   averageLV = averageLV ? averageLV.toFixed(2) : '0.00';
 
    document.getElementById('averageLV').innerText = averageLV;
 
