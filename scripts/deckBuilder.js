@@ -6,7 +6,7 @@ var inDeck = [];
 var uniqueCards = {};
 var unobtainableTracker = [];
 
-var loadFusions = 'none';
+var loadFusions = 'some';
 
 var canWinInSlots = [];
 
