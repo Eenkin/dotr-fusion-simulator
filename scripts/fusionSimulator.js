@@ -1,4 +1,4 @@
-console.log('ver1.0.3b');
+console.log('ver1.0.4a');
 
 var abcList = [];
 
@@ -604,7 +604,7 @@ function checkName(x){
    let deciNum = parseInt(cardInput[x].value);
 
    //Find if card exists
-   if (Number.isInteger(deciNum)) {
+   if (!isNaN(temp)) {
       //If input was a number,
       if (deciNum < 854 && deciNum >= 0) {
          //If exists and input was ID# and exists
@@ -676,7 +676,7 @@ function fuseBase36() {
       let deciNum = parseInt(cardInput[i].value);
 
       //Find if card exists
-      if (Number.isInteger(deciNum) && deciNum < 854 && deciNum >= 0) {
+      if (!isNaN(temp) && deciNum < 854 && deciNum >= 0) {
          //If exists and input was ID# and exists
          cardInput[i].value = cardList[deciNum].name;
          hashString[i] = deciNum < 36 ? '0' + deciNum.toString(36) : deciNum.toString(36); //Converts ID # to base 36; add a leading 0 if result only has 1 character
