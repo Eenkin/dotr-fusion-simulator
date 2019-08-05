@@ -191,7 +191,7 @@ function addCard(num) {
       return;
    }
 
-   if (inDeck.length > 40) {
+   if (inDeck.length >= 40) {
       document.getElementById('limitWarning').style.display = 'block';
       return;
    }
@@ -209,10 +209,26 @@ function addCard(num) {
 }
 
 function sortDeck(skipHash) {
-   //Sort by ID
+
+   let sorting = document.getElementById('sorting').value;
+   //Sort by:
    inDeck.sort((a, b) => {
-      return a - b;
-   })
+
+      if (sorting == '123') {
+         return a - b;
+      } else {
+         a = cardNamelist[a];
+         b = cardNamelist[b];
+         if (a < b) {
+            return -1
+         } else if (a > b) {
+            return 1
+         } else {
+            0
+         }
+      }
+
+   });
 
    canWinInSlots = [];
 
@@ -357,7 +373,7 @@ function sortDeck(skipHash) {
    // deckStatSection.innerHTML = '<span class="noWrap">Total DC: ' + dcTotal + '</span>&emsp;|&emsp;<span class="noWrap">Average LV: ' + averageLV + '</span>&emsp;|&emsp;<span class="noWrap"># of Cards in Deck: '  + inDeck.length + '/40</span>'
    // deckStatSection.innerHTML += '<p>Total of Each Type<br>' + typeText + '</p>';
 
-   let attrText = ''
+   let attrText = '';
 
    if (trackAttribute) {
       tempObjKey = Object.keys(trackAttribute);
@@ -602,12 +618,29 @@ function fuseCards() {
 
 function createFusionResults() {
    let tbody = document.getElementById('fusionTBody');
+   let sorting = document.getElementById('sorting').value;
 
    let eachFusion = Object.keys(fusionTracker);
 
    for (var i = 0; i < eachFusion.length; i++) {
       eachFusion[i] = parseInt(eachFusion[i])
    }
+
+   eachFusion.sort((a, b) => {
+      if (sorting == '123') {
+         return a - b;
+      } else {
+         a = cardNamelist[a];
+         b = cardNamelist[b];
+         if (a < b) {
+            return -1
+         } else if (a > b) {
+            return 1
+         } else {
+            0
+         }
+      }
+   })
 
    for (var fusion of eachFusion) {
 
