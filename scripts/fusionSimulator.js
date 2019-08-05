@@ -1,4 +1,4 @@
-console.log('ver1.0.4a');
+console.log('ver1.0.4b');
 
 var abcList = [];
 

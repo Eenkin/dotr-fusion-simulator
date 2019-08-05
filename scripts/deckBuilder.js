@@ -4,10 +4,13 @@ var abcList = [];
 
 var inDeck = [];
 var uniqueCards = {};
+var unobtainableTracker = [];
+
+var loadFusions = 'none';
 
 var canWinInSlots = [];
 
-const cardTypeArr = ['Dragon', 'Spellcaster', 'Zombie', 'Warrior', 'Beast-Warrior', 'Beast', 'Winged Beast', 'Fiend', 'Fairy', 'Insect', 'Dinosaur', 'Reptile', 'Fish', 'Sea Serpent', 'Machine', 'Thunder', 'Aqua', 'Pyro', 'Rock', 'Plant', 'Immortal', 'Magic', 'Trap', 'Ritual']
+const cardTypeArr = ['Dragon', 'Spellcaster', 'Zombie', 'Warrior', 'Beast-Warrior', 'Beast', 'Winged Beast', 'Fiend', 'Fairy', 'Insect', 'Dinosaur', 'Reptile', 'Fish', 'Sea Serpent', 'Machine', 'Thunder', 'Aqua', 'Pyro', 'Rock', 'Plant', 'Immortal', 'Magic', 'Trap', 'Ritual'];
 const monsterAttributes = ['WATER', 'FIRE', 'EARTH', 'WIND', 'DARK', 'LIGHT'];
 const archetypeArray = ['Female', 'Toon', 'Elf', 'Egg', 'Horned', 'Shell', 'Turtle']
 
@@ -40,6 +43,13 @@ const characters = ["Bakura",
 let fusionTracker = {};
 
 let dummy = [];
+
+function loadingFusions(load){
+   loadFusions = load;
+
+   //console.log(load)
+   fuseCards();
+}
 
 function createArray() {
 
@@ -213,6 +223,8 @@ function sortDeck(skipHash) {
 
    uniqueCards = {} //track # of each unique card
 
+   document.getElementById('unobtainListSection').innerHTML = '';
+
    let dcTotal = 0;
    let numOfMonsters = 0;
    let monsterSLV = 0;
@@ -220,6 +232,7 @@ function sortDeck(skipHash) {
    let trackTyping = {};
    let trackArchetype = {};
    let trackAttribute = {};
+   unobtainableTracker = [];
 
    let hashString = '';
 
@@ -244,7 +257,13 @@ function sortDeck(skipHash) {
          //document.getElementById('multipleCardsWarning').style.display = uniqueCards[card.id] > 3 ? 'block' : '';
 
          if (unobtainableCards.includes(card.id)) {
-            document.getElementById('unobtainableWarning').style.display = 'block' //warns if unobtainable card is added to the deck
+            document.getElementById('unobtainableWarning').style.display = 'block' //warns if unobtainable card is added to the deck;
+
+            if (!unobtainableTracker.includes(card.id)) {
+               unobtainableTracker.push(card.id);
+               document.getElementById('unobtainListSection').innerHTML += unobtainableTracker.length > 1 ? ', ' + card.name : card.name; //Lists which cards
+               //console.log(document.getElementById('unobtainListSection').innerHTML)
+            }
          }
 
          textId = card.id;
@@ -410,26 +429,20 @@ function usePreset(skipHash) {
 
 function fuseCards() {
 
-   let cardInput = document.getElementsByClassName('cardInput');
-   let errorSection = document.getElementById('errorSection');
-   let fusionResults = document.getElementById('fusionResults');
-   let jumpToSection = document.getElementById('jumpToSection');
+
+
+
+   let fusionResults = document.getElementById('fusionTBody');
    let deckStatSection = document.getElementById('deckStatSection');
 
-   let errorCheck = false;
-   let errorMessages = [];
-   let groundExists = false;
-
-   errorSection.innerHTML = '';
    fusionResults.innerHTML = '';
-   jumpToSection.innerHTML = '';
+
 
    fusionTracker = {};
 
-   if (inDeck.length < 2) {
-      return; //skips fusion if there are insufficient amount of cards
+   if (inDeck.length < 2 || loadFusions == 'none') {
+      return; //skips fusion if there are insufficient amount of cards; if fusing options is set to none
    }
-
 
    //Prevents dublpicative sequences
    let uniqueSequence = [];
@@ -438,6 +451,8 @@ function fuseCards() {
    let trial;
    let copyDeck;
    let fusableDeck;
+
+
 
    function fusionCheck(arr, tier){
       // a = Math.min(cardA, cardB);
@@ -518,6 +533,10 @@ function fuseCards() {
 
    for (var a = 1; a < 11; a++) {
 
+      if (loadFusions == 'some') {
+         break;
+      }
+
       for (var i = 0; i < fusions.length; i++) {
 
 
@@ -557,6 +576,7 @@ function fuseCards() {
    fusions = Object.keys(fusionTracker);
 
    for (var i = 0; i < fusions.length; i++) {
+
       let x = fusions[i];
 
       let keys = Object.keys(fusionTracker[x]);
@@ -566,6 +586,10 @@ function fuseCards() {
       for (var j = 0; j < keys.length; j++) {
          // fusionTracker[x].deckCombos = fusionTracker.deckCombos ? [...fusionTracker[x][keys[j]]] :  fusionTracker[x].deckCombos.concat(fusionTracker[x][keys[j]]);
          fusionTracker[x].deckCombos = fusionTracker[x].deckCombos ?  fusionTracker[x].deckCombos.concat(fusionTracker[x][keys[j]]) :  [...fusionTracker[x][keys[j]]];
+
+         if (loadFusions == 'some') {
+            break;
+         }
       }
 
    }
@@ -576,44 +600,8 @@ function fuseCards() {
 
 }
 
-function continueFusions(copyDeck){
-   let eachFusion = Object.keys(fusionTracker);
-
-   let mimicDeck = [...copyDeck];
-
-   let uniqueSequence = [];
-
-   for (var i = 0; i < eachFusion.length; i++) {
-      let current = parseInt(eachFusion[i]);
-
-      if (!fusableCards.includes(current)) {
-         continue;
-      }
-
-      for (var j = 0; j < fusionTracker[current].deckCombos.length; j++) {
-         let baseSet = [...fusionTracker[current].deckCombos[i]];
-
-         mimicDeck = [...copyDeck];
-
-         for (var t = 0; t < baseSet.length; t++) {
-            mimicDeck.splice(mimicDeck.indexOf(baseSet[t]), 1)
-         }
-
-         for (var i = 0; i < mimikDeck.length; i++) {
-            let newSet = [...baseSet];
-            mimicDeck[i]
-         }
-
-
-      }
-
-
-   }
-}
-
 function createFusionResults() {
    let tbody = document.getElementById('fusionTBody');
-   tbody.innerHTML = ''
 
    let eachFusion = Object.keys(fusionTracker);
 
