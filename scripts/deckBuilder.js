@@ -549,7 +549,7 @@ function fuseCards() {
       for (var i = 0; i < fusions.length; i++) {
 
 
-         fusions[i] = parseInt(fusions[i])
+         fusions[i] = fusions[i] == "?" ? "?" : parseInt(fusions[i]); //skip parsing if fusion involves insect imitation
 
          let currentTier = fusionTracker[fusions[i]]['t' + (a - 1)]
 
