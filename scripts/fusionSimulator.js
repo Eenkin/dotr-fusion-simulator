@@ -1,4 +1,4 @@
-console.log('ver1.0.4b');
+console.log('ver1.0.4c');
 
 var abcList = [];
 
@@ -637,8 +637,7 @@ function checkName(x){
       tempText += 'ID# ' + tempCard.id + ' | ' + tempCard.type; //ID and Type
       tempText += tempCard.attribute ? '/' + tempCard.attribute : ''; //Attribute
       tempText += tempCard.dc ? '/DC ' + tempCard.dc : ''; //Deck Cost
-      tempText += tempCard.lv ? '/LV ' + tempCard.lv : ''; //Level
-      tempText += tempCard.atk ? '/ATK ' + tempCard.atk + '/DEF ' + tempCard.def : ''; //ATK/DEF
+      tempText += tempCard.lv ? '/LV ' + tempCard.lv + '/ATK ' + tempCard.atk + '/DEF ' + tempCard.def: ''; //Level/ATK/DEF
       tempText += tempCard.archetype ? '<br>Archetype(s): ' + tempCard.archetype : ''; //Archetypes
 
       tempText += fusableCards.includes(deciNum) ? '' : '<br><span class="warningHighlight">Note: This card does not fuse with other cards.</span>' //Warns this card can't fuse
@@ -810,7 +809,13 @@ function fuseCards(idArrSkip, clearSkip) {
             uniqueSequence.push(trial.sequence.toString());
             createCardResults(checkForGround, trial.sequence, trial.resultCard);
 
-            if (!allResults.includes(cardList[trial.resultCard].name)) {
+            if(trial.resultCard == "?"){
+               //Used for Insect Imitation fusions
+               if (!allResults.includes("?")) {
+                  allResults.push("?");
+               }
+
+            } else if (!allResults.includes(cardList[trial.resultCard].name)) {
                allResults.push(cardList[trial.resultCard].name);
             }
          }
@@ -845,10 +850,10 @@ function createCardResults(groundExists, newSequence, finalResult, numberOrder) 
 
    for (var i = 0; i < newSequence.length; i++) {
       //Change Id into card name
-      newSequence[i] = cardList[newSequence[i]].name;
+      newSequence[i] = newSequence[i] == "?" ? "?": cardList[newSequence[i]].name;//If insect imitation, use mystery card info, else search for existing card
    }
 
-   finalResult = cardList[finalResult];
+   finalResult = finalResult == "?" ? mysteryCard : cardList[finalResult]; //If insect imitation, use mystery card info, else search for existing card
 
    //let fusionDetail = finalResult.fusionInfo.replace(/\] \[/g, '] &ensp;or&ensp; [');
    let fusionDetail = finalResult.fusionInfo.replace(/\n/g, '<br>')

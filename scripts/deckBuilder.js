@@ -303,16 +303,12 @@ function sortDeck(skipHash) {
          dcTotal += card.dc;
 
 
-         //:V
+         //:V/ATK/DEF
          if (card.lv) {
-            textStat += '/LV ' + card.lv;
+            textStat += '/LV ' + card.lv + '/ATK ' + card.atk + '/DEF ' + card.def;
             numOfMonsters++;
             monsterSLV += card.lv;
          }
-
-         //ATK & DEF
-         textStat += card.atk ? '/ATK ' + card.atk : '';
-         textStat += card.def ? '/DEF ' + card.def : '';
 
 
          //Archetypes
@@ -444,9 +440,6 @@ function usePreset(skipHash) {
 }
 
 function fuseCards() {
-
-
-
 
    let fusionResults = document.getElementById('fusionTBody');
    let deckStatSection = document.getElementById('deckStatSection');
@@ -644,7 +637,7 @@ function createFusionResults() {
 
    for (var fusion of eachFusion) {
 
-      fusion = cardList[fusion];
+      fusion = isNaN(fusion) ? mysteryCard : cardList[fusion]; //use MysterCard if Insect Imitation was used, else find card normally
 
       let tr1 = document.createElement('tr');
       let tr2 = document.createElement('tr');
@@ -667,7 +660,9 @@ function createFusionResults() {
 
       //Fusion Material
       let statText = '<i>Fusion Materials: ' + fusion.fusionInfo.replace(/\n/gi, '<br>') + '</i>';
-      statText += '<br><i><u><a onclick="revealFusionCombos(' + fusion.id+ ')">Check for fusion materials from the deck</a></u></i>'
+
+      let stringId = fusion.id == "?" ? "'?'" : fusion.id;
+      statText += '<br><i><u><a onclick="revealFusionCombos(' + stringId + ')">Check for fusion materials from the deck</a></u></i>'
 
       //Base Stats
       statText += '<p>' + fusion.type + '/' + fusion.attribute + '/LV ' + fusion.lv + '/ATK ' + fusion.atk + '/DEF ' + fusion.def;
@@ -697,7 +692,7 @@ function revealFusionCombos(x){
    document.getElementById('fusionPopUp').style.display = 'inherit';
    let listBG = document.getElementById('listBG');
 
-   let fusion = cardList[x];
+   let fusion = x == "?" ? mysteryCard : cardList[x]; //use MysterCard if Insect Imitation was used, else find card normally
    let combos = [...fusionTracker[x].deckCombos]
 
 
