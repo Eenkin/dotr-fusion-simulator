@@ -72,7 +72,7 @@ function createArray() {
    document.execCommand('copy');
    document.body.removeChild(doc);
 
-   console.log(a);
+   // console.log(a);
 }
 
 function createDeckTable() {
@@ -183,7 +183,7 @@ function addCard(num) {
          document.getElementById('spellingWarning').style.display = 'block';
       }
 
-      console.log(card);
+      // console.log(card);
 
    }
 
@@ -409,7 +409,6 @@ function sortDeck(skipHash) {
    if (!skipHash) {
       window.location.hash = hashString;
    }
-
    fuseCards();
 }
 
@@ -449,9 +448,12 @@ function fuseCards() {
 
    fusionTracker = {};
 
+
+
    if (inDeck.length < 2 || loadFusions == 'none') {
       return; //skips fusion if there are insufficient amount of cards; if fusing options is set to none
    }
+
 
    //Prevents dublpicative sequences
    let uniqueSequence = [];
@@ -476,6 +478,7 @@ function fuseCards() {
       //    copyDeck.splice(copyDeck.indexOf(arr[i]), 1)
       // }
 
+
       currentOrder = arr;
 
       let stringSeq = currentOrder.toString();
@@ -486,7 +489,6 @@ function fuseCards() {
 
       uniqueSequence.push(stringSeq);
       trial = bruteFusion(currentOrder);
-
 
       if (trial) {
          //uniqueSequence.push(trial.sequence.toString())
@@ -522,12 +524,14 @@ function fuseCards() {
    for (var i = 0; i < fusableDeck.length; i++) {
       currentOrder = [];
 
+
       // if (!fusableCards.includes(inDeck[i])) {
       //    continue;
       // }
       for (var j = i + 1; j < fusableDeck.length; j++) {
 
-         if (j + 1 == fusableDeck.length || !fusableCards.includes(fusableDeck[j])) {
+
+         if (j == fusableDeck.length || !fusableCards.includes(fusableDeck[j])) {
             continue;
          }
 
@@ -539,6 +543,7 @@ function fuseCards() {
    }
 
    let fusions = Object.keys(fusionTracker);
+
 
    for (var a = 1; a < 11; a++) {
 
