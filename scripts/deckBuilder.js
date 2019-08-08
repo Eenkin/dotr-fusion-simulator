@@ -543,22 +543,30 @@ function fuseCards() {
    }
 
    let fusions = Object.keys(fusionTracker);
+   fusions = fusions.filter(card => fusableCards.includes(parseInt(card)));
+   // console.log(fusions)
 
+   for (var a = 1; a < 20; a++) {
 
-   for (var a = 1; a < 11; a++) {
-
-      if (loadFusions == 'some') {
+      if (loadFusions == 'some' || fusions.length === 0) {
          break;
       }
 
-      for (var i = 0; i < fusions.length; i++) {
+      let hasTiers = [...fusions];
+
+      for (var i = 0; i < hasTiers.length; i++) {
 
 
-         fusions[i] = fusions[i] == "?" ? "?" : parseInt(fusions[i]); //skip parsing if fusion involves insect imitation
+         currentFusion = parseInt(hasTiers[i]); //searchForFusion
 
-         let currentTier = fusionTracker[fusions[i]]['t' + (a - 1)]
+         let currentTier = fusionTracker[currentFusion]['t' + (a - 1)];
 
-         if(!fusableCards.includes(fusions[i]) || !currentTier) {
+         // if(!fusableCards.includes(fusions[i]) || !currentTier) {
+         //    continue;
+         // }
+
+         if (!currentTier) {
+            fusions.splice(i, 1)
             continue;
          }
          // console.log(fusions[i])
@@ -585,28 +593,29 @@ function fuseCards() {
 
 
       }
+
+      // console.log(a + ": " +fusions);
    }
 
-   fusions = Object.keys(fusionTracker);
-
-   for (var i = 0; i < fusions.length; i++) {
-
-      let x = fusions[i];
-
-      let keys = Object.keys(fusionTracker[x]);
-
-      // console.log(keys)
-
-      for (var j = 0; j < keys.length; j++) {
-         // fusionTracker[x].deckCombos = fusionTracker.deckCombos ? [...fusionTracker[x][keys[j]]] :  fusionTracker[x].deckCombos.concat(fusionTracker[x][keys[j]]);
-         fusionTracker[x].deckCombos = fusionTracker[x].deckCombos ?  fusionTracker[x].deckCombos.concat(fusionTracker[x][keys[j]]) :  [...fusionTracker[x][keys[j]]];
-
-         if (loadFusions == 'some') {
-            break;
-         }
-      }
-
-   }
+   // fusions = Object.keys(fusionTracker);
+   //
+   // for (var i = 0; i < fusions.length; i++) {
+   //
+   //    let x = fusions[i];
+   //
+   //    let keys = Object.keys(fusionTracker[x]);
+   //
+   //    // console.log(keys)
+   //
+   //    for (var j = 0; j < keys.length; j++) {
+   //       fusionTracker[x].deckCombos = fusionTracker[x].deckCombos ?  fusionTracker[x].deckCombos.concat(fusionTracker[x][keys[j]]) :  [...fusionTracker[x][keys[j]]];
+   //
+   //       if (loadFusions == 'some') {
+   //          break;
+   //       }
+   //    }
+   //
+   // }
 
    createFusionResults();
 
@@ -698,7 +707,10 @@ function revealFusionCombos(x){
    let listBG = document.getElementById('listBG');
 
    let fusion = x == "?" ? mysteryCard : cardList[x]; //use MysterCard if Insect Imitation was used, else find card normally
-   let combos = [...fusionTracker[x].deckCombos]
+   //let combos = [...fusionTracker[x].deckCombos]
+   let tiers = fusionTracker[x]
+
+   // console.log(tiers)
 
 
 
@@ -715,47 +727,61 @@ function revealFusionCombos(x){
    //Effect
    statText += fusion.effect ? '<p>' + fusion.effect.replace(/\n/gi, '<br>') + '</p>' : '';
 
-   statText += '<p>---------</p>';
-
-   let finalDecipher = [];
-
-   for (currentSet of combos) {
-
-      let tempText = '<p>'
 
 
-      let decipher = currentSet;
+   for (combos in tiers) {
+      statText += '<p>---------</p>';
 
-      for (var i = 0; i < decipher.length; i++) {
-         let card = decipher[i];
-         tempText += cardList[card].name;
+      let finalDecipher = [];
 
-         tempText += i < decipher.length - 1 ? ' &rarr; ' : '';
+      // console.log(combos)
+      combos = tiers[combos];
 
+      for (currentSet of combos) {
+
+         // console.log(currentSet)
+
+         let tempText = '<p>'
+
+
+         let decipher = currentSet;
+
+         for (var i = 0; i < decipher.length; i++) {
+            let card = decipher[i];
+
+            // console.log(card);
+            tempText += cardList[card].name;
+
+            tempText += i < decipher.length - 1 ? ' &rarr; ' : '';
+
+         }
+
+         tempText += '</p>'
+
+         finalDecipher.push(tempText);
       }
 
-      tempText += '</p>'
+      finalDecipher.sort((a,b) => {
 
-      finalDecipher.push(tempText);
-   }
+         if (a < b) {
+            return -1
+         } else if (a > b) {
+            return 1
+         } else {
+            0
+         }
+      });
 
-   finalDecipher.sort((a,b) => {
-
-      if (a < b) {
-         return -1
-      } else if (a > b) {
-         return 1
-      } else {
-         0
+      for (var i = 0; i < finalDecipher.length; i++) {
+         statText += finalDecipher[i]
       }
-   });
 
-   for (var i = 0; i < finalDecipher.length; i++) {
-      statText += finalDecipher[i]
+
    }
-
 
    listBG.innerHTML += statText;
+
+
 
 
 }
