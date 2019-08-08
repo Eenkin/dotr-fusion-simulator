@@ -6,7 +6,7 @@ var inDeck = [];
 var uniqueCards = {};
 var unobtainableTracker = [];
 
-var loadFusions = 'some';
+var loadFusions = 'all';
 
 var canWinInSlots = [];
 
@@ -14,35 +14,7 @@ const cardTypeArr = ['Dragon', 'Spellcaster', 'Zombie', 'Warrior', 'Beast-Warrio
 const monsterAttributes = ['WATER', 'FIRE', 'EARTH', 'WIND', 'DARK', 'LIGHT'];
 const archetypeArray = ['Female', 'Toon', 'Elf', 'Egg', 'Horned', 'Shell', 'Turtle']
 
-const characters = ["Bakura",
-   "Darkness-ruler",
-   "Ishtar",
-   "J. Shadi Morton",
-   "Jasper Dice Tudor",
-   "Joey",
-   "Keith",
-   "Labyrinth-ruler",
-   "Mako",
-   "Manawyddan fab Llyr (Chakra)",
-   "Manawyddan fab Llyr (Skull Knight)",
-   "Margaret Mai Beaufort",
-   "Necromancer",
-   "Pegasus Crawford",
-   "Rex Raptor",
-   "Richard Slysheen of York",
-   "Seto",
-   "T. Tristan Grey",
-   "Tea",
-   "Weevil Underwood",
-   "Yugi",
-   "Deck Master I",
-   "Deck Master S",
-   "Deck Master T"
-];
-
 let fusionTracker = {};
-
-let dummy = [];
 
 function loadingFusions(load){
    loadFusions = load;
@@ -51,28 +23,8 @@ function loadingFusions(load){
    fuseCards();
 }
 
-function createArray() {
-
-   let a = [...dummy];
-
-   if (!a) {
-      return;
-   }
-
-   for (var i = 0; i < a.length; i++) {
-      a[i] = a[i].slice(0, 3);
-      a[i] = parseInt(a[i]);
-   }
-
-   let doc = document.createElement('textarea');
-   document.body.appendChild(doc);
-
-   doc.value = a;
-   doc.select();
-   document.execCommand('copy');
-   document.body.removeChild(doc);
-
-   // console.log(a);
+function copyUniqueCards(){
+   return Object.assign({}, uniqueCards);
 }
 
 function createDeckTable() {
@@ -120,22 +72,6 @@ function createDeckTable() {
    document.getElementById('deckTable').appendChild(tbody);
 }
 
-function createOptions() {
-
-   let presetForm = document.getElementById('presetForm');
-
-   for (var i = 0; i < characters.length; i++) {
-
-
-      let options = document.createElement('option');
-      options.value = characters[i];
-      options.innerText = characters[i];
-
-      presetForm.appendChild(options);
-   }
-
-}
-
 function scrollToTop() {
    document.body.scrollTop = 0;
    resetFusionSectionColors();
@@ -173,7 +109,7 @@ function addCard(num) {
          if (card > 853) {
             card = null;
          }
-      } else if (cardNamelist.includes(temp)) {
+      } else if (cardNamelist.indexOf(temp) > -1) {
          //card = cardList[cardNamelist.indexOf(temp)]; //is input a name?
          card = cardNamelist.indexOf(temp);
       } else if (!card) {
@@ -272,10 +208,10 @@ function sortDeck(skipHash) {
          }
          //document.getElementById('multipleCardsWarning').style.display = uniqueCards[card.id] > 3 ? 'block' : '';
 
-         if (unobtainableCards.includes(card.id)) {
+         if (unobtainableCards.indexOf(card.id) > -1) {
             document.getElementById('unobtainableWarning').style.display = 'block' //warns if unobtainable card is added to the deck;
 
-            if (!unobtainableTracker.includes(card.id)) {
+            if (!unobtainableTracker.indexOf(card.id) > -1) {
                unobtainableTracker.push(card.id);
                document.getElementById('unobtainListSection').innerHTML += unobtainableTracker.length > 1 ? ', ' + card.name : card.name; //Lists which cards
                //console.log(document.getElementById('unobtainListSection').innerHTML)
@@ -293,7 +229,7 @@ function sortDeck(skipHash) {
          if (card.attribute) {
             textStat += '/' + card.attribute;
 
-            if (monsterAttributes.includes(card.attribute)) {
+            if (monsterAttributes.indexOf(card.attribute) > -1) {
                trackAttribute[card.attribute] = trackAttribute[card.attribute] ? trackAttribute[card.attribute] + 1 : 1;
             }
          }
@@ -329,7 +265,7 @@ function sortDeck(skipHash) {
 
          textStat += card.effect ? '<p>' + card.effect.replace(/\n/gi, '<br>') + '</p>' : '';
 
-         if (normalSlotCards.includes(card.id)) {
+         if (normalSlotCards.indexOf(card.id) > -1) {
             canWinInSlots.push(card.id);
             tdCardId[i].style.backgroundColor = 'lightgreen';
          }
@@ -462,38 +398,39 @@ function fuseCards() {
    let trial;
    let copyDeck;
    let fusableDeck;
+   let tempArr;
+
+   function uniqueString(arr){
+      //let stringSeq = arr.toString();
+      let stringSeq = '' + arr;
+      // console.log(stringSeq);
+
+      if (uniqueSequence.indexOf(stringSeq) > -1) {
+         return false;
+      }
+
+      uniqueSequence.push(stringSeq);
+      return true;
+   }
 
 
 
    function fusionCheck(arr, tier){
-      // a = Math.min(cardA, cardB);
-      // b = Math.max(cardA, cardB);
 
-      // copyDeck = [...fusableDeck];
-      //
-      // // copyDeck.splice(copyDeck.indexOf(a), 1);
-      // // copyDeck.splice(copyDeck.indexOf(b), 1);
-      //
-      // for (var i = 0; i < arr.length; i++) {
-      //    copyDeck.splice(copyDeck.indexOf(arr[i]), 1)
+      //currentOrder = arr;
+
+      // if (!uniqueString(arr)) {
+      //    return;
       // }
 
 
-      currentOrder = arr;
-
-      let stringSeq = currentOrder.toString();
-
-      if (uniqueSequence.includes(stringSeq)) {
-         return;
-      }
-
-      uniqueSequence.push(stringSeq);
-      trial = bruteFusion(currentOrder);
+      trial = bruteFusion(arr);
 
       if (trial) {
          //uniqueSequence.push(trial.sequence.toString())
 
-         let addArr = [...trial.sequence];
+         // let addArr = [...trial.sequence];
+         let addArr = trial.sequence.slice();
          // let result = addArr.pop();
          // addArr = addArr.toString();
 
@@ -516,8 +453,20 @@ function fuseCards() {
 
    // console.groupCollapsed();
 
-   fusableDeck = [...inDeck];
-   fusableDeck = fusableDeck.filter(fusable => fusableCards.includes(fusable))
+   // fusableDeck = [...inDeck];
+   // fusableDeck = fusableDeck.filter(fusable => fusableCards.includes(fusable))
+
+   fusableDeck = inDeck.slice();
+   tempArr = [];
+
+   for (var i = 0; i < fusableDeck.length; i++) {
+      let x = parseInt(fusableDeck[i])
+      if (fusableCards.indexOf(x) > -1) {
+         tempArr.push(x);
+      }
+   }
+
+   fusableDeck = tempArr;
 
    //console.log(copyDeck)
 
@@ -531,7 +480,7 @@ function fuseCards() {
       for (var j = i + 1; j < fusableDeck.length; j++) {
 
 
-         if (j == fusableDeck.length || !fusableCards.includes(fusableDeck[j])) {
+         if (j == fusableDeck.length || fusableCards.indexOf(fusableDeck[j]) < 0) {
             continue;
          }
 
@@ -543,7 +492,17 @@ function fuseCards() {
    }
 
    let fusions = Object.keys(fusionTracker);
-   fusions = fusions.filter(card => fusableCards.includes(parseInt(card)));
+   tempArr = [];
+   //fusions = fusions.filter(card => fusableCards.includes(parseInt(card)));
+
+   for (var i = 0; i < fusions.length; i++) {
+      let x = parseInt(fusions[i])
+      if (fusableCards.indexOf(x) > -1) {
+         tempArr.push(x);
+      }
+   }
+
+   fusions = tempArr;
    // console.log(fusions)
 
    for (var a = 1; a < 20; a++) {
@@ -552,13 +511,14 @@ function fuseCards() {
          break;
       }
 
-      let hasTiers = [...fusions];
+      // let hasTiers = [...fusions];
+      let hasTiers = fusions.slice();
 
       for (var i = 0; i < hasTiers.length; i++) {
 
 
-         currentFusion = parseInt(hasTiers[i]); //searchForFusion
-
+         //currentFusion = parseInt(hasTiers[i]); //searchForFusion
+         currentFusion = hasTiers[i]
          let currentTier = fusionTracker[currentFusion]['t' + (a - 1)];
 
          // if(!fusableCards.includes(fusions[i]) || !currentTier) {
@@ -576,14 +536,17 @@ function fuseCards() {
          for (var j = 0; j < currentTier.length; j++) {
             let thisSet = currentTier[j];
 
-            let dummyDeck = [...fusableDeck];
+            // let dummyDeck = [...fusableDeck];
+            let dummyDeck = fusableDeck.slice();
 
             for (var k = 0; k < thisSet.length; k++) {
                dummyDeck.splice(dummyDeck.indexOf(thisSet[k]), 1);
             }
 
             for (var k = 0; k < dummyDeck.length; k++) {
-               let fusionArr = [...thisSet, dummyDeck[k]];
+               //let fusionArr = [...thisSet, dummyDeck[k]];
+               let fusionArr = thisSet.slice()
+               fusionArr.push(dummyDeck[k]);
 
                // console.log(fusionArr)
 
@@ -696,7 +659,7 @@ function createFusionResults() {
       tbody.appendChild(tr1);
       tbody.appendChild(tr2);
 
-      if (normalSlotCards.includes(fusion.id)) {
+      if (normalSlotCards.indexOf(fusion.id) > -1) {
          tdId.style.backgroundColor = 'lightgreen';
       }
    }
@@ -704,6 +667,7 @@ function createFusionResults() {
 
 function revealFusionCombos(x){
    document.getElementById('fusionPopUp').style.display = 'inherit';
+   document.getElementById('listBG').scrollTop = 0;
    let listBG = document.getElementById('listBG');
 
    let fusion = x == "?" ? mysteryCard : cardList[x]; //use MysterCard if Insect Imitation was used, else find card normally
@@ -761,6 +725,9 @@ function revealFusionCombos(x){
          finalDecipher.push(tempText);
       }
 
+      finalDecipher = new Set(finalDecipher);
+      finalDecipher = [...finalDecipher];
+
       finalDecipher.sort((a,b) => {
 
          if (a < b) {
@@ -768,9 +735,11 @@ function revealFusionCombos(x){
          } else if (a > b) {
             return 1
          } else {
-            0
+            return 0
          }
       });
+
+
 
       for (var i = 0; i < finalDecipher.length; i++) {
          statText += finalDecipher[i]
@@ -862,8 +831,21 @@ function checkHash() {
          hashArr[i] = hashArr[i] > 853 || hashArr[i] == 671 ? null : hashArr[i];
       }
 
-      hashArr = hashArr.filter(hash => true);
-      inDeck = [...hashArr];
+      // hashArr = hashArr.filter(hash => true);
+      let tempArr = [];
+
+      for (var i = 0; i < hashArr.length; i++) {
+         let x = hashArr[i];
+         if (x) {
+            tempArr.push(x)
+         }
+      }
+
+      hashArr = tempArr;
+
+
+      // inDeck = [...hashArr];
+      inDeck = hashArr;
 
       // console.log(hashArr);
 
@@ -878,7 +860,6 @@ window.onload = function() {
       checkHash();
    }
 
-   //createArray(dummy);
 };
 
 window.onhashchange = function() {
