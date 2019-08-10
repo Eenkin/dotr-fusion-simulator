@@ -9846,6 +9846,7 @@ const cardList = [
     "id": 815,
     "name": "Bad Reaction to Simochi",
     "type": "Trap",
+    "attribute": "Full Range",
     "dc": 25,
     "effect": "Permanent trap that triggers against LP recovery and reduces an opponent's LP by the same amount.",
     "pw": "E94X6MQB"
@@ -9854,6 +9855,7 @@ const cardList = [
     "id": 816,
     "name": "Reverse Trap",
     "type": "Trap",
+    "attribute": "Full Range",
     "dc": 25,
     "effect": "Permanent trap that triggers against power-ups involving increases in ATK and DEF, reversing the positive effect to a negative amount.",
     "pw": "GM8RU1QF"
@@ -9862,6 +9864,7 @@ const cardList = [
     "id": 817,
     "name": "Block Attack",
     "type": "Trap",
+    "attribute": "Full Range",
     "dc": 25,
     "effect": "Disposable trap that triggers when an enemy card completes its move in the attack position. Cancels the card's actions and ends further movement.",
     "pw": "SHNXWP69"
@@ -9870,6 +9873,7 @@ const cardList = [
     "id": 818,
     "name": "Shadow of Eyes",
     "type": "Trap",
+    "attribute": "Full Range",
     "dc": 20,
     "effect": "Permanent trap that triggers when an enemy card completes its move in the defense position. Automatically changes the card to offense position.",
     "pw": "QXS9WH8V"
@@ -9878,6 +9882,7 @@ const cardList = [
     "id": 819,
     "name": "Gorgon's Eye",
     "type": "Trap",
+    "attribute": "Full Range",
     "dc": 50,
     "effect": "Permanent trap that triggers when an enemy card completes its move in the defense position. Automatically cancels the enemy card's move and eternally spellbinds it.",
     "pw": "WDG3A7E1"
@@ -9886,6 +9891,7 @@ const cardList = [
     "id": 820,
     "name": "Fake Trap",
     "type": "Trap",
+    "attribute": "Full Range",
     "dc": 5,
     "effect": "Disposable trap that triggers when Harpie's Feather Duster is activated, and nullifies the card's effect.",
     "pw": "WHQFGZ6B"
@@ -9894,6 +9900,7 @@ const cardList = [
     "id": 821,
     "name": "Anti Raigeki",
     "type": "Trap",
+    "attribute": "Full Range",
     "dc": 5,
     "effect": "Permanent trap that triggers when Raigeki is activated, and nullifies the card's effect."
   },
@@ -9901,6 +9908,7 @@ const cardList = [
     "id": 822,
     "name": "Call of the Grave",
     "type": "Trap",
+    "attribute": "Full Range",
     "dc": 5,
     "effect": "Permanent trap that triggers when a card is resurrected from the Graveyard, and cancels the card's effect.",
     "pw": "UTWKW5GX"
@@ -9909,6 +9917,7 @@ const cardList = [
     "id": 823,
     "name": "Magic Jammer",
     "type": "Trap",
+    "attribute": "Full Range",
     "dc": 35,
     "effect": "Disposable trap that triggers when an opponent's MAGIC or RITUAL Card is activated, and cancels the cards's effect.",
     "pw": "AM4KQBQM"
@@ -9917,6 +9926,7 @@ const cardList = [
     "id": 824,
     "name": "White Hole",
     "type": "Trap",
+    "attribute": "Full Range",
     "dc": 10,
     "effect": "Permanent trap that triggers when a Dark Hole is activated. Protects all your cards on the Field from destruction.",
     "pw": "LVGZAMUT"
@@ -9925,6 +9935,7 @@ const cardList = [
     "id": 825,
     "name": "Royal Decree",
     "type": "Trap",
+    "attribute": "Full Range",
     "dc": 80,
     "effect": "Permanent trap that triggers against any activated TRAP card and nullifies the card.",
     "pw": "8TETQHE1"
@@ -9933,6 +9944,7 @@ const cardList = [
     "id": 826,
     "name": "Seal of the Ancients",
     "type": "Trap",
+    "attribute": "Full Range",
     "dc": 5,
     "effect": "Permanent trap that triggers against any activated RITUAL card and nullifies the effect.",
     "pw": "C3EZ47NB"
@@ -9941,6 +9953,7 @@ const cardList = [
     "id": 827,
     "name": "Mirror Force",
     "type": "Trap",
+    "attribute": "Full Range",
     "dc": 99,
     "effect": "Disposable trap that triggers when an enemy initiates an attack against your Leader or other cards on the field. Destroys every one of your opponent's attack-positioned cards on the field."
   },
@@ -9948,6 +9961,7 @@ const cardList = [
     "id": 828,
     "name": "Negate Attack",
     "type": "Trap",
+    "attribute": "Full Range",
     "dc": 15,
     "effect": "Disposable trap that triggers when an enemy initiates an attack against your Leader or other cards on the field and cancels the attack.",
     "pw": "6TAZ6P4R"
@@ -9956,6 +9970,7 @@ const cardList = [
     "id": 829,
     "name": "Mirror Wall",
     "type": "Trap",
+    "attribute": "Full Range",
     "dc": 80,
     "effect": "Permanent trap that triggers when an enemy initiates an attack against your Leader or other cards on the Field and reduces the ATK of the enemy by half.",
     "pw": 53297534

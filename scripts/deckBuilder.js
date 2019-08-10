@@ -9,12 +9,15 @@ var unobtainableTracker = [];
 var loadFusions = 'all';
 
 var canWinInSlots = [];
+const base36String = '0123456789abcdefghijklmnopqrstuvwxyz'
 
 const cardTypeArr = ['Dragon', 'Spellcaster', 'Zombie', 'Warrior', 'Beast-Warrior', 'Beast', 'Winged Beast', 'Fiend', 'Fairy', 'Insect', 'Dinosaur', 'Reptile', 'Fish', 'Sea Serpent', 'Machine', 'Thunder', 'Aqua', 'Pyro', 'Rock', 'Plant', 'Immortal', 'Magic', 'Trap', 'Ritual'];
 const monsterAttributes = ['WATER', 'FIRE', 'EARTH', 'WIND', 'DARK', 'LIGHT'];
 const archetypeArray = ['Female', 'Toon', 'Elf', 'Egg', 'Horned', 'Shell', 'Turtle']
 
-let fusionTracker = {};
+var multipleCardsArr =[]
+
+var fusionTracker = {};
 
 function loadingFusions(load){
    loadFusions = load;
@@ -117,6 +120,7 @@ function addCard(num) {
       } else {
          card = null;
          document.getElementById('spellingWarning').style.display = 'block';
+         return;
       }
 
       // console.log(card);
@@ -148,23 +152,26 @@ function sortDeck(skipHash) {
 
    let sorting = document.getElementById('sorting').value;
    //Sort by:
-   inDeck.sort((a, b) => {
 
-      if (sorting == '123') {
-         return a - b;
-      } else {
-         a = cardNamelist[a];
-         b = cardNamelist[b];
-         if (a < b) {
-            return -1
-         } else if (a > b) {
-            return 1
+   if(!skipHash){
+      inDeck.sort((a, b) => {
+
+         if (sorting == '123') {
+            return a - b;
          } else {
-            0
+            a = cardNamelist[a];
+            b = cardNamelist[b];
+            if (a < b) {
+               return -1
+            } else if (a > b) {
+               return 1
+            } else {
+               return 0
+            }
          }
-      }
 
-   });
+      });
+   }
 
    canWinInSlots = [];
 
@@ -174,8 +181,10 @@ function sortDeck(skipHash) {
    let deckStatSection = document.getElementById('deckStatSection');
 
    uniqueCards = {} //track # of each unique card
+   multipleCardsArr = [];
 
    document.getElementById('unobtainListSection').innerHTML = '';
+   document.getElementById('multipleListSection').innerHTML = '';
 
    let dcTotal = 0;
    let numOfMonsters = 0;
@@ -188,96 +197,119 @@ function sortDeck(skipHash) {
 
    let hashString = '';
 
-   for (var i = 0; i < 40; i++) {
+   function createHash(card){
+      //hashString += card.id < 36 ? '0' + card.id.toString(36) : card.id.toString(36);
+      let num = card.id;
+      let div36 = Math.floor(num / 36);
+      let mod36 = num % 36;
 
-      let textId = '';
-      let textName = '';
-      let textStat = '';
+      hashString += base36String.charAt(div36) + base36String.charAt(mod36);
+   }
 
-      tdCardId[i].style.backgroundColor = '';
+   function cardChecker(){
+      for (var i = 0; i < 40; i++) {
 
-      if (i < inDeck.length) {
-         let card = cardList[inDeck[i]];
+         let textId = '';
+         let textName = '';
+         let textStat = '';
 
-         uniqueCards[card.id] = uniqueCards[card.id] ? uniqueCards[card.id] + 1 : 1; //Check if unique card, else add to a counter
+         tdCardId[i].style.backgroundColor = '';
 
-         hashString += card.id < 36 ? '0' + card.id.toString(36) : card.id.toString(36);
+         if (i < inDeck.length) {
+            let card = cardList[inDeck[i]];
 
-         if (uniqueCards[card.id] > 3) {
-            document.getElementById('multipleCardsWarning').style.display = 'block'; //warns if more than 3 of the same card are in the deck,
-         }
-         //document.getElementById('multipleCardsWarning').style.display = uniqueCards[card.id] > 3 ? 'block' : '';
+            uniqueCards[card.id] = uniqueCards[card.id] ? uniqueCards[card.id] + 1 : 1; //Check if unique card, else add to a counter
 
-         if (unobtainableCards.indexOf(card.id) > -1) {
-            document.getElementById('unobtainableWarning').style.display = 'block' //warns if unobtainable card is added to the deck;
+            if(!skipHash){
+               createHash(card);
+               continue;
+            }
 
-            if (!unobtainableTracker.indexOf(card.id) > -1) {
+            if (uniqueCards[card.id] > 3 && multipleCardsArr.indexOf(card.id) < 0) {
+               document.getElementById('multipleCardsWarning').style.display = 'block'; //warns if more than 3 of the same card are in the deck,
+               multipleCardsArr.push(card.id);
+               document.getElementById('multipleListSection').innerText += unobtainableTracker.length > 1 ? ', ' + card.name : card.name; //Lists which cards
+            }
+            //document.getElementById('multipleCardsWarning').style.display = uniqueCards[card.id] > 3 ? 'block' : '';
+
+            if (unobtainableCards.indexOf(card.id) > -1 && unobtainableTracker.indexOf(card.id) < 0) {
+               document.getElementById('unobtainableWarning').style.display = 'block' //warns if unobtainable card is added to the deck;
                unobtainableTracker.push(card.id);
-               document.getElementById('unobtainListSection').innerHTML += unobtainableTracker.length > 1 ? ', ' + card.name : card.name; //Lists which cards
-               //console.log(document.getElementById('unobtainListSection').innerHTML)
+               document.getElementById('unobtainListSection').innerText += unobtainableTracker.length > 1 ? ', ' + card.name : card.name; //Lists which cards
+
+               // if (unobtainableTracker.indexOf(card.id) > -1) {
+               //    unobtainableTracker.push(card.id);
+               //    //document.getElementById('unobtainListSection').innerHTML += unobtainableTracker.length > 1 ? ', ' + card.name : card.name; //Lists which cards
+               //    //console.log(document.getElementById('unobtainListSection').innerHTML)
+               // }
             }
-         }
 
-         textId = card.id;
-         textName = card.name;
+            textId = card.id;
+            textName = card.name;
 
-         //Type
-         textStat = '<p>' + card.type;
-         trackTyping[card.type] = trackTyping[card.type] ? trackTyping[card.type] + 1 : 1;
+            //Type
+            textStat = '<p>' + card.type;
+            // trackTyping[card.type] = trackTyping[card.type] ? trackTyping[card.type] + 1 : 1;
 
-         //Attribute
-         if (card.attribute) {
-            textStat += '/' + card.attribute;
+            //Attribute
+            if (card.attribute) {
+               textStat += '/' + card.attribute;
 
-            if (monsterAttributes.indexOf(card.attribute) > -1) {
-               trackAttribute[card.attribute] = trackAttribute[card.attribute] ? trackAttribute[card.attribute] + 1 : 1;
+               // if (monsterAttributes.indexOf(card.attribute) > -1) {
+               //    trackAttribute[card.attribute] = trackAttribute[card.attribute] ? trackAttribute[card.attribute] + 1 : 1;
+               // }
             }
+
+            //DC
+            // textStat += card.dc ? '/DC ' + card.dc : '';
+            textStat +=  '/DC ' + card.dc;
+            dcTotal += card.dc;
+
+
+            //:V/ATK/DEF
+            if (card.lv) {
+               textStat += '/LV ' + card.lv + '/ATK ' + card.atk + '/DEF ' + card.def;
+               numOfMonsters++;
+               monsterSLV += card.lv;
+            }
+
+
+            //Archetypes
+            if (card.archetype) {
+
+               textStat += '<br>Archetype(s): ' + card.archetype;
+
+               // let splitArchetype = card.archetype.split(', ');
+               //
+               // splitArchetype.forEach(function(archetype) {
+               //    trackArchetype[archetype] = trackArchetype[archetype] ? trackArchetype[archetype] + 1 : 1;
+               // });
+
+            }
+
+
+            textStat += '</p>';
+
+            textStat += card.effect ? '<p>' + card.effect.replace(/\n/gi, '<br>') + '</p>' : '';
+
+            if (normalSlotCards.indexOf(card.id) > -1) {
+               // canWinInSlots.push(card.id);
+               tdCardId[i].style.backgroundColor = 'lightgreen';
+            }
+
          }
 
-         //DC
-         textStat += card.dc ? '/DC ' + card.dc : '';
-         dcTotal += card.dc;
+         tdCardId[i].innerText = textId;
+         tdCardName[i].innerText = textName;
 
-
-         //:V/ATK/DEF
-         if (card.lv) {
-            textStat += '/LV ' + card.lv + '/ATK ' + card.atk + '/DEF ' + card.def;
-            numOfMonsters++;
-            monsterSLV += card.lv;
-         }
-
-
-         //Archetypes
-         if (card.archetype) {
-
-            textStat += '<br>Archetype(s): ' + card.archetype;
-
-            let splitArchetype = card.archetype.split(', ');
-
-            splitArchetype.forEach(function(archetype) {
-               trackArchetype[archetype] = trackArchetype[archetype] ? trackArchetype[archetype] + 1 : 1;
-            });
-
-         }
-
-
-         textStat += '</p>';
-
-         textStat += card.effect ? '<p>' + card.effect.replace(/\n/gi, '<br>') + '</p>' : '';
-
-         if (normalSlotCards.indexOf(card.id) > -1) {
-            canWinInSlots.push(card.id);
-            tdCardId[i].style.backgroundColor = 'lightgreen';
-         }
+         tdCardStat[i].innerHTML = textStat;
 
       }
-
-      tdCardId[i].innerText = textId;
-      tdCardName[i].innerText = textName;
-
-      tdCardStat[i].innerHTML = textStat;
-
    }
+
+   cardChecker();
+
+
 
    document.getElementById('dcTotal').innerText = dcTotal;
 
@@ -288,71 +320,73 @@ function sortDeck(skipHash) {
 
    document.getElementById('totalCards').innerText = inDeck.length;
 
-   let typeText = ''
-
-   let tempObjKey = Object.keys(trackTyping);
-   tempObjKey.sort(function(a, b) {
-      return cardTypeArr.indexOf(a) - cardTypeArr.indexOf(b);
-   })
-
-   for (var i = 0; i < tempObjKey.length; i++) {
-      let key = tempObjKey[i];
-      typeText += '<span class="noWrap">' + key + ': ' + trackTyping[key];
-      typeText += i < tempObjKey.length - 1 ? ',&emsp;' : '';
-      typeText += '</span>';
-   }
-
-   // deckStatSection.innerHTML = '<span class="noWrap">Total DC: ' + dcTotal + '</span>&emsp;|&emsp;<span class="noWrap">Average LV: ' + averageLV + '</span>&emsp;|&emsp;<span class="noWrap"># of Cards in Deck: '  + inDeck.length + '/40</span>'
-   // deckStatSection.innerHTML += '<p>Total of Each Type<br>' + typeText + '</p>';
-
-   let attrText = '';
-
-   if (trackAttribute) {
-      tempObjKey = Object.keys(trackAttribute);
-      tempObjKey.sort(function(a, b) {
-         return monsterAttributes.indexOf(a) - monsterAttributes.indexOf(b);
-      })
-
-      for (var i = 0; i < tempObjKey.length; i++) {
-         let key = tempObjKey[i];
-         attrText += '<span class="noWrap">' + key + ': ' + trackAttribute[key];
-         attrText += i < tempObjKey.length - 1 ? ',&emsp;' : '';
-         attrText += '</span>';
-      }
-
-      // deckStatSection.innerHTML += '<p>Total of Each Attribute<br>' + attrText + '</p>';
-   }
-
-   let archeText = '';
-
-   if (trackArchetype) {
-      tempObjKey = Object.keys(trackArchetype);
-      tempObjKey.sort(function(a, b) {
-         return archetypeArray.indexOf(a) - archetypeArray.indexOf(b);
-      })
-
-      for (var i = 0; i < tempObjKey.length; i++) {
-         let key = tempObjKey[i];
-         archeText += '<span class="noWrap">' + key + ': ' + trackArchetype[key];
-         archeText += i < tempObjKey.length - 1 ? ',&emsp;' : '';
-         archeText += '</span>';
-      }
-
-      // deckStatSection.innerHTML += '<p>Total of Each Archetype<br>' + archeText + '</p>';
-
+   function hide(){
+      // let typeText = ''
+      //
+      // let tempObjKey = Object.keys(trackTyping);
+      // tempObjKey.sort(function(a, b) {
+      //    return cardTypeArr.indexOf(a) - cardTypeArr.indexOf(b);
+      // })
+      //
+      // for (var i = 0; i < tempObjKey.length; i++) {
+      //    let key = tempObjKey[i];
+      //    typeText += '<span class="noWrap">' + key + ': ' + trackTyping[key];
+      //    typeText += i < tempObjKey.length - 1 ? ',&emsp;' : '';
+      //    typeText += '</span>';
+      // }
+      //
+      //
+      // let attrText = '';
+      //
+      // if (trackAttribute) {
+      //    tempObjKey = Object.keys(trackAttribute);
+      //    tempObjKey.sort(function(a, b) {
+      //       return monsterAttributes.indexOf(a) - monsterAttributes.indexOf(b);
+      //    })
+      //
+      //    for (var i = 0; i < tempObjKey.length; i++) {
+      //       let key = tempObjKey[i];
+      //       attrText += '<span class="noWrap">' + key + ': ' + trackAttribute[key];
+      //       attrText += i < tempObjKey.length - 1 ? ',&emsp;' : '';
+      //       attrText += '</span>';
+      //    }
+      //
+      //    // deckStatSection.innerHTML += '<p>Total of Each Attribute<br>' + attrText + '</p>';
+      // }
+      //
+      // let archeText = '';
+      //
+      // if (trackArchetype) {
+      //    tempObjKey = Object.keys(trackArchetype);
+      //    tempObjKey.sort(function(a, b) {
+      //       return archetypeArray.indexOf(a) - archetypeArray.indexOf(b);
+      //    })
+      //
+      //    for (var i = 0; i < tempObjKey.length; i++) {
+      //       let key = tempObjKey[i];
+      //       archeText += '<span class="noWrap">' + key + ': ' + trackArchetype[key];
+      //       archeText += i < tempObjKey.length - 1 ? ',&emsp;' : '';
+      //       archeText += '</span>';
+      //    }
+      //
+      //    // deckStatSection.innerHTML += '<p>Total of Each Archetype<br>' + archeText + '</p>';
+      //
+      // }
    }
 
    if (!skipHash) {
       window.location.hash = hashString;
+   } else {
+      fuseCards();
    }
-   fuseCards();
+
 }
 
 function removeCard(x) {
 
    inDeck.splice(x, 1);
 
-   document.getElementById('presetForm').value = ''
+   document.getElementById('presetForm').value = '';
 
    resetWarnings();
    sortDeck();
@@ -364,11 +398,12 @@ function usePreset(skipHash) {
    resetWarnings();
 
    if (presetForm) {
-      inDeck = presetDeck[presetForm];
-      sortDeck(true);
 
       if (!skipHash) {
          window.location.hash = presetForm.replace(/ /gi, '_');
+      } else{
+         inDeck = presetDeck[presetForm];
+         sortDeck(true);
       }
 
    }
@@ -560,29 +595,7 @@ function fuseCards() {
       // console.log(a + ": " +fusions);
    }
 
-   // fusions = Object.keys(fusionTracker);
-   //
-   // for (var i = 0; i < fusions.length; i++) {
-   //
-   //    let x = fusions[i];
-   //
-   //    let keys = Object.keys(fusionTracker[x]);
-   //
-   //    // console.log(keys)
-   //
-   //    for (var j = 0; j < keys.length; j++) {
-   //       fusionTracker[x].deckCombos = fusionTracker[x].deckCombos ?  fusionTracker[x].deckCombos.concat(fusionTracker[x][keys[j]]) :  [...fusionTracker[x][keys[j]]];
-   //
-   //       if (loadFusions == 'some') {
-   //          break;
-   //       }
-   //    }
-   //
-   // }
-
    createFusionResults();
-
-
 
 }
 
@@ -758,7 +771,7 @@ function revealFusionCombos(x){
 function bruteFusion(order) {
    let object = {};
 
-   object.sequence = [];
+   //object.sequence = [order];
 
    for (var i = 0; i < order.length - 1; i++) {
       //Card A = first card in sequence. Otherwise, it equals the result of the previous card
@@ -767,13 +780,8 @@ function bruteFusion(order) {
 
       let pair = Math.min(cardA, cardB) + "," + Math.max(cardA, cardB);
 
-      if (pair in fusionCombos) {
+      if (fusionCombos[pair]) {
          object.resultCard = fusionCombos[pair];
-         if (object.sequence < 1) {
-            // adds very first card to sequence
-            object.sequence.push(cardA);
-         }
-         object.sequence.push(cardB, object.resultCard);
       } else {
          return false;
       }
@@ -808,6 +816,7 @@ function resetDeck() {
    fusionTracker = {};
 
    document.getElementById('fusionTBody').innerHTML = '';
+   document.getElementById('presetForm').value = '';
    resetWarnings();
    sortDeck();
 }
@@ -821,12 +830,15 @@ function checkHash() {
       document.getElementById('presetForm').value = hashString;
       usePreset(true)
    } else {
+      hashString = hashString.toLowerCase();
       hashString = hashString.replace(/[^0-9a-z]/gi, '');
       hashString = hashString.length > 80 ? hashString.slice(0, 80) : hashString;
 
       let hashArr = hashString.match(/.{1,2}/g);
 
-      for (var i = 0; i < hashArr.length; i++) {
+      let loopMax = Math.min(hashArr.length, 40);
+
+      for (var i = 0; i < loopMax; i++) {
          hashArr[i] = parseInt(hashArr[i], 36);
          hashArr[i] = hashArr[i] > 853 || hashArr[i] == 671 ? null : hashArr[i];
       }
