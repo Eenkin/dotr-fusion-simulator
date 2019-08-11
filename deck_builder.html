@@ -77,7 +77,7 @@
          font-size: 12px;
       }
 
-      #fusionPopUp{
+      #fusionPopUp, #chartPopUp{
          position:fixed;
          top: 0;
          left: 0;
@@ -90,7 +90,7 @@
 
       }
 
-      #listBG{
+      #listBG, #chartBG{
          background-color: white;
          padding: 20px;
          font-size: 14px;
@@ -99,7 +99,24 @@
          height: 100%;
       }
 
-      #closeFusionListBtn{
+      #typeChart th{
+         background-color: yellow;
+         padding: 5px;
+      }
+
+      #typeChart{
+         width: 80%;
+         max-width: 480px;
+         //margin: 0 auto;
+      }
+
+      #typeChart td {
+         padding: 5px;
+      }
+
+
+
+      #closeFusionListBtn, #closeChartListBtn{
          background-color: red;
          position: fixed;
          top: 20px;
@@ -1082,11 +1099,12 @@
             &emsp;|&emsp;
             <span class="noWrap">Average LV: <span id="averageLV">0.00</span></span>
             &emsp;|&emsp;
-            <span class="noWrap">Cards in Deck: <span id="totalCards">0</span>/40</span></p>
+            <span class="noWrap">Cards in Deck: <span id="totalCards">0</span>/40</span>
+            <br>
 
-         <!-- <p>Total of Each Type<br><span id="eachType"></span></p>
-         <p>Total of Each Attribute<br><span id="eachAttribute"></span></p>
-         <p>Total of Each Archetype<br><span class="eachArcheType"></span></p> -->
+            <a onclick="openTypeChart()"><u>Chart of each type/attribute/archetype in the deck</u></a>
+
+         </p>
       </div>
 
       <div id='deckBuildSection'>
@@ -1477,8 +1495,148 @@
       <div id='jumpToSection' style='margin:10px 0'></div>
 
       <div id="fusionPopUp">
+
          <div style="float:right;"><input id="closeFusionListBtn" type="button" value="X" onclick="document.getElementById('fusionPopUp').style.display = ''"></div>
          <div id="listBG"></div>
+      </div>
+
+      <div id="chartPopUp">
+         <div style="float:right;"><input id="closeChartListBtn" type="button" value="X" onclick="document.getElementById('chartPopUp').style.display = ''"></div>
+         <div id="chartBG">
+            <h1>Number of Each Type, Attribute, and Archetype</h1>
+            <p id="dupliicateStats"></p>
+            <table id="typeChart">
+               <thead>
+                  <tr>
+                     <th>Type</th>
+                     <th>Attribute</th>
+                     <th>Archetype</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>Dragon: <span id="tdDragon"></span></td>
+                     <td>LIGHT: <span id="tdLIGHT"></span></td>
+                     <td>Female: <span id="tdFemale"></span></td>
+                  </tr>
+                  <tr>
+                     <td>Spellcaster: <span id="tdSpellcaster"></span></td>
+                     <td>WATER: <span id="tdWATER"></span></td>
+                     <td>Toon: <span id="tdToon"></span></td>
+                  </tr>
+                  <tr>
+                     <td>Zombie: <span id="tdZombie"></span></td>
+                     <td>FIRE: <span id="tdFIRE"></span></td>
+                     <td>Elf: <span id="tdElf"></span></td>
+                  </tr>
+                  <tr>
+                     <td>Warrior: <span id="tdWarrior"></span></td>
+                     <td>EARTH: <span id="tdEARTH"></span></td>
+                     <td>Egg: <span id="tdEgg"></span></td>
+                  </tr>
+                  <tr>
+                     <td>Beast-Warrior: <span id="tdBeastWarrior"></span></td>
+                     <td>WIND: <span id="tdWIND"></span></td>
+                     <td>Horned: <span id="tdHorned"></span></td>
+                  </tr>
+                  <tr>
+                     <td>Beast: <span id="tdBeast"></span></td>
+                     <td>DARK: <span id="tdDARK"></span></td>
+                     <td>Shell: <span id="tdShell"></span></td>
+                  </tr>
+                  <tr>
+                     <td>Winged-Beast: <span id="tdWingedBeast"></span></td>
+                     <td></td>
+                     <td>Turtle: <span id="tdTurtle"></span></td>
+                  </tr>
+                  <tr>
+                     <td>Fiend: <span id="tdFiend"></span></td>
+                     <td></td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>Fairy: <span id="tdFairy"></span></td>
+                     <td></td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>Insect: <span id="tdInsect"></span></td>
+                     <td></td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>Dinosaur: <span id="tdDinosaur"></span></td>
+                     <td></td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>Reptile: <span id="tdReptile"></span></td>
+                     <td></td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>Fish: <span id="tdFish"></span></td>
+                     <td></td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>Sea Serpent: <span id="tdSeaSerpent"></span></td>
+                     <td></td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>Machine: <span id="tdMachine"></span></td>
+                     <td></td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>Thunder: <span id="tdThunder"></span></td>
+                     <td></td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>Aqua: <span id="tdAqua"></span></td>
+                     <td></td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>Pyro: <span id="tdPyro"></span></td>
+                     <td></td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>Rock: <span id="tdRock"></span></td>
+                     <td></td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>Plant: <span id="tdPlant"></span></td>
+                     <td></td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>Immortal: <span id="tdImmortal"></span></td>
+                     <td></td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>Magic: <span id="tdMagic"></span></td>
+                     <td></td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>Trap: <span id="tdTrap"></span></td>
+                     <td></td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>Ritual: <span id="tdRitual"></span></td>
+                     <td></td>
+                     <td></td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
       </div>
 
       <script>
