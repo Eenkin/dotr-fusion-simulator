@@ -137,3 +137,8 @@ hr{
 .jumpAnch{
    white-space: nowrap;
 }
+
+footer{
+   font-size: 10px;
+   text-align: left;
+}
