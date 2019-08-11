@@ -135,11 +135,11 @@
    <h1 id="pageHeading" style="width: 80%;">Yu-Gi-Oh! The Duelists of the Roses - Fusion Simulator</h1>
 
    <div id='note' style=''>
-      <p>For all intents and purposes, cards that include "Elegant Egotist", "Cocoon of Evolution", "Metalmorph" and "Insect Imitation" as their "SPECIAL POWER UP" will count as fusions. Due to "Insect Imitation" fuses into a random card, the result will be displayed as "?" as it is uncertain what monster it can fuse into.</p>
+      <p>This simulator calculates for all possible fusion combinations from the hand. The light-blue box labeled "Card on Field" is for a card that is currently in your Summoning Area. This will set the card to be placed first in the fusion order. It is optional, but the simulator will still provide options for if you decide to use the card or not. All other boxes can have cards be arranged in any order.</p>
 
-      <p>The light-blue box labeled "Card on Field" is for a card that is already in your Summoning Area, and it will always be placed as the first card in the fusion order. The simulator will still display options for whether or not you choose to use the card on the field. All other boxes can have cards be arranged in any order, and they will be calculated for any possible combinations from the hand. Blank inputs will be ignored, but a minimum of 2 cards is needed to perform a fusion.</p>
+      <p>Fusions involving "Insect Imitation" will display as "?" and won't be taken account for other fusions due to the random nature of the card.</p>
 
-      <p>Enter the names of the card or their ID number. Use this guide for a <u><a onclick="displayFusionList('inherit')">general fusion list</a></u>.</p>
+      <p>Enter the name or ID number of each card, but a minimum of 2 cards is required. Use this guide for a <u><a onclick="displayFusionList('inherit')">general fusion list</a></u>.</p>
    </div>
 
    <div id='forms' style='width:80%; margin: 20px auto;'>
@@ -1056,11 +1056,11 @@
 
             <p>A general rule of thumb is that a fusion material's <u>original</u> ATK cannot be higher than the fusion monster's ATK (with a few, rare exceptions).</p>
 
-            <p>Some fusions will have minimum ATK or LV requirement (i.e. 1500+ ATK or LV 5+). Only the fusion materials' <u>original</u> type, ATK, attribute, etc. matters. Changing a monster's stat will not affect the fusion result.</p>
+            <p>Some fusions will have minimum ATK or LV requirement (i.e. 1500+ ATK or LV 5+). Only the fusion materials' <u>original</u> stats matters. Changing a monster's stat will not affect the fusion result.</p>
 
-            <p>Some fusions requires a monster from the Female, Elf, or Turtle archetypes. Elf monsters have "Elf" in its name ("Celtic Guardian" is considered as an elf for fusions), Turtle monsters have "Turtle" or "Tortoise" in its name, and Female monsters can be identified if they can equip female Power Ups like "Cyber Shield". Fusions involving these archetypes as fusion materials will typically be placed in a higher priority than fusions that exclusively deal with a monster's type. For example, a female, Fairy with less than 1300 ATK and a Fish will prioritize fusing for "Amazon of the Seas" (Female + Fish) over "7 Colored Fish" (Fairy + Fish).</p>
+            <p>Some fusions require a monster from the Female, Elf, or Turtle archetypes. Elf monsters have "Elf" in its name ("Celtic Guardian" is considered as an elf for fusions); Turtle monsters have "Turtle" or "Tortoise" in its name, and Female monsters can equip female Power Ups like "Cyber Shield" (see their Power Up section in the game's card details). Fusions involving these archetypes as fusion materials may conflict with other fusions.</p>
 
-            <p>Due to how the game is programmed, there are some inconsistencies of some card combinations that should and shouldn't work. Please use the fusion simulator to double check.</p>
+            <p>Due to how the game is programmed, there are some inconsistencies of several card combinations that should and shouldn't work. Please use the fusion simulator to double check.</p>
          </div>
 
          Sort by: <input type="radio" name="sortList" onclick="swapTable('123')"> ID#/Type &emsp; <input type="radio" onclick="swapTable('ABC')" name="sortList" checked> Name
@@ -2912,11 +2912,11 @@
             </tbody>
          </table>
 
-         <p class='footnote'>
+         <footer>
             *Using Insects as fusion materials for "Sword Arm of Dragon" are a glitch in the game. They were supposed to be warriors whose ID#'s are 200 less than those Insects. This is why "Perfectly Ultimate Great Moth" can work in this fusion despite having twice the amount of ATK.'<br>
             **Due to the pot and jar themed fusions for "Ushi Oni", "Charubin the Fire Knight" may have originally been intended to be "Dragon Piper".<br>
             ***"Celtic Guardian" can be used for "Elf" fusions due to its Japanese name being "Elf Swordsman".
-         </p>
+         </footer>
 
       </div>
    </div>
