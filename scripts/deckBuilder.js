@@ -228,7 +228,7 @@ function sortDeck(skipHash) {
             if (uniqueCards[card.id] > 3 && multipleCardsArr.indexOf(card.id) < 0) {
                document.getElementById('multipleCardsWarning').style.display = 'block'; //warns if more than 3 of the same card are in the deck,
                multipleCardsArr.push(card.id);
-               document.getElementById('multipleListSection').innerText += unobtainableTracker.length > 1 ? ', ' + card.name : card.name; //Lists which cards
+               document.getElementById('multipleListSection').innerText += multipleCardsArr.length > 1 ? ', ' + card.name : card.name; //Lists which cards
             }
             //document.getElementById('multipleCardsWarning').style.display = uniqueCards[card.id] > 3 ? 'block' : '';
 
