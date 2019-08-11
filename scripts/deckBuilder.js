@@ -903,6 +903,9 @@ function openTypeChart() {
       "WIND": 0,
       "DARK": 0,
       "LIGHT": 0,
+      "PowerUp": 0,
+      "LimitedRange": 0,
+      "FullRange": 0,
       "Female": 0,
       "Toon": 0,
       "Elf": 0,
@@ -920,8 +923,9 @@ function openTypeChart() {
 
       trackTypeArr[tempType]++;
 
-      if (card.attribute && monsterAttributes.indexOf(card.attribute) > -1) {
-         trackTypeArr[card.attribute]++;
+      if (card.attribute) {
+         let tempAttr = card.attribute.replace(/ /gi, '').replace(/-/gi, '');
+         trackTypeArr[tempAttr]++;
       }
 
       if (card.archetype) {

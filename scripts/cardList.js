@@ -396,7 +396,7 @@ const cardList = [
     "dc": 45,
     "atk": 2000,
     "def": 2500,
-    "fusionInfo": "Dragon + \"Harpie Lady\" or \"Harpie Lady Sisters\"",
+    "fusionInfo": "\"Harpie Lady\" or \"Harpie Lady Sisters\" + Dragon",
     "powerUp": "780, 789, 795, 796, 766",
     "pw": "E34V63JT"
   },
@@ -1125,7 +1125,7 @@ const cardList = [
     "name": "Dark Magician Girl",
     "type": "Spellcaster",
     "attribute": "DARK",
-    "lv": 4,
+    "lv": 6,
     "dc": 42,
     "atk": 2000,
     "def": 1700,
@@ -1359,7 +1359,7 @@ const cardList = [
     "dc": 15,
     "atk": 1500,
     "def": 0,
-    "fusionInfo": "Zombie + Warrior\n*Requires at least one card with 1200+ ATK.",
+    "fusionInfo": "Zombie + Warrior\n*Requires at least 1 card with 1200+ ATK.",
     "powerUp": "780, 789, 795, 796, 772, 754",
     "pw": "SVYMUH6K"
   },
@@ -1399,7 +1399,7 @@ const cardList = [
     "atk": 1800,
     "def": 2000,
     "effect": "NATURE: While this card is face-up in the defense position, all ZOMBIE monsters are increased 100 points at the start of each turn.",
-    "fusionInfo": "Zombie + Plant\n*Requires at least one card with 1000+ ATK.",
+    "fusionInfo": "Zombie + Plant\n*Requires at least 1 card with 1000+ ATK.",
     "powerUp": "780, 789, 795, 796, 772, 754",
     "pw": "EFGVETEZ"
   },
@@ -3329,7 +3329,7 @@ const cardList = [
     "dc": 27,
     "atk": 1300,
     "def": 1400,
-    "fusionInfo": "Larvas + Beast",
+    "fusionInfo": "\"Larvas\" + Beast",
     "powerUp": "780, 789, 795, 796, 759, 769, 773"
   },
   {
@@ -3704,7 +3704,7 @@ const cardList = [
     "dc": 27,
     "atk": 1300,
     "def": 1400,
-    "fusionInfo": "Winged-Beast + \"Job-Change Mirror\" or \"Wicked Mirror\"",
+    "fusionInfo": "\"Job-Change Mirror\" or \"Wicked Mirror\" + Winged-Beast",
     "powerUp": "780, 789, 795, 796, 776, 785",
     "pw": "QMAMWHG3"
   },
@@ -4353,7 +4353,7 @@ const cardList = [
     "dc": 28,
     "atk": 1800,
     "def": 1000,
-    "fusionInfo": "Fiend + \"Lord of the Lamp\" or \"Mystic Lamp\"",
+    "fusionInfo": "\"Lord of the Lamp\" or \"Mystic Lamp\" + Fiend",
     "powerUp": "780, 789, 795, 796, 755, 770, 782, 754",
     "pw": "N7EZUH4V"
   },
@@ -4394,7 +4394,7 @@ const cardList = [
     "dc": 41,
     "atk": 2150,
     "def": 1950,
-    "fusionInfo": "Spellcaster (1500+ ATK) + \"Ancient Jar\", \"Morphing Jar\", or \"Pot of Trick\"",
+    "fusionInfo": "\"Ancient Jar\", \"Morphing Jar\", or \"Pot of Trick\" + Spellcaster (1500+ ATK)",
     "powerUp": "780, 789, 795, 796, 755, 770, 782, 765, 754",
     "archetype": "Horned"
   },
@@ -4420,7 +4420,7 @@ const cardList = [
     "dc": 40,
     "atk": 2200,
     "def": 1800,
-    "fusionInfo": "Reptile + \"Crass Clown\" or \"Clown Zombie\"",
+    "fusionInfo": "\"Crass Clown\" or \"Clown Zombie\" + Reptile",
     "powerUp": "780, 789, 795, 796, 755, 770, 782, 765, 754",
     "archetype": "Horned"
   },
@@ -4936,7 +4936,7 @@ const cardList = [
     "dc": 35,
     "atk": 1800,
     "def": 1700,
-    "fusionInfo": "Fairy + Female Archetype",
+    "fusionInfo": "Female + Fairy",
     "powerUp": "780, 789, 795, 796, 763, 792, 767, 768, 770, 781",
     "archetype": "Female"
   },
@@ -5035,7 +5035,7 @@ const cardList = [
     "name": "Doma The Angel of Silence",
     "type": "Fairy",
     "attribute": "DARK",
-    "lv": 6,
+    "lv": 5,
     "dc": 30,
     "atk": 1600,
     "def": 1400,
@@ -5475,7 +5475,7 @@ const cardList = [
     "def": 2000,
     "effect": "MOVEMENT: Cannot move.\nNATURE: Transforms into Pupa of Moth if this card survives 5 turns in face-up, defense position after being flipped face-up by the controlling player. If destroyed prior to transformation, the card is revived as Larvae Moth in own Summoning Area other than current location.",
     "abillity_summon": true,
-    "fusionInfo": "\"Cocoon of Evolution\" + any Insect that has \"Cocoon of Evolution\" in its SPECIAL POWER UP effect",
+    "fusionInfo": "\"Cocoon of Evolution\" + Insect that has \"Cocoon of Evolution\" in its SPECIAL POWER UP effect",
     "powerUp": "780, 789, 795, 796, 756, 757, 773, 794"
   },
   {
@@ -5890,7 +5890,7 @@ const cardList = [
     "dc": 27,
     "atk": 1500,
     "def": 1200,
-    "fusionInfo": "Fish + Beast\n*Requires at least one card with 1350+ ATK",
+    "fusionInfo": "Fish + Beast\n*Requires at least 1 card with 1350+ ATK",
     "powerUp": "780, 789, 795, 796, 783, 777",
     "pw": "GXQ1SF4V"
   },
@@ -6082,7 +6082,7 @@ const cardList = [
     "dc": 27,
     "atk": 1300,
     "def": 1400,
-    "fusionInfo": "Fish + Female",
+    "fusionInfo": "Female + Fish",
     "powerUp": "780, 789, 795, 796, 783, 767, 768, 770, 777",
     "pw": "L7L5EZ85",
     "archetype": "Female"
@@ -6793,7 +6793,7 @@ const cardList = [
     "dc": 35,
     "atk": 1600,
     "def": 1900,
-    "fusionInfo": "Machine + Fish\n*Requires at least one card with 1400+ ATK.",
+    "fusionInfo": "Machine + Fish\n*Requires at least 1 card with 1400+ ATK.",
     "powerUp": "780, 789, 796, 774, 777",
     "pw": "YZJR0TY5"
   },
@@ -6887,7 +6887,7 @@ const cardList = [
     "dc": 49,
     "atk": 2800,
     "def": 2100,
-    "fusionInfo": "Thunder + Dragon (2000+ ATK)\n*The following can be substituted for the Dragon material: \"Aqua Dragon\", \"Spike Seadra\", and \"Stone D.\"",
+    "fusionInfo": "Thunder + Dragon (2000+ ATK)\n*Dragon can be substituted with the follwoing monsters: \"Aqua Dragon\", \"Spike Seadra\", and \"Stone D.\"",
     "powerUp": "780, 789, 795, 796, 784, 764, 781",
     "archetype": "Horned"
   },
@@ -6968,7 +6968,7 @@ const cardList = [
     "dc": 33,
     "atk": 1900,
     "def": 1400,
-    "fusionInfo": "Thunder + Spellcaster\n*Requires at least one card with 1500+ ATK.",
+    "fusionInfo": "Thunder + Spellcaster\n*Requires at least 1 card with 1500+ ATK.",
     "powerUp": "780, 789, 795, 796, 784, 785",
     "pw": "U9YB4XA5"
   },
@@ -7033,7 +7033,7 @@ const cardList = [
     "dc": 37,
     "atk": 1450,
     "def": 2200,
-    "fusionInfo": "Rock + Turtle",
+    "fusionInfo": "Turtle + Rock",
     "powerUp": "780, 789, 795, 796, 784, 760, 773",
     "pw": "AV0TS7UB",
     "archetype": "Shell, Turtle"
@@ -7150,7 +7150,7 @@ const cardList = [
     "dc": 25,
     "atk": 1000,
     "def": 1500,
-    "fusionInfo": "Beast + Turtle",
+    "fusionInfo": "Turtle + Beast",
     "powerUp": "780, 789, 795, 796, 784, 760, 777, 794",
     "pw": "CP8REHU9",
     "archetype": "Shell, Turtle"
@@ -7329,7 +7329,7 @@ const cardList = [
     "name": "Flying Penguin",
     "type": "Aqua",
     "attribute": "WATER",
-    "lv": 2,
+    "lv": 4,
     "dc": 22,
     "atk": 1200,
     "def": 1000,
@@ -7591,7 +7591,7 @@ const cardList = [
     "dc": 36,
     "atk": 1900,
     "def": 1700,
-    "fusionInfo": "Winged-Beast + Turtle",
+    "fusionInfo": "Turtle + Winged-Beast",
     "powerUp": "780, 789, 795, 796, 784, 760, 777",
     "pw": "JDC9SZWB",
     "archetype": "Shell, Turtle"
@@ -7667,7 +7667,7 @@ const cardList = [
     "dc": 32,
     "atk": 1400,
     "def": 1800,
-    "fusionInfo": "Pyro + Turtle",
+    "fusionInfo": "Turtle + Pyro",
     "powerUp": "780, 789, 795, 796, 784, 760, 764, 777",
     "pw": "AVUHNB6D",
     "archetype": "Horned, Shell, Turtle"
@@ -8214,7 +8214,7 @@ const cardList = [
     "dc": 38,
     "atk": 2100,
     "def": 1700,
-    "fusionInfo": "Rock + Female (LV 4+)",
+    "fusionInfo": "Female (LV 4+) + Rock",
     "powerUp": "780, 789, 795, 796, 784, 767, 768, 770, 773",
     "archetype": "Female"
   },
@@ -8542,7 +8542,7 @@ const cardList = [
     "dc": 33,
     "atk": 1800,
     "def": 1500,
-    "fusionInfo": "Plant + Female",
+    "fusionInfo": "Female + Plant",
     "powerUp": "780, 789, 795, 796, 761, 793, 767, 768, 770, 773",
     "pw": "AVY7AVY1",
     "archetype": "Female"
@@ -10149,7 +10149,7 @@ const cardList = [
     "dc": 5,
     "effect": "Sacrifice 2 monsters with ATKs of 1500 or less and Dark Magician to summon Magician of Black Chaos."
   }
-]
+];
 
 const mysteryCard ={ //use only for Insect Imitation fusions
    "id": "?",
