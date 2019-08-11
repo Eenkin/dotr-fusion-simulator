@@ -11,22 +11,22 @@ var loadFusions = 'all';
 var canWinInSlots = [];
 const base36String = '0123456789abcdefghijklmnopqrstuvwxyz'
 
-const cardTypeArr = ['Dragon', 'Spellcaster', 'Zombie', 'Warrior', 'Beast-Warrior', 'Beast', 'Winged Beast', 'Fiend', 'Fairy', 'Insect', 'Dinosaur', 'Reptile', 'Fish', 'Sea Serpent', 'Machine', 'Thunder', 'Aqua', 'Pyro', 'Rock', 'Plant', 'Immortal', 'Magic', 'Trap', 'Ritual'];
+const cardTypeArr = ['Dragon', 'Spellcaster', 'Zombie', 'Warrior', 'BeastWarrior', 'Beast', 'WingedBeast', 'Fiend', 'Fairy', 'Insect', 'Dinosaur', 'Reptile', 'Fish', 'SeaSerpent', 'Machine', 'Thunder', 'Aqua', 'Pyro', 'Rock', 'Plant', 'Immortal', 'Magic', 'Trap', 'Ritual'];
 const monsterAttributes = ['WATER', 'FIRE', 'EARTH', 'WIND', 'DARK', 'LIGHT'];
-const archetypeArray = ['Female', 'Toon', 'Elf', 'Egg', 'Horned', 'Shell', 'Turtle']
+const archetypeArray = ['Female', 'Toon', 'Elf', 'Egg', 'Horned', 'Shell', 'Turtle'];
 
-var multipleCardsArr =[]
+var multipleCardsArr = []
 
 var fusionTracker = {};
 
-function loadingFusions(load){
+function loadingFusions(load) {
    loadFusions = load;
 
    //console.log(load)
    fuseCards();
 }
 
-function copyUniqueCards(){
+function copyUniqueCards() {
    return Object.assign({}, uniqueCards);
 }
 
@@ -153,7 +153,7 @@ function sortDeck(skipHash) {
    let sorting = document.getElementById('sorting').value;
    //Sort by:
 
-   if(!skipHash){
+   if (!skipHash) {
       inDeck.sort((a, b) => {
 
          if (sorting == '123') {
@@ -197,7 +197,7 @@ function sortDeck(skipHash) {
 
    let hashString = '';
 
-   function createHash(card){
+   function createHash(card) {
       //hashString += card.id < 36 ? '0' + card.id.toString(36) : card.id.toString(36);
       let num = card.id;
       let div36 = Math.floor(num / 36);
@@ -206,7 +206,7 @@ function sortDeck(skipHash) {
       hashString += base36String.charAt(div36) + base36String.charAt(mod36);
    }
 
-   function cardChecker(){
+   function cardChecker() {
       for (var i = 0; i < 40; i++) {
 
          let textId = '';
@@ -220,7 +220,7 @@ function sortDeck(skipHash) {
 
             uniqueCards[card.id] = uniqueCards[card.id] ? uniqueCards[card.id] + 1 : 1; //Check if unique card, else add to a counter
 
-            if(!skipHash){
+            if (!skipHash) {
                createHash(card);
                continue;
             }
@@ -262,7 +262,7 @@ function sortDeck(skipHash) {
 
             //DC
             // textStat += card.dc ? '/DC ' + card.dc : '';
-            textStat +=  '/DC ' + card.dc;
+            textStat += '/DC ' + card.dc;
             dcTotal += card.dc;
 
 
@@ -320,7 +320,7 @@ function sortDeck(skipHash) {
 
    document.getElementById('totalCards').innerText = inDeck.length;
 
-   function hide(){
+   function hide() {
       // let typeText = ''
       //
       // let tempObjKey = Object.keys(trackTyping);
@@ -401,7 +401,7 @@ function usePreset(skipHash) {
 
       if (!skipHash) {
          window.location.hash = presetForm.replace(/ /gi, '_');
-      } else{
+      } else {
          inDeck = presetDeck[presetForm];
          sortDeck(true);
       }
@@ -435,7 +435,7 @@ function fuseCards() {
    let fusableDeck;
    let tempArr;
 
-   function uniqueString(arr){
+   function uniqueString(arr) {
       //let stringSeq = arr.toString();
       let stringSeq = '' + arr;
       // console.log(stringSeq);
@@ -450,7 +450,7 @@ function fuseCards() {
 
 
 
-   function fusionCheck(arr, tier){
+   function fusionCheck(arr, tier) {
 
       //currentOrder = arr;
 
@@ -678,7 +678,7 @@ function createFusionResults() {
    }
 }
 
-function revealFusionCombos(x){
+function revealFusionCombos(x) {
    document.getElementById('fusionPopUp').style.display = 'inherit';
    document.getElementById('listBG').scrollTop = 0;
    let listBG = document.getElementById('listBG');
@@ -693,7 +693,7 @@ function revealFusionCombos(x){
 
    // console.log(combos);
 
-   listBG.innerHTML = '<h1>'+fusion.name+'</h1>';
+   listBG.innerHTML = '<h1>' + fusion.name + '</h1>';
 
    let statText = '<i>Fusion Materials: ' + fusion.fusionInfo.replace(/\n/gi, '<br>') + '</i>';
 
@@ -741,7 +741,7 @@ function revealFusionCombos(x){
       finalDecipher = new Set(finalDecipher);
       finalDecipher = [...finalDecipher];
 
-      finalDecipher.sort((a,b) => {
+      finalDecipher.sort((a, b) => {
 
          if (a < b) {
             return -1
@@ -864,6 +864,80 @@ function checkHash() {
       sortDeck(true);
    }
 
+
+}
+
+function openTypeChart() {
+   document.getElementById('chartPopUp').style.display = 'initial';
+
+   document.getElementById('dupliicateStats').innerText = document.getElementById('deckStatSection').innerText.replace(/Chart of each type\/attribute\/archetype in the deck/, '');
+
+   let trackTypeArr = {
+      "Dragon": 0,
+      "Spellcaster": 0,
+      "Zombie": 0,
+      "Warrior": 0,
+      "BeastWarrior": 0,
+      "Beast": 0,
+      "WingedBeast": 0,
+      "Fiend": 0,
+      "Fairy": 0,
+      "Insect": 0,
+      "Dinosaur": 0,
+      "Reptile": 0,
+      "Fish": 0,
+      "SeaSerpent": 0,
+      "Machine": 0,
+      "Thunder": 0,
+      "Aqua": 0,
+      "Pyro": 0,
+      "Rock": 0,
+      "Plant": 0,
+      "Immortal": 0,
+      "Magic": 0,
+      "Trap": 0,
+      "Ritual": 0,
+      "WATER": 0,
+      "FIRE": 0,
+      "EARTH": 0,
+      "WIND": 0,
+      "DARK": 0,
+      "LIGHT": 0,
+      "Female": 0,
+      "Toon": 0,
+      "Elf": 0,
+      "Egg": 0,
+      "Horned": 0,
+      "Shell": 0,
+      "Turtle": 0
+   }
+
+   for (var i = 0; i < inDeck.length; i++) {
+      let card = cardList[inDeck[i]];
+
+      let tempType = card.type.replace(/ /gi, '').replace(/-/gi, '');
+      // console.log(tempType)
+
+      trackTypeArr[tempType]++;
+
+      if (card.attribute && monsterAttributes.indexOf(card.attribute) > -1) {
+         trackTypeArr[card.attribute]++;
+      }
+
+      if (card.archetype) {
+         let archTemp = card.archetype.split(', ');
+
+         for (arch of archTemp) {
+            trackTypeArr[arch]++;
+         }
+      }
+   }
+
+   // console.log(trackTypeArr);
+   for (var tdType in trackTypeArr) {
+      // console.log(tdType)
+      document.getElementById('td' + tdType).innerText = trackTypeArr[tdType];
+   }
 
 }
 
