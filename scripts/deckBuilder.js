@@ -153,7 +153,7 @@ function sortDeck(skipHash) {
    let sorting = document.getElementById('sorting').value;
    //Sort by:
 
-   if (!skipHash) {
+   if (skipHash) {
       inDeck.sort((a, b) => {
 
          if (sorting == '123') {
