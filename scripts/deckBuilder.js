@@ -236,12 +236,6 @@ function sortDeck(skipHash) {
                document.getElementById('unobtainableWarning').style.display = 'block' //warns if unobtainable card is added to the deck;
                unobtainableTracker.push(card.id);
                document.getElementById('unobtainListSection').innerText += unobtainableTracker.length > 1 ? ', ' + card.name : card.name; //Lists which cards
-
-               // if (unobtainableTracker.indexOf(card.id) > -1) {
-               //    unobtainableTracker.push(card.id);
-               //    //document.getElementById('unobtainListSection').innerHTML += unobtainableTracker.length > 1 ? ', ' + card.name : card.name; //Lists which cards
-               //    //console.log(document.getElementById('unobtainListSection').innerHTML)
-               // }
             }
 
             textId = card.id;
@@ -255,13 +249,9 @@ function sortDeck(skipHash) {
             if (card.attribute) {
                textStat += '/' + card.attribute;
 
-               // if (monsterAttributes.indexOf(card.attribute) > -1) {
-               //    trackAttribute[card.attribute] = trackAttribute[card.attribute] ? trackAttribute[card.attribute] + 1 : 1;
-               // }
             }
 
             //DC
-            // textStat += card.dc ? '/DC ' + card.dc : '';
             textStat += '/DC ' + card.dc;
             dcTotal += card.dc;
 
@@ -276,24 +266,14 @@ function sortDeck(skipHash) {
 
             //Archetypes
             if (card.archetype) {
-
                textStat += '<br>Archetype(s): ' + card.archetype;
-
-               // let splitArchetype = card.archetype.split(', ');
-               //
-               // splitArchetype.forEach(function(archetype) {
-               //    trackArchetype[archetype] = trackArchetype[archetype] ? trackArchetype[archetype] + 1 : 1;
-               // });
-
             }
-
 
             textStat += '</p>';
 
             textStat += card.effect ? '<p>' + card.effect.replace(/\n/gi, '<br>') + '</p>' : '';
 
             if (normalSlotCards.indexOf(card.id) > -1) {
-               // canWinInSlots.push(card.id);
                tdCardId[i].style.backgroundColor = 'lightgreen';
             }
 
@@ -431,43 +411,19 @@ function fuseCards() {
    let allResults = [];
    let currentOrder = [];
    let trial;
-   let copyDeck;
    let fusableDeck;
    let tempArr;
 
-   function uniqueString(arr) {
-      //let stringSeq = arr.toString();
-      let stringSeq = '' + arr;
-      // console.log(stringSeq);
-
-      if (uniqueSequence.indexOf(stringSeq) > -1) {
-         return false;
-      }
-
-      uniqueSequence.push(stringSeq);
-      return true;
-   }
-
-
+   let fusionAdded = false;
+   let minTier = 0;
 
    function fusionCheck(arr, tier) {
-
-      //currentOrder = arr;
-
-      // if (!uniqueString(arr)) {
-      //    return;
-      // }
-
 
       trial = bruteFusion(arr);
 
       if (trial) {
-         //uniqueSequence.push(trial.sequence.toString())
 
-         // let addArr = [...trial.sequence];
          let addArr = trial.sequence.slice();
-         // let result = addArr.pop();
-         // addArr = addArr.toString();
 
          if (fusionTracker[trial.resultCard]) {
 
@@ -476,124 +432,106 @@ function fuseCards() {
             } else {
                fusionTracker[trial.resultCard]['t' + tier] = [addArr]
             }
-
          } else {
             fusionTracker[trial.resultCard] = {};
             fusionTracker[trial.resultCard]['t' + tier] = [addArr];
+            fusionAdded = true;
+            minTier = tier + 1;
          }
 
       }
    }
 
-
-   // console.groupCollapsed();
-
-   // fusableDeck = [...inDeck];
-   // fusableDeck = fusableDeck.filter(fusable => fusableCards.includes(fusable))
-
-   fusableDeck = inDeck.slice();
+   fusableDeck = inDeck.slice(); //grabs the entire deck
    tempArr = [];
 
    for (var i = 0; i < fusableDeck.length; i++) {
       let x = parseInt(fusableDeck[i])
-      if (fusableCards.indexOf(x) > -1) {
+      if (fusableCards.indexOf(x) > -1) { //only add cards that can fuse
          tempArr.push(x);
       }
    }
 
-   fusableDeck = tempArr;
-
-   //console.log(copyDeck)
+   fusableDeck = tempArr.slice(); // cards that can't fuse are gone
 
    for (var i = 0; i < fusableDeck.length; i++) {
       currentOrder = [];
 
-
-      // if (!fusableCards.includes(inDeck[i])) {
-      //    continue;
-      // }
       for (var j = i + 1; j < fusableDeck.length; j++) {
 
-
          if (j == fusableDeck.length || fusableCards.indexOf(fusableDeck[j]) < 0) {
-            continue;
+            //is checking fusableCards necessary? The fusable deck should've already contained only cards in the fusableCards array per tempArr.slice();
+            continue; //if j's index is at than the fusableDeck length or the card is not fusable, then skip.
          }
 
-         let fusionArr = [fusableDeck[i], fusableDeck[j]]
+         let fusionArr = [fusableDeck[i], fusableDeck[j]]; //fuse these cards
          fusionCheck(fusionArr, 0);
          // console.log(trial);
 
       }
    }
 
-   let fusions = Object.keys(fusionTracker);
-   tempArr = [];
-   //fusions = fusions.filter(card => fusableCards.includes(parseInt(card)));
-
-   for (var i = 0; i < fusions.length; i++) {
-      let x = parseInt(fusions[i])
-      if (fusableCards.indexOf(x) > -1) {
-         tempArr.push(x);
-      }
-   }
-
-   fusions = tempArr;
-   // console.log(fusions)
-
-   for (var a = 1; a < 20; a++) {
-
-      if (loadFusions == 'some' || fusions.length === 0) {
-         break;
-      }
-
-      // let hasTiers = [...fusions];
-      let hasTiers = fusions.slice();
-
-      for (var i = 0; i < hasTiers.length; i++) {
 
 
-         //currentFusion = parseInt(hasTiers[i]); //searchForFusion
-         currentFusion = hasTiers[i]
-         let currentTier = fusionTracker[currentFusion]['t' + (a - 1)];
+   minTier = 1;
 
-         // if(!fusableCards.includes(fusions[i]) || !currentTier) {
-         //    continue;
-         // }
+   do {
+      fusionAdded = false;
+      let fusions = Object.keys(fusionTracker); //grab the fusions
+      tempArr = [];
 
-         if (!currentTier) {
-            fusions.splice(i, 1)
-            continue;
+      for (var i = 0; i < fusions.length; i++) {
+         let x = parseInt(fusions[i])
+         if (fusableCards.indexOf(x) > -1) {
+            tempArr.push(x); //only add cards that can fuse
          }
-         // console.log(fusions[i])
-         // console.log(fusions[i])
-         // console.log(a);
+      }
 
-         for (var j = 0; j < currentTier.length; j++) {
-            let thisSet = currentTier[j];
+      fusions = tempArr;
 
-            // let dummyDeck = [...fusableDeck];
-            let dummyDeck = fusableDeck.slice();
-
-            for (var k = 0; k < thisSet.length; k++) {
-               dummyDeck.splice(dummyDeck.indexOf(thisSet[k]), 1);
-            }
-
-            for (var k = 0; k < dummyDeck.length; k++) {
-               //let fusionArr = [...thisSet, dummyDeck[k]];
-               let fusionArr = thisSet.slice()
-               fusionArr.push(dummyDeck[k]);
-
-               // console.log(fusionArr)
-
-               fusionCheck(fusionArr, a);
-            }
+      for (var a = minTier; a < 20; a++) {
+         //a = tier number after 0
+         if (loadFusions == 'some' || fusions.length === 0) {
+            break;
          }
 
+         let hasTiers = fusions.slice(); //hasTiers are the fusion that can be forward fuison
 
+         for (var i = 0; i < hasTiers.length; i++) {
+
+            currentFusion = hasTiers[i] //current fusion in loop
+            let currentTier = fusionTracker[currentFusion]['t' + (a - 1)]; //find the previous tier of the current fusion
+
+            if (!currentTier) {
+               fusions.splice(i, 1); //if the tier doesn't exist, then remove fusion. Is this even necessary? fusions aren't even called at this point... why not just use hasTiers?
+               continue;
+            }
+
+            for (var j = 0; j < currentTier.length; j++) {
+               let thisSet = currentTier[j];
+
+               let dummyDeck = fusableDeck.slice();
+
+               for (var k = 0; k < thisSet.length; k++) {
+                  dummyDeck.splice(dummyDeck.indexOf(thisSet[k]), 1);
+               }
+
+               for (var k = 0; k < dummyDeck.length; k++) {
+                  let fusionArr = thisSet.slice();
+                  fusionArr.push(dummyDeck[k]);
+
+                  fusionCheck(fusionArr, a);
+               }
+            }
+
+
+         }
+
+         // console.log(a + ": " +fusions);
       }
+   } while (fusionAdded);
 
-      // console.log(a + ": " +fusions);
-   }
+
 
    createFusionResults();
 
