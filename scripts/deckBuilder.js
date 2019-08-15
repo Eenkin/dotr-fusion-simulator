@@ -15,6 +15,12 @@ var multipleCardsArr = []
 
 var fusionTracker = {};
 
+var storeRemainingFusions = [];
+var remainingFusionsCounter = {
+   "maxTotal": 0,
+   "currentlyAt": 0
+}
+
 function createDeckTable() {
    document.getElementById('deckTable').innerHTML = ''
 
@@ -320,7 +326,7 @@ function fuseCards(load) {
 
    let tbody = document.getElementById('fusionTBody');
    let deckStatSection = document.getElementById('deckStatSection');
-   
+
    tbody.innerHTML = '';
 
    loadFusions = load ? load : loadFusions;
@@ -578,7 +584,10 @@ function createFusionResults() {
 function revealFusionCombos(x) {
    document.getElementById('fusionPopUp').style.display = 'inherit';
    document.getElementById('listBG').scrollTop = 0;
+   document.getElementById('listBG').removeAttribute('onscroll');
    let listBG = document.getElementById('listBG');
+
+   storeRemainingFusions = [];
 
    let fusion = x == "?" ? mysteryCard : cardList[x]; //use MysterCard if Insect Imitation was used, else find card normally
    //let combos = [...fusionTracker[x].deckCombos];
@@ -596,10 +605,13 @@ function revealFusionCombos(x) {
    //Effect
    statText += fusion.effect ? '<p>' + fusion.effect.replace(/\n/gi, '<br>') + '</p>' : '';
 
-
+   let numOfFusions = 2;
 
    for (combos in tiers) {
-      statText += '<p>---------</p>';
+      //statText += '<p>---------</p>';
+
+      storeRemainingFusions.push('<p><br>---Fusion from ' + numOfFusions + ' cards---</p>');
+      numOfFusions++;
 
       let finalDecipher = []; //used at the end to alphabetize and remove duplicate fusion combinations
 
@@ -638,14 +650,63 @@ function revealFusionCombos(x) {
          }
       });
 
-      for (var i = 0; i < finalDecipher.length; i++) {
-         statText += finalDecipher[i]; //add evert fusion combination possible from the deck to the list
-      }
+      storeRemainingFusions = storeRemainingFusions.concat(finalDecipher);
+   }
 
+   statText += '<p><br>Total Number of Fusion Combinations from the Deck: ' + (storeRemainingFusions.length - numOfFusions + 2) + '</p>'
+
+   let maxLength = Math.min(storeRemainingFusions.length, 200);
+
+   for (var i = 0; i < maxLength; i++) {
+      statText += storeRemainingFusions[i]; //add evert fusion combination possible from the deck to the list
+   }
+
+   if (storeRemainingFusions.length > 199) {
+      document.getElementById('listBG').setAttribute('onscroll', 'reveal100moreFusions()');
+      remainingFusionsCounter.maxTotal = Math.ceil(storeRemainingFusions.length / 200);
+      remainingFusionsCounter.currentlyAt = 1;
    }
 
    listBG.innerHTML += statText;
+
 }
+
+function reveal100moreFusions(){
+   let listBG = document.getElementById('listBG');
+
+   if (listBG.scrollTop >= (listBG.scrollHeight - listBG.offsetHeight - 30)) {
+
+      let statText = '';
+      let minIndex;
+      let maxIndex;
+
+      minIndex = 200 * remainingFusionsCounter.currentlyAt;
+      maxIndex = 200 + minIndex;
+
+      for (var i = minIndex; i < maxIndex; i++) {
+
+         if (!storeRemainingFusions[i]) {
+            break;
+         }
+
+         statText += storeRemainingFusions[i];
+      }
+
+      listBG.innerHTML += statText;
+
+      if (remainingFusionsCounter.currentlyAt < remainingFusionsCounter.maxTotal) {
+         remainingFusionsCounter.currentlyAt++
+      } else {
+         listBG.removeAttribute('onscroll');
+         //console.log('end');
+      }
+
+   } else {
+      return;
+   }
+}
+
+
 
 function bruteFusion(order) {
    let object = {};
