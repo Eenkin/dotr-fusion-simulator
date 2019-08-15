@@ -42,10 +42,6 @@ a:visited {
    box-sizing: border-box;
 }
 
-html {
-   scroll-behavior: smooth;
-}
-
 body {
    font: 18px Verdana;
    max-width: 1200px;
