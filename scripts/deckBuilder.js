@@ -1,34 +1,19 @@
 //Notes: Check if Serpentine Princess has #448 Yormungarde or #446 Armored Lizard
-
-var abcList = [];
-
 var inDeck = [];
 var uniqueCards = {};
 var unobtainableTracker = [];
 
 var loadFusions = 'all';
 
-var canWinInSlots = [];
 const base36String = '0123456789abcdefghijklmnopqrstuvwxyz'
 
-const cardTypeArr = ['Dragon', 'Spellcaster', 'Zombie', 'Warrior', 'BeastWarrior', 'Beast', 'WingedBeast', 'Fiend', 'Fairy', 'Insect', 'Dinosaur', 'Reptile', 'Fish', 'SeaSerpent', 'Machine', 'Thunder', 'Aqua', 'Pyro', 'Rock', 'Plant', 'Immortal', 'Magic', 'Trap', 'Ritual'];
-const monsterAttributes = ['WATER', 'FIRE', 'EARTH', 'WIND', 'DARK', 'LIGHT'];
-const archetypeArray = ['Female', 'Toon', 'Elf', 'Egg', 'Horned', 'Shell', 'Turtle'];
+// const cardTypeArr = ['Dragon', 'Spellcaster', 'Zombie', 'Warrior', 'BeastWarrior', 'Beast', 'WingedBeast', 'Fiend', 'Fairy', 'Insect', 'Dinosaur', 'Reptile', 'Fish', 'SeaSerpent', 'Machine', 'Thunder', 'Aqua', 'Pyro', 'Rock', 'Plant', 'Immortal', 'Magic', 'Trap', 'Ritual'];
+// const monsterAttributes = ['WATER', 'FIRE', 'EARTH', 'WIND', 'DARK', 'LIGHT'];
+// const archetypeArray = ['Female', 'Toon', 'Elf', 'Egg', 'Horned', 'Shell', 'Turtle'];
 
 var multipleCardsArr = []
 
 var fusionTracker = {};
-
-function loadingFusions(load) {
-   loadFusions = load;
-
-   //console.log(load)
-   fuseCards();
-}
-
-function copyUniqueCards() {
-   return Object.assign({}, uniqueCards);
-}
 
 function createDeckTable() {
    document.getElementById('deckTable').innerHTML = ''
@@ -112,9 +97,8 @@ function addCard(num) {
          if (card > 853) {
             card = null;
          }
-      } else if (cardNamelist.indexOf(temp) > -1) {
-         //card = cardList[cardNamelist.indexOf(temp)]; //is input a name?
-         card = cardNamelist.indexOf(temp);
+      } else if (cardNamelist.includes(temp)) {
+         card = cardNamelist.indexOf(temp); //is input a name
       } else if (!card) {
          //is input blank?
       } else {
@@ -173,7 +157,6 @@ function sortDeck(skipHash) {
       });
    }
 
-   canWinInSlots = [];
 
    let tdCardId = document.getElementsByClassName('tdCardId');
    let tdCardName = document.getElementsByClassName('tdCardName');
@@ -225,14 +208,14 @@ function sortDeck(skipHash) {
                continue;
             }
 
-            if (uniqueCards[card.id] > 3 && multipleCardsArr.indexOf(card.id) < 0) {
+            if (uniqueCards[card.id] > 3 && !multipleCardsArr.includes(card.id)) {
                document.getElementById('multipleCardsWarning').style.display = 'block'; //warns if more than 3 of the same card are in the deck,
                multipleCardsArr.push(card.id);
                document.getElementById('multipleListSection').innerText += multipleCardsArr.length > 1 ? ', ' + card.name : card.name; //Lists which cards
             }
             //document.getElementById('multipleCardsWarning').style.display = uniqueCards[card.id] > 3 ? 'block' : '';
 
-            if (unobtainableCards.indexOf(card.id) > -1 && unobtainableTracker.indexOf(card.id) < 0) {
+            if (unobtainableCards.includes(card.id) && !unobtainableTracker.includes(card.id)) {
                document.getElementById('unobtainableWarning').style.display = 'block' //warns if unobtainable card is added to the deck;
                unobtainableTracker.push(card.id);
                document.getElementById('unobtainListSection').innerText += unobtainableTracker.length > 1 ? ', ' + card.name : card.name; //Lists which cards
@@ -273,7 +256,7 @@ function sortDeck(skipHash) {
 
             textStat += card.effect ? '<p>' + card.effect.replace(/\n/gi, '<br>') + '</p>' : '';
 
-            if (normalSlotCards.indexOf(card.id) > -1) {
+            if (normalSlotCards.includes(card.id)) {
                tdCardId[i].style.backgroundColor = 'lightgreen';
             }
 
@@ -289,8 +272,6 @@ function sortDeck(skipHash) {
 
    cardChecker();
 
-
-
    document.getElementById('dcTotal').innerText = dcTotal;
 
    averageLV = Math.ceil(monsterSLV / numOfMonsters * 100) / 100;
@@ -300,64 +281,10 @@ function sortDeck(skipHash) {
 
    document.getElementById('totalCards').innerText = inDeck.length;
 
-   function hide() {
-      // let typeText = ''
-      //
-      // let tempObjKey = Object.keys(trackTyping);
-      // tempObjKey.sort(function(a, b) {
-      //    return cardTypeArr.indexOf(a) - cardTypeArr.indexOf(b);
-      // })
-      //
-      // for (var i = 0; i < tempObjKey.length; i++) {
-      //    let key = tempObjKey[i];
-      //    typeText += '<span class="noWrap">' + key + ': ' + trackTyping[key];
-      //    typeText += i < tempObjKey.length - 1 ? ',&emsp;' : '';
-      //    typeText += '</span>';
-      // }
-      //
-      //
-      // let attrText = '';
-      //
-      // if (trackAttribute) {
-      //    tempObjKey = Object.keys(trackAttribute);
-      //    tempObjKey.sort(function(a, b) {
-      //       return monsterAttributes.indexOf(a) - monsterAttributes.indexOf(b);
-      //    })
-      //
-      //    for (var i = 0; i < tempObjKey.length; i++) {
-      //       let key = tempObjKey[i];
-      //       attrText += '<span class="noWrap">' + key + ': ' + trackAttribute[key];
-      //       attrText += i < tempObjKey.length - 1 ? ',&emsp;' : '';
-      //       attrText += '</span>';
-      //    }
-      //
-      //    // deckStatSection.innerHTML += '<p>Total of Each Attribute<br>' + attrText + '</p>';
-      // }
-      //
-      // let archeText = '';
-      //
-      // if (trackArchetype) {
-      //    tempObjKey = Object.keys(trackArchetype);
-      //    tempObjKey.sort(function(a, b) {
-      //       return archetypeArray.indexOf(a) - archetypeArray.indexOf(b);
-      //    })
-      //
-      //    for (var i = 0; i < tempObjKey.length; i++) {
-      //       let key = tempObjKey[i];
-      //       archeText += '<span class="noWrap">' + key + ': ' + trackArchetype[key];
-      //       archeText += i < tempObjKey.length - 1 ? ',&emsp;' : '';
-      //       archeText += '</span>';
-      //    }
-      //
-      //    // deckStatSection.innerHTML += '<p>Total of Each Archetype<br>' + archeText + '</p>';
-      //
-      // }
-   }
-
    if (!skipHash) {
       window.location.hash = hashString;
    } else {
-      fuseCards();
+      // fuseCards();
    }
 
 }
@@ -383,23 +310,22 @@ function usePreset(skipHash) {
          window.location.hash = presetForm.replace(/ /gi, '_');
       } else {
          inDeck = presetDeck[presetForm];
-         sortDeck(true);
+         // sortDeck(true);
       }
 
    }
 }
 
-function fuseCards() {
+function fuseCards(load) {
 
-   let fusionResults = document.getElementById('fusionTBody');
+   let tbody = document.getElementById('fusionTBody');
    let deckStatSection = document.getElementById('deckStatSection');
+   
+   tbody.innerHTML = '';
 
-   fusionResults.innerHTML = '';
-
+   loadFusions = load ? load : loadFusions;
 
    fusionTracker = {};
-
-
 
    if (inDeck.length < 2 || loadFusions == 'none') {
       return; //skips fusion if there are insufficient amount of cards; if fusing options is set to none
@@ -409,13 +335,11 @@ function fuseCards() {
    //Prevents dublpicative sequences
    let uniqueSequence = [];
    let allResults = [];
-   let currentOrder = [];
    let trial;
    let fusableDeck;
-   let tempArr;
+   let fusionArr;
 
-   let fusionAdded = false;
-   let minTier = 0;
+   let fusionTierAdded = false;
 
    function fusionCheck(arr, tier) {
 
@@ -435,119 +359,154 @@ function fuseCards() {
          } else {
             fusionTracker[trial.resultCard] = {};
             fusionTracker[trial.resultCard]['t' + tier] = [addArr];
-            fusionAdded = true;
-            minTier = tier + 1;
          }
-
+         fusionTierAdded = trial.resultCard; //ignore tier n -1 Requirement later in the code
       }
    }
 
-   fusableDeck = inDeck.slice(); //grabs the entire deck
-   tempArr = [];
+
+
+   fusableDeck = inDeck.filter(card => fusableCards.includes(parseInt(card))); //Copies only cards from the deck that are fusable for fusions
+
 
    for (var i = 0; i < fusableDeck.length; i++) {
-      let x = parseInt(fusableDeck[i])
-      if (fusableCards.indexOf(x) > -1) { //only add cards that can fuse
-         tempArr.push(x);
-      }
-   }
-
-   fusableDeck = tempArr.slice(); // cards that can't fuse are gone
-
-   for (var i = 0; i < fusableDeck.length; i++) {
-      currentOrder = [];
-
+      // i is card A
       for (var j = i + 1; j < fusableDeck.length; j++) {
-
-         if (j == fusableDeck.length || fusableCards.indexOf(fusableDeck[j]) < 0) {
-            //is checking fusableCards necessary? The fusable deck should've already contained only cards in the fusableCards array per tempArr.slice();
-            continue; //if j's index is at than the fusableDeck length or the card is not fusable, then skip.
+         //j is card B
+         if (j >= fusableDeck.length) {
+            continue; //skip if there are no other cards in the fusableDeck for j
          }
 
-         let fusionArr = [fusableDeck[i], fusableDeck[j]]; //fuse these cards
+         fusionArr = [fusableDeck[i], fusableDeck[j]]; //fuse these cards
          fusionCheck(fusionArr, 0);
-         // console.log(trial);
 
       }
    }
 
+   function additionalTiers(){
+      let uniqueDummies = new Set(fusableDeck);
+      uniqueDummies = [...uniqueDummies]; //grabs only the unique cards from the deck;
+      fusionTierAdded = false;
+      let dummyDeck;
+      let fusableFusions = Object.keys(fusionTracker).filter(card => fusableCards.includes(parseInt(card))).map(card => {return parseInt(card)}) //list of initial fusion results that can be used as fusion materials for other fusions
 
+      // let fusableFusions = Object.keys(fusionTracker);
+      let tierNum = 0;
+      let addedTier;
+      let previousTier;
+      let insufficentAmount;
+      let moveToNextTier = [];
 
-   minTier = 1;
+      function buildTiers(fusionA, cardB, resultFusion){
+         //Creates the actual tiers
 
-   do {
-      fusionAdded = false;
-      let fusions = Object.keys(fusionTracker); //grab the fusions
-      tempArr = [];
-
-      for (var i = 0; i < fusions.length; i++) {
-         let x = parseInt(fusions[i])
-         if (fusableCards.indexOf(x) > -1) {
-            tempArr.push(x); //only add cards that can fuse
+         if (!fusionTracker[fusionA] || !fusionTracker[fusionA][previousTier]) {
+            //if the previous fusion doesn't exist in the fusion tracker (which should not happen) nor has a previous tier, end function
+            return
          }
-      }
+         let grabTier = fusionTracker[fusionA][previousTier]; //grabs the previous tier of the previous fusion card
 
-      fusions = tempArr;
+         for (arr of grabTier) {
 
-      for (var a = minTier; a < 20; a++) {
-         //a = tier number after 0
-         if (loadFusions == 'some' || fusions.length === 0) {
-            break;
-         }
 
-         let hasTiers = fusions.slice(); //hasTiers are the fusion that can be forward fuison
+            let usedCards = arr.slice(); //for each array of the previous tier of the previous fusion, grab all of its cards
+            usedCards.push(cardB); //add the newest card to the array
 
-         for (var i = 0; i < hasTiers.length; i++) {
+            dummyDeck = fusableDeck.slice(); //copy purposes to not overwrite the original fusableDeck
+            insufficentAmount = false; //checking purposes to see if the right amount of cards are in the deck
 
-            currentFusion = hasTiers[i] //current fusion in loop
-            let currentTier = fusionTracker[currentFusion]['t' + (a - 1)]; //find the previous tier of the current fusion
-
-            if (!currentTier) {
-               fusions.splice(i, 1); //if the tier doesn't exist, then remove fusion. Is this even necessary? fusions aren't even called at this point... why not just use hasTiers?
-               continue;
-            }
-
-            for (var j = 0; j < currentTier.length; j++) {
-               let thisSet = currentTier[j];
-
-               let dummyDeck = fusableDeck.slice();
-
-               for (var k = 0; k < thisSet.length; k++) {
-                  dummyDeck.splice(dummyDeck.indexOf(thisSet[k]), 1);
+            for (card of usedCards) {
+               //remove each card from the deck, if no problems then proceed;
+               if (dummyDeck.includes(card)) {
+                  //if a copy of the card exists in the deck, remove one copy of it.
+                  dummyDeck.splice(dummyDeck.indexOf(card), 1);
+               } else {
+                  //if there were no more copies of the card in the deck, then end current loop and move on to next array
+                  insufficentAmount = true;
+                  break;
                }
 
-               for (var k = 0; k < dummyDeck.length; k++) {
-                  let fusionArr = thisSet.slice();
-                  fusionArr.push(dummyDeck[k]);
-
-                  fusionCheck(fusionArr, a);
-               }
             }
+
+            if (insufficentAmount) {
+               continue; //ends current array if there are not enough copies of a certain card in the deck
+            }
+
+            if (!fusionTracker[resultFusion]) { //if the resulted rusion does not exist in the fusion tracker, make a new entry
+               fusionTracker[resultFusion] = {};
+               fusionTracker[resultFusion][addedTier] = [];
+            } else if (!fusionTracker[resultFusion][addedTier]) { //if the current tier doesn't exist for the resulted fusion, then make an entry for it
+               fusionTracker[resultFusion][addedTier] = [];
+            }
+
+            fusionTracker[resultFusion][addedTier].push(usedCards); //add the previous tier of the previou fusion with the added card to the new tier of the resulted fusion
 
 
          }
 
-         // console.log(a + ": " +fusions);
       }
-   } while (fusionAdded);
+
+      do {
+
+         previousTier = 't' + tierNum; //the previous tier (should start off with tier0)
+         addedTier = 't' + (tierNum + 1); //the current tier
+
+         fusableFusions = previousTier == 't0' ? fusableFusions : moveToNextTier.slice(); //if tier0, then grab the inital fusions; for all other tiers, grab only fusions that came into the results from the previous tier
+         moveToNextTier = []; //tracks what set of fusions should be tested for the next tier
+         fusionTierAdded = false; //if this remains false by the end of the loop, this loop ends due to no new tiers were added
 
 
+         for (fusionA of fusableFusions) {
 
+            //fusionA is the fusion that's going to forward dusioned into another fusion
+
+            for (cardB of uniqueDummies) {
+               //cardB is any card in the deck that can be used as fusion material
+
+               let fusionTrial = bruteFusion([fusionA, cardB]); //test if it works
+               let resultFusion = fusionTrial.resultCard; //grabs the resulted fusion from the test
+
+               if(resultFusion){
+                  //if a result was found, then build the next/new tier for it
+                  buildTiers(fusionA, cardB, resultFusion); //add to tier N : previous fusion + a card from the decck = resulted fusion
+                  if (fusableCards.includes(resultFusion) && !moveToNextTier.includes(resultFusion)) {
+                     //if the card can be forward fusioned and hasne't shown up as a result yet for this current tier, add it to be tested for the next tier and continue the do/while loop
+                     moveToNextTier.push(resultFusion);
+                     fusionTierAdded = true;
+                  }
+               }
+            }
+
+         }
+
+         tierNum++; //move on to the next tier
+      } while (fusionTierAdded);
+   }
+
+
+   if (loadFusions == 'all') {
+      additionalTiers(); //do this if user wants to know all possible multi-chain fusions
+   }
    createFusionResults();
 
 }
 
 function createFusionResults() {
+   //adds fusions into the fusion table and reveal their Stats
+
    let tbody = document.getElementById('fusionTBody');
    let sorting = document.getElementById('sorting').value;
 
-   let eachFusion = Object.keys(fusionTracker);
+   let eachFusion = Object.keys(fusionTracker); //grab all of the fusion results
+   tbody.innerHTML = '';
 
    for (var i = 0; i < eachFusion.length; i++) {
-      eachFusion[i] = parseInt(eachFusion[i])
+      eachFusion[i] = parseInt(eachFusion[i]); //turn their ids from strings into numbers
    }
 
    eachFusion.sort((a, b) => {
+      //alphabetize or sort by id number
+
       if (sorting == '123') {
          return a - b;
       } else {
@@ -567,8 +526,8 @@ function createFusionResults() {
 
       fusion = isNaN(fusion) ? mysteryCard : cardList[fusion]; //use MysterCard if Insect Imitation was used, else find card normally
 
-      let tr1 = document.createElement('tr');
-      let tr2 = document.createElement('tr');
+      let tr1 = document.createElement('tr'); //the name and id number
+      let tr2 = document.createElement('tr'); //the stats
 
       let tdId = document.createElement('td');
       let tdName = document.createElement('td');
@@ -589,7 +548,7 @@ function createFusionResults() {
       //Fusion Material
       let statText = '<i>Fusion Materials: ' + fusion.fusionInfo.replace(/\n/gi, '<br>') + '</i>';
 
-      let stringId = fusion.id == "?" ? "'?'" : fusion.id;
+      let stringId = fusion.id == "?" ? "'?'" : fusion.id; //refer to the ? entry if insect imitation was involved
       statText += '<br><i><u><a onclick="revealFusionCombos(' + stringId + ')">Check for fusion materials from the deck</a></u></i>'
 
       //Base Stats
@@ -610,7 +569,7 @@ function createFusionResults() {
       tbody.appendChild(tr1);
       tbody.appendChild(tr2);
 
-      if (normalSlotCards.indexOf(fusion.id) > -1) {
+      if (normalSlotCards.includes(fusion.id)) {
          tdId.style.backgroundColor = 'lightgreen';
       }
    }
@@ -622,18 +581,13 @@ function revealFusionCombos(x) {
    let listBG = document.getElementById('listBG');
 
    let fusion = x == "?" ? mysteryCard : cardList[x]; //use MysterCard if Insect Imitation was used, else find card normally
-   //let combos = [...fusionTracker[x].deckCombos]
-   let tiers = fusionTracker[x]
+   //let combos = [...fusionTracker[x].deckCombos];
 
-   // console.log(tiers)
+   let tiers = fusionTracker[x] //the fusioin card with all of its tiears
 
+   listBG.innerHTML = '<h1>' + fusion.name + '</h1>'; //name of the fusion
 
-
-   // console.log(combos);
-
-   listBG.innerHTML = '<h1>' + fusion.name + '</h1>';
-
-   let statText = '<i>Fusion Materials: ' + fusion.fusionInfo.replace(/\n/gi, '<br>') + '</i>';
+   let statText = '<i>Fusion Materials: ' + fusion.fusionInfo.replace(/\n/gi, '<br>') + '</i>'; //show the stats of the fusion
 
    //Base Stats
    statText += '<p>' + fusion.type + '/' + fusion.attribute + '/LV ' + fusion.lv + '/ATK ' + fusion.atk + '/DEF ' + fusion.def;
@@ -647,27 +601,21 @@ function revealFusionCombos(x) {
    for (combos in tiers) {
       statText += '<p>---------</p>';
 
-      let finalDecipher = [];
+      let finalDecipher = []; //used at the end to alphabetize and remove duplicate fusion combinations
 
-      // console.log(combos)
-      combos = tiers[combos];
+      combos = tiers[combos]; //the current tiear that's being checked
 
       for (currentSet of combos) {
-
-         // console.log(currentSet)
+         //each set of cards that was used to make the fusion in one of the arrays in the current tiear
 
          let tempText = '<p>'
 
-
-         let decipher = currentSet;
+         let decipher = currentSet; //decipher is to grab the name of each card in the set
 
          for (var i = 0; i < decipher.length; i++) {
-            let card = decipher[i];
-
-            // console.log(card);
+            let card = decipher[i]; //current card its checking
             tempText += cardList[card].name;
-
-            tempText += i < decipher.length - 1 ? ' &rarr; ' : '';
+            tempText += i < decipher.length - 1 ? ' &rarr; ' : ''; //if this isn't the last card in the set, add a forward arrow
 
          }
 
@@ -676,10 +624,10 @@ function revealFusionCombos(x) {
          finalDecipher.push(tempText);
       }
 
-      finalDecipher = new Set(finalDecipher);
-      finalDecipher = [...finalDecipher];
+      finalDecipher = new Set(finalDecipher); //grab each unique set of comibinations
+      finalDecipher = [...finalDecipher]; //turns it into an array
 
-      finalDecipher.sort((a, b) => {
+      finalDecipher.sort((a, b) => { //alphabetize
 
          if (a < b) {
             return -1
@@ -690,20 +638,13 @@ function revealFusionCombos(x) {
          }
       });
 
-
-
       for (var i = 0; i < finalDecipher.length; i++) {
-         statText += finalDecipher[i]
+         statText += finalDecipher[i]; //add evert fusion combination possible from the deck to the list
       }
-
 
    }
 
    listBG.innerHTML += statText;
-
-
-
-
 }
 
 function bruteFusion(order) {
@@ -714,9 +655,9 @@ function bruteFusion(order) {
    for (var i = 0; i < order.length - 1; i++) {
       //Card A = first card in sequence. Otherwise, it equals the result of the previous card
       let cardA = i > 0 ? object.resultCard : order[i];
-      let cardB = order[i + 1];
+      let cardB = order[i + 1]; //card B = the next card in the sequence
 
-      let pair = Math.min(cardA, cardB) + "," + Math.max(cardA, cardB);
+      let pair = Math.min(cardA, cardB) + "," + Math.max(cardA, cardB); //1st card is the lowest id, 2nd is the highest id; this is because of how it is written for each entry in fusionCombos
 
       if (fusionCombos[pair]) {
          object.resultCard = fusionCombos[pair];
@@ -731,23 +672,6 @@ function bruteFusion(order) {
    return object;
 }
 
-function randomDeck() {
-
-   resetWarnings();
-
-   inDeck = [];
-   for (var i = 0; i < 40; i++) {
-      let random;
-      do {
-         random = Math.floor(Math.random() * 854)
-      } while (random === 671);
-
-      inDeck.push(random);
-   }
-
-   sortDeck();
-}
-
 function resetDeck() {
    //Empties all input boxes in fusion simulator
    inDeck = [];
@@ -755,51 +679,52 @@ function resetDeck() {
 
    document.getElementById('fusionTBody').innerHTML = '';
    document.getElementById('presetForm').value = '';
+   window.location.hash = '';
    resetWarnings();
    sortDeck();
 }
 
 function checkHash() {
-   let hashString = window.location.hash ? window.location.hash.slice(1).replace(/_/gi, ' ') : '';
-
-   // console.log(hashString);
+   let hashString = window.location.hash ? window.location.hash.slice(1).replace(/_/gi, ' ') : ''; //grab the # in url
 
    if (presetDeck.hasOwnProperty(hashString)) {
+      //if # contains the name of a starter deck or an enemy deck
       document.getElementById('presetForm').value = hashString;
-      usePreset(true)
+      usePreset(true);
    } else {
-      hashString = hashString.toLowerCase();
-      hashString = hashString.replace(/[^0-9a-z]/gi, '');
-      hashString = hashString.length > 80 ? hashString.slice(0, 80) : hashString;
+      document.getElementById('presetForm').value = '';
+      hashString = hashString.replace(/[^0-9a-zA-Z]/gi, ''); //removes non-alphanumericcharacters
+      hashString = hashString.length > 80 ? hashString.slice(0, 80) : hashString; //limits to only the first 80 characters (40 cards)
 
-      let hashArr = hashString.match(/.{1,2}/g);
+      let hashArr = hashString ? hashString.match(/.{1,2}/g) : []; //split to an array of 2 characters each, if string was empty, make an empty array
 
-      let loopMax = Math.min(hashArr.length, 40);
+      let loopMax = hashArr.length; //Math.min(hashArr.length, 40);
 
       for (var i = 0; i < loopMax; i++) {
-         hashArr[i] = parseInt(hashArr[i], 36);
-         hashArr[i] = hashArr[i] > 853 || hashArr[i] == 671 ? null : hashArr[i];
+         hashArr[i] = parseInt(hashArr[i], 36); //convert base-36 to decimal
+         hashArr[i] = hashArr[i] > 853 || hashArr[i] == 671 ? null : hashArr[i]; //Make any numbers higher than the number of cards in the game and Summoned Lord Exodia blank
       }
 
       // hashArr = hashArr.filter(hash => true);
-      let tempArr = [];
+      // let tempArr = [];
+      //
+      // for (var i = 0; i < hashArr.length; i++) {
+      //    let x = hashArr[i];
+      //    if (x) {
+      //       tempArr.push(x)
+      //    }
+      // }
+      //
+      // hashArr = tempArr;
 
-      for (var i = 0; i < hashArr.length; i++) {
-         let x = hashArr[i];
-         if (x) {
-            tempArr.push(x)
-         }
-      }
-
-      hashArr = tempArr;
-
+      inDeck = hashArr.filter(hash => true); //Remove blank spaces
 
       // inDeck = [...hashArr];
-      inDeck = hashArr;
+      // inDeck = hashArr;
 
       // console.log(hashArr);
 
-      sortDeck(true);
+      // sortDeck(true);
    }
 
 
@@ -886,12 +811,16 @@ function openTypeChart() {
 window.onload = function() {
    if (window.location.hash) {
       checkHash();
+      sortDeck(true);
+      fuseCards();
    }
 
 };
 
 window.onhashchange = function() {
    if (window.location.hash) {
-      checkHash()
+      checkHash();
+      sortDeck(true);
+      fuseCards();
    }
 }
