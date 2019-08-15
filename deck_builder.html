@@ -1007,9 +1007,9 @@
 
       <form autocomplete="on" style='width:100%; margin: 0 auto; display:inline-block;'>
          <input list="listOfCards" class="cardInput" onfocus="this.select()" id="cardInput" onkeypress="handle(event, this)" type="text" style="width:60%" placeholder="Enter the name or ID# of a card">
-         <input type="button" value="+" class="fuseSimBtn" id='addCardBtn' onclick='addCard()'>
+         <input type="button" value="+" class="fuseSimBtn" id='addCardBtn' onclick='addCard();'>
          <!-- <input type="button" value="Randomize Deck" class="fuseSimBtn" id="rndmBtn" onclick='randomDeck()'> -->
-         <input type="button" value="Reset Deck" class="fuseSimBtn" id="resetBtn" onclick='resetDeck()'>
+         <input type="button" value="Reset Deck" class="fuseSimBtn" id="resetBtn" onclick='resetDeck();sortDeck;'>
 
       </form>
 
@@ -1023,13 +1023,13 @@
 
       <div id="buttonSection">
          <p>Sort By:
-            <select id="sorting" onchange="sortDeck(true)">
+            <select id="sorting" onchange="sortDeck(true); createFusionResults();">
                <option value="123">ID#/Type</option>
                <option value="abc">Name</option>
             </select></p>
 
          <p>Check for fusions:
-            <select id="fuseSpeed" onchange="loadingFusions(this.value)">
+            <select id="fuseSpeed" onchange="fuseCards(this.value)">
                <option value='none' disabled>---Choose how many fusions can be shown---</option>
                <option value='none' disabled></option>
                <option value='none' disabled>---Fasest Loading Speed---</option>
@@ -1117,7 +1117,7 @@
             <tbody>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">1</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(0)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(0);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1126,7 +1126,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">2</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(1)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(1);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1135,7 +1135,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">3</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(2)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(2);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1144,7 +1144,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">4</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(3)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(3);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1153,7 +1153,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">5</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(4)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(4);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1162,7 +1162,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">6</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(5)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(5);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1171,7 +1171,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">7</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(6)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(6);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1180,7 +1180,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">8</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(7)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(7);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1189,7 +1189,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">9</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(8)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(8);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1198,7 +1198,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">10</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(9)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(9);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1207,7 +1207,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">11</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(10)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(10);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1216,7 +1216,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">12</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(11)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(11);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1225,7 +1225,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">13</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(12)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(12);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1234,7 +1234,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">14</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(13)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(13;)">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1243,7 +1243,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">15</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(14)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(14);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1252,7 +1252,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">16</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(15)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(15);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1261,7 +1261,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">17</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(16)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(16);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1270,7 +1270,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">18</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(17)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(17);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1279,7 +1279,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">19</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(18)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(18);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1288,7 +1288,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">20</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(19)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(19);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1297,7 +1297,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">21</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(20)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(20);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1306,7 +1306,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">22</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(21)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(21);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1315,7 +1315,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">23</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(22)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(22);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1324,7 +1324,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">24</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(23)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(23);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1333,7 +1333,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">25</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(24)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(24);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1342,7 +1342,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">26</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(25)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(25);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1351,7 +1351,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">27</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(26)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(26);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1360,7 +1360,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">28</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(27)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(27;)">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1369,7 +1369,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">29</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(28)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(28);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1378,7 +1378,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">30</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(29)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(29);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1387,7 +1387,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">31</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(30)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(30);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1396,7 +1396,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">32</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(31)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(31);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1405,7 +1405,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">33</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(32)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(32);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1414,7 +1414,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">34</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(33)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(33);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1423,7 +1423,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">35</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(34)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(34);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1432,7 +1432,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">36</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(35)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(35);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1441,7 +1441,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">37</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(36)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(36);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1450,7 +1450,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">38</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(37)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(37);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1459,7 +1459,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">39</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(38)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(38);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
@@ -1468,7 +1468,7 @@
                </tr>
                <tr class="trCardMain">
                   <td class="cardSlot" rowspan="2">40</td>
-                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(39)">Remove</a></td>
+                  <td class="tdRemove" rowspan="2"><a onclick="removeCard(39);">Remove</a></td>
                   <td class="tdCardId"></td>
                   <td class="tdCardName"></td>
                </tr>
