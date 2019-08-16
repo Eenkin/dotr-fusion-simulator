@@ -610,8 +610,10 @@ function revealFusionCombos(x) {
    for (combos in tiers) {
       //statText += '<p>---------</p>';
 
-      storeRemainingFusions.push('<p><br>---Fusion from ' + numOfFusions + ' cards---</p>');
-      numOfFusions++;
+      numOfFusions = tiers[combos][0].length;
+
+      storeRemainingFusions.push('<p><br>---Using ' + numOfFusions + ' cards---</p>');
+      //numOfFusions++;
 
       let finalDecipher = []; //used at the end to alphabetize and remove duplicate fusion combinations
 
@@ -653,7 +655,7 @@ function revealFusionCombos(x) {
       storeRemainingFusions = storeRemainingFusions.concat(finalDecipher);
    }
 
-   statText += '<p><br>Total Number of Fusion Combinations from the Deck: ' + (storeRemainingFusions.length - numOfFusions + 2) + '</p>'
+   statText += '<p><br>Total Number of Fusion Combinations from the Deck: ' + (storeRemainingFusions.length - Object.keys(tiers).length) + '</p>'
 
    let maxLength = Math.min(storeRemainingFusions.length, 200);
 
@@ -662,7 +664,7 @@ function revealFusionCombos(x) {
    }
 
    if (storeRemainingFusions.length > 199) {
-      document.getElementById('listBG').setAttribute('onscroll', 'reveal100moreFusions()');
+      document.getElementById('listBG').setAttribute('onscroll', 'reveal200moreFusions()');
       remainingFusionsCounter.maxTotal = Math.ceil(storeRemainingFusions.length / 200);
       remainingFusionsCounter.currentlyAt = 1;
    }
@@ -671,7 +673,7 @@ function revealFusionCombos(x) {
 
 }
 
-function reveal100moreFusions(){
+function reveal200moreFusions(){
    let listBG = document.getElementById('listBG');
 
    if (listBG.scrollTop >= (listBG.scrollHeight - listBG.offsetHeight - 30)) {
