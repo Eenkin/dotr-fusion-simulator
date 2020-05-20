@@ -587,6 +587,8 @@ function revealFusionCombos(x) {
    document.getElementById('listBG').removeAttribute('onscroll');
    let listBG = document.getElementById('listBG');
 
+   document.body.className = 'stop-scrolling';
+
    storeRemainingFusions = [];
 
    let fusion = x == "?" ? mysteryCard : cardList[x]; //use MysterCard if Insect Imitation was used, else find card normally
@@ -795,6 +797,7 @@ function checkHash() {
 
 function openTypeChart() {
    document.getElementById('chartPopUp').style.display = 'initial';
+   document.body.className = 'stop-scrolling';
 
    document.getElementById('dupliicateStats').innerText = document.getElementById('deckStatSection').innerText.replace(/Chart of each type\/attribute\/archetype in the deck/, '');
 
