@@ -6,6 +6,10 @@ body {
    padding: 10px 0;
 }
 
+nav{
+   font-size: 14px;
+}
+
 .noWrap{
    white-space: nowrap;
    display: inline-block;
