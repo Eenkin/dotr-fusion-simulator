@@ -8,6 +8,7 @@
    <script src="scripts/cardList.js"></script>
    <script src="scripts/fusionList.js"></script>
    <script src="scripts/deckBuilder.js"></script>
+   <script src="scripts/createNav.js"></script>
    <link rel="stylesheet" href="stylesheet.css">
 
    <style>
@@ -129,13 +130,17 @@
          font-size: 12px;
          text-align: left;
       }
+
+      .stop-scrolling {
+         height: 100%;
+         overflow: hidden;
+      }
    </style>
 </head>
 
 <body>
 
-   <nav><a href='.'>Fusion Simulator</a> &emsp; <a href='naming_simulator'>Naming/Starter Deck Simulator</a> &emsp; <a href='deck_builder'>Deck Builder</a></nav>
-
+   <nav><script>createNav()</script></nav>
 
    <h1 id="pageHeading" style="width: 80%;">Yu-Gi-Oh! The Duelists of the Roses - Deck Builder</h1>
 
@@ -1495,13 +1500,12 @@
       <div id='jumpToSection' style='margin:10px 0'></div>
 
       <div id="fusionPopUp">
-
-         <div style="float:right;"><input id="closeFusionListBtn" type="button" value="X" onclick="document.getElementById('fusionPopUp').style.display = ''"></div>
+         <div style="float:right;"><input id="closeFusionListBtn" type="button" value="X" onclick="document.getElementById('fusionPopUp').style.display = '';  document.body.classList.remove('stop-scrolling');"></div>
          <div id="listBG"></div>
       </div>
 
       <div id="chartPopUp">
-         <div style="float:right;"><input id="closeChartListBtn" type="button" value="X" onclick="document.getElementById('chartPopUp').style.display = ''"></div>
+         <div style="float:right;"><input id="closeChartListBtn" type="button" value="X" onclick="document.getElementById('chartPopUp').style.display = '';  document.body.classList.remove('stop-scrolling');"></div>
          <div id="chartBG">
             <h1>Number of Each Type, Attribute, and Archetype</h1>
             <p id="dupliicateStats"></p>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <title>Yu-Gi-Oh! The Duelists of the Roses - Fusion List</title>
+   <script src="scripts/cardList.js"></script>
+   <script src="scripts/fusionList.js"></script>
+   <script src="scripts/fusionList_page.js"></script>
+   <script src="scripts/createNav.js"></script>
+   <link rel="stylesheet" href="stylesheet.css">
+
+   <style>
+      a {
+         color: blue;
+      }
+
+      .fusionTable, .fusionMaterialTable {
+         font-size: 12px;
+         //border: 1px black solid;
+         border-collapse: collapse;
+         margin: 10px 0;
+         //width: 100%;
+         text-align: left;
+         display: inherit;
+      }
+
+      .fusionTable td, .fusionMaterialTable td {
+         border: 1px black solid;
+         border-collapse: collapse;
+         padding-left: 5px;
+      }
+
+      .fusionMaterialTable td{
+         padding: 10px;
+         min-width: 350px;
+      }
+
+      .fusionTable tr:nth-child(even) {
+         background-color: #dadada;
+      }
+
+      .tdFusionId {
+         width: 3%;
+      }
+
+      .tdCheckMaterials {
+         width: 15%;
+         text-align: center;
+      }
+
+      .tdFusionName {
+         //width: 85%;
+      }
+
+      tr.fusionTableHead {
+         background-color: #eac8e5;
+         font-weight: bold
+      }
+
+      #fusionPopUp, #chartPopUp{
+         position:fixed;
+         top: 0;
+         left: 0;
+         text-align: left;
+         width: 100%;
+         height: 100%;
+         background-color: #000000b5;
+         padding: 20px;
+         display: none;
+
+      }
+
+      #listBG, #chartBG{
+         background-color: white;
+         padding: 20px;
+         font-size: 14px;
+         border: 2px red solid;
+         overflow: auto;
+         height: 100%;
+      }
+
+      .stop-scrolling {
+         height: 100%;
+         overflow: hidden;
+      }
+
+      #closeFusionListBtn{
+         background-color: red;
+         position: fixed;
+         top: 20px;
+         width: 50px;
+         height: 50px;
+         right:10px;
+      }
+
+      #fusionListNote, #sortSection{
+         font-size: 14px;
+         text-align: left;
+      }
+
+      body{
+         padding:20px
+      }
+
+      #sortSection{
+         margin: 20px 0;
+      }
+
+   </style>
+</head>
+
+<body>
+   <nav><script>createNav()</script></nav>
+
+   <div id="fusionPopUp">
+      <div style="float:right;"><input id="closeFusionListBtn" type="button" value="X" onclick="document.getElementById('fusionPopUp').style.display = ''; document.body.classList.remove('stop-scrolling'); document.getElementById('listBG').style.scrollBehavior = 'auto';"></div>
+      <div id="listBG"></div>
+   </div>
+
+   <h1 id="pageHeading" style="width: 80%;">Yu-Gi-Oh! The Duelists of the Roses - Fusion List</h1>
+
+   <div id="fusionListNote">
+
+      <p>A general rule of thumb is that a fusion material's <u>original</u> ATK cannot be higher than the fusion monster's ATK (with a few, rare exceptions).</p>
+
+      <p>Some fusions will have minimum ATK or LV requirement (i.e. 1500+ ATK or LV 5+). Only the fusion materials' <u>original</u> stats matters. Changing a monster's stat will not affect the fusion result.</p>
+
+      <p>Some fusions require a monster from the Female, Elf, or Turtle archetypes. Elf monsters have "Elf" in its name ("Celtic Guardian" is considered as an elf for fusions); Turtle monsters have "Turtle" or "Tortoise" in its name, and Female monsters can equip female Power Ups like "Cyber Shield" (see their "Power Up Card" section in the game's card details). Fusions involving these archetypes as fusion materials may conflict with other fusions.</p>
+
+      <p>Due to how the game is programmed, there are some inconsistencies of several card combinations that should and shouldn't work. Please use the <u><a href='.'>fusion simulator</a></u> to or click on <i>"Show all possible fusion material combinations."</i> on a fusion to check if the 2 cards work.</p>
+   </div>
+
+   <div id="sortSection"><b>Sort by:</b> <input type="radio" name="sortList" onclick="createFusionTable('ABC')" checked> Name &emsp; <input type="radio" onclick="createFusionTable('123')" name="sortList"> ID#/Type</div>
+   <table class="fusionTable" id="fusionTableID"></table>
+
+   <footer>
+      *Using Insects as fusion materials for "Sword Arm of Dragon" are a glitch in the game. They were supposed to be warriors whose ID#'s are 200 less than those Insects. This is why "Perfectly Ultimate Great Moth" can work in this fusion despite having twice the amount of ATK.'<br>
+      **Due to the pot and jar themed fusions for "Ushi Oni", "Charubin the Fire Knight" may have originally been intended to be "Dragon Piper".<br>
+      ***"Celtic Guardian" can be used for "Elf" fusions due to its Japanese name being "Elf Swordsman".
+   </footer>
+
+</body>
+
+</html>
