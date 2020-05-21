@@ -639,6 +639,9 @@ function revealFusionCombos(x) {
             finalDecipher.push('<p>'+ cardList[combos[0]].name + ' &rarr; ' + cardList[combos[1]].name + '</p>')
          }
 
+         finalDecipher = new Set(finalDecipher); //grab each unique set of comibinations
+         finalDecipher = [...finalDecipher]; //turns it into an array
+
          finalDecipher.sort((a, b) => { //alphabetize
 
             if (a < b) {
@@ -667,6 +670,9 @@ function revealFusionCombos(x) {
 
             finalDecipher.push('<p>'+ cardList[combos[0]].name + '<i> (Fusion)</i> &rarr; ' + cardList[combos[1]].name + '</p>')
          }
+
+         finalDecipher = new Set(finalDecipher); //grab each unique set of comibinations
+         finalDecipher = [...finalDecipher]; //turns it into an array
 
          finalDecipher.sort((a, b) => { //alphabetize
 
