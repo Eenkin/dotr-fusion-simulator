@@ -17,7 +17,7 @@ function checkCard() {
 
       //console.log(card)
 
-      // document.getElementById('cardInput').value = cardList[card].name;
+      document.getElementById('cardInput').value = cardList[card].name;
    } else if (cardNamelist.includes(temp)) {
       card = cardNamelist.indexOf(temp); //is input a name
    } else if (!card) {
