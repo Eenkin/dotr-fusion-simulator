@@ -9,8 +9,8 @@ function createNav(){
    fusionText += '<a href="forward_fusion"><span class="navLink">Forward Fusing</span></a>';
 
    var deckText = '<h2>Deck</h2>';
-   deckText += '<a href="."><span class="navLink">Naming/Starter Deck Simulator</span></a>';
-   deckText += '<a href="fusion_list"><span class="navLink">Deck Builder</span></a>';
+   deckText += '<a href="naming_simulator"><span class="navLink">Naming/Starter Deck Simulator</span></a>';
+   deckText += '<a href="deck_builder"><span class="navLink">Deck Builder</span></a>';
 
 
 
