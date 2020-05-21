@@ -3,7 +3,7 @@ var fusionTracker = {}; //Tracks all of the current fusion
 var tempNameTracker;
 
 function checkCard() {
-   let card = document.getElementById('cardInput').value
+   let card = document.getElementById('cardInput').value;
    let temp = card.toLowerCase();
 
    // resetWarnings();
@@ -14,6 +14,8 @@ function checkCard() {
          card = null;
          return;
       }
+
+      //console.log(card)
 
       document.getElementById('cardInput').value = cardList[card].name;
    } else if (cardNamelist.includes(temp)) {
@@ -29,6 +31,7 @@ function checkCard() {
 
    if (card !== null) {
       checkForFusion(card);
+      window.location.hash = temp.replace(/ /gi, '_')
    }
 }
 
@@ -170,3 +173,29 @@ function sortFusionTracker(sortType) {
    //sortType = ABC = alphabetical; sortType = ID = id number;
 
 }
+
+function checkHash(){
+   let hashString = window.location.hash ? window.location.hash.slice(1).replace(/_/gi, ' ') : ''; //grab the # in url
+   document.getElementById('cardInput').value = hashString;
+   checkCard();
+}
+
+function windowCheck(){
+   if (window.location.hash) {
+      checkHash();
+   } else{
+      document.getElementById('cardInput').value = '';
+      document.getElementById('resultSection').innerHTML = '';
+
+   }
+}
+
+window.onload = function(){
+   windowCheck();
+};
+//
+window.onhashchange =  function(){
+   windowCheck()
+};
+
+// window.addEventListener('DOMContentLoaded', windowCheck());
