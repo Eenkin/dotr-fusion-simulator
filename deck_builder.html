@@ -109,10 +109,13 @@
          width: 80%;
          max-width: 480px;
          //margin: 0 auto;
+         background-color: gray;
+
       }
 
       #typeChart td {
          padding: 5px;
+         //background-color: ;
       }
 
 
@@ -146,7 +149,7 @@
 
    <div id='note' style='font-size: 14px; width: 78%;text-align: left; margin: 20px auto;'>
 
-      <p>This will determine the your deck cost, number of types and attributes, average monster level, and any basic fusions in the deck. (This will not calculate fusions between 2 fusions.) <b>For minimal loading times, please select "Do not fuse deck" or "Fuse any 2 cards in the deck" when adding/removing cards or selecting a preset deck.</b></p>
+      <p>This will determine the your deck cost, number of types and attributes, average monster level, and any basic fusions in the deck. This will not calculate fusions between 2 fusion monsters that are not from the deck. Select "Detailed List" for every single combination of cards from the deck that can make that fusion monster. Select "Simplified List" to list only 2 cards from the deck and fusing a fusion monster with a card from the deck.</p>
       <p>All cards with a green box on their ID# are cards that you can win from the slots from either Deck Master K or against a CPU if you select a preset deck.</p>
 
    </div>
@@ -1033,7 +1036,7 @@
                <option value="abc">Name</option>
             </select></p>
 
-         <p>Check for fusions:
+         <!--p>Check for fusions:
             <select id="fuseSpeed" onchange="fuseCards(this.value)">
                <option value='none' disabled>---Choose how many fusions can be shown---</option>
                <option value='none' disabled></option>
@@ -1044,7 +1047,7 @@
                <option value='none' disabled>---Longest Loading Speed---</option>
                <option value="all" selected>All possible multi-chain fusions</option>
             </select>
-         </p>
+         </p-->
 
          <p>Select Preset Deck:
             <select id="presetForm" onchange="usePreset()">
@@ -1094,6 +1097,8 @@
                <option value="Deck Master S">Deck Master S</option>
                <option value="Deck Master T">Deck Master T</option>
             </select>
+
+            <p>Fusion List: <input type="radio" name="sortList" id="simplifiedBtn" onclick="listOutFusions('simple')" checked> Simplified List &emsp; <input type="radio" onclick="listOutFusions('detailed')"  name="sortList"> Detailed List</p>
          </p>
          <!-- <input type="button" value="Select Preset" class="fuseSimBtn" id="presetBtn" onclick='usePreset()'> -->
       </div>
