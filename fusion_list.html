@@ -12,24 +12,24 @@
    <link rel="stylesheet" href="stylesheet.css">
 
    <style>
-      a {
-         color: blue;
-      }
 
       .fusionTable, .fusionMaterialTable {
          font-size: 12px;
-         //border: 1px black solid;
          border-collapse: collapse;
-         margin: 10px 0;
-         //width: 100%;
+         margin: 10px auto;
+         width: 80%;
          text-align: left;
          display: inherit;
+      }
+
+      .fusionMaterialTable{
+         margin: 10px 0;
       }
 
       .fusionTable td, .fusionMaterialTable td {
          border: 1px black solid;
          border-collapse: collapse;
-         padding-left: 5px;
+         padding: 5px;
       }
 
       .fusionMaterialTable td{
@@ -42,16 +42,12 @@
       }
 
       .tdFusionId {
-         width: 3%;
+         width: 35px;
       }
 
       .tdCheckMaterials {
-         width: 15%;
+         width: 180px;
          text-align: center;
-      }
-
-      .tdFusionName {
-         //width: 85%;
       }
 
       tr.fusionTableHead {
@@ -95,17 +91,11 @@
          right:10px;
       }
 
-      #fusionListNote, #sortSection{
+      #sortSection{
          font-size: 14px;
          text-align: left;
-      }
-
-      body{
-         padding:20px
-      }
-
-      #sortSection{
-         margin: 20px 0;
+         margin: 20px auto;
+         width: 80%;
       }
 
    </style>
@@ -121,15 +111,13 @@
 
    <h1 id="pageHeading" style="width: 80%;">Yu-Gi-Oh! The Duelists of the Roses - Fusion List</h1>
 
-   <div id="fusionListNote">
+   <div id="note">
 
-      <p>A general rule of thumb is that a fusion material's <u>original</u> ATK cannot be higher than the fusion monster's ATK (with a few, rare exceptions).</p>
+      <p>The Fusion List details all possible fusions in the game, their stats, and what cards can be fused into it as fusion materials. A fusion material's <i>original</i> ATK generally cannot be higher than the fusion monster's ATK (with a few, rare exceptions).Some fusions will have minimum ATK or LV requirement (i.e. 1500+ ATK or LV 5+). Only the fusion materials' <i>original</i> stats matters. Changing a monster's type or ATK will not affect the fusion result.</p>
 
-      <p>Some fusions will have minimum ATK or LV requirement (i.e. 1500+ ATK or LV 5+). Only the fusion materials' <u>original</u> stats matters. Changing a monster's stat will not affect the fusion result.</p>
+      <p>Some fusions require a monster from certain archetypes. Elf monsters have "Elf" in its name ("Celtic Guardian" is considered as an elf for fusions); Turtle monsters have "Turtle" or "Tortoise" in its name, and Female monsters can equip female Power Ups like "Cyber Shield" (see their "Power Up Card" section in the game's card details). Fusions involving these archetypes as fusion materials may conflict with other fusions.</p>
 
-      <p>Some fusions require a monster from the Female, Elf, or Turtle archetypes. Elf monsters have "Elf" in its name ("Celtic Guardian" is considered as an elf for fusions); Turtle monsters have "Turtle" or "Tortoise" in its name, and Female monsters can equip female Power Ups like "Cyber Shield" (see their "Power Up Card" section in the game's card details). Fusions involving these archetypes as fusion materials may conflict with other fusions.</p>
-
-      <p>Due to how the game is programmed, there are some inconsistencies of several card combinations that should and shouldn't work. Please use the <u><a href='.'>fusion simulator</a></u> to or click on <i>"Show all possible fusion material combinations."</i> on a fusion to check if the 2 cards work.</p>
+      <p>Due to how the game is programmed, there are some inconsistencies of several card combinations that should and shouldn't work. Please use the <a href='.'>fusion simulator</a> or click on <i>"Show all possible fusion material combinations."</i> on a fusion to check if the 2 cards work.</p>
    </div>
 
    <div id="sortSection"><b>Sort by:</b> <input type="radio" name="sortList" onclick="createFusionTable('ABC')" checked> Name &emsp; <input type="radio" onclick="createFusionTable('123')" name="sortList"> ID#/Type</div>

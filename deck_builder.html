@@ -12,9 +12,6 @@
    <link rel="stylesheet" href="stylesheet.css">
 
    <style>
-      a{
-         color: blue;
-      }
 
       table, td, th {
          border-collapse: collapse;
@@ -118,8 +115,6 @@
          //background-color: ;
       }
 
-
-
       #closeFusionListBtn, #closeChartListBtn{
          background-color: red;
          position: fixed;
@@ -143,14 +138,18 @@
 
 <body>
 
-   <nav><script>createNav()</script></nav>
+   <nav>
+      <script>createNav()</script>
+   </nav>
 
    <h1 id="pageHeading" style="width: 80%;">Yu-Gi-Oh! The Duelists of the Roses - Deck Builder</h1>
 
-   <div id='note' style='font-size: 14px; width: 78%;text-align: left; margin: 20px auto;'>
+   <div id='note'>
 
-      <p>This will determine the your deck cost, number of types and attributes, average monster level, and any basic fusions in the deck. This will not calculate fusions between 2 fusion monsters that are not from the deck. Select "Detailed List" for every single combination of cards from the deck that can make that fusion monster. Select "Simplified List" to list only 2 cards from the deck and fusing a fusion monster with a card from the deck.</p>
-      <p>All cards with a green box on their ID# are cards that you can win from the slots from either Deck Master K or against a CPU if you select a preset deck.</p>
+      <p>The Deck Builder will determine the your total deck cost, the number of types and attributes, average monster level, and any basic fusions in the deck. It will not calculate fusions between 2 fusion monsters that were not originally in the deck.</p>
+      <p>You can view all possible fusions by clicking "Check for fusion materials from the deck" on any of the fusions on the Fusion table. Select "Simplified List" to display fusing only 2 cards from the deck and when fusing another fusion monster with a card from the deck. Select "Detailed List" to display the entire combination of cards that can be fused from the deck.</p>
+      <p>Select a preset deck to view all cards from any of the starter decks or a CPU deck (not including deck leaders).</p>
+      <p>Any card with a green box on its ID# can be won from the Graveyard Slots from either Deck Master K or against a CPU.</p>
 
    </div>
 
@@ -1098,7 +1097,7 @@
                <option value="Deck Master T">Deck Master T</option>
             </select>
 
-            <p>Fusion List: <input type="radio" name="sortList" id="simplifiedBtn" onclick="listOutFusions('simple')" checked> Simplified List &emsp; <input type="radio" onclick="listOutFusions('detailed')"  name="sortList"> Detailed List</p>
+            <p>Fusion List: <input type="radio" name="sortList" id="simplifiedBtn" onclick="listOutFusions('simple')" checked> Simplified List &emsp; <input type="radio" onclick="listOutFusions('detailed')" name="sortList"> Detailed List</p>
          </p>
          <!-- <input type="button" value="Select Preset" class="fuseSimBtn" id="presetBtn" onclick='usePreset()'> -->
       </div>
@@ -1112,7 +1111,7 @@
             <span class="noWrap">Cards in Deck: <span id="totalCards">0</span>/40</span>
             <br>
 
-            <a onclick="openTypeChart()"><u>Chart of each type/attribute/archetype in the deck</u></a>
+            <a onclick="openTypeChart()">Chart of each type/attribute/archetype in the deck</a>
 
          </p>
       </div>

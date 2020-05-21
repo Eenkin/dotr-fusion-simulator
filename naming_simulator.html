@@ -11,25 +11,16 @@
    <link rel="stylesheet" href="stylesheet.css">
 
    <style>
-      a.link{
-         text-decoration: underline;
-      }
-      #notes{
-         text-align: left;
-         font-size: 14px;
-      }
    </style>
 </head>
 
 <body>
    <nav><script>createNav()</script></nav>
-
-   <section style="width:80%; margin:0 auto;">
       <h1>Yu-Gi-Oh! The Duelists of the Roses - Naming/Starter Deck Simulator</h1><br>
 
 
-      <div id="notes">
-         <p>In the game, the player's name determines what 3 starter decks they can choose from out of the 17 that are in the game (check here for more info under <a href="https://www.speedrun.com/Yu-Gi-Oh_The_Duelists_of_the_Roses/thread/ch2hb"><u>"Starter decks and names"</u></a>). This simulator can help figure out what starter decks the player can get.</p>
+      <div id="note">
+         <p>The Naming/Starter Deck Simulator helps determine what names can give which starter deck options. In the game, the player's name determines what 3 starter decks they can choose from out of the 17 that are in the game (check here for more info under <a href="https://www.speedrun.com/Yu-Gi-Oh_The_Duelists_of_the_Roses/thread/ch2hb">"Starter decks and names"</a>).</p>
 
          <p>
             Please use alphanumeric characters (A-Z, a-z, 0-9) and any of the following special characters: <span style="white-space:nowrap;">!"#$%&amp;'=^-¥./_ ,()[]</span>.
@@ -42,10 +33,6 @@
          <input type='button' id='submitBtn' onclick="checkName()" value="&rarr;" style="height:25px; padding: 0 10px; font-size: 12px;">
       </div>
       <p id='resultSection'></p>
-
-      <footer>If you want a specific starter deck while generally keeping the same name, add 1 letter from A-P. Keep cycling through the extra letter until you've reached the desired starter deck.</footer>
-
-   </section>
 
    <script>
       function handle(e) {
