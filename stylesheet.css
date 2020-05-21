@@ -28,15 +28,23 @@ h2, h1 {
    margin: 0 auto;
 }
 
-a:link {
+a {
+   color: blue;
+   cursor: pointer;
+   text-decoration: underline;
+}
+
+
+nav a:link {
    color: #4680db;
    text-decoration: none;
 }
 
-a:hover {
+nav a:hover {
    text-decoration: underline;
    cursor: pointer;
 }
+
 
 a:visited {
    color: #4680db;
@@ -141,4 +149,12 @@ hr{
 footer{
    font-size: 10px;
    text-align: left;
+}
+
+#note{
+   text-align: left;
+   font-size: 14px;
+   width: 80%;
+   margin: 20px auto;
+   padding: 0 5px;
 }
