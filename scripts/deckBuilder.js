@@ -4,6 +4,7 @@ var uniqueCards = {};
 var unobtainableTracker = [];
 
 var loadFusions = 'all';
+var useSimpleList = true;
 
 const base36String = '0123456789abcdefghijklmnopqrstuvwxyz'
 
@@ -359,12 +360,16 @@ function fuseCards(load) {
 
             if (fusionTracker[trial.resultCard]['t' + tier]) {
                fusionTracker[trial.resultCard]['t' + tier].push(addArr);
+               //fusionTracker[trial.resultCard]['tS'].push(addArr.toString());
             } else {
                fusionTracker[trial.resultCard]['t' + tier] = [addArr]
             }
          } else {
             fusionTracker[trial.resultCard] = {};
             fusionTracker[trial.resultCard]['t' + tier] = [addArr];
+            //fusionTracker[trial.resultCard]['tS'] = [addArr.toString()];
+
+            //console.log(addArr)
          }
          fusionTierAdded = trial.resultCard; //ignore tier n -1 Requirement later in the code
       }
@@ -389,21 +394,24 @@ function fuseCards(load) {
       }
    }
 
-   function additionalTiers(){
+   function additionalTiers() {
       let uniqueDummies = new Set(fusableDeck);
       uniqueDummies = [...uniqueDummies]; //grabs only the unique cards from the deck;
       fusionTierAdded = false;
       let dummyDeck;
-      let fusableFusions = Object.keys(fusionTracker).filter(card => fusableCards.includes(parseInt(card))).map(card => {return parseInt(card)}) //list of initial fusion results that can be used as fusion materials for other fusions
+      let fusableFusions = Object.keys(fusionTracker).filter(card => fusableCards.includes(parseInt(card))).map(card => {
+         return parseInt(card)
+      }) //list of initial fusion results that can be used as fusion materials for other fusions
 
       // let fusableFusions = Object.keys(fusionTracker);
       let tierNum = 0;
       let addedTier;
       let previousTier;
+      let simpleTier = 'tS';
       let insufficentAmount;
       let moveToNextTier = [];
 
-      function buildTiers(fusionA, cardB, resultFusion){
+      function buildTiers(fusionA, cardB, resultFusion) {
          //Creates the actual tiers
 
          if (!fusionTracker[fusionA] || !fusionTracker[fusionA][previousTier]) {
@@ -445,7 +453,16 @@ function fuseCards(load) {
                fusionTracker[resultFusion][addedTier] = [];
             }
 
+            if (!fusionTracker[resultFusion]['tS']) {
+               fusionTracker[resultFusion]['tS'] = [];
+            }
+
             fusionTracker[resultFusion][addedTier].push(usedCards); //add the previous tier of the previou fusion with the added card to the new tier of the resulted fusion
+
+            var arrString = [fusionA, cardB].toString()
+            if (!fusionTracker[resultFusion]['tS'].includes(arrString)) {
+               fusionTracker[resultFusion]['tS'].push(arrString)
+            }
 
 
          }
@@ -472,7 +489,7 @@ function fuseCards(load) {
                let fusionTrial = bruteFusion([fusionA, cardB]); //test if it works
                let resultFusion = fusionTrial.resultCard; //grabs the resulted fusion from the test
 
-               if(resultFusion){
+               if (resultFusion) {
                   //if a result was found, then build the next/new tier for it
                   buildTiers(fusionA, cardB, resultFusion); //add to tier N : previous fusion + a card from the decck = resulted fusion
                   if (fusableCards.includes(resultFusion) && !moveToNextTier.includes(resultFusion)) {
@@ -609,73 +626,138 @@ function revealFusionCombos(x) {
 
    let numOfFusions = 2;
 
-   for (combos in tiers) {
-      //statText += '<p>---------</p>';
+   if (useSimpleList) {
 
-      numOfFusions = tiers[combos][0].length;
+      if (fusionTracker[x]['t0']) {
+         statText += '<p><br>---Using 2 Cards from the deck---</p>';
 
-      storeRemainingFusions.push('<p><br>---Using ' + numOfFusions + ' cards---</p>');
-      //numOfFusions++;
+         let finalDecipher = [];
 
-      let finalDecipher = []; //used at the end to alphabetize and remove duplicate fusion combinations
+         for (var i = 0; i < fusionTracker[x]['t0'].length; i++) {
+            var combos = fusionTracker[x]['t0'][i];
 
-      combos = tiers[combos]; //the current tiear that's being checked
-
-      for (currentSet of combos) {
-         //each set of cards that was used to make the fusion in one of the arrays in the current tiear
-
-         let tempText = '<p>'
-
-         let decipher = currentSet; //decipher is to grab the name of each card in the set
-
-         for (var i = 0; i < decipher.length; i++) {
-            let card = decipher[i]; //current card its checking
-            tempText += cardList[card].name;
-            tempText += i < decipher.length - 1 ? ' &rarr; ' : ''; //if this isn't the last card in the set, add a forward arrow
-
+            finalDecipher.push('<p>'+ cardList[combos[0]].name + ' &rarr; ' + cardList[combos[1]].name + '</p>')
          }
 
-         tempText += '</p>'
+         finalDecipher.sort((a, b) => { //alphabetize
 
-         finalDecipher.push(tempText);
+            if (a < b) {
+               return -1
+            } else if (a > b) {
+               return 1
+            } else {
+               return 0
+            }
+         });
+
+         statText+= finalDecipher.toString().replace(/>,/gi, '>');
       }
 
-      finalDecipher = new Set(finalDecipher); //grab each unique set of comibinations
-      finalDecipher = [...finalDecipher]; //turns it into an array
+      if (fusionTracker[x]['tS']) {
+         statText += '<p><br>---Using 1 Fusion Monster created from the deck & 1 card from the deck---</p>';
 
-      finalDecipher.sort((a, b) => { //alphabetize
+         let finalDecipher = [];
 
-         if (a < b) {
-            return -1
-         } else if (a > b) {
-            return 1
-         } else {
-            return 0
+         for (var i = 0; i < fusionTracker[x]['tS'].length; i++) {
+            var combos = fusionTracker[x]['tS'][i];
+            combos = combos.split(',');
+            combos[0] = parseInt(combos[0]);
+            combos[1] = parseInt(combos[1]);
+            console.log(combos);
+
+            finalDecipher.push('<p>'+ cardList[combos[0]].name + '<i> (Fusion)</i> &rarr; ' + cardList[combos[1]].name + '</p>')
          }
-      });
 
-      storeRemainingFusions = storeRemainingFusions.concat(finalDecipher);
-   }
+         finalDecipher.sort((a, b) => { //alphabetize
 
-   statText += '<p><br>Total Number of Fusion Combinations from the Deck: ' + (storeRemainingFusions.length - Object.keys(tiers).length) + '</p>'
+            if (a < b) {
+               return -1
+            } else if (a > b) {
+               return 1
+            } else {
+               return 0
+            }
+         });
 
-   let maxLength = Math.min(storeRemainingFusions.length, 200);
+         statText+= finalDecipher.toString().replace(/>,/gi, '>');
+      }
 
-   for (var i = 0; i < maxLength; i++) {
-      statText += storeRemainingFusions[i]; //add evert fusion combination possible from the deck to the list
-   }
+   } else {
+      for (combos in tiers) {
+         //statText += '<p>---------</p>';
 
-   if (storeRemainingFusions.length > 199) {
-      document.getElementById('listBG').setAttribute('onscroll', 'reveal200moreFusions()');
-      remainingFusionsCounter.maxTotal = Math.ceil(storeRemainingFusions.length / 200);
-      remainingFusionsCounter.currentlyAt = 1;
+         if (combos == 'tS') {
+            continue;
+         }
+
+         numOfFusions = tiers[combos][0].length;
+
+         storeRemainingFusions.push('<p><br>---Using ' + numOfFusions + ' cards---</p>');
+         //numOfFusions++;
+
+         let finalDecipher = []; //used at the end to alphabetize and remove duplicate fusion combinations
+
+         combos = tiers[combos]; //the current tiear that's being checked
+
+
+         for (currentSet of combos) {
+            //each set of cards that was used to make the fusion in one of the arrays in the current tiear
+
+
+
+            let tempText = '<p>'
+
+            let decipher = currentSet; //decipher is to grab the name of each card in the set
+
+            for (var i = 0; i < decipher.length; i++) {
+               let card = decipher[i]; //current card its checking
+               tempText += cardList[card].name;
+               tempText += i < decipher.length - 1 ? ' &rarr; ' : ''; //if this isn't the last card in the set, add a forward arrow
+
+            }
+
+            tempText += '</p>'
+
+            finalDecipher.push(tempText);
+         }
+
+         finalDecipher = new Set(finalDecipher); //grab each unique set of comibinations
+         finalDecipher = [...finalDecipher]; //turns it into an array
+
+         finalDecipher.sort((a, b) => { //alphabetize
+
+            if (a < b) {
+               return -1
+            } else if (a > b) {
+               return 1
+            } else {
+               return 0
+            }
+         });
+
+         storeRemainingFusions = storeRemainingFusions.concat(finalDecipher);
+      }
+      statText += '<p><br>Total Number of Fusion Combinations from the Deck: ' + (storeRemainingFusions.length - Object.keys(tiers).length) + '</p>';
+
+      let maxLength = Math.min(storeRemainingFusions.length, 200);
+
+      for (var i = 0; i < maxLength; i++) {
+         statText += storeRemainingFusions[i]; //add evert fusion combination possible from the deck to the list
+      }
+
+      if (storeRemainingFusions.length > 199) {
+         document.getElementById('listBG').setAttribute('onscroll', 'reveal200moreFusions()');
+         remainingFusionsCounter.maxTotal = Math.ceil(storeRemainingFusions.length / 200);
+         remainingFusionsCounter.currentlyAt = 1;
+      }
    }
 
    listBG.innerHTML += statText;
 
 }
 
-function reveal200moreFusions(){
+function reveal200moreFusions() {
+
    let listBG = document.getElementById('listBG');
 
    if (listBG.scrollTop >= (listBG.scrollHeight - listBG.offsetHeight - 30)) {
@@ -710,7 +792,14 @@ function reveal200moreFusions(){
    }
 }
 
+function listOutFusions(listType) {
+   if (listType == 'detailed') {
+      useSimpleList = false;
+   } else if (listType == 'simple') {
+      useSimpleList = true;
+   }
 
+}
 
 function bruteFusion(order) {
    let object = {};
@@ -870,6 +959,8 @@ function openTypeChart() {
    for (var tdType in trackTypeArr) {
       // console.log(tdType)
       document.getElementById('td' + tdType).innerText = trackTypeArr[tdType];
+
+      document.getElementById('td' + tdType).parentElement.style.backgroundColor = trackTypeArr[tdType] ? 'white' : 'inherit';
    }
 
 }
