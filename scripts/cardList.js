@@ -4394,7 +4394,7 @@ const cardList = [
     "dc": 41,
     "atk": 2150,
     "def": 1950,
-    "fusionInfo": "\"Ancient Jar\", \"Morphing Jar\", or \"Pot of Trick\" + Spellcaster (1500+ ATK)",
+    "fusionInfo": "\"Ancient Jar\", \"Charubin the Fire Knight\", \"Morphing Jar\", or \"Pot of Trick\" + Spellcaster (1500+ ATK)",
     "powerUp": "780, 789, 795, 796, 755, 770, 782, 765, 754",
     "archetype": "Horned"
   },
@@ -6887,7 +6887,7 @@ const cardList = [
     "dc": 49,
     "atk": 2800,
     "def": 2100,
-    "fusionInfo": "Thunder + Dragon (2000+ ATK)\n*Dragon can be substituted with the follwoing monsters: \"Aqua Dragon\", \"Spike Seadra\", and \"Stone D.\"",
+    "fusionInfo": "Thunder + Dragon (2000+ ATK)\n*Dragon can be substituted with the follwoing monsters: \"Aqua Dragon\", \"Sea King Dragon\", and \"Stone D.\"",
     "powerUp": "780, 789, 795, 796, 784, 764, 781",
     "archetype": "Horned"
   },

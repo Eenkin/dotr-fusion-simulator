@@ -52,13 +52,15 @@ function createFusionTable(sortBy) {
 
       tdID.innerHTML = currentCard.id;
       tdName.innerHTML = currentCard.name;
-      tdMaterial.innerHTML = '<a onclick="checkMaterials(' + currentCard.id + ')"><u><i>Show all possible fusion material combinations.</u></i></a>';
+      tdMaterial.innerHTML = '<a onclick="checkMaterials(' + currentCard.id + ')"><i>Show all possible fusion material combinations.</i></a>';
 
       tdID.className = tdClassID;
       tdName.className = tdClassName;
       tdMaterial.className = tdClassMaterial;
 
-      statText += '<i>Fusion Materials: ' + currentCard.fusionInfo + '</i>'
+      tdID.id = currentCard.name.replace(/ /gi, '_');
+
+      statText += '<i>Fusion Materials: ' + currentCard.fusionInfo.replace(/\n/gi, '<br>') + '</i>'
 
       statText += '<p>' + currentCard.type + '/' + currentCard.attribute + '/LV ' + currentCard.lv + '/ATK ' + currentCard.atk + '/DEF ' + currentCard.def;
       statText += currentCard.archetype ? '<br>Archetype(s): ' + currentCard.archetype : '';
@@ -105,10 +107,22 @@ function checkMaterials(id) {
    document.body.className = 'stop-scrolling'
 
    var listBG = document.getElementById('listBG');
+   var currentCard = cardList[id];
+   var statText = '';
 
    listBG.innerHTML = '';
 
-   listBG.innerHTML += '<p><b>' + cardList[id].name + '</b>'+ '<br><i>Fusion Materials: ' + cardList[id].fusionInfo + '</i></p><p id="fmP">Showing fusions involving: <i id="fmPi">___________</i> + ___________</p>'
+   listBG.innerHTML += '<p><b>' + currentCard.name + '</b>'+ '<br><i>Fusion Materials: ' + currentCard.fusionInfo.replace(/\n/gi, '<br>') + '</i></p>'
+
+   statText += '<p>' + currentCard.type + '/' + currentCard.attribute + '/LV ' + currentCard.lv + '/ATK ' + currentCard.atk + '/DEF ' + currentCard.def;
+   statText += currentCard.archetype ? '<br>Archetype(s): ' + currentCard.archetype : '';
+   statText += currentCard.effect ? '<p>' + currentCard.effect.replace(/\n/gi, '<br>') + '</p>' : '';
+
+   listBG.innerHTML += statText;
+
+   listBG.innerHTML += '<hr style="width:100%;"><p id="fmP">Select a card from the "Fusion Material A" column to display all cards that it can be fused with in the "Fusion Material B" column to make "' + currentCard.name + '"<br>Showing fusions involving: <i id="fmPi">___________</i> + ___________</p>'
+
+   // listBG.innerHTML += '<p id="fmP">Showing fusions involving: <i id="fmPi">___________</i> + ___________</p>'
 
    var table = document.createElement('table');
    var thead = document.createElement('thead');
@@ -184,7 +198,7 @@ function checkMaterials(id) {
       td1.className = 'fusionMaterialTD';
       td2.className = 'fusionMaterialTD';
 
-      td1.innerHTML = '<a onclick="revealFusion(\'' +  fusionMaterialList[i].replace(/'/gi, "\\'") + '\')"><u>' + fusionMaterialList[i] +'</u></a>';
+      td1.innerHTML = '<a onclick="revealFusion(\'' +  fusionMaterialList[i].replace(/'/gi, "\\'") + '\')">' + fusionMaterialList[i] +'</a>';
 
       td1.id = 'fma' + i;
       td2.id = 'fmb' + i;

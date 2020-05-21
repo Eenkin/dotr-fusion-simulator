@@ -572,7 +572,7 @@ function createFusionResults() {
       let statText = '<i>Fusion Materials: ' + fusion.fusionInfo.replace(/\n/gi, '<br>') + '</i>';
 
       let stringId = fusion.id == "?" ? "'?'" : fusion.id; //refer to the ? entry if insect imitation was involved
-      statText += '<br><i><u><a onclick="revealFusionCombos(' + stringId + ')">Check for fusion materials from the deck</a></u></i>'
+      statText += '<br><i><a onclick="revealFusionCombos(' + stringId + ')">Check for fusion materials from the deck</a></i>'
 
       //Base Stats
       statText += '<p>' + fusion.type + '/' + fusion.attribute + '/LV ' + fusion.lv + '/ATK ' + fusion.atk + '/DEF ' + fusion.def;
