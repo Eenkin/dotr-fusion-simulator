@@ -634,11 +634,11 @@ function checkName(x){
 
       let tempText = ''
 
-      tempText += 'ID# ' + tempCard.id + ' | ' + tempCard.type; //ID and Type
+      tempText += /*'ID# ' + tempCard.id + ' | ' +*/ tempCard.type; //ID and Type
       tempText += tempCard.attribute ? '/' + tempCard.attribute : ''; //Attribute
-      tempText += tempCard.dc ? '/DC ' + tempCard.dc : ''; //Deck Cost
-      tempText += tempCard.lv ? '/LV ' + tempCard.lv + '/ATK ' + tempCard.atk + '/DEF ' + tempCard.def: ''; //Level/ATK/DEF
-      tempText += tempCard.archetype ? '<br>Archetype(s): ' + tempCard.archetype : ''; //Archetypes
+      // tempText += tempCard.dc ? '/DC ' + tempCard.dc : ''; //Deck Cost
+      tempText += tempCard.lv ? '/LV ' + tempCard.lv + '/ATK ' + tempCard.atk /*+ '/DEF ' + tempCard.def*/: ''; //Level/ATK/DEF
+      tempText += tempCard.archetype ? '/' + tempCard.archetype.replace(/, /gi, '/') : ''; //Archetypes
 
       tempText += fusableCards.includes(deciNum) ? '' : '<br><span class="warningHighlight">Note: This card does not fuse with other cards.</span>' //Warns this card can't fuse
 
@@ -704,6 +704,7 @@ function fuseBase36() {
 
       if (errorMessage) {
          errorSection.innerHTML = errorMessage;
+         errorSection.style.display = 'initial';
          return
       }
 
@@ -734,6 +735,7 @@ function fuseCards(idArrSkip, clearSkip) {
    let groundExists = false;
 
    errorSection.innerHTML = '';
+   errorSection.style.display = 'none';
    fusionResults.innerHTML = '';
    jumpToSection.innerHTML = '';
 
@@ -771,6 +773,7 @@ function fuseCards(idArrSkip, clearSkip) {
       //List all possible error messages
       if (errorCheck) {
          errorSection.innerHTML = errorMessages;
+         errorSection.style.display = 'initial';
          return;
       }
 
@@ -880,8 +883,9 @@ function createCardResults(groundExists, newSequence, finalResult, numberOrder) 
 
       let statText = '<p>Type: ' + finalResult.type + '&emsp;Attribute: ' + finalResult.attribute + '&emsp;ATK/DEF:' + finalResult.atk + '/' + finalResult.def;
 
-      statText += finalResult.archetype ? '&emsp;Archetype: ' + finalResult.archetype + '</p>': '</p>';
-      statText += finalResult.effect ? '<div class="fusionEffect"> <p>' + finalResult.effect.replace(/\n/g, '<br>') + '</p></div>': '';
+      statText += finalResult.archetype ? '&emsp;<span class="no-wrap">Archetype: ' + finalResult.archetype + '</span></p>': '</p>';
+      // statText += finalResult.effect ? '<div class="fusionEffect"> <p>' + finalResult.effect.replace(/\n/g, '<br>') + '</p></div>': '';
+      statText += finalResult.effect ? '<p style="text-align:left">' + finalResult.effect.replace(/\n/g, '<br>') + '</p>': '';
       statText += '<hr>';
 
       spanResultStat.innerHTML = statText
@@ -899,7 +903,7 @@ function createCardResults(groundExists, newSequence, finalResult, numberOrder) 
    let text = '<span class="resultOrder">';
    for (i = 2; i < newSequence.length; i = i + 2) {
       if (i == 2) {
-         text += groundExists ? '<sup><sup><sub><i>On Field</i></sub></sup></sup> ' : '';
+         text += groundExists ? '<sup><sup><sub><i>(On Field)</i></sub></sup></sup> ' : '';
          text += newSequence[i - 2] + ' &rarr; ' + newSequence[i - 1];
       } else {
          text += ' &rarr; ' + newSequence[i - 1];

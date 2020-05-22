@@ -14,6 +14,6 @@ function createNav(){
 
 
 
-   nav.innerHTML = '<div id="displayMenu" onclick="document.getElementById(\'navMenu\').style.display = \'initial\'">Menu</div><div id="navMenu"><div id="hideBlock" onclick="document.getElementById(\'navMenu\').style.display = \'none\'"></div><div id="navBlock"><h1>MENU</h1>'+ fusionText + deckText + '</div></div>';
+   nav.innerHTML = '<div id="displayMenu" onclick="document.getElementById(\'navMenu\').style.display = \'initial\'"><div class="hamMenu"></div><div class="hamMenu"></div><div class="hamMenu"></div></div><div id="navMenu"><div id="hideBlock" onclick="document.getElementById(\'navMenu\').style.display = \'none\'"></div><div id="navBlock"><h1>MENU</h1>'+ fusionText + deckText + '</div></div>';
    // nav.setAttribute('onclick', 'this.style.display = "none"')
 }
