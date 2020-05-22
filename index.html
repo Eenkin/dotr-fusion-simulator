@@ -12,58 +12,6 @@
    <link rel="stylesheet" href="stylesheet.css">
 
    <style>
-      a{
-         color: blue;
-      }
-
-      #fusionPopUp{
-         position:absolute;
-         top: 0;
-         left: 0;
-         text-align: left;
-         width: 100%;
-         //height: 100%;
-         background-color: #000000b5;
-         padding: 20px;
-         display: none;
-      }
-
-      #listBG{
-         background-color: white;
-         padding: 20px;
-         font-size: 14px;
-      }
-
-      .fusionTable{
-         font-size: 12px;
-         //border: 1px black solid;
-         border-collapse: collapse;
-         margin:  10px 0;
-         //width: 100%;
-      }
-
-      .fusionTable td{
-         border: 1px black solid;
-         border-collapse: collapse;
-         padding-left: 5px;
-      }
-
-      .fusionTable tr:nth-child(even) {
-         background-color:#dadada;
-      }
-
-      .tdFusionId{
-         width: 40px;
-      }
-
-      #closeFusionListBtn{
-         background-color: red;
-         position: fixed;
-         top: 20px;
-         width: 50px;
-         height: 50px;
-         right:10px;
-      }
 
       #fusionTable123{
          display: none;
@@ -91,8 +39,14 @@
 
       .materialStats{
          margin-top: -3px;
+         margin-bottom:0;
          text-align: left;
          font-size:  10px;
+         height:25px;
+      }
+
+      .resultOrder{
+         font-size: 14px;
       }
 
       #cardOnField{
@@ -100,12 +54,32 @@
       }
 
       .inputDiv{
-         width: 45%;
-         display: inline-table;
-         min-height: 90px;
+         width: 100%;
+         /* display: inline-table; */
+         /* min-height: 90px; */
+         /* float: right; */
       }
 
-      @media screen and (max-width: 600px) {
+      #inputSection{
+         width:48%;
+         float:left;
+         clear:both;
+      }
+
+      #fusionResults, #errorSection{
+         width: 48%;
+         float:right;
+      }
+
+      #errorSection{
+         display: none;
+      }
+
+      @media screen and (max-width: 800px) {
+         #inputSection, #errorSection, #fusionResults{
+            width:100%;
+            float:none;
+         }
          .inputDiv{
             width: 100%;
             display: block;
@@ -114,7 +88,12 @@
       }
 
       #buttonSection{
-         margin-top: 10px;
+         margin: 10px 0;
+      }
+
+      #jumpToSection{
+         font-size: 14px;
+         text-align: left;
       }
 
       .footnote{
@@ -125,10 +104,10 @@
 
 <body>
    <nav><script>createNav()</script></nav>
-   <h1 id="pageHeading" style="width: 80%;">Yu-Gi-Oh! The Duelists of the Roses - Fusion Simulator</h1>
+   <h1 id="pageHeading">Yu-Gi-Oh! The Duelists of the Roses - Fusion Simulator</h1>
 
    <div id='note'>
-      <p>The Fusion Simulator calculates for all possible fusion combinations that can be created from the hand. The light-blue box labeled "Card on Field" is for a card that is currently in your Summoning Area. It will place the card as being first in the fusion order. All other boxes can have cards be arranged in any order.</p>
+      <p>The Fusion Simulator calculates for all possible fusion combinations that can be created from the hand. The light-blue box is for fusing a card that is currently in your Summoning Area. It will place the card as being first in the fusion order. The order of cards for all other boxes does not matter.</p>
 
       <p>Fusions involving "Insect Imitation" will display as "?" and won't be taken account for other fusions due to the random nature of the card.</p>
 
@@ -997,43 +976,43 @@
 
          <form autocomplete="on" style=''>
             <div class="inputDiv" style="">
-               <input list='listOfCards' class="cardInput" id="cardOnField" type="text" onblur="checkName(0)" onfocus="this.select()" placeholder="Card on Field" style=" background-color: lightblue">
+               <input list='listOfCards' class="cardInput" id="cardOnField" type="text" onblur="checkName(0)" onfocus="this.select()" placeholder="Enter the name or ID# of a card on the field" style=" background-color: lightblue">
                <p class='materialStats'></p>
             </div>
             <div class="inputDiv" style="">
-               <input list="listOfCards" class="cardInput" type="text" onblur="checkName(1)" onfocus="this.select()" placeholder="Card 1">
+               <input list="listOfCards" class="cardInput" type="text" onblur="checkName(1)" onfocus="this.select()" placeholder="Enter the name or ID# of a card">
                <p class='materialStats'></p>
             </div>
             <div class="inputDiv" style="">
-               <input list='listOfCards' class="cardInput" type="text" onblur="checkName(2)" onfocus="this.select()" placeholder="Card 2">
+               <input list='listOfCards' class="cardInput" type="text" onblur="checkName(2)" onfocus="this.select()" placeholder="Enter the name or ID# of a card">
                <p class='materialStats'></p>
             </div>
             <div class="inputDiv" style="">
-               <input list='listOfCards' class="cardInput" type="text" onblur="checkName(3)" onfocus="this.select()" placeholder="Card 3">
+               <input list='listOfCards' class="cardInput" type="text" onblur="checkName(3)" onfocus="this.select()" placeholder="Enter the name or ID# of a card">
                <p class='materialStats'></p>
             </div>
             <div class="inputDiv" style="">
-               <input list='listOfCards' class="cardInput" type="text" onblur="checkName(4)" onfocus="this.select()" placeholder="Card 4">
+               <input list='listOfCards' class="cardInput" type="text" onblur="checkName(4)" onfocus="this.select()" placeholder="Enter the name or ID# of a card">
                <p class='materialStats'></p>
             </div>
             <div class="inputDiv" style="">
-               <input list='listOfCards' class="cardInput" type="text" onblur="checkName(5)" onfocus="this.select()" placeholder="Card 5">
+               <input list='listOfCards' class="cardInput" type="text" onblur="checkName(5)" onfocus="this.select()" placeholder="Enter the name or ID# of a card">
                <p class='materialStats'></p>
             </div>
          </form>
 
          <div id="buttonSection">
             <input type="button" value="Fuse Cards" class="fuseSimBtn" id='fuseCardsBtn' onclick='fuseBase36()'>
-            <input type="button" value="Use Preset Example" class="fuseSimBtn" id="exampleBtn" onclick='exampleFusion()'>
-            <input type="button" value="Randomize Cards" class="fuseSimBtn" id="rndmBtn" onclick='randomFusion()'>
+            <!-- <input type="button" value="Use Preset Example" class="fuseSimBtn" id="exampleBtn" onclick='exampleFusion()'>
+            <input type="button" value="Randomize Cards" class="fuseSimBtn" id="rndmBtn" onclick='randomFusion()'> -->
             <input type="button" value="Reset" class="fuseSimBtn" id="resetBtn" onclick='resetFusionInputs()'>
          </div>
-
+         <div id='jumpToSection' style='margin:10px 0'></div>
       </div>
 
       <div id='errorSection' style='margin:10px 0'></div>
 
-      <div id='jumpToSection' style='margin:10px 0'></div>
+
 
       <div id='fusionResults'></div>
 
