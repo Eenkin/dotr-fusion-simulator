@@ -1,5 +1,5 @@
-html{
-}
+html {}
+
 body {
    font-family: Verdana;
    margin: 0 auto;
@@ -7,7 +7,7 @@ body {
    min-width: 400px;
 }
 
-.noWrap{
+.noWrap {
    white-space: nowrap;
    display: inline-block;
 }
@@ -30,7 +30,6 @@ a {
    cursor: pointer;
    text-decoration: underline;
 }
-
 
 a:visited {
    color: #4680db;
@@ -124,95 +123,106 @@ input[type=button], .fuseSimBtn {
    font-weight: bold;
 }
 
-hr{
+hr {
    width: 60%;
 }
 
-.jumpAnch{
+.jumpAnch, .no-wrap {
    white-space: nowrap;
 }
 
-footer{
+footer {
    font-size: 10px;
    text-align: left;
 }
 
-#note{
+#pageHeading, #note {
+   width: 80%
+}
+
+#note {
    text-align: left;
    font-size: 14px;
-   width: 80%;
    margin: 20px auto;
    padding: 0 5px;
 }
 
-.navLink{
+.navLink {
    cursor: pointer;
    display: block;
    width: 100%;
 }
 
-nav{
-   position:fixed;
-   top:0;
-   left:0;
+nav {
+   position: fixed;
+   top: 0;
+   left: 0;
    user-select: none;
 }
 
-#displayMenu{
-   position:fixed;
-   top:50vh;
-   left:0;
-   padding:5px;
-   background-color: red;
-   writing-mode: vertical-rl;
-   text-orientation: mixed;
+#displayMenu {
+   position: fixed;
+   //top:15px;
+   //left:10px;
+   //padding:8px;
+   padding: 15px 10px;
+   background-color: #e8e8e8;
+   height: 100vh;
    z-index: 30;
-   cursor:pointer;
-   background-color: #e84f0d;
-   text-transform: uppercase;
-   color: white;
-   font-size: 20px;
-   font-family: Cambria;
+   cursor: pointer;
+   /* border-radius:5px; */
 }
 
-#navMenu{
-   display:none;
+#displayMenu:hover {
+   background-color: #a8c0ff;
 }
 
-#hideBlock{
-   position:fixed;
-   top:0;
-   left:0;
-   width:100vw;
-   height:100vh;
+.hamMenu {
+   width: 15px;
+   height: 2px;
+   margin: 2px auto;
+   background-color: black;
+   border-radius: 100px;
+}
+
+#navMenu {
+   display: none;
+}
+
+#hideBlock {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
    background-color: #000000b5;
    z-index: 80;
-   display:block;
+   display: block;
 }
 
-#navBlock{
+#navBlock {
    font-size: 16px;
    text-align: left;
-   position:fixed;
+   position: fixed;
    width: 350px;
-   height:100vh;
+   height: 100vh;
    background-color: white;
-   padding:20px;
+   padding: 20px;
    color: black;
    text-decoration: none;
    z-index: 90;
 }
 
-.navLink{
-   padding:5px 20px;
+.navLink {
+   padding: 5px 20px;
 }
 
-.navLink:hover{
-   background-color:lightgray;
+.navLink:hover {
+   background-color: lightgray;
 }
 
 nav a:link, nav a:visited {
-   color:black;
+   color: black;
    text-decoration: none;
    text-align: left;
 }
@@ -221,12 +231,11 @@ nav a:hover {
    cursor: pointer;
 }
 
-nav h2, nav h1{
+nav h2, nav h1 {
    margin: 0;
    text-align: left;
 }
 
-nav h1{
-   font-size:40px;
-
+nav h1 {
+   font-size: 40px;
 }
