@@ -14,6 +14,16 @@ function createNav(){
 
 
 
-   nav.innerHTML = '<div id="displayMenu" onclick="document.getElementById(\'navMenu\').style.display = \'initial\'"><div class="hamMenu"></div><div class="hamMenu"></div><div class="hamMenu"></div></div><div id="navMenu"><div id="hideBlock" onclick="document.getElementById(\'navMenu\').style.display = \'none\'"></div><div id="navBlock"><h1>MENU</h1>'+ fusionText + deckText + '</div></div>';
+   nav.innerHTML = '<div id="displayMenu" onclick="displayMenu()"><div class="hamMenu"></div><div class="hamMenu"></div><div class="hamMenu"></div></div><div id="navMenu"><div id="hideBlock" onclick="displayMenu()"></div><div id="navBlock"><h1>MENU</h1>'+ fusionText + deckText + '</div></div>';
    // nav.setAttribute('onclick', 'this.style.display = "none"')
+}
+
+function displayMenu(){
+   let navMenu = document.getElementById("navMenu");
+
+   if(navMenu.className){
+      navMenu.classList.remove('showMenu');
+   } else {
+      navMenu.className = 'showMenu';
+   }
 }

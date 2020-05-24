@@ -636,7 +636,7 @@ function revealFusionCombos(x) {
          for (var i = 0; i < fusionTracker[x]['t0'].length; i++) {
             var combos = fusionTracker[x]['t0'][i];
 
-            finalDecipher.push('<p>'+ cardList[combos[0]].name + ' &rarr; ' + cardList[combos[1]].name + '</p>')
+            finalDecipher.push('<p>' + cardList[combos[0]].name + ' &rarr; ' + cardList[combos[1]].name + '</p>')
          }
 
          finalDecipher = new Set(finalDecipher); //grab each unique set of comibinations
@@ -653,7 +653,7 @@ function revealFusionCombos(x) {
             }
          });
 
-         statText+= finalDecipher.toString().replace(/>,/gi, '>');
+         statText += finalDecipher.toString().replace(/>,/gi, '>');
       }
 
       if (fusionTracker[x]['tS']) {
@@ -668,7 +668,7 @@ function revealFusionCombos(x) {
             combos[1] = parseInt(combos[1]);
             console.log(combos);
 
-            finalDecipher.push('<p>'+ cardList[combos[0]].name + '<i> (Fusion)</i> &rarr; ' + cardList[combos[1]].name + '</p>')
+            finalDecipher.push('<p>' + cardList[combos[0]].name + '<i> (Fusion)</i> &rarr; ' + cardList[combos[1]].name + '</p>')
          }
 
          finalDecipher = new Set(finalDecipher); //grab each unique set of comibinations
@@ -685,7 +685,7 @@ function revealFusionCombos(x) {
             }
          });
 
-         statText+= finalDecipher.toString().replace(/>,/gi, '>');
+         statText += finalDecipher.toString().replace(/>,/gi, '>');
       }
 
    } else {
@@ -968,6 +968,42 @@ function openTypeChart() {
 
       document.getElementById('td' + tdType).parentElement.style.backgroundColor = trackTypeArr[tdType] ? 'white' : 'inherit';
    }
+
+}
+
+function smallWindowViewTable(type) {
+   var viewDeck = document.getElementById('viewDeck');
+   var viewFusion = document.getElementById('viewFusion');
+   var deckTable = document.getElementById('deckTable');
+   var fusionTable = document.getElementById('fusionTable');
+
+   var onBtn;
+   var offBtn;
+
+   var showTable;
+   var hideTable;
+
+
+   switch (type) {
+      case 'deck':
+         onBtn = viewDeck;
+         offBtn = viewFusion;
+         showTable = deckTable;
+         hideTable = fusionTable;
+         break;
+      case 'fusion':
+         onBtn = viewFusion;
+         offBtn = viewDeck;
+         showTable = fusionTable;
+         hideTable = deckTable;
+         break;
+   }
+
+   onBtn.className = 'viewOnBtn';
+   offBtn.className = 'viewOffBtn';
+
+   showTable.className = 'showTable';
+   hideTable.className = 'hideTable';
 
 }
 

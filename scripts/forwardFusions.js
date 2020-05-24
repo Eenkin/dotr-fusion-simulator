@@ -31,7 +31,7 @@ function checkCard() {
 
    if (card !== null) {
       checkForFusion(card);
-      window.location.hash = temp.replace(/ /gi, '_')
+      window.location.hash = cardList[card].name.replace(/ /gi, '_')
    }
 }
 
@@ -137,8 +137,10 @@ function checkForFusion(cardA) {
 
       materialTd.innerHTML = materialText + "</ul>"
 
+      materialTd.className = 'materialTd';
+
       materialTd.colSpan = 2;
-      materialTd.style.columnCount = 3;
+      // materialTd.style.columnCount = 3;
 
       tr3.appendChild(materialTd);
       tbody.appendChild(tr3)
@@ -153,7 +155,7 @@ function checkForFusion(cardA) {
 
 
 
-   console.log(fusionTracker);
+   // console.log(fusionTracker);
 }
 
 function tempNamer() {

@@ -735,7 +735,7 @@ function fuseCards(idArrSkip, clearSkip) {
    let groundExists = false;
 
    errorSection.innerHTML = '';
-   errorSection.style.display = 'none';
+   // errorSection.style.display = 'none';
    fusionResults.innerHTML = '';
    jumpToSection.innerHTML = '';
 
@@ -773,7 +773,7 @@ function fuseCards(idArrSkip, clearSkip) {
       //List all possible error messages
       if (errorCheck) {
          errorSection.innerHTML = errorMessages;
-         errorSection.style.display = 'initial';
+         // errorSection.style.display = 'block';
          return;
       }
 
@@ -881,12 +881,15 @@ function createCardResults(groundExists, newSequence, finalResult, numberOrder) 
       let spanResultStat = document.createElement('span');
       spanResultStat.setAttribute('class', 'resultStats');
 
-      let statText = '<p>Type: ' + finalResult.type + '&emsp;Attribute: ' + finalResult.attribute + '&emsp;ATK/DEF:' + finalResult.atk + '/' + finalResult.def;
+      // let statText = '<p>Type: ' + finalResult.type + '&emsp;Attribute: ' + finalResult.attribute + '&emsp;ATK/DEF:' + finalResult.atk + '/' + finalResult.def;
+      //
+      // statText += finalResult.archetype ? '&emsp;<span class="no-wrap">Archetype: ' + finalResult.archetype + '</span></p>': '</p>';
+      let statText = '<p>' + finalResult.type + '/' + finalResult.attribute + '/LV '+ finalResult.lv +'/ATK ' + finalResult.atk + '/DEF ' + finalResult.def;
 
-      statText += finalResult.archetype ? '&emsp;<span class="no-wrap">Archetype: ' + finalResult.archetype + '</span></p>': '</p>';
+      statText += finalResult.archetype ? '/' + finalResult.archetype.replace(/, /gi, '/') + '</p>': '</p>';
       // statText += finalResult.effect ? '<div class="fusionEffect"> <p>' + finalResult.effect.replace(/\n/g, '<br>') + '</p></div>': '';
       statText += finalResult.effect ? '<p style="text-align:left">' + finalResult.effect.replace(/\n/g, '<br>') + '</p>': '';
-      statText += '<hr>';
+      // statText += '<hr>';
 
       spanResultStat.innerHTML = statText
 
@@ -900,13 +903,14 @@ function createCardResults(groundExists, newSequence, finalResult, numberOrder) 
    divCard = document.getElementById(divResultsId);
 
    //Create body text
-   let text = '<span class="resultOrder">';
-   for (i = 2; i < newSequence.length; i = i + 2) {
+   let text = '<hr><span class="resultOrder">';
+   for (i = 2; i < newSequence.length; i += 2) {
       if (i == 2) {
-         text += groundExists ? '<sup><sup><sub><i>(On Field)</i></sub></sup></sup> ' : '';
-         text += newSequence[i - 2] + ' &rarr; ' + newSequence[i - 1];
+         // text += groundExists ? '<sup><sup><sub><i>(On Field)</i></sub></sup></sup> ' : '';
+         text += groundExists ? '<span class="miniText"><i>(On Field)</i></span> ' : '';
+         text += '"' + newSequence[i - 2] + '" &rarr; "' + newSequence[i - 1] + '"';
       } else {
-         text += ' &rarr; ' + newSequence[i - 1];
+         text += ' &rarr; "' + newSequence[i - 1] + '"';
       }
    }
    text += '</span>'
@@ -1027,6 +1031,9 @@ function resetFusionInputs() {
       cardInput[i].style.backgroundColor = ''; //Reset input colors
 
    }
+
+   document.getElementById('fusionResults').innerHTML = '';
+   window.location.hash = '';
 
 }
 
