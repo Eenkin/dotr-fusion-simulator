@@ -21,7 +21,7 @@
 
       #deckBuildSection{
          width:100%;
-         display: inline-flex;
+         display: inline-block;
       }
 
       #deckTable > tbody > tr:nth-child(odd), th, #fusionTable > tbody > tr:nth-child(odd) {
@@ -34,12 +34,24 @@
       }
 
       #deckTable, #fusionTable{
-         width: 49%;
-         display: inline-table;
+         margin: 10px 0;
+      }
+
+      @media screen and (min-width: 800px){
+         #deckTable, #fusionTable{
+            width: 49%;
+            display: inline-table;
+            margin: 10px 0;
+         }
+      }
+
+      #deckTable{
+         float:left;
       }
 
       #fusionTable{
-         margin-left: 2%;
+         /* margin-left: 2%; */
+         float:right;
       }
 
       .tdRemove{
@@ -119,9 +131,10 @@
          background-color: red;
          position: fixed;
          top: 20px;
-         width: 50px;
+         max-width: 64px;
          height: 50px;
-         right:10px;
+         /* right:44px; */
+         margin-left: -64px;
       }
 
       #buttonSection{
@@ -133,6 +146,66 @@
          height: 100%;
          overflow: hidden;
       }
+
+      #forms{
+         margin: 20px auto;
+      }
+
+      #viewTable{
+         display:none;
+      }
+
+      @media screen and (max-width: 800px){
+         #deckTable, #fusionTable{
+            width:100%;
+         }
+
+         .hideTable{
+            display:none;
+         }
+
+         .showTable{
+            display:table;
+         }
+
+         #viewTable{
+            display:inline-flex;
+            width:100%;
+            border-bottom: 1px solid black;
+            user-select: none;
+            font-size: 16px;
+            font-weight: bold;
+         }
+
+         #viewDeck,#viewFusion{
+            display:inline-block;
+            cursor:pointer;
+            padding: 5px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+         }
+
+         #viewDeck:hover, #viewFusion:hover{
+            background-color: DodgerBlue;
+            color: white;
+
+         }
+
+         #viewDeck{
+            margin-right: 5px;
+         }
+
+         .viewOnBtn{
+            background-color: #3457ac;
+            color:white;
+         }
+
+         .viewOffBtn{
+            background-color: lightgray;
+         }
+      }
+
+
    </style>
 </head>
 
@@ -142,7 +215,7 @@
       <script>createNav()</script>
    </nav>
 
-   <h1 id="pageHeading">Yu-Gi-Oh! The Duelists of the Roses - Deck Builder</h1>
+   <h1 id="pageHeading">Yu-Gi-Oh! The Duelists of the Roses -<br>Deck Builder</h1>
 
    <div id='note'>
 
@@ -153,7 +226,7 @@
 
    </div>
 
-   <div id='forms' style='width:80%; margin: 20px auto;'>
+   <div id='forms'>
 
       <datalist id="listOfCards">
          <option value="30,000-Year White Turtle"></option>
@@ -1116,8 +1189,13 @@
          </p>
       </div>
 
+      <div id="viewTable">
+         <div class="viewOnBtn" id="viewDeck" onclick="smallWindowViewTable('deck')">Deck</div>
+         <div class="viewOffBtn" id="viewFusion" onclick="smallWindowViewTable('fusion')">Fusion</div>
+      </div>
+
       <div id='deckBuildSection'>
-         <table id="deckTable">
+         <table class="showTable" id="deckTable">
             <thead>
                <tr>
                   <th colspan="4" style="background-color:burlywood;">Deck</th>
@@ -1486,8 +1564,7 @@
                </tr>
             </tbody>
          </table>
-
-         <table id='fusionTable'>
+         <table class="hideTable" id='fusionTable'>
             <thead>
                <tr>
                   <th colspan="2" style="background-color:plum;">Fusions</th>
@@ -1499,17 +1576,13 @@
 
       <div id='errorSection' style='margin:10px 0'></div>
 
-
-
-      <div id='jumpToSection' style='margin:10px 0'></div>
-
       <div id="fusionPopUp">
-         <div style="float:right;"><input id="closeFusionListBtn" type="button" value="X" onclick="document.getElementById('fusionPopUp').style.display = '';  document.body.classList.remove('stop-scrolling');"></div>
+         <div style="float:right;"><input id="closeFusionListBtn" type="button" value="Close" onclick="document.getElementById('fusionPopUp').style.display = '';  document.body.classList.remove('stop-scrolling');"></div>
          <div id="listBG"></div>
       </div>
 
       <div id="chartPopUp">
-         <div style="float:right;"><input id="closeChartListBtn" type="button" value="X" onclick="document.getElementById('chartPopUp').style.display = '';  document.body.classList.remove('stop-scrolling');"></div>
+         <div style="float:right;"><input id="closeChartListBtn" type="button" value="Close" onclick="document.getElementById('chartPopUp').style.display = '';  document.body.classList.remove('stop-scrolling');"></div>
          <div id="chartBG">
             <h1>Number of Each Type, Attribute, and Archetype</h1>
             <p id="dupliicateStats"></p>

@@ -21,7 +21,7 @@
       }
 
       table{
-         width: 75%;
+         width: 100%;
          min-width: 250px;
          margin: auto;
          margin-bottom: 20px;
@@ -60,13 +60,33 @@
          margin-top: 20px;
       }
 
+      li{
+         margin-bottom: 5px;
+      }
+
+      .materialTd{
+         column-count: 3;
+      }
+
+      @media screen and (max-width:800px){
+         .materialTd{
+            column-count: 2;
+         }
+      }
+
+      @media screen and (max-width:600px){
+         .materialTd{
+            column-count: 1;
+         }
+      }
+
 
    </style>
 </head>
 
 <body>
    <nav><script>createNav()</script></nav>
-   <h1 id="pageHeading">Yu-Gi-Oh! The Duelists of the Roses - Forward Fusing</h1>
+   <h1 id="pageHeading">Yu-Gi-Oh! The Duelists of the Roses -<br>Forward Fusing</h1>
 
    <div id='note'>
       <p>Enter the name or ID number of a card to check all possible fusions that it could make. Fusions involving "Insect Imitation" will display as "?" and won't be taken account for other fusions due to the random nature of the card.</p>

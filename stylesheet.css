@@ -3,7 +3,7 @@ html {}
 body {
    font-family: Verdana;
    margin: 0 auto;
-   padding: 10px 0;
+   padding: 10px 25px 10px 60px;
    min-width: 400px;
 }
 
@@ -95,7 +95,8 @@ input[type=button], .fuseSimBtn {
 
 .resultSequence {
    text-align: center;
-   margin: 10px auto;
+   /* margin: 10px auto; */
+   margin-bottom:20px;
    width: 100%;
    padding: 10px;
    border-radius: 10px;
@@ -137,7 +138,7 @@ footer {
 }
 
 #pageHeading, #note {
-   width: 80%
+   /* width: 80% */
 }
 
 #note {
@@ -204,7 +205,7 @@ nav {
    font-size: 16px;
    text-align: left;
    position: fixed;
-   width: 350px;
+   /* width: 350px; */
    height: 100vh;
    background-color: white;
    padding: 20px;
@@ -225,6 +226,34 @@ nav a:link, nav a:visited {
    color: black;
    text-decoration: none;
    text-align: left;
+}
+
+#navMenu.showMenu{
+   display:initial;
+}
+
+@media screen and (min-width:1100px){
+   #navMenu{
+      display:block;
+   }
+
+   body{
+      padding: 10px 25px 10px 359px;
+   }
+
+   #navBlock{
+      /* border-right: 1px solid black; */
+      background-color:lightblue;
+      /* color:white; */
+   }
+
+   .navLink:hover {
+      background-color: white;
+   }
+
+   #hideBlock{
+      display:none;
+   }
 }
 
 nav a:hover {

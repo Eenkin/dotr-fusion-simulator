@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <title>Yu-Gi-Oh! The Duelists of the Roses - Reincarnation Calculator</title>
+   <script src="scripts/cardList.js"></script>
+   <script src="scripts/reincarnation.js"></script>
+   <script src="scripts/createNav.js"></script>
+   <link rel="stylesheet" href="stylesheet.css">
+
+   <style>
+      a{
+         color: blue;
+      }
+
+      #reincarnationResults, #note{
+         font-size: 14px;
+         width: 80%;
+         padding: 10px;
+         margin: 0 auto;
+      }
+
+      hr{
+         width: 100%;
+      }
+
+      p{
+         text-align: left;
+      }
+
+      .percentage{
+         background-color: yellow;
+      }
+   </style>
+</head>
+
+<body>
+   <nav><script>createNav()</script></nav>
+   <h1 id="pageHeading">Yu-Gi-Oh! The Duelists of the Roses -<br>Reincarnation Calculator</h1>
+
+   <div id='note' style=''>
+      <p>This simulator calculates the chances of receiving each card from reincarnation.</p>
+   </div>
+
+   <div>
+      <input id="cardInput" type="text" placeholder="Enter Name or ID# of a Card" style="width: 500px;" onfocus="this.select()">
+      <input id="submit" value="Reincarnate" type="button" onclick="reincarnateCard()">
+   </div>
+
+   <div id="reincarnationResults"></div>
+
+   <footer style="width: 80%; margin: 0 auto;">*Reincarnating a card that has 10 DC or less will have a higher chance to result in a "Fake Trap". This is due to the game finding a card that doesn't exist when making it's calculations.</footer>
+
+</body>
+
+
+</html>

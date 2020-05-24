@@ -18,7 +18,7 @@
       }
 
       #warningSection{
-         width: 80%;
+         /* width: 80%; */
          font-size: 12px;
          text-align: left;
 
@@ -71,9 +71,9 @@
          float:right;
       }
 
-      #errorSection{
+      /* #errorSection{
          display: none;
-      }
+      } */
 
       @media screen and (max-width: 800px) {
          #inputSection, #errorSection, #fusionResults{
@@ -87,24 +87,33 @@
          }
       }
 
+      @media screen and (min-width: 800px){
+         .jumpAnch{
+            display:block;
+         }
+      }
+
       #buttonSection{
          margin: 10px 0;
+         text-align: left;
       }
 
       #jumpToSection{
          font-size: 14px;
          text-align: left;
+         display:none;
+
       }
 
-      .footnote{
-         font-size: 10px;
+      .miniText{
+         font-size: 8px;
       }
    </style>
 </head>
 
 <body>
    <nav><script>createNav()</script></nav>
-   <h1 id="pageHeading">Yu-Gi-Oh! The Duelists of the Roses - Fusion Simulator</h1>
+   <h1 id="pageHeading">Yu-Gi-Oh! The Duelists of the Roses -<br>Fusion Simulator</h1>
 
    <div id='note'>
       <p>The Fusion Simulator calculates for all possible fusion combinations that can be created from the hand. The light-blue box is for fusing a card that is currently in your Summoning Area. It will place the card as being first in the fusion order. The order of cards for all other boxes does not matter.</p>
@@ -114,7 +123,7 @@
       <p>Enter the name or ID number of each card, but a minimum of 2 cards is required. Use this guide for a <a href="fusion_list">general fusion list</a>.</p>
    </div>
 
-   <div id='forms' style='width:80%; margin: 20px auto;'>
+   <div id='forms' style='/*width:80%;*/ margin: 20px auto;'>
 
       <div id="inputSection">
          <datalist id="listOfCards">
@@ -1003,17 +1012,14 @@
 
          <div id="buttonSection">
             <input type="button" value="Fuse Cards" class="fuseSimBtn" id='fuseCardsBtn' onclick='fuseBase36()'>
-            <!-- <input type="button" value="Use Preset Example" class="fuseSimBtn" id="exampleBtn" onclick='exampleFusion()'>
-            <input type="button" value="Randomize Cards" class="fuseSimBtn" id="rndmBtn" onclick='randomFusion()'> -->
+            <!-- <input type="button" value="Use Preset Example" class="fuseSimBtn" id="exampleBtn" onclick='exampleFusion()'> -->
+            <input type="button" value="Random" class="fuseSimBtn" id="rndmBtn" onclick='randomFusion()'>
             <input type="button" value="Reset" class="fuseSimBtn" id="resetBtn" onclick='resetFusionInputs()'>
          </div>
          <div id='jumpToSection' style='margin:10px 0'></div>
       </div>
 
-      <div id='errorSection' style='margin:10px 0'></div>
-
-
-
+      <div id='errorSection'></div>
       <div id='fusionResults'></div>
 
    </div>
