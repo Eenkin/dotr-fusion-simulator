@@ -14,10 +14,7 @@ function checkCard() {
          card = null;
          return;
       }
-
       //console.log(card)
-
-      document.getElementById('cardInput').value = cardList[card].name;
    } else if (cardNamelist.includes(temp)) {
       card = cardNamelist.indexOf(temp); //is input a name
    } else if (!card) {
@@ -31,6 +28,7 @@ function checkCard() {
 
    if (card !== null) {
       checkForFusion(card);
+      document.getElementById('cardInput').value = cardList[card].name;
       window.location.hash = cardList[card].name.replace(/ /gi, '_')
    }
 }
@@ -42,14 +40,18 @@ function checkForFusion(cardA) {
 
    fusionTracker = {}; //Reset tracker
 
+   var mainCard = cardList[cardA];
 
    if (!fusableCards.includes(cardA)) {
       //If the card is not a fusable card, then end function;
-      resultSection.innerHTML = '<b>This card cannot be used to make fusions</b>';
+      // resultSection.innerHTML = '<b>This card cannot be used to make fusions</b>';
+      resultSection.innerHTML = '<b>No results found for fusions involving "' + mainCard.name + '"</b>';
       return;
    }
 
-   resultSection.innerHTML = '';
+
+
+   resultSection.innerHTML = '<b>Search results for fusions involving "' + mainCard.name + '".</b><br><br>';
 
    //Compare current card with all other fusable cards.
    for (cardB of fusableCards) {
