@@ -101,11 +101,17 @@
          width: 100%;
       }
 
+      #tableSection{
+         margin-bottom: 20px;
+      }
+
    </style>
 </head>
 
 <body>
-   <nav><script>createNav()</script></nav>
+   <nav>
+      <script>createNav()</script>
+   </nav>
 
    <div id="fusionPopUp">
       <div style="float:right;"><input id="closeFusionListBtn" type="button" value="Close" onclick="document.getElementById('fusionPopUp').style.display = ''; document.body.classList.remove('stop-scrolling'); document.getElementById('listBG').style.scrollBehavior = 'auto';"></div>
@@ -123,8 +129,2102 @@
       <p>Due to how the game is programmed, there are some inconsistencies of several card combinations that should and shouldn't work. Please use the <a href='.'>fusion simulator</a> or click on <i>"Show all possible fusion material combinations."</i> on a fusion to check if the 2 cards work.</p>
    </div>
 
-   <div id="sortSection"><b>Sort by:</b> <input type="radio" name="sortList" onclick="createFusionTable('ABC')" checked> Name &emsp; <input type="radio" onclick="createFusionTable('123')" name="sortList"> ID#/Type</div>
-   <table class="fusionTable" id="fusionTableID"></table>
+   <div id="sortSection"><b>Sort by:</b> <input type="radio" name="sortList" onclick="pickTable('ABC')" checked> Name &emsp; <input type="radio" onclick="pickTable('123')" name="sortList"> ID#/Type</div>
+   <!-- <table class="fusionTable" id="fusionTableID">
+   </table> -->
+
+   <div id="tableSection">
+      <table class="fusionTable" id="fusionTableABC">
+         <thead>
+            <tr class="fusionTableHead">
+               <td class="tdFusionId">ID</td>
+               <td class="tdFusionName" colspan="2">Name</td>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td class="tdFusionId" id="30,000-Year_White_Turtle">584</td>
+               <td class="tdFusionName">30,000-Year White Turtle</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(584)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Time Wizard" + Turtle</i>
+                  <p>Aqua/WATER/LV 5/ATK 1250/DEF 2100<br>Archetype(s): Shell, Turtle</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="7_Colored_Fish">466</td>
+               <td class="tdFusionName">7 Colored Fish</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(466)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Fish + Fairy</i>
+                  <p>Fish/WATER/LV 4/ATK 1800/DEF 800</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Amazon_of_the_Seas">475</td>
+               <td class="tdFusionName">Amazon of the Seas</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(475)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Female + Fish</i>
+                  <p>Fish/WATER/LV 4/ATK 1300/DEF 1400<br>Archetype(s): Female</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Amphibious_Bugroth">607</td>
+               <td class="tdFusionName">Amphibious Bugroth</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(607)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Ground Attacker Bugroth" + Aqua</i>
+                  <p>Aqua/WATER/LV 5/ATK 1850/DEF 1300</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Aqua_Dragon">478</td>
+               <td class="tdFusionName">Aqua Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(478)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Aqua (LV 5+) + Dragon (2000+ ATK) or Sea Serpent (LV 5+)</i>
+                  <p>Sea Serpent/WATER/LV 6/ATK 2250/DEF 1900<br>Archetype(s): Horned</p>
+                  <p>ATTACK: Space occupied is transformed to Sea terrain when engaged in battle.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Armored_Zombie">105</td>
+               <td class="tdFusionName">Armored Zombie</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(105)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Zombie + Warrior<br>*Requires at least 1 card with 1200+ ATK.</i>
+                  <p>Zombie/DARK/LV 3/ATK 1500/DEF 0</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="B._Dragon_Jungle_King">20</td>
+               <td class="tdFusionName">B. Dragon Jungle King</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(20)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Dragon (1600+ ATK) + Plant</i>
+                  <p>Dragon/EARTH/LV 6/ATK 2100/DEF 1800<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="B._Skull_Dragon">9</td>
+               <td class="tdFusionName">B. Skull Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(9)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Red Eyes B. Dragon" + "Summoned Skull"</i>
+                  <p>Dragon/DARK/LV 9/ATK 3200/DEF 2500<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Bean_Soldier">660</td>
+               <td class="tdFusionName">Bean Soldier</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(660)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Plant + Warrior</i>
+                  <p>Plant/EARTH/LV 4/ATK 1400/DEF 1300</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Blackland_Fire_Dragon">4</td>
+               <td class="tdFusionName">Blackland Fire Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(4)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Dragon + Spellcaster</i>
+                  <p>Dragon/DARK/LV 4/ATK 1500/DEF 800<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Bolt_Escargot">546</td>
+               <td class="tdFusionName">Bolt Escargot</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(546)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Thunder + Aqua</i>
+                  <p>Thunder/WATER/LV 5/ATK 1400/DEF 1500<br>Archetype(s): Shell</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Boulder_Tortoise">549</td>
+               <td class="tdFusionName">Boulder Tortoise</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(549)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Turtle + Rock</i>
+                  <p>Aqua/EARTH/LV 6/ATK 1450/DEF 2200<br>Archetype(s): Shell, Turtle</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Bracchio-raidus">445</td>
+               <td class="tdFusionName">Bracchio-raidus</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(445)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Dinosaur (1750+ ATK) + Aqua<br>Reptile (1400+ ATK) + Rock</i>
+                  <p>Dinosaur/WATER/LV 6/ATK 2200/DEF 2000</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Celtic_Guardian">156</td>
+               <td class="tdFusionName">Celtic Guardian</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(156)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Elf + Warrior</i>
+                  <p>Warrior/EARTH/LV 4/ATK 1400/DEF 1200<br>Archetype(s): Elf</p>
+                  <p>NATURE: While this card is face-up in the defense position, all effects involving the taking of a card's control are rendered ineffective.<br>(This card is considered an Elf only for fusions)</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Chimera_the_Flying_Mythical_Beast">267</td>
+               <td class="tdFusionName">Chimera the Flying Mythical Beast</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(267)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Beast (LV 4+) + Fiend</i>
+                  <p>Beast/WIND/LV 6/ATK 2100/DEF 1800<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Clown_Zombie">107</td>
+               <td class="tdFusionName">Clown Zombie</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(107)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Crass Clown" + Zombie</i>
+                  <p>Zombie/DARK/LV 2/ATK 1350/DEF 0</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Corroding_Shark">125</td>
+               <td class="tdFusionName">Corroding Shark</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(125)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Zombie + Fish</i>
+                  <p>Zombie/DARK/LV 3/ATK 1100/DEF 700</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Crimson_Sunbird">269</td>
+               <td class="tdFusionName">Crimson Sunbird</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(269)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Mavelus" + Winged-Beast<br>Winged-Beast (1300+ ATK) + Pyro</i>
+                  <p>Winged-Beast/FIRE/LV 6/ATK 2300/DEF 1800</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Curse_of_Dragon">6</td>
+               <td class="tdFusionName">Curse of Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(6)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Dragon (1600+ ATK) + Zombie (1200+ ATK)</i>
+                  <p>Dragon/DARK/LV 5/ATK 2000/DEF 1500<br>Archetype(s): Horned</p>
+                  <p>ATTACK: Transforms the occupied space into WASTELAND terrain when engaging in a battle.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Cyber_Saurus">521</td>
+               <td class="tdFusionName">Cyber Saurus</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(521)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Machine + Dinosaur</i>
+                  <p>Machine/EARTH/LV 5/ATK 1800/DEF 1400</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Cyber_Soldier">491</td>
+               <td class="tdFusionName">Cyber Soldier</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(491)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Machine + Warrior</i>
+                  <p>Machine/DARK/LV 5/ATK 1500/DEF 1700<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Dark_Elf">79</td>
+               <td class="tdFusionName">Dark Elf</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(79)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Elf + Spellcaster (DARK)</i>
+                  <p>Spellcaster/DARK/LV 4/ATK 2000/DEF 800<br>Archetype(s): Female, Elf</p>
+                  <p>ATTACK: For every battle engaged with the enemy, the LP of the player controlling Dark Elf is reduced by 50 points.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Dark_Witch">385</td>
+               <td class="tdFusionName">Dark Witch</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(385)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Female + Fairy</i>
+                  <p>Fairy/LIGHT/LV 5/ATK 1800/DEF 1700<br>Archetype(s): Female</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Darkworld_Thorns">662</td>
+               <td class="tdFusionName">Darkworld Thorns</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(662)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Fungi of the Musk" + Fiend</i>
+                  <p>Plant/EARTH/LV 3/ATK 1200/DEF 900</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Dice_Armadillo">520</td>
+               <td class="tdFusionName">Dice Armadillo</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(520)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Machine + Beast</i>
+                  <p>Machine/EARTH/LV 5/ATK 1650/DEF 1800<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Dragon_Zombie">106</td>
+               <td class="tdFusionName">Dragon Zombie</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(106)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Zombie + Dragon</i>
+                  <p>Zombie/DARK/LV 3/ATK 1600/DEF 0</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Dragoness_the_Wicked_Knight">205</td>
+               <td class="tdFusionName">Dragoness the Wicked Knight</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(205)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Dragon + Warrior</i>
+                  <p>Warrior/WIND/LV 3/ATK 1200/DEF 900<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Electric_Lizard">541</td>
+               <td class="tdFusionName">Electric Lizard</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(541)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Reptile + Thunder</i>
+                  <p>Thunder/EARTH/LV 3/ATK 850/DEF 800<br>Archetype(s): Horned</p>
+                  <p>FLIP: Spellbinds the opposing enemy for 1 turn when this card is flipped face-up in battle.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Fiend_Reflection_#1">289</td>
+               <td class="tdFusionName">Fiend Reflection #1</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(289)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Job-Change Mirror" or "Wicked Mirror" + Winged-Beast</i>
+                  <p>Winged-Beast/WIND/LV 4/ATK 1300/DEF 1400</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Fire_Kraken">548</td>
+               <td class="tdFusionName">Fire Kraken</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(548)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Aqua + Pyro</i>
+                  <p>Aqua/FIRE/LV 5/ATK 1600/DEF 1500</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Flame_Cerebrus">620</td>
+               <td class="tdFusionName">Flame Cerebrus</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(620)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Beast (1200+ ATK) + Pyro</i>
+                  <p>Pyro/FIRE/LV 6/ATK 2100/DEF 1800</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Flame_Swordsman">151</td>
+               <td class="tdFusionName">Flame Swordsman</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(151)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Warrior + Pyro</i>
+                  <p>Warrior/FIRE/LV 5/ATK 1800/DEF 1600<br>Archetype(s): Horned</p>
+                  <p>ATTACK: 300-pt bonus when battling DINOSAUR monsters.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Flower_Wolf">253</td>
+               <td class="tdFusionName">Flower Wolf</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(253)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Beast + Plant</i>
+                  <p>Beast/EARTH/LV 5/ATK 1800/DEF 1400</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Gaia_the_Dragon_Champion">23</td>
+               <td class="tdFusionName">Gaia the Dragon Champion</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(23)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Gaia the Fierce Knight" + "Curse of Dragon"</i>
+                  <p>Dragon/WIND/LV 7/ATK 2600/DEF 2100<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Garvas">252</td>
+               <td class="tdFusionName">Garvas</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(252)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Beast + Winged-Beast</i>
+                  <p>Beast/EARTH/LV 6/ATK 2000/DEF 1700</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Gatekeeper">483</td>
+               <td class="tdFusionName">Gatekeeper</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(483)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Key Mace" + "Key Mace #2"</i>
+                  <p>Machine/DARK/LV 5/ATK 1500/DEF 1800</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Giant_Turtle_Who_Feeds_on_Flames">598</td>
+               <td class="tdFusionName">Giant Turtle Who Feeds on Flames</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(598)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Turtle + Pyro</i>
+                  <p>Aqua/WATER/LV 5/ATK 1400/DEF 1800<br>Archetype(s): Horned, Shell, Turtle</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Great_Mammoth_of_Goldfine">130</td>
+               <td class="tdFusionName">Great Mammoth of Goldfine</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(130)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Mammoth Graveyard" + Zombie</i>
+                  <p>Zombie/DARK/LV 6/ATK 2200/DEF 1800</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Harpie_Lady_Sisters">273</td>
+               <td class="tdFusionName">Harpie Lady Sisters</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(273)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Harpie Lady" + "Elegant Egotist"</i>
+                  <p>Winged-Beast/WIND/LV 6/ATK 1950/DEF 2100<br>Archetype(s): Female</p>
+                  <p>FLIP: When this card is flipped face-up, Harpie's Pet Dragon increases 900 points.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Harpie's_Pet_Dragon">30</td>
+               <td class="tdFusionName">Harpie's Pet Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(30)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Harpie Lady" or "Harpie Lady Sisters" + Dragon</i>
+                  <p>Dragon/WIND/LV 7/ATK 2000/DEF 2500</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Invader_of_the_Throne">202</td>
+               <td class="tdFusionName">Invader of the Throne</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(202)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Protector of the Throne" + Fiend</i>
+                  <p>Warrior/EARTH/LV 5/ATK 1350/DEF 1700<br>Archetype(s): Female</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Judge_Man">154</td>
+               <td class="tdFusionName">Judge Man</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(154)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Judgement Hand" + Warrior (1000+ ATK)</i>
+                  <p>Warrior/EARTH/LV 6/ATK 2200/DEF 1500</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Kairyu-Shin">476</td>
+               <td class="tdFusionName">Kairyu-Shin</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(476)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Fish + Dragon</i>
+                  <p>Sea Serpent/WATER/LV 5/ATK 1800/DEF 1500</p>
+                  <p>FLIP: All spaces within a range of 1 space are transformed to Sea terrain when this card is flipped face-up.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Kaminari_Attack">544</td>
+               <td class="tdFusionName">Kaminari Attack</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(544)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Thunder + Spellcaster<br>*Requires at least 1 card with 1500+ ATK.</i>
+                  <p>Thunder/WIND/LV 5/ATK 1900/DEF 1400</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Koumori_Dragon">5</td>
+               <td class="tdFusionName">Koumori Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(5)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Dragon + Fiend</i>
+                  <p>Dragon/DARK/LV 4/ATK 1500/DEF 1200<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="La_Jinn_the_Mystical_Genie_of_the_Lamp">340</td>
+               <td class="tdFusionName">La Jinn the Mystical Genie of the Lamp</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(340)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Lord of the Lamp" or "Mystic Lamp" + Fiend</i>
+                  <p>Fiend/DARK/LV 4/ATK 1800/DEF 1000</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Larva_of_Moth">427</td>
+               <td class="tdFusionName">Larva of Moth</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(427)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Cocoon of Evolution" + Insect that has "Cocoon of Evolution" in its SPECIAL POWER UP effect</i>
+                  <p>Insect/EARTH/LV 2/ATK 0/DEF 2000</p>
+                  <p>MOVEMENT: Cannot move.<br>NATURE: Transforms into Pupa of Moth if this card survives 5 turns in face-up, defense position after being flipped face-up by the controlling player. If destroyed prior to transformation, the card is revived as Larvae Moth in own Summoning Area other than current location.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Lord_of_the_Lamp">312</td>
+               <td class="tdFusionName">Lord of the Lamp</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(312)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Mystic Lamp" + Spellcaster</i>
+                  <p>Fiend/DARK/LV 4/ATK 1400/DEF 1200</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Magical_Ghost">124</td>
+               <td class="tdFusionName">Magical Ghost</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(124)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Spellcaster + Zombie</i>
+                  <p>Zombie/DARK/LV 4/ATK 1300/DEF 1400</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Marine_Beast">474</td>
+               <td class="tdFusionName">Marine Beast</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(474)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Rare Fish" + Aqua</i>
+                  <p>Fish/WATER/LV 5/ATK 1700/DEF 1600</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Mavelus">277</td>
+               <td class="tdFusionName">Mavelus</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(277)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Winged-Beast + Pyro</i>
+                  <p>Winged-Beast/WIND/LV 4/ATK 1300/DEF 900</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Mech_Bass">532</td>
+               <td class="tdFusionName">Mech Bass</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(532)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Machine (1600+ ATK) + Fish</i>
+                  <p>Machine/WATER/LV 5/ATK 1800/DEF 1500</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Megazowler">436</td>
+               <td class="tdFusionName">Megazowler</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(436)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Reptile + Rock</i>
+                  <p>Dinosaur/EARTH/LV 6/ATK 1800/DEF 2000<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Metal_Dragon">529</td>
+               <td class="tdFusionName">Metal Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(529)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Machine + Dragon</i>
+                  <p>Machine/WIND/LV 6/ATK 1850/DEF 1700<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Metal_Fish">531</td>
+               <td class="tdFusionName">Metal Fish</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(531)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Machine + Fish<br>*Requires at least 1 card with 1400+ ATK.</i>
+                  <p>Machine/WATER/LV 5/ATK 1600/DEF 1900</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Metalzoa">488</td>
+               <td class="tdFusionName">Metalzoa</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(488)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Zoa" + "Metalmorph"</i>
+                  <p>Machine/DARK/LV 8/ATK 3000/DEF 2300<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Meteor_B._Dragon">14</td>
+               <td class="tdFusionName">Meteor B. Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(14)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Red Eyes B. Dragon" + "Meteor Dragon"</i>
+                  <p>Dragon/FIRE/LV 8/ATK 3500/DEF 2000</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Minomushi_Warrior">636</td>
+               <td class="tdFusionName">Minomushi Warrior</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(636)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Rock + Warrior</i>
+                  <p>Rock/EARTH/LV 4/ATK 1300/DEF 1200<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Misairuzame">469</td>
+               <td class="tdFusionName">Misairuzame</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(469)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Fish + Machine</i>
+                  <p>Fish/WATER/LV 5/ATK 1400/DEF 1600<br>Archetype(s): Horned</p>
+                  <p>ATTACK: Adds 500 bonus points for any battle against MACHINE monsters.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Mon_Larvas">259</td>
+               <td class="tdFusionName">Mon Larvas</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(259)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Larvas" + Beast</i>
+                  <p>Beast/EARTH/LV 4/ATK 1300/DEF 1400</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Musician_King">46</td>
+               <td class="tdFusionName">Musician King</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(46)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Hibikime" + "Sonic Maid"</i>
+                  <p>Spellcaster/LIGHT/LV 5/ATK 1750/DEF 1500</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Mystical_Elf">35</td>
+               <td class="tdFusionName">Mystical Elf</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(35)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Elf + Spellcaster (LIGHT) or Fairy</i>
+                  <p>Spellcaster/LIGHT/LV 4/ATK 800/DEF 2000<br>Archetype(s): Female, Elf</p>
+                  <p>FLIP: When this card is flipped face-up, powers up all of your own LIGHT monsters by 800 points.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Mystical_Sand">641</td>
+               <td class="tdFusionName">Mystical Sand</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(641)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Female (LV 4+) + Rock</i>
+                  <p>Rock/EARTH/LV 6/ATK 2100/DEF 1700<br>Archetype(s): Female</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Mystical_Sheep_#1">264</td>
+               <td class="tdFusionName">Mystical Sheep #1</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(264)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Mystical Sheep #2" + Fiend</i>
+                  <p>Beast/EARTH/LV 3/ATK 1150/DEF 900</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Nekogal_#2">221</td>
+               <td class="tdFusionName">Nekogal #2</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(221)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Female + Beast or Beast-Warrior</i>
+                  <p>Beast-Warrior/EARTH/LV 6/ATK 1900/DEF 2000<br>Archetype(s): Female</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Pumpking_the_King_of_Ghosts">108</td>
+               <td class="tdFusionName">Pumpking the King of Ghosts</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(108)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Zombie + Plant<br>*Requires at least 1 card with 1000+ ATK.</i>
+                  <p>Zombie/DARK/LV 6/ATK 1800/DEF 2000</p>
+                  <p>NATURE: While this card is face-up in the defense position, all ZOMBIE monsters are increased 100 points at the start of each turn.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Punished_Eagle">280</td>
+               <td class="tdFusionName">Punished Eagle</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(280)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Winged-Beast (1300+ ATK) + Warrior</i>
+                  <p>Winged-Beast/WIND/LV 6/ATK 2100/DEF 1800</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Queen_of_Autumn_Leaves">667</td>
+               <td class="tdFusionName">Queen of Autumn Leaves</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(667)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Female + Plant</i>
+                  <p>Plant/EARTH/LV 5/ATK 1800/DEF 1500<br>Archetype(s): Female</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Rabid_Horseman">215</td>
+               <td class="tdFusionName">Rabid Horseman</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(215)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Battle Ox" + "Mystical Horseman"</i>
+                  <p>Beast-Warrior/EARTH/LV 6/ATK 2000/DEF 1700<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Rare_Fish">460</td>
+               <td class="tdFusionName">Rare Fish</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(460)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Fish + Beast<br>*Requires at least 1 card with 1350+ ATK</i>
+                  <p>Fish/WATER/LV 4/ATK 1500/DEF 1200</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Red-Eyes_B._Dragon">7</td>
+               <td class="tdFusionName">Red-Eyes B. Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(7)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Tyhone #2" + Dragon (DARK)</i>
+                  <p>Dragon/DARK/LV 7/ATK 2400/DEF 2000<br>Archetype(s): Horned</p>
+                  <p>SPECIAL POWER UP: Transforms into "Red-Eyes Black Metal Dragon when powered up with a "Metalmorph".</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Red-Eyes_Black_Metal_Dragon">501</td>
+               <td class="tdFusionName">Red-Eyes Black Metal Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(501)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Red-Eyes B. Dragon" + "Metalmorph"</i>
+                  <p>Machine/DARK/LV 8/ATK 2800/DEF 2400<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Rose_Spectre_of_Dunn">648</td>
+               <td class="tdFusionName">Rose Spectre of Dunn</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(648)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Plant + Fiend</i>
+                  <p>Plant/DARK/LV 6/ATK 2000/DEF 1800<br>Archetype(s): Female</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Ryu-Kishin_Powered">339</td>
+               <td class="tdFusionName">Ryu-Kishin Powered</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(339)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Job-Change Mirror" + Fiend</i>
+                  <p>Fiend/DARK/LV 4/ATK 1600/DEF 1200<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Sea_King_Dragon">479</td>
+               <td class="tdFusionName">Sea King Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(479)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Dragon + Aqua (1500+ ATK)</i>
+                  <p>Sea Serpent/WATER/LV 6/ATK 2000/DEF 1700<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Skelgon">126</td>
+               <td class="tdFusionName">Skelgon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(126)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Dragon Zombie" + Zombie</i>
+                  <p>Zombie/DARK/LV 6/ATK 1700/DEF 1900<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Snakeyashi">665</td>
+               <td class="tdFusionName">Snakeyashi</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(665)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Plant + Reptile</i>
+                  <p>Plant/EARTH/LV 4/ATK 1000/DEF 1200</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Soul_Hunter">345</td>
+               <td class="tdFusionName">Soul Hunter</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(345)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Crass Clown" or "Clown Zombie" + Reptile</i>
+                  <p>Fiend/DARK/LV 6/ATK 2200/DEF 1800<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Spike_Seadra">480</td>
+               <td class="tdFusionName">Spike Seadra</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(480)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Boulder Tortoise" + Dragon</i>
+                  <p>Sea Serpent/WATER/LV 5/ATK 1600/DEF 1300</p>
+                  <p>FLIP: When this card is flipped face-up, this card is strengthened by 300 points for every THUNDER monster on the field.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Spirit_of_the_Books">274</td>
+               <td class="tdFusionName">Spirit of the Books</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(274)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Boo Koo" + Winged-Beast</i>
+                  <p>Winged-Beast/WIND/LV 4/ATK 1400/DEF 1200</p>
+                  <p>FLIP: When this card is flipped face-up, add a Boo Koo face-down to own Summoning Area.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Stone_D.">632</td>
+               <td class="tdFusionName">Stone D.</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(632)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Rock + Dragon (1200+ ATK)</i>
+                  <p>Rock/EARTH/LV 7/ATK 2000/DEF 2300<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Stone_Ghost">637</td>
+               <td class="tdFusionName">Stone Ghost</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(637)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Rock + Zombie</i>
+                  <p>Rock/EARTH/LV 4/ATK 1200/DEF 1000</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Summoned_Skull">294</td>
+               <td class="tdFusionName">Summoned Skull</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(294)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Job-Change Mirror" + Fiend (1600+ ATK)</i>
+                  <p>Fiend/DARK/LV 6/ATK 2500/DEF 1200<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Sword_Arm_of_Dragon">433</td>
+               <td class="tdFusionName">Sword Arm of Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(433)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Dinosaur + Warrior (ID# less than 200) or Insect (ID# between 401-407)</i>
+                  <p>Dinosaur/EARTH/LV 6/ATK 1750/DEF 2030<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Tatsunootoshigo">250</td>
+               <td class="tdFusionName">Tatsunootoshigo</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(250)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Beast + Fish</i>
+                  <p>Beast/EARTH/LV 5/ATK 1350/DEF 1600</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="The_Immortal_of_Thunder">536</td>
+               <td class="tdFusionName">The Immortal of Thunder</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(536)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Thunder + Spellcaster</i>
+                  <p>Thunder/LIGHT/LV 4/ATK 1500/DEF 1300</p>
+                  <p>NATURE: While this card is face-up in the defense position, all female monsters are reduced by 500 points.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Thousand_Dragon">24</td>
+               <td class="tdFusionName">Thousand Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(24)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Time Wizard" + Dragon</i>
+                  <p>Dragon/WIND/LV 7/ATK 2400/DEF 2000<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Thunder_Dragon">535</td>
+               <td class="tdFusionName">Thunder Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(535)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Thunder + Dragon</i>
+                  <p>Thunder/LIGHT/LV 5/ATK 1600/DEF 1500<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Tripwire_Beast">540</td>
+               <td class="tdFusionName">Tripwire Beast</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(540)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Thunder + Beast</i>
+                  <p>Thunder/EARTH/LV 4/ATK 1200/DEF 1300<br>Archetype(s): Horned, Shell</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Turtle_Bird">592</td>
+               <td class="tdFusionName">Turtle Bird</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(592)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Turtle + Winged-Beast</i>
+                  <p>Aqua/WATER/LV 6/ATK 1900/DEF 1700<br>Archetype(s): Shell, Turtle</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Turtle_Tiger">558</td>
+               <td class="tdFusionName">Turtle Tiger</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(558)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Turtle + Beast</i>
+                  <p>Aqua/WATER/LV 4/ATK 1000/DEF 1500<br>Archetype(s): Shell, Turtle</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Twin-Headed_Thunder_Dragon">538</td>
+               <td class="tdFusionName">Twin-Headed Thunder Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(538)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Thunder + Dragon (2000+ ATK)<br>*Dragon can be substituted with the follwoing monsters: "Aqua Dragon", "Sea King Dragon", and "Stone D."</i>
+                  <p>Thunder/LIGHT/LV 7/ATK 2800/DEF 2100<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Ushi_Oni">343</td>
+               <td class="tdFusionName">Ushi Oni</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(343)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Ancient Jar", "Charubin the Fire Knight", "Morphing Jar", or "Pot of Trick" + Spellcaster (1500+ ATK)</i>
+                  <p>Fiend/DARK/LV 6/ATK 2150/DEF 1950<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Vermillion_Sparrow">619</td>
+               <td class="tdFusionName">Vermillion Sparrow</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(619)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Flame Swordsman" + Pyro</i>
+                  <p>Pyro/FIRE/LV 5/ATK 1900/DEF 1500</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Whiptail_Crow">358</td>
+               <td class="tdFusionName">Whiptail Crow</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(358)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Ryu-Kishin" + Reptile</i>
+                  <p>Fiend/DARK/LV 5/ATK 1650/DEF 1600</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Winged_Egg_of_New_Life">391</td>
+               <td class="tdFusionName">Winged Egg of New Life</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(391)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Fairy + Winged-Beast</i>
+                  <p>Fairy/LIGHT/LV 5/ATK 1400/DEF 1700</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Wood_Remains">119</td>
+               <td class="tdFusionName">Wood Remains</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(119)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Zombie + Plant</i>
+                  <p>Zombie/DARK/LV 3/ATK 1000/DEF 900</p>
+                  <p>FLIP: When this card is flipped face-up, all Wood Remains are increased by 500 points.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Wow_Warrior">471</td>
+               <td class="tdFusionName">Wow Warrior</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(471)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Fish + Warrior</i>
+                  <p>Fish/WATER/LV 4/ATK 1250/DEF 900</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Zombie_Warrior">103</td>
+               <td class="tdFusionName">Zombie Warrior</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(103)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Zombie + Warrior</i>
+                  <p>Zombie/DARK/LV 3/ATK 1200/DEF 900</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId">?</td>
+               <td class="tdFusionName" colspan="2">?</td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Insect Imitation" + any Egg monster with "Insect Imitation" in its SPECIAL POWER UP effect</i>
+                  <p>?/?/LV ?/ATK ?/DEF ?</p>
+                  <p>Check the SPECIAL POWER UP effect of the Egg monster to see what random monster it can be.</p>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <table class="fusionTable" id="fusionTable123" style="display: none;">
+         <thead>
+            <tr class="fusionTableHead">
+               <td class="tdFusionId">ID</td>
+               <td class="tdFusionName" colspan="2">Name</td>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td class="tdFusionId" id="Blackland_Fire_Dragon">4</td>
+               <td class="tdFusionName">Blackland Fire Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(4)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Dragon + Spellcaster</i>
+                  <p>Dragon/DARK/LV 4/ATK 1500/DEF 800<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Koumori_Dragon">5</td>
+               <td class="tdFusionName">Koumori Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(5)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Dragon + Fiend</i>
+                  <p>Dragon/DARK/LV 4/ATK 1500/DEF 1200<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Curse_of_Dragon">6</td>
+               <td class="tdFusionName">Curse of Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(6)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Dragon (1600+ ATK) + Zombie (1200+ ATK)</i>
+                  <p>Dragon/DARK/LV 5/ATK 2000/DEF 1500<br>Archetype(s): Horned</p>
+                  <p>ATTACK: Transforms the occupied space into WASTELAND terrain when engaging in a battle.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Red-Eyes_B._Dragon">7</td>
+               <td class="tdFusionName">Red-Eyes B. Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(7)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Tyhone #2" + Dragon (DARK)</i>
+                  <p>Dragon/DARK/LV 7/ATK 2400/DEF 2000<br>Archetype(s): Horned</p>
+                  <p>SPECIAL POWER UP: Transforms into "Red-Eyes Black Metal Dragon when powered up with a "Metalmorph".</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="B._Skull_Dragon">9</td>
+               <td class="tdFusionName">B. Skull Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(9)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Red Eyes B. Dragon" + "Summoned Skull"</i>
+                  <p>Dragon/DARK/LV 9/ATK 3200/DEF 2500<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Meteor_B._Dragon">14</td>
+               <td class="tdFusionName">Meteor B. Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(14)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Red Eyes B. Dragon" + "Meteor Dragon"</i>
+                  <p>Dragon/FIRE/LV 8/ATK 3500/DEF 2000</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="B._Dragon_Jungle_King">20</td>
+               <td class="tdFusionName">B. Dragon Jungle King</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(20)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Dragon (1600+ ATK) + Plant</i>
+                  <p>Dragon/EARTH/LV 6/ATK 2100/DEF 1800<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Gaia_the_Dragon_Champion">23</td>
+               <td class="tdFusionName">Gaia the Dragon Champion</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(23)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Gaia the Fierce Knight" + "Curse of Dragon"</i>
+                  <p>Dragon/WIND/LV 7/ATK 2600/DEF 2100<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Thousand_Dragon">24</td>
+               <td class="tdFusionName">Thousand Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(24)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Time Wizard" + Dragon</i>
+                  <p>Dragon/WIND/LV 7/ATK 2400/DEF 2000<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Harpie's_Pet_Dragon">30</td>
+               <td class="tdFusionName">Harpie's Pet Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(30)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Harpie Lady" or "Harpie Lady Sisters" + Dragon</i>
+                  <p>Dragon/WIND/LV 7/ATK 2000/DEF 2500</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Mystical_Elf">35</td>
+               <td class="tdFusionName">Mystical Elf</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(35)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Elf + Spellcaster (LIGHT) or Fairy</i>
+                  <p>Spellcaster/LIGHT/LV 4/ATK 800/DEF 2000<br>Archetype(s): Female, Elf</p>
+                  <p>FLIP: When this card is flipped face-up, powers up all of your own LIGHT monsters by 800 points.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Musician_King">46</td>
+               <td class="tdFusionName">Musician King</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(46)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Hibikime" + "Sonic Maid"</i>
+                  <p>Spellcaster/LIGHT/LV 5/ATK 1750/DEF 1500</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Dark_Elf">79</td>
+               <td class="tdFusionName">Dark Elf</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(79)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Elf + Spellcaster (DARK)</i>
+                  <p>Spellcaster/DARK/LV 4/ATK 2000/DEF 800<br>Archetype(s): Female, Elf</p>
+                  <p>ATTACK: For every battle engaged with the enemy, the LP of the player controlling Dark Elf is reduced by 50 points.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Zombie_Warrior">103</td>
+               <td class="tdFusionName">Zombie Warrior</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(103)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Zombie + Warrior</i>
+                  <p>Zombie/DARK/LV 3/ATK 1200/DEF 900</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Armored_Zombie">105</td>
+               <td class="tdFusionName">Armored Zombie</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(105)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Zombie + Warrior<br>*Requires at least 1 card with 1200+ ATK.</i>
+                  <p>Zombie/DARK/LV 3/ATK 1500/DEF 0</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Dragon_Zombie">106</td>
+               <td class="tdFusionName">Dragon Zombie</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(106)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Zombie + Dragon</i>
+                  <p>Zombie/DARK/LV 3/ATK 1600/DEF 0</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Clown_Zombie">107</td>
+               <td class="tdFusionName">Clown Zombie</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(107)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Crass Clown" + Zombie</i>
+                  <p>Zombie/DARK/LV 2/ATK 1350/DEF 0</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Pumpking_the_King_of_Ghosts">108</td>
+               <td class="tdFusionName">Pumpking the King of Ghosts</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(108)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Zombie + Plant<br>*Requires at least 1 card with 1000+ ATK.</i>
+                  <p>Zombie/DARK/LV 6/ATK 1800/DEF 2000</p>
+                  <p>NATURE: While this card is face-up in the defense position, all ZOMBIE monsters are increased 100 points at the start of each turn.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Wood_Remains">119</td>
+               <td class="tdFusionName">Wood Remains</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(119)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Zombie + Plant</i>
+                  <p>Zombie/DARK/LV 3/ATK 1000/DEF 900</p>
+                  <p>FLIP: When this card is flipped face-up, all Wood Remains are increased by 500 points.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Magical_Ghost">124</td>
+               <td class="tdFusionName">Magical Ghost</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(124)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Spellcaster + Zombie</i>
+                  <p>Zombie/DARK/LV 4/ATK 1300/DEF 1400</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Corroding_Shark">125</td>
+               <td class="tdFusionName">Corroding Shark</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(125)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Zombie + Fish</i>
+                  <p>Zombie/DARK/LV 3/ATK 1100/DEF 700</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Skelgon">126</td>
+               <td class="tdFusionName">Skelgon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(126)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Dragon Zombie" + Zombie</i>
+                  <p>Zombie/DARK/LV 6/ATK 1700/DEF 1900<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Great_Mammoth_of_Goldfine">130</td>
+               <td class="tdFusionName">Great Mammoth of Goldfine</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(130)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Mammoth Graveyard" + Zombie</i>
+                  <p>Zombie/DARK/LV 6/ATK 2200/DEF 1800</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Flame_Swordsman">151</td>
+               <td class="tdFusionName">Flame Swordsman</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(151)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Warrior + Pyro</i>
+                  <p>Warrior/FIRE/LV 5/ATK 1800/DEF 1600<br>Archetype(s): Horned</p>
+                  <p>ATTACK: 300-pt bonus when battling DINOSAUR monsters.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Judge_Man">154</td>
+               <td class="tdFusionName">Judge Man</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(154)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Judgement Hand" + Warrior (1000+ ATK)</i>
+                  <p>Warrior/EARTH/LV 6/ATK 2200/DEF 1500</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Celtic_Guardian">156</td>
+               <td class="tdFusionName">Celtic Guardian</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(156)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Elf + Warrior</i>
+                  <p>Warrior/EARTH/LV 4/ATK 1400/DEF 1200<br>Archetype(s): Elf</p>
+                  <p>NATURE: While this card is face-up in the defense position, all effects involving the taking of a card's control are rendered ineffective.<br>(This card is considered an Elf only for fusions)</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Invader_of_the_Throne">202</td>
+               <td class="tdFusionName">Invader of the Throne</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(202)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Protector of the Throne" + Fiend</i>
+                  <p>Warrior/EARTH/LV 5/ATK 1350/DEF 1700<br>Archetype(s): Female</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Dragoness_the_Wicked_Knight">205</td>
+               <td class="tdFusionName">Dragoness the Wicked Knight</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(205)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Dragon + Warrior</i>
+                  <p>Warrior/WIND/LV 3/ATK 1200/DEF 900<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Rabid_Horseman">215</td>
+               <td class="tdFusionName">Rabid Horseman</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(215)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Battle Ox" + "Mystical Horseman"</i>
+                  <p>Beast-Warrior/EARTH/LV 6/ATK 2000/DEF 1700<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Nekogal_#2">221</td>
+               <td class="tdFusionName">Nekogal #2</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(221)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Female + Beast or Beast-Warrior</i>
+                  <p>Beast-Warrior/EARTH/LV 6/ATK 1900/DEF 2000<br>Archetype(s): Female</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Tatsunootoshigo">250</td>
+               <td class="tdFusionName">Tatsunootoshigo</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(250)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Beast + Fish</i>
+                  <p>Beast/EARTH/LV 5/ATK 1350/DEF 1600</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Garvas">252</td>
+               <td class="tdFusionName">Garvas</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(252)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Beast + Winged-Beast</i>
+                  <p>Beast/EARTH/LV 6/ATK 2000/DEF 1700</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Flower_Wolf">253</td>
+               <td class="tdFusionName">Flower Wolf</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(253)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Beast + Plant</i>
+                  <p>Beast/EARTH/LV 5/ATK 1800/DEF 1400</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Mon_Larvas">259</td>
+               <td class="tdFusionName">Mon Larvas</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(259)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Larvas" + Beast</i>
+                  <p>Beast/EARTH/LV 4/ATK 1300/DEF 1400</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Mystical_Sheep_#1">264</td>
+               <td class="tdFusionName">Mystical Sheep #1</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(264)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Mystical Sheep #2" + Fiend</i>
+                  <p>Beast/EARTH/LV 3/ATK 1150/DEF 900</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Chimera_the_Flying_Mythical_Beast">267</td>
+               <td class="tdFusionName">Chimera the Flying Mythical Beast</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(267)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Beast (LV 4+) + Fiend</i>
+                  <p>Beast/WIND/LV 6/ATK 2100/DEF 1800<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Crimson_Sunbird">269</td>
+               <td class="tdFusionName">Crimson Sunbird</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(269)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Mavelus" + Winged-Beast<br>Winged-Beast (1300+ ATK) + Pyro</i>
+                  <p>Winged-Beast/FIRE/LV 6/ATK 2300/DEF 1800</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Harpie_Lady_Sisters">273</td>
+               <td class="tdFusionName">Harpie Lady Sisters</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(273)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Harpie Lady" + "Elegant Egotist"</i>
+                  <p>Winged-Beast/WIND/LV 6/ATK 1950/DEF 2100<br>Archetype(s): Female</p>
+                  <p>FLIP: When this card is flipped face-up, Harpie's Pet Dragon increases 900 points.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Spirit_of_the_Books">274</td>
+               <td class="tdFusionName">Spirit of the Books</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(274)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Boo Koo" + Winged-Beast</i>
+                  <p>Winged-Beast/WIND/LV 4/ATK 1400/DEF 1200</p>
+                  <p>FLIP: When this card is flipped face-up, add a Boo Koo face-down to own Summoning Area.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Mavelus">277</td>
+               <td class="tdFusionName">Mavelus</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(277)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Winged-Beast + Pyro</i>
+                  <p>Winged-Beast/WIND/LV 4/ATK 1300/DEF 900</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Punished_Eagle">280</td>
+               <td class="tdFusionName">Punished Eagle</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(280)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Winged-Beast (1300+ ATK) + Warrior</i>
+                  <p>Winged-Beast/WIND/LV 6/ATK 2100/DEF 1800</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Fiend_Reflection_#1">289</td>
+               <td class="tdFusionName">Fiend Reflection #1</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(289)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Job-Change Mirror" or "Wicked Mirror" + Winged-Beast</i>
+                  <p>Winged-Beast/WIND/LV 4/ATK 1300/DEF 1400</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Summoned_Skull">294</td>
+               <td class="tdFusionName">Summoned Skull</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(294)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Job-Change Mirror" + Fiend (1600+ ATK)</i>
+                  <p>Fiend/DARK/LV 6/ATK 2500/DEF 1200<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Lord_of_the_Lamp">312</td>
+               <td class="tdFusionName">Lord of the Lamp</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(312)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Mystic Lamp" + Spellcaster</i>
+                  <p>Fiend/DARK/LV 4/ATK 1400/DEF 1200</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Ryu-Kishin_Powered">339</td>
+               <td class="tdFusionName">Ryu-Kishin Powered</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(339)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Job-Change Mirror" + Fiend</i>
+                  <p>Fiend/DARK/LV 4/ATK 1600/DEF 1200<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="La_Jinn_the_Mystical_Genie_of_the_Lamp">340</td>
+               <td class="tdFusionName">La Jinn the Mystical Genie of the Lamp</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(340)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Lord of the Lamp" or "Mystic Lamp" + Fiend</i>
+                  <p>Fiend/DARK/LV 4/ATK 1800/DEF 1000</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Ushi_Oni">343</td>
+               <td class="tdFusionName">Ushi Oni</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(343)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Ancient Jar", "Charubin the Fire Knight", "Morphing Jar", or "Pot of Trick" + Spellcaster (1500+ ATK)</i>
+                  <p>Fiend/DARK/LV 6/ATK 2150/DEF 1950<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Soul_Hunter">345</td>
+               <td class="tdFusionName">Soul Hunter</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(345)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Crass Clown" or "Clown Zombie" + Reptile</i>
+                  <p>Fiend/DARK/LV 6/ATK 2200/DEF 1800<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Whiptail_Crow">358</td>
+               <td class="tdFusionName">Whiptail Crow</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(358)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Ryu-Kishin" + Reptile</i>
+                  <p>Fiend/DARK/LV 5/ATK 1650/DEF 1600</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Dark_Witch">385</td>
+               <td class="tdFusionName">Dark Witch</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(385)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Female + Fairy</i>
+                  <p>Fairy/LIGHT/LV 5/ATK 1800/DEF 1700<br>Archetype(s): Female</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Winged_Egg_of_New_Life">391</td>
+               <td class="tdFusionName">Winged Egg of New Life</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(391)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Fairy + Winged-Beast</i>
+                  <p>Fairy/LIGHT/LV 5/ATK 1400/DEF 1700</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Larva_of_Moth">427</td>
+               <td class="tdFusionName">Larva of Moth</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(427)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Cocoon of Evolution" + Insect that has "Cocoon of Evolution" in its SPECIAL POWER UP effect</i>
+                  <p>Insect/EARTH/LV 2/ATK 0/DEF 2000</p>
+                  <p>MOVEMENT: Cannot move.<br>NATURE: Transforms into Pupa of Moth if this card survives 5 turns in face-up, defense position after being flipped face-up by the controlling player. If destroyed prior to transformation, the card is revived as Larvae Moth in own Summoning Area other than current location.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Sword_Arm_of_Dragon">433</td>
+               <td class="tdFusionName">Sword Arm of Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(433)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Dinosaur + Warrior (ID# less than 200) or Insect (ID# between 401-407)</i>
+                  <p>Dinosaur/EARTH/LV 6/ATK 1750/DEF 2030<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Megazowler">436</td>
+               <td class="tdFusionName">Megazowler</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(436)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Reptile + Rock</i>
+                  <p>Dinosaur/EARTH/LV 6/ATK 1800/DEF 2000<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Bracchio-raidus">445</td>
+               <td class="tdFusionName">Bracchio-raidus</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(445)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Dinosaur (1750+ ATK) + Aqua<br>Reptile (1400+ ATK) + Rock</i>
+                  <p>Dinosaur/WATER/LV 6/ATK 2200/DEF 2000</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Rare_Fish">460</td>
+               <td class="tdFusionName">Rare Fish</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(460)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Fish + Beast<br>*Requires at least 1 card with 1350+ ATK</i>
+                  <p>Fish/WATER/LV 4/ATK 1500/DEF 1200</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="7_Colored_Fish">466</td>
+               <td class="tdFusionName">7 Colored Fish</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(466)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Fish + Fairy</i>
+                  <p>Fish/WATER/LV 4/ATK 1800/DEF 800</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Misairuzame">469</td>
+               <td class="tdFusionName">Misairuzame</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(469)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Fish + Machine</i>
+                  <p>Fish/WATER/LV 5/ATK 1400/DEF 1600<br>Archetype(s): Horned</p>
+                  <p>ATTACK: Adds 500 bonus points for any battle against MACHINE monsters.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Wow_Warrior">471</td>
+               <td class="tdFusionName">Wow Warrior</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(471)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Fish + Warrior</i>
+                  <p>Fish/WATER/LV 4/ATK 1250/DEF 900</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Marine_Beast">474</td>
+               <td class="tdFusionName">Marine Beast</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(474)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Rare Fish" + Aqua</i>
+                  <p>Fish/WATER/LV 5/ATK 1700/DEF 1600</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Amazon_of_the_Seas">475</td>
+               <td class="tdFusionName">Amazon of the Seas</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(475)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Female + Fish</i>
+                  <p>Fish/WATER/LV 4/ATK 1300/DEF 1400<br>Archetype(s): Female</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Kairyu-Shin">476</td>
+               <td class="tdFusionName">Kairyu-Shin</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(476)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Fish + Dragon</i>
+                  <p>Sea Serpent/WATER/LV 5/ATK 1800/DEF 1500</p>
+                  <p>FLIP: All spaces within a range of 1 space are transformed to Sea terrain when this card is flipped face-up.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Aqua_Dragon">478</td>
+               <td class="tdFusionName">Aqua Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(478)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Aqua (LV 5+) + Dragon (2000+ ATK) or Sea Serpent (LV 5+)</i>
+                  <p>Sea Serpent/WATER/LV 6/ATK 2250/DEF 1900<br>Archetype(s): Horned</p>
+                  <p>ATTACK: Space occupied is transformed to Sea terrain when engaged in battle.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Sea_King_Dragon">479</td>
+               <td class="tdFusionName">Sea King Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(479)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Dragon + Aqua (1500+ ATK)</i>
+                  <p>Sea Serpent/WATER/LV 6/ATK 2000/DEF 1700<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Spike_Seadra">480</td>
+               <td class="tdFusionName">Spike Seadra</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(480)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Boulder Tortoise" + Dragon</i>
+                  <p>Sea Serpent/WATER/LV 5/ATK 1600/DEF 1300</p>
+                  <p>FLIP: When this card is flipped face-up, this card is strengthened by 300 points for every THUNDER monster on the field.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Gatekeeper">483</td>
+               <td class="tdFusionName">Gatekeeper</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(483)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Key Mace" + "Key Mace #2"</i>
+                  <p>Machine/DARK/LV 5/ATK 1500/DEF 1800</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Metalzoa">488</td>
+               <td class="tdFusionName">Metalzoa</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(488)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Zoa" + "Metalmorph"</i>
+                  <p>Machine/DARK/LV 8/ATK 3000/DEF 2300<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Cyber_Soldier">491</td>
+               <td class="tdFusionName">Cyber Soldier</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(491)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Machine + Warrior</i>
+                  <p>Machine/DARK/LV 5/ATK 1500/DEF 1700<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Red-Eyes_Black_Metal_Dragon">501</td>
+               <td class="tdFusionName">Red-Eyes Black Metal Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(501)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Red-Eyes B. Dragon" + "Metalmorph"</i>
+                  <p>Machine/DARK/LV 8/ATK 2800/DEF 2400<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Dice_Armadillo">520</td>
+               <td class="tdFusionName">Dice Armadillo</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(520)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Machine + Beast</i>
+                  <p>Machine/EARTH/LV 5/ATK 1650/DEF 1800<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Cyber_Saurus">521</td>
+               <td class="tdFusionName">Cyber Saurus</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(521)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Machine + Dinosaur</i>
+                  <p>Machine/EARTH/LV 5/ATK 1800/DEF 1400</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Metal_Dragon">529</td>
+               <td class="tdFusionName">Metal Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(529)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Machine + Dragon</i>
+                  <p>Machine/WIND/LV 6/ATK 1850/DEF 1700<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Metal_Fish">531</td>
+               <td class="tdFusionName">Metal Fish</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(531)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Machine + Fish<br>*Requires at least 1 card with 1400+ ATK.</i>
+                  <p>Machine/WATER/LV 5/ATK 1600/DEF 1900</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Mech_Bass">532</td>
+               <td class="tdFusionName">Mech Bass</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(532)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Machine (1600+ ATK) + Fish</i>
+                  <p>Machine/WATER/LV 5/ATK 1800/DEF 1500</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Thunder_Dragon">535</td>
+               <td class="tdFusionName">Thunder Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(535)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Thunder + Dragon</i>
+                  <p>Thunder/LIGHT/LV 5/ATK 1600/DEF 1500<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="The_Immortal_of_Thunder">536</td>
+               <td class="tdFusionName">The Immortal of Thunder</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(536)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Thunder + Spellcaster</i>
+                  <p>Thunder/LIGHT/LV 4/ATK 1500/DEF 1300</p>
+                  <p>NATURE: While this card is face-up in the defense position, all female monsters are reduced by 500 points.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Twin-Headed_Thunder_Dragon">538</td>
+               <td class="tdFusionName">Twin-Headed Thunder Dragon</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(538)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Thunder + Dragon (2000+ ATK)<br>*Dragon can be substituted with the follwoing monsters: "Aqua Dragon", "Sea King Dragon", and "Stone D."</i>
+                  <p>Thunder/LIGHT/LV 7/ATK 2800/DEF 2100<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Tripwire_Beast">540</td>
+               <td class="tdFusionName">Tripwire Beast</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(540)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Thunder + Beast</i>
+                  <p>Thunder/EARTH/LV 4/ATK 1200/DEF 1300<br>Archetype(s): Horned, Shell</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Electric_Lizard">541</td>
+               <td class="tdFusionName">Electric Lizard</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(541)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Reptile + Thunder</i>
+                  <p>Thunder/EARTH/LV 3/ATK 850/DEF 800<br>Archetype(s): Horned</p>
+                  <p>FLIP: Spellbinds the opposing enemy for 1 turn when this card is flipped face-up in battle.</p>
+                  <p></p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Kaminari_Attack">544</td>
+               <td class="tdFusionName">Kaminari Attack</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(544)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Thunder + Spellcaster<br>*Requires at least 1 card with 1500+ ATK.</i>
+                  <p>Thunder/WIND/LV 5/ATK 1900/DEF 1400</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Bolt_Escargot">546</td>
+               <td class="tdFusionName">Bolt Escargot</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(546)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Thunder + Aqua</i>
+                  <p>Thunder/WATER/LV 5/ATK 1400/DEF 1500<br>Archetype(s): Shell</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Fire_Kraken">548</td>
+               <td class="tdFusionName">Fire Kraken</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(548)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Aqua + Pyro</i>
+                  <p>Aqua/FIRE/LV 5/ATK 1600/DEF 1500</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Boulder_Tortoise">549</td>
+               <td class="tdFusionName">Boulder Tortoise</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(549)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Turtle + Rock</i>
+                  <p>Aqua/EARTH/LV 6/ATK 1450/DEF 2200<br>Archetype(s): Shell, Turtle</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Turtle_Tiger">558</td>
+               <td class="tdFusionName">Turtle Tiger</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(558)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Turtle + Beast</i>
+                  <p>Aqua/WATER/LV 4/ATK 1000/DEF 1500<br>Archetype(s): Shell, Turtle</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="30,000-Year_White_Turtle">584</td>
+               <td class="tdFusionName">30,000-Year White Turtle</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(584)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Time Wizard" + Turtle</i>
+                  <p>Aqua/WATER/LV 5/ATK 1250/DEF 2100<br>Archetype(s): Shell, Turtle</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Turtle_Bird">592</td>
+               <td class="tdFusionName">Turtle Bird</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(592)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Turtle + Winged-Beast</i>
+                  <p>Aqua/WATER/LV 6/ATK 1900/DEF 1700<br>Archetype(s): Shell, Turtle</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Giant_Turtle_Who_Feeds_on_Flames">598</td>
+               <td class="tdFusionName">Giant Turtle Who Feeds on Flames</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(598)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Turtle + Pyro</i>
+                  <p>Aqua/WATER/LV 5/ATK 1400/DEF 1800<br>Archetype(s): Horned, Shell, Turtle</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Amphibious_Bugroth">607</td>
+               <td class="tdFusionName">Amphibious Bugroth</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(607)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Ground Attacker Bugroth" + Aqua</i>
+                  <p>Aqua/WATER/LV 5/ATK 1850/DEF 1300</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Vermillion_Sparrow">619</td>
+               <td class="tdFusionName">Vermillion Sparrow</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(619)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Flame Swordsman" + Pyro</i>
+                  <p>Pyro/FIRE/LV 5/ATK 1900/DEF 1500</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Flame_Cerebrus">620</td>
+               <td class="tdFusionName">Flame Cerebrus</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(620)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Beast (1200+ ATK) + Pyro</i>
+                  <p>Pyro/FIRE/LV 6/ATK 2100/DEF 1800</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Stone_D.">632</td>
+               <td class="tdFusionName">Stone D.</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(632)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Rock + Dragon (1200+ ATK)</i>
+                  <p>Rock/EARTH/LV 7/ATK 2000/DEF 2300<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Minomushi_Warrior">636</td>
+               <td class="tdFusionName">Minomushi Warrior</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(636)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Rock + Warrior</i>
+                  <p>Rock/EARTH/LV 4/ATK 1300/DEF 1200<br>Archetype(s): Horned</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Stone_Ghost">637</td>
+               <td class="tdFusionName">Stone Ghost</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(637)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Rock + Zombie</i>
+                  <p>Rock/EARTH/LV 4/ATK 1200/DEF 1000</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Mystical_Sand">641</td>
+               <td class="tdFusionName">Mystical Sand</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(641)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Female (LV 4+) + Rock</i>
+                  <p>Rock/EARTH/LV 6/ATK 2100/DEF 1700<br>Archetype(s): Female</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Rose_Spectre_of_Dunn">648</td>
+               <td class="tdFusionName">Rose Spectre of Dunn</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(648)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Plant + Fiend</i>
+                  <p>Plant/DARK/LV 6/ATK 2000/DEF 1800<br>Archetype(s): Female</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Bean_Soldier">660</td>
+               <td class="tdFusionName">Bean Soldier</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(660)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Plant + Warrior</i>
+                  <p>Plant/EARTH/LV 4/ATK 1400/DEF 1300</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Darkworld_Thorns">662</td>
+               <td class="tdFusionName">Darkworld Thorns</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(662)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Fungi of the Musk" + Fiend</i>
+                  <p>Plant/EARTH/LV 3/ATK 1200/DEF 900</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Snakeyashi">665</td>
+               <td class="tdFusionName">Snakeyashi</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(665)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Plant + Reptile</i>
+                  <p>Plant/EARTH/LV 4/ATK 1000/DEF 1200</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId" id="Queen_of_Autumn_Leaves">667</td>
+               <td class="tdFusionName">Queen of Autumn Leaves</td>
+               <td class="tdCheckMaterials"><a onclick="checkMaterials(667)"><i>Show all possible fusion material combinations.</i></a></td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: Female + Plant</i>
+                  <p>Plant/EARTH/LV 5/ATK 1800/DEF 1500<br>Archetype(s): Female</p>
+               </td>
+            </tr>
+            <tr>
+               <td class="tdFusionId">?</td>
+               <td class="tdFusionName" colspan="2">?</td>
+            </tr>
+            <tr>
+               <td class="tdFusionStat" colspan="3"><i>Fusion Materials: "Insect Imitation" + any Egg monster with "Insect Imitation" in its SPECIAL POWER UP effect</i>
+                  <p>?/?/LV ?/ATK ?/DEF ?</p>
+                  <p>Check the SPECIAL POWER UP effect of the Egg monster to see what random monster it can be.</p>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+
+
 
    <footer>
       *Using Insects as fusion materials for "Sword Arm of Dragon" are a glitch in the game. They were supposed to be warriors whose ID#'s are 200 less than those Insects. This is why "Perfectly Ultimate Great Moth" can work in this fusion despite having twice the amount of ATK.'<br>
