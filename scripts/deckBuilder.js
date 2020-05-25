@@ -103,6 +103,7 @@ function addCard(num) {
 
          if (card > 853) {
             card = null;
+             document.getElementById('cardInput').value = '';
          }
       } else if (cardNamelist.includes(temp)) {
          card = cardNamelist.indexOf(temp); //is input a name

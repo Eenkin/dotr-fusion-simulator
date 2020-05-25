@@ -12,6 +12,7 @@ function checkCard() {
       card = parseInt(card)
       if (card > 853) {
          card = null;
+         document.getElementById('cardInput').value = '';
          return;
       }
       //console.log(card)
@@ -45,7 +46,7 @@ function checkForFusion(cardA) {
    if (!fusableCards.includes(cardA)) {
       //If the card is not a fusable card, then end function;
       // resultSection.innerHTML = '<b>This card cannot be used to make fusions</b>';
-      resultSection.innerHTML = '<b>No results found for fusions involving "' + mainCard.name + '"</b>';
+      resultSection.innerHTML = '<b>No results found for fusions involving "' + mainCard.name + '".</b>';
       return;
    }
 
