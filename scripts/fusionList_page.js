@@ -99,6 +99,21 @@ function createFusionTable(sortBy) {
 
 }
 
+function pickTable(type) {
+
+   switch (type) {
+      case 'ABC':
+         document.getElementById('fusionTableABC').style.display = 'initial';
+         document.getElementById('fusionTable123').style.display = 'none';
+         break;
+      case '123':
+         document.getElementById('fusionTableABC').style.display = 'none';
+         document.getElementById('fusionTable123').style.display = 'initial';
+         break;
+
+   }
+}
+
 function checkMaterials(id) {
    document.getElementById('fusionPopUp').style.display = 'inherit';
    document.getElementById('listBG').scrollTop = 0;
@@ -112,7 +127,7 @@ function checkMaterials(id) {
 
    listBG.innerHTML = '';
 
-   listBG.innerHTML += '<p><b>' + currentCard.name + '</b>'+ '<br><i>Fusion Materials: ' + currentCard.fusionInfo.replace(/\n/gi, '<br>') + '</i></p>'
+   listBG.innerHTML += '<p><b>' + currentCard.name + '</b>' + '<br><i>Fusion Materials: ' + currentCard.fusionInfo.replace(/\n/gi, '<br>') + '</i></p>'
 
    statText += '<p>' + currentCard.type + '/' + currentCard.attribute + '/LV ' + currentCard.lv + '/ATK ' + currentCard.atk + '/DEF ' + currentCard.def;
    statText += currentCard.archetype ? '<br>Archetype(s): ' + currentCard.archetype : '';
@@ -153,23 +168,23 @@ function checkMaterials(id) {
 
       var currentCombination = fusionListByResult[id][i].split(',');
 
-      if(!fusionMaterialList.includes(cardList[currentCombination[0]].name)){
+      if (!fusionMaterialList.includes(cardList[currentCombination[0]].name)) {
          fusionMaterialList.push(cardList[currentCombination[0]].name);
       }
 
-      if(fusionMaterialStorage[cardList[currentCombination[0]].name]){
+      if (fusionMaterialStorage[cardList[currentCombination[0]].name]) {
          fusionMaterialStorage[cardList[currentCombination[0]].name].push(cardList[currentCombination[1]].name)
       } else {
          fusionMaterialStorage[cardList[currentCombination[0]].name] = [cardList[currentCombination[1]].name]
       }
 
       if (cardList[currentCombination[1]].name !== cardList[currentCombination[0]].name) {
-         if(!fusionMaterialList.includes(cardList[currentCombination[1]].name)){
+         if (!fusionMaterialList.includes(cardList[currentCombination[1]].name)) {
             fusionMaterialList.push(cardList[currentCombination[1]].name);
          }
          //fusionMaterialList.push(cardList[currentCombination[1]].name);
 
-         if(fusionMaterialStorage[cardList[currentCombination[1]].name]){
+         if (fusionMaterialStorage[cardList[currentCombination[1]].name]) {
             fusionMaterialStorage[cardList[currentCombination[1]].name].push(cardList[currentCombination[0]].name)
          } else {
             fusionMaterialStorage[cardList[currentCombination[1]].name] = [cardList[currentCombination[0]].name]
@@ -190,7 +205,7 @@ function checkMaterials(id) {
       return 0;
    });
 
-   for(var i = 0; i < fusionMaterialList.length; i++){
+   for (var i = 0; i < fusionMaterialList.length; i++) {
       var tr = document.createElement('tr');
       var td1 = document.createElement('td');
       var td2 = document.createElement('td');
@@ -198,7 +213,7 @@ function checkMaterials(id) {
       td1.className = 'fusionMaterialTD';
       td2.className = 'fusionMaterialTD';
 
-      td1.innerHTML = '<a onclick="revealFusion(\'' +  fusionMaterialList[i].replace(/'/gi, "\\'") + '\')">' + fusionMaterialList[i] +'</a>';
+      td1.innerHTML = '<a onclick="revealFusion(\'' + fusionMaterialList[i].replace(/'/gi, "\\'") + '\')">' + fusionMaterialList[i] + '</a>';
 
       td1.id = 'fma' + i;
       td2.id = 'fmb' + i;
@@ -233,7 +248,7 @@ function checkMaterials(id) {
 
 }
 
-function revealFusion(card){
+function revealFusion(card) {
 
    for (var i = 0; i < fusionMaterialStorage.tdLength; i++) {
       var fma = document.getElementById('fma' + i);
@@ -253,5 +268,5 @@ function revealFusion(card){
 }
 
 window.onload = function() {
-   createFusionTable('ABC');
+   // createFusionTable('ABC');
 }
