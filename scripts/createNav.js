@@ -13,10 +13,12 @@ function createNav(){
    deckText += '<a href="naming_simulator"><span class="navLink">Naming/Starter Deck Simulator</span></a>';
    deckText += '<a href="reincarnation_calculator"><span class="navLink">Reincarnation Calculator</span></a>';
 
+   var otherText = '<h2>Other</h2>';
+   otherText += '<a href="about"><span class="navLink">About DotR Fusion Simulator</span></a>';
 
 
 
-   nav.innerHTML = '<div id="displayMenu" onclick="displayMenu()"><div class="hamMenu"></div><div class="hamMenu"></div><div class="hamMenu"></div></div><div id="navMenu"><div id="hideBlock" onclick="displayMenu()"></div><div id="navBlock"><h1>MENU</h1>'+ fusionText + deckText + '</div></div>';
+   nav.innerHTML = '<div id="displayMenu" onclick="displayMenu()"><div class="hamMenu"></div><div class="hamMenu"></div><div class="hamMenu"></div></div><div id="navMenu"><div id="hideBlock" onclick="displayMenu()"></div><div id="navBlock"><h1>MENU</h1>'+ fusionText + deckText + otherText + '</div></div>';
    // nav.setAttribute('onclick', 'this.style.display = "none"')
 }
 
