@@ -11,7 +11,7 @@ function createNav(){
    var deckText = '<h2>Deck</h2>';
    deckText += '<a href="deck_builder"><span class="navLink">Deck Builder</span></a>';
    deckText += '<a href="naming_simulator"><span class="navLink">Naming/Starter Deck Simulator</span></a>';
-   deckText += '<a href="reincarnation_calculator"><span class="navLink">Reincarnation Calculator</span></a>';
+   deckText += '<a href="reincarnation_calculator"><span class="navLink">Reincarnation Drop Rates</span></a>';
 
    var otherText = '<h2>Other</h2>';
    otherText += '<a href="about"><span class="navLink">About DotR Fusion Simulator</span></a>';
