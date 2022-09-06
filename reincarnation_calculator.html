@@ -6,7 +6,7 @@
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
    <meta name="description" content="Calculate the possiblity of all card drops during reincarnation for Yu-Gi-Oh! The Duelists of the Roses.">
    <meta name=viewport content="width=device-width, initial-scale=1">
-   <title>Reincarnation Calculator | DotR Fusion Simulator</title>
+   <title>Reincarnation Drop Rates | DotR Fusion Simulator</title>
    <script src="scripts/cardList.js"></script>
    <script src="scripts/reincarnation.js"></script>
    <script src="scripts/createNav.js"></script>
@@ -95,11 +95,12 @@
 
 <body>
    <nav><script>createNav()</script></nav>
-   <h1 id="pageHeading">Yu-Gi-Oh! The Duelists of the Roses<br>Reincarnation Calculator</h1>
+   <h1 id="pageHeading">Yu-Gi-Oh! The Duelists of the Roses<br>Reincarnation Drop Rates</h1>
 
    <div id='note' style=''>
-      <p>The Reincarnation Calculator determines the percentages of each card drop from a chosen card. This is <u>NOT</u> to calculate the probability of receiving the selected card. Reincarnation occurs after every 5 campaign duels since the last one was performed (wins, loses, and surrenders all contribute to this count). By selecting an unused card in the deck edit, you can receive up to 3 random cards of similar deck costs. </p>
-      <p>Select your deck leaders' rank on deck slot A and B. Deck leader ranks influence the probability of getting a card whose deck cost is higher than the reincarated card. Only the leader rank of slots A and B are considered. Slot C does not influence reincarnation.</p>
+      <p>This page helps determine the drop rate percentages of what cards you can receive when you perform a reincarnation of a selected card. This is <u>NOT</u> to calculate the probability of receiving the inputted card.</p>
+      <p>Reincarnation can be performed after a minimum of 5 campaign duels (wins, loses, and surrenders all contribute to this count). You can only perform another reincarnation after another set of at least 5 campaign duels after the last reincarnation. By selecting an unused card in the deck edit with L3, you can receive up to 3 random cards of similar deck costs (DC).</p>
+      <p>In the Leader Rank fields, please input your deck leaders' rank on deck slot A and B. Deck leader ranks influence the probability of getting a card whose deck cost is higher than the reincarated card. Only the leader rank of slots A and B are considered. Slot C does not influence reincarnation.</p>
       <p>View the <a href="https://www.speedrun.com/yugiohdotr/thread/ch2hb">Reincarnation section</a> for more details on how the game calculates this process.</p>
    </div>
 
@@ -1005,7 +1006,7 @@
    <div id="reincarnationResults">
    </div>
 
-   <footer>*Reincarnating a card that has 10 DC or less will have a higher chance to result in a "Fake Trap". This is due to the game finding a card that doesn't exist when making it's calculations.</footer>
+   <footer>*Reincarnating a card that has 10 DC or less will have a higher chance to result in a "Fake Trap". It is the default card the game gives if the final calculation results in searching for a non-existent card with a value of 0 or less DC.</footer>
 
    <script>
       function handle(e, input) {
