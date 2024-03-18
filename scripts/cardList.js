@@ -128,7 +128,7 @@ const cardList = [
     "dc": 57,
     "atk": 3200,
     "def": 2500,
-    "fusionInfo": "\"Red Eyes B. Dragon\" + \"Summoned Skull\"",
+    "fusionInfo": "\"Red-Eyes B. Dragon\" + \"Summoned Skull\"",
     "powerUp": "780, 789, 795, 796, 766, 788, 765, 754",
     "archetype": "Horned"
   },
@@ -191,7 +191,7 @@ const cardList = [
     "dc": 55,
     "atk": 3500,
     "def": 2000,
-    "fusionInfo": "\"Red Eyes B. Dragon\" + \"Meteor Dragon\"",
+    "fusionInfo": "\"Red-Eyes B. Dragon\" + \"Meteor Dragon\"",
     "powerUp": "780, 789, 795, 796, 766, 779"
   },
   {
